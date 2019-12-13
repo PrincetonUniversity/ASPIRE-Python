@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>aspire.source package &mdash; ASPIRE 0.5.27 documentation</title>
+  <title>aspire.source package &mdash; ASPIRE 0.5.28 documentation</title>
   
 
   
@@ -58,7 +58,7 @@
             
             
               <div class="version">
-                0.5.27
+                0.5.28
               </div>
             
           
@@ -731,6 +731,14 @@ no default value is used, and missing field(s) cause a RuntimeError.</p>
 <dd class="field-even"><p>An ndarray of values (any valid np types) representing metadata info.</p>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="aspire.source.ImageSource.has_metadata">
+<code class="sig-name descname">has_metadata</code><span class="sig-paren">(</span><em class="sig-param">metadata_fields</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.source.ImageSource.has_metadata" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find out if one more more metadata fields are available for this <cite>ImageSource</cite>.
+:param metadata_fields: A string, of list of strings, representing the metadata field(s) to be queried.
+:return: Boolean value indicating whether the field(s) are available.</p>
 </dd></dl>
 
 <dl class="method">
