@@ -1,0 +1,30 @@
+aspire.io package
+=================
+
+Submodules
+----------
+
+aspire.io.micrograph module
+---------------------------
+
+.. automodule:: aspire.io.micrograph
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+aspire.io.starfile module
+-------------------------
+
+.. automodule:: aspire.io.starfile
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: aspire.io
+   :members:
+   :undoc-members:
+   :show-inheritance:

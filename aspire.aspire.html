@@ -1,0 +1,1163 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>aspire.aspire package &mdash; ASPIRE 0.5.24 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="aspire.aspire.common package" href="aspire.aspire.common.html" />
+    <link rel="prev" title="aspire.apple package" href="aspire.apple.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> ASPIRE
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.5.24
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Modules</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="aspire.html">aspire package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="aspire.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="aspire.apple.html">aspire.apple package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">aspire.aspire package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.basis.html">aspire.basis package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.class2d.html">aspire.class2d package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.class3d.html">aspire.class3d package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.commands.html">aspire.commands package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.data.html">aspire.data package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.denoise.html">aspire.denoise package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.estimation.html">aspire.estimation package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.image.html">aspire.image package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.io.html">aspire.io package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.nfft.html">aspire.nfft package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.orientation.html">aspire.orientation package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.picker.html">aspire.picker package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.reconstruct.html">aspire.reconstruct package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.source.html">aspire.source package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.utils.html">aspire.utils package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.volume.html">aspire.volume package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="aspire.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="aspire.html#module-aspire.exceptions">aspire.exceptions module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="aspire.html#module-aspire.version">aspire.version module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="aspire.html#module-aspire">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ASPIRE</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="modules.html">Modules</a> &raquo;</li>
+        
+          <li><a href="aspire.html">aspire package</a> &raquo;</li>
+        
+      <li>aspire.aspire package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/aspire.aspire.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="aspire-aspire-package">
+<h1>aspire.aspire package<a class="headerlink" href="#aspire-aspire-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="aspire.aspire.common.html">aspire.aspire.common package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="aspire.aspire.common.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.aspire.common.html#module-aspire.aspire.common.config">aspire.aspire.common.config module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.aspire.common.html#module-aspire.aspire.common.logger">aspire.aspire.common.logger module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.aspire.common.html#module-aspire.aspire.common">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="aspire.aspire.em_classavg.html">aspire.aspire.em_classavg package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="aspire.aspire.em_classavg.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.html">aspire.aspire.em_classavg.image_denoising package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.image_denoising.html">aspire.aspire.em_classavg.image_denoising.image_denoising package</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.image_denoising.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.image_denoising.ConverterModel.html">aspire.aspire.em_classavg.image_denoising.image_denoising.ConverterModel package</a><ul>
+<li class="toctree-l8"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.image_denoising.ConverterModel.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l9"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.image_denoising.ConverterModel.DirectModel.html">aspire.aspire.em_classavg.image_denoising.image_denoising.ConverterModel.DirectModel package</a><ul>
+<li class="toctree-l10"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.image_denoising.ConverterModel.DirectModel.html#submodules">Submodules</a></li>
+<li class="toctree-l10"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.image_denoising.ConverterModel.DirectModel.html#aspire-aspire-em-classavg-image-denoising-image-denoising-convertermodel-directmodel-directmodel-module">aspire.aspire.em_classavg.image_denoising.image_denoising.ConverterModel.DirectModel.DirectModel module</a></li>
+<li class="toctree-l10"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.image_denoising.ConverterModel.DirectModel.html#aspire-aspire-em-classavg-image-denoising-image-denoising-convertermodel-directmodel-test-module">aspire.aspire.em_classavg.image_denoising.image_denoising.ConverterModel.DirectModel.test module</a></li>
+<li class="toctree-l10"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.image_denoising.ConverterModel.DirectModel.html#module-aspire.aspire.em_classavg.image_denoising.image_denoising.ConverterModel.DirectModel">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l9"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.image_denoising.ConverterModel.FastModel.html">aspire.aspire.em_classavg.image_denoising.image_denoising.ConverterModel.FastModel package</a><ul>
+<li class="toctree-l10"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.image_denoising.ConverterModel.FastModel.html#submodules">Submodules</a></li>
+<li class="toctree-l10"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.image_denoising.ConverterModel.FastModel.html#aspire-aspire-em-classavg-image-denoising-image-denoising-convertermodel-fastmodel-fastmodel-module">aspire.aspire.em_classavg.image_denoising.image_denoising.ConverterModel.FastModel.FastModel module</a></li>
+<li class="toctree-l10"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.image_denoising.ConverterModel.FastModel.html#module-aspire.aspire.em_classavg.image_denoising.image_denoising.ConverterModel.FastModel.FastModel_forward_utils">aspire.aspire.em_classavg.image_denoising.image_denoising.ConverterModel.FastModel.FastModel_forward_utils module</a></li>
+<li class="toctree-l10"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.image_denoising.ConverterModel.FastModel.html#aspire-aspire-em-classavg-image-denoising-image-denoising-convertermodel-fastmodel-fastmodel-init-utils-module">aspire.aspire.em_classavg.image_denoising.image_denoising.ConverterModel.FastModel.FastModel_init_utils module</a></li>
+<li class="toctree-l10"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.image_denoising.ConverterModel.FastModel.html#aspire-aspire-em-classavg-image-denoising-image-denoising-convertermodel-fastmodel-test-module">aspire.aspire.em_classavg.image_denoising.image_denoising.ConverterModel.FastModel.test module</a></li>
+<li class="toctree-l10"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.image_denoising.ConverterModel.FastModel.html#module-aspire.aspire.em_classavg.image_denoising.image_denoising.ConverterModel.FastModel">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l8"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.image_denoising.ConverterModel.html#submodules">Submodules</a></li>
+<li class="toctree-l8"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.image_denoising.ConverterModel.html#aspire-aspire-em-classavg-image-denoising-image-denoising-convertermodel-converter-module">aspire.aspire.em_classavg.image_denoising.image_denoising.ConverterModel.Converter module</a></li>
+<li class="toctree-l8"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.image_denoising.ConverterModel.html#aspire-aspire-em-classavg-image-denoising-image-denoising-convertermodel-test-module">aspire.aspire.em_classavg.image_denoising.image_denoising.ConverterModel.test module</a></li>
+<li class="toctree-l8"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.image_denoising.ConverterModel.html#module-aspire.aspire.em_classavg.image_denoising.image_denoising.ConverterModel">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l7"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.image_denoising.PSWF2D.html">aspire.aspire.em_classavg.image_denoising.image_denoising.PSWF2D package</a><ul>
+<li class="toctree-l8"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.image_denoising.PSWF2D.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l9"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.image_denoising.PSWF2D.BN.html">aspire.aspire.em_classavg.image_denoising.image_denoising.PSWF2D.BN package</a><ul>
+<li class="toctree-l10"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.image_denoising.PSWF2D.BN.html#submodules">Submodules</a></li>
+<li class="toctree-l10"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.image_denoising.PSWF2D.BN.html#aspire-aspire-em-classavg-image-denoising-image-denoising-pswf2d-bn-bn-module">aspire.aspire.em_classavg.image_denoising.image_denoising.PSWF2D.BN.BN module</a></li>
+<li class="toctree-l10"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.image_denoising.PSWF2D.BN.html#module-aspire.aspire.em_classavg.image_denoising.image_denoising.PSWF2D.BN.BN_init_utils">aspire.aspire.em_classavg.image_denoising.image_denoising.PSWF2D.BN.BN_init_utils module</a></li>
+<li class="toctree-l10"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.image_denoising.PSWF2D.BN.html#module-aspire.aspire.em_classavg.image_denoising.image_denoising.PSWF2D.BN">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l8"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.image_denoising.PSWF2D.html#submodules">Submodules</a></li>
+<li class="toctree-l8"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.image_denoising.PSWF2D.html#aspire-aspire-em-classavg-image-denoising-image-denoising-pswf2d-generalfunctions-module">aspire.aspire.em_classavg.image_denoising.image_denoising.PSWF2D.GeneralFunctions module</a></li>
+<li class="toctree-l8"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.image_denoising.PSWF2D.html#aspire-aspire-em-classavg-image-denoising-image-denoising-pswf2d-pswf2dmodel-module">aspire.aspire.em_classavg.image_denoising.image_denoising.PSWF2D.PSWF2DModel module</a></li>
+<li class="toctree-l8"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.image_denoising.PSWF2D.html#aspire-aspire-em-classavg-image-denoising-image-denoising-pswf2d-pswf2d-utils-module">aspire.aspire.em_classavg.image_denoising.image_denoising.PSWF2D.PSWF2D_utils module</a></li>
+<li class="toctree-l8"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.image_denoising.PSWF2D.html#aspire-aspire-em-classavg-image-denoising-image-denoising-pswf2d-test-module">aspire.aspire.em_classavg.image_denoising.image_denoising.PSWF2D.test module</a></li>
+<li class="toctree-l8"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.image_denoising.PSWF2D.html#module-aspire.aspire.em_classavg.image_denoising.image_denoising.PSWF2D">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.image_denoising.html#submodules">Submodules</a></li>
+<li class="toctree-l6"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.image_denoising.html#aspire-aspire-em-classavg-image-denoising-image-denoising-steerablepca-module">aspire.aspire.em_classavg.image_denoising.image_denoising.SteerablePCA module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.image_denoising.html#module-aspire.aspire.em_classavg.image_denoising.image_denoising">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.html#module-aspire.aspire.em_classavg.image_denoising">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.aspire.em_classavg.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.aspire.em_classavg.html#aspire-aspire-em-classavg-circ-shift-kernel-module">aspire.aspire.em_classavg.circ_shift_kernel module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.aspire.em_classavg.html#module-aspire.aspire.em_classavg.config">aspire.aspire.em_classavg.config module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.aspire.em_classavg.html#module-aspire.aspire.em_classavg.data_utils">aspire.aspire.em_classavg.data_utils module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.aspire.em_classavg.html#aspire-aspire-em-classavg-em-module">aspire.aspire.em_classavg.em module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.aspire.em_classavg.html#aspire-aspire-em-classavg-em-old-module">aspire.aspire.em_classavg.em_old module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.aspire.em_classavg.html#aspire-aspire-em-classavg-mask-images-kernel-module">aspire.aspire.em_classavg.mask_images_kernel module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.aspire.em_classavg.html#aspire-aspire-em-classavg-s-em-module">aspire.aspire.em_classavg.s_em module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.aspire.em_classavg.html#aspire-aspire-em-classavg-s-em-class-avg-module">aspire.aspire.em_classavg.s_em_class_avg module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.aspire.em_classavg.html#aspire-aspire-em-classavg-slice-assign-kernel-module">aspire.aspire.em_classavg.slice_assign_kernel module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.aspire.em_classavg.html#aspire-aspire-em-classavg-test-forward-backward-module">aspire.aspire.em_classavg.test_forward_backward module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.aspire.em_classavg.html#aspire-aspire-em-classavg-test-progressbar2-module">aspire.aspire.em_classavg.test_progressbar2 module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.aspire.em_classavg.html#module-aspire.aspire.em_classavg">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="aspire.aspire.utils.html">aspire.aspire.utils package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="aspire.aspire.utils.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.aspire.utils.html#module-aspire.aspire.utils.array_utils">aspire.aspire.utils.array_utils module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.aspire.utils.html#module-aspire.aspire.utils.compare_stacks">aspire.aspire.utils.compare_stacks module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.aspire.utils.html#module-aspire.aspire.utils.data_utils">aspire.aspire.utils.data_utils module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.aspire.utils.html#module-aspire.aspire.utils.helpers">aspire.aspire.utils.helpers module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.aspire.utils.html#module-aspire.aspire.utils.parse_star">aspire.aspire.utils.parse_star module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.aspire.utils.html#module-aspire.aspire.utils.viewstack">aspire.aspire.utils.viewstack module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.aspire.utils.html#aspire-aspire-utils-workflow-validation-module">aspire.aspire.utils.workflow_validation module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.aspire.utils.html#module-aspire.aspire.utils">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-aspire.aspire.abinitio">
+<span id="aspire-aspire-abinitio-module"></span><h2>aspire.aspire.abinitio module<a class="headerlink" href="#module-aspire.aspire.abinitio" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="aspire.aspire.abinitio.Abinitio">
+<em class="property">class </em><code class="sig-prename descclassname">aspire.aspire.abinitio.</code><code class="sig-name descname">Abinitio</code><a class="headerlink" href="#aspire.aspire.abinitio.Abinitio" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Abinitio class contains all functions related to Abinitio algorithm.</p>
+<p class="rubric">Methods</p>
+<dl class="method">
+<dt id="aspire.aspire.abinitio.Abinitio.cryo_abinitio_c1_worker">
+<em class="property">classmethod </em><code class="sig-name descname">cryo_abinitio_c1_worker</code><span class="sig-paren">(</span><em class="sig-param">stack</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.abinitio.Abinitio.cryo_abinitio_c1_worker" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="aspire.aspire.abinitio.DiracBasis">
+<em class="property">class </em><code class="sig-prename descclassname">aspire.aspire.abinitio.</code><code class="sig-name descname">DiracBasis</code><span class="sig-paren">(</span><em class="sig-param">sz</em>, <em class="sig-param">mask=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.abinitio.DiracBasis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p class="rubric">Methods</p>
+<dl class="method">
+<dt id="aspire.aspire.abinitio.DiracBasis.evaluate">
+<code class="sig-name descname">evaluate</code><span class="sig-paren">(</span><em class="sig-param">x</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.abinitio.DiracBasis.evaluate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="aspire.aspire.abinitio.DiracBasis.evaluate_t">
+<code class="sig-name descname">evaluate_t</code><span class="sig-paren">(</span><em class="sig-param">x</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.abinitio.DiracBasis.evaluate_t" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="aspire.aspire.abinitio.DiracBasis.expand">
+<code class="sig-name descname">expand</code><span class="sig-paren">(</span><em class="sig-param">x</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.abinitio.DiracBasis.expand" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="aspire.aspire.abinitio.DiracBasis.expand_t">
+<code class="sig-name descname">expand_t</code><span class="sig-paren">(</span><em class="sig-param">x</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.abinitio.DiracBasis.expand_t" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.abinitio.anufft3">
+<code class="sig-prename descclassname">aspire.aspire.abinitio.</code><code class="sig-name descname">anufft3</code><span class="sig-paren">(</span><em class="sig-param">vol_f</em>, <em class="sig-param">fourier_pts</em>, <em class="sig-param">sz</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.abinitio.anufft3" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.abinitio.apply_mean_kernel">
+<code class="sig-prename descclassname">aspire.aspire.abinitio.</code><code class="sig-name descname">apply_mean_kernel</code><span class="sig-paren">(</span><em class="sig-param">vol_basis</em>, <em class="sig-param">kernel_f</em>, <em class="sig-param">basis</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.abinitio.apply_mean_kernel" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.abinitio.cart2pol">
+<code class="sig-prename descclassname">aspire.aspire.abinitio.</code><code class="sig-name descname">cart2pol</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">y</em>, <em class="sig-param">z=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.abinitio.cart2pol" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.abinitio.cfft2">
+<code class="sig-prename descclassname">aspire.aspire.abinitio.</code><code class="sig-name descname">cfft2</code><span class="sig-paren">(</span><em class="sig-param">x</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.abinitio.cfft2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.abinitio.check_imaging_params">
+<code class="sig-prename descclassname">aspire.aspire.abinitio.</code><code class="sig-name descname">check_imaging_params</code><span class="sig-paren">(</span><em class="sig-param">params</em>, <em class="sig-param">resolution=None</em>, <em class="sig-param">n=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.abinitio.check_imaging_params" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.abinitio.circularize_kernel_1d">
+<code class="sig-prename descclassname">aspire.aspire.abinitio.</code><code class="sig-name descname">circularize_kernel_1d</code><span class="sig-paren">(</span><em class="sig-param">kernel</em>, <em class="sig-param">dim</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.abinitio.circularize_kernel_1d" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.abinitio.circularize_kernel_f">
+<code class="sig-prename descclassname">aspire.aspire.abinitio.</code><code class="sig-name descname">circularize_kernel_f</code><span class="sig-paren">(</span><em class="sig-param">kernel_f</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.abinitio.circularize_kernel_f" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.abinitio.common_line_r">
+<code class="sig-prename descclassname">aspire.aspire.abinitio.</code><code class="sig-name descname">common_line_r</code><span class="sig-paren">(</span><em class="sig-param">r1</em>, <em class="sig-param">r2</em>, <em class="sig-param">l</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.abinitio.common_line_r" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.abinitio.comp">
+<code class="sig-prename descclassname">aspire.aspire.abinitio.</code><code class="sig-name descname">comp</code><span class="sig-paren">(</span><em class="sig-param">a</em>, <em class="sig-param">b</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.abinitio.comp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.abinitio.conj_grad">
+<code class="sig-prename descclassname">aspire.aspire.abinitio.</code><code class="sig-name descname">conj_grad</code><span class="sig-paren">(</span><em class="sig-param">a_fun</em>, <em class="sig-param">b</em>, <em class="sig-param">cg_opt=None</em>, <em class="sig-param">init=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.abinitio.conj_grad" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.abinitio.cryo_clmatrix_cpu">
+<code class="sig-prename descclassname">aspire.aspire.abinitio.</code><code class="sig-name descname">cryo_clmatrix_cpu</code><span class="sig-paren">(</span><em class="sig-param">pf</em>, <em class="sig-param">nk=None</em>, <em class="sig-param">verbose=1</em>, <em class="sig-param">max_shift=15</em>, <em class="sig-param">shift_step=1</em>, <em class="sig-param">map_filter_radius=0</em>, <em class="sig-param">ref_clmatrix=0</em>, <em class="sig-param">ref_shifts_2d=0</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.abinitio.cryo_clmatrix_cpu" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.abinitio.cryo_clmatrix_cpu_ref">
+<code class="sig-prename descclassname">aspire.aspire.abinitio.</code><code class="sig-name descname">cryo_clmatrix_cpu_ref</code><span class="sig-paren">(</span><em class="sig-param">pf</em>, <em class="sig-param">nk=None</em>, <em class="sig-param">verbose=1</em>, <em class="sig-param">max_shift=15</em>, <em class="sig-param">shift_step=1</em>, <em class="sig-param">map_filter_radius=0</em>, <em class="sig-param">ref_clmatrix=0</em>, <em class="sig-param">ref_shifts_2d=0</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.abinitio.cryo_clmatrix_cpu_ref" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.abinitio.cryo_conj_grad_mean">
+<code class="sig-prename descclassname">aspire.aspire.abinitio.</code><code class="sig-name descname">cryo_conj_grad_mean</code><span class="sig-paren">(</span><em class="sig-param">kernel_f</em>, <em class="sig-param">im_bp</em>, <em class="sig-param">basis</em>, <em class="sig-param">precond_kernel_f=None</em>, <em class="sig-param">mean_est_opt=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.abinitio.cryo_conj_grad_mean" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.abinitio.cryo_conv_vol">
+<code class="sig-prename descclassname">aspire.aspire.abinitio.</code><code class="sig-name descname">cryo_conv_vol</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">kernel_f</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.abinitio.cryo_conv_vol" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.abinitio.cryo_estimate_mean">
+<code class="sig-prename descclassname">aspire.aspire.abinitio.</code><code class="sig-name descname">cryo_estimate_mean</code><span class="sig-paren">(</span><em class="sig-param">im</em>, <em class="sig-param">params</em>, <em class="sig-param">basis=None</em>, <em class="sig-param">mean_est_opt=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.abinitio.cryo_estimate_mean" title="Permalink to this definition">¶</a></dt>
+<dd><p>1e-5 error from matlab
+:param im:
+:param params:
+:param basis:
+:param mean_est_opt:
+:return:</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.abinitio.cryo_estimate_shifts">
+<code class="sig-prename descclassname">aspire.aspire.abinitio.</code><code class="sig-name descname">cryo_estimate_shifts</code><span class="sig-paren">(</span><em class="sig-param">pf</em>, <em class="sig-param">rotations</em>, <em class="sig-param">max_shift</em>, <em class="sig-param">shift_step=1</em>, <em class="sig-param">memory_factor=10000</em>, <em class="sig-param">shifts_2d_ref=None</em>, <em class="sig-param">verbose=0</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.abinitio.cryo_estimate_shifts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.abinitio.cryo_mean_backproject">
+<code class="sig-prename descclassname">aspire.aspire.abinitio.</code><code class="sig-name descname">cryo_mean_backproject</code><span class="sig-paren">(</span><em class="sig-param">im</em>, <em class="sig-param">params</em>, <em class="sig-param">mean_est_opt=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.abinitio.cryo_mean_backproject" title="Permalink to this definition">¶</a></dt>
+<dd><p>1e-7 error from matlab
+:param im:
+:param params:
+:param mean_est_opt:
+:return:</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.abinitio.cryo_mean_kernel_f">
+<code class="sig-prename descclassname">aspire.aspire.abinitio.</code><code class="sig-name descname">cryo_mean_kernel_f</code><span class="sig-paren">(</span><em class="sig-param">resolution</em>, <em class="sig-param">params</em>, <em class="sig-param">mean_est_opt=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.abinitio.cryo_mean_kernel_f" title="Permalink to this definition">¶</a></dt>
+<dd><p>8e-14 error from matlab
+:param resolution:
+:param params:
+:param mean_est_opt:
+:return:</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.abinitio.cryo_pft">
+<code class="sig-prename descclassname">aspire.aspire.abinitio.</code><code class="sig-name descname">cryo_pft</code><span class="sig-paren">(</span><em class="sig-param">p</em>, <em class="sig-param">n_r</em>, <em class="sig-param">n_theta</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.abinitio.cryo_pft" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the polar Fourier transform of projections with resolution n_r in the radial direction
+and resolution n_theta in the angular direction.
+:param p:
+:param n_r: Number of samples along each ray (in the radial direction).
+:param n_theta: Angular resolution. Number of Fourier rays computed for each projection.
+:return:</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.abinitio.cryo_ray_normalize">
+<code class="sig-prename descclassname">aspire.aspire.abinitio.</code><code class="sig-name descname">cryo_ray_normalize</code><span class="sig-paren">(</span><em class="sig-param">pf</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.abinitio.cryo_ray_normalize" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.abinitio.cryo_sync_rotations">
+<code class="sig-prename descclassname">aspire.aspire.abinitio.</code><code class="sig-name descname">cryo_sync_rotations</code><span class="sig-paren">(</span><em class="sig-param">s</em>, <em class="sig-param">rots_ref=None</em>, <em class="sig-param">verbose=0</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.abinitio.cryo_sync_rotations" title="Permalink to this definition">¶</a></dt>
+<dd><p>3e-14 err from matlab
+:param s:
+:param rots_ref:
+:param verbose:
+:return:</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.abinitio.cryo_syncmatrix_ij_vote">
+<code class="sig-prename descclassname">aspire.aspire.abinitio.</code><code class="sig-name descname">cryo_syncmatrix_ij_vote</code><span class="sig-paren">(</span><em class="sig-param">clmatrix</em>, <em class="sig-param">i</em>, <em class="sig-param">j</em>, <em class="sig-param">k</em>, <em class="sig-param">l</em>, <em class="sig-param">rots_ref=None</em>, <em class="sig-param">is_perturbed=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.abinitio.cryo_syncmatrix_ij_vote" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.abinitio.cryo_syncmatrix_vote">
+<code class="sig-prename descclassname">aspire.aspire.abinitio.</code><code class="sig-name descname">cryo_syncmatrix_vote</code><span class="sig-paren">(</span><em class="sig-param">clmatrix</em>, <em class="sig-param">l</em>, <em class="sig-param">rots_ref=None</em>, <em class="sig-param">is_perturbed=0</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.abinitio.cryo_syncmatrix_vote" title="Permalink to this definition">¶</a></dt>
+<dd><p>3e-16 error from matlab
+:param clmatrix:
+:param l:
+:param rots_ref:
+:param is_perturbed:
+:return:</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.abinitio.cryo_vote_ij">
+<code class="sig-prename descclassname">aspire.aspire.abinitio.</code><code class="sig-name descname">cryo_vote_ij</code><span class="sig-paren">(</span><em class="sig-param">clmatrix</em>, <em class="sig-param">l</em>, <em class="sig-param">i</em>, <em class="sig-param">j</em>, <em class="sig-param">k</em>, <em class="sig-param">rots_ref</em>, <em class="sig-param">is_perturbed</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.abinitio.cryo_vote_ij" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.abinitio.fill_struct">
+<code class="sig-prename descclassname">aspire.aspire.abinitio.</code><code class="sig-name descname">fill_struct</code><span class="sig-paren">(</span><em class="sig-param">obj=None</em>, <em class="sig-param">att_vals=None</em>, <em class="sig-param">overwrite=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.abinitio.fill_struct" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fill object with attributes in a dictionary.
+If a struct is not given a new object will be created and filled.
+If the given struct has a field in att_vals, the original field will stay, unless specified otherwise in overwrite.
+att_vals is a dictionary with string keys, and for each key:
+if hasattr(s, key) and key in overwrite:</p>
+<blockquote>
+<div><p>pass</p>
+</div></blockquote>
+<dl class="simple">
+<dt>else:</dt><dd><p>setattr(s, key, att_vals[key])</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>obj</strong> – </p></li>
+<li><p><strong>att_vals</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<p>:param overwrite
+:return:</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.abinitio.fix_signs">
+<code class="sig-prename descclassname">aspire.aspire.abinitio.</code><code class="sig-name descname">fix_signs</code><span class="sig-paren">(</span><em class="sig-param">u</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.abinitio.fix_signs" title="Permalink to this definition">¶</a></dt>
+<dd><p>makes the matrix coloumn sign be by the biggest value
+:param u: matrix
+:return: matrix</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.abinitio.fuzzy_mask">
+<code class="sig-prename descclassname">aspire.aspire.abinitio.</code><code class="sig-name descname">fuzzy_mask</code><span class="sig-paren">(</span><em class="sig-param">n</em>, <em class="sig-param">r0</em>, <em class="sig-param">origin=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.abinitio.fuzzy_mask" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.abinitio.icfft2">
+<code class="sig-prename descclassname">aspire.aspire.abinitio.</code><code class="sig-name descname">icfft2</code><span class="sig-paren">(</span><em class="sig-param">x</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.abinitio.icfft2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.abinitio.im_backproject">
+<code class="sig-prename descclassname">aspire.aspire.abinitio.</code><code class="sig-name descname">im_backproject</code><span class="sig-paren">(</span><em class="sig-param">im</em>, <em class="sig-param">rot_matrices</em>, <em class="sig-param">half_pixel=False</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.abinitio.im_backproject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.abinitio.im_filter">
+<code class="sig-prename descclassname">aspire.aspire.abinitio.</code><code class="sig-name descname">im_filter</code><span class="sig-paren">(</span><em class="sig-param">im</em>, <em class="sig-param">filter_f</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.abinitio.im_filter" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.abinitio.mdim_fftshift">
+<code class="sig-prename descclassname">aspire.aspire.abinitio.</code><code class="sig-name descname">mdim_fftshift</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">dims=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.abinitio.mdim_fftshift" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.abinitio.mdim_ifftshift">
+<code class="sig-prename descclassname">aspire.aspire.abinitio.</code><code class="sig-name descname">mdim_ifftshift</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">dims=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.abinitio.mdim_ifftshift" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.abinitio.mesh_2d">
+<code class="sig-prename descclassname">aspire.aspire.abinitio.</code><code class="sig-name descname">mesh_2d</code><span class="sig-paren">(</span><em class="sig-param">resolution</em>, <em class="sig-param">inclusive=False</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.abinitio.mesh_2d" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.abinitio.rotated_grids">
+<code class="sig-prename descclassname">aspire.aspire.abinitio.</code><code class="sig-name descname">rotated_grids</code><span class="sig-paren">(</span><em class="sig-param">resolution</em>, <em class="sig-param">rot_matrices</em>, <em class="sig-param">half_pixel=False</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.abinitio.rotated_grids" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.abinitio.rotratio_eulerangle_vec">
+<code class="sig-prename descclassname">aspire.aspire.abinitio.</code><code class="sig-name descname">rotratio_eulerangle_vec</code><span class="sig-paren">(</span><em class="sig-param">cl</em>, <em class="sig-param">i</em>, <em class="sig-param">j</em>, <em class="sig-param">good_k</em>, <em class="sig-param">n_theta</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.abinitio.rotratio_eulerangle_vec" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.abinitio.subset_params">
+<code class="sig-prename descclassname">aspire.aspire.abinitio.</code><code class="sig-name descname">subset_params</code><span class="sig-paren">(</span><em class="sig-param">params</em>, <em class="sig-param">ind</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.abinitio.subset_params" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-aspire.aspire.class_averaging">
+<span id="aspire-aspire-class-averaging-module"></span><h2>aspire.aspire.class_averaging module<a class="headerlink" href="#module-aspire.aspire.class_averaging" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="aspire.aspire.class_averaging.Basis">
+<em class="property">class </em><code class="sig-prename descclassname">aspire.aspire.class_averaging.</code><code class="sig-name descname">Basis</code><span class="sig-paren">(</span><em class="sig-param">phi_ns</em>, <em class="sig-param">angular_freqs</em>, <em class="sig-param">radian_freqs</em>, <em class="sig-param">n_theta</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.class_averaging.Basis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="aspire.aspire.class_averaging.ClassAverages">
+<em class="property">class </em><code class="sig-prename descclassname">aspire.aspire.class_averaging.</code><code class="sig-name descname">ClassAverages</code><a class="headerlink" href="#aspire.aspire.class_averaging.ClassAverages" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p class="rubric">Methods</p>
+<dl class="method">
+<dt id="aspire.aspire.class_averaging.ClassAverages.align_main">
+<em class="property">classmethod </em><code class="sig-name descname">align_main</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">angle</em>, <em class="sig-param">class_vdm</em>, <em class="sig-param">refl</em>, <em class="sig-param">spca_data</em>, <em class="sig-param">k</em>, <em class="sig-param">max_shifts</em>, <em class="sig-param">list_recon</em>, <em class="sig-param">tmpdir</em>, <em class="sig-param">use_em</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.class_averaging.ClassAverages.align_main" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="aspire.aspire.class_averaging.ClassAverages.choose_support_v6">
+<em class="property">classmethod </em><code class="sig-name descname">choose_support_v6</code><span class="sig-paren">(</span><em class="sig-param">proj_ctf_noisy</em>, <em class="sig-param">energy_threshold</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.class_averaging.ClassAverages.choose_support_v6" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determine sizes of the compact support in both real and Fourier space.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>proj_ctf_noisy</strong> – </p></li>
+<li><p><strong>energy_threshold</strong> – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(c_limit, R_limit):
+c_limit: Size of support in Fourier space
+R_limit: Size of support in real space</p>
+</dd>
+</dl>
+<p>We scale the images in real space by L, so that the noise variance in
+both real and Fourier domains is the same.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="aspire.aspire.class_averaging.ClassAverages.compute_spca">
+<em class="property">classmethod </em><code class="sig-name descname">compute_spca</code><span class="sig-paren">(</span><em class="sig-param">images</em>, <em class="sig-param">noise_v_r</em>, <em class="sig-param">adaptive_support=False</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.class_averaging.ClassAverages.compute_spca" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="aspire.aspire.class_averaging.ClassAverages.initial_classification_fd_update">
+<em class="property">classmethod </em><code class="sig-name descname">initial_classification_fd_update</code><span class="sig-paren">(</span><em class="sig-param">spca_data</em>, <em class="sig-param">n_nbor</em>, <em class="sig-param">is_rand=False</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.class_averaging.ClassAverages.initial_classification_fd_update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="aspire.aspire.class_averaging.ClassAverages.jobscript_ffbspca">
+<em class="property">classmethod </em><code class="sig-name descname">jobscript_ffbspca</code><span class="sig-paren">(</span><em class="sig-param">images</em>, <em class="sig-param">support_size</em>, <em class="sig-param">noise_var</em>, <em class="sig-param">basis</em>, <em class="sig-param">sample_points</em>, <em class="sig-param">num_threads=10</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.class_averaging.ClassAverages.jobscript_ffbspca" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="aspire.aspire.class_averaging.ClassAverages.precompute_fb">
+<em class="property">classmethod </em><code class="sig-name descname">precompute_fb</code><span class="sig-paren">(</span><em class="sig-param">n_r</em>, <em class="sig-param">support_size</em>, <em class="sig-param">bandlimit</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.class_averaging.ClassAverages.precompute_fb" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="aspire.aspire.class_averaging.ClassAverages.run">
+<em class="property">classmethod </em><code class="sig-name descname">run</code><span class="sig-paren">(</span><em class="sig-param">input_images</em>, <em class="sig-param">output_images</em>, <em class="sig-param">n_nbor=100</em>, <em class="sig-param">nn_avg=50</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.class_averaging.ClassAverages.run" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="aspire.aspire.class_averaging.ClassAverages.vdm">
+<em class="property">classmethod </em><code class="sig-name descname">vdm</code><span class="sig-paren">(</span><em class="sig-param">classes</em>, <em class="sig-param">corr</em>, <em class="sig-param">rot</em>, <em class="sig-param">class_refl</em>, <em class="sig-param">k</em>, <em class="sig-param">flag</em>, <em class="sig-param">n_nbor</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.class_averaging.ClassAverages.vdm" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="aspire.aspire.class_averaging.FastRotatePrecomp">
+<em class="property">class </em><code class="sig-prename descclassname">aspire.aspire.class_averaging.</code><code class="sig-name descname">FastRotatePrecomp</code><span class="sig-paren">(</span><em class="sig-param">phi</em>, <em class="sig-param">mx</em>, <em class="sig-param">my</em>, <em class="sig-param">mult90</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.class_averaging.FastRotatePrecomp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="aspire.aspire.class_averaging.Precomp">
+<em class="property">class </em><code class="sig-prename descclassname">aspire.aspire.class_averaging.</code><code class="sig-name descname">Precomp</code><span class="sig-paren">(</span><em class="sig-param">n_theta</em>, <em class="sig-param">n_r</em>, <em class="sig-param">resolution</em>, <em class="sig-param">freqs</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.class_averaging.Precomp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="aspire.aspire.class_averaging.SamplePoints">
+<em class="property">class </em><code class="sig-prename descclassname">aspire.aspire.class_averaging.</code><code class="sig-name descname">SamplePoints</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">w</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.class_averaging.SamplePoints" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="aspire.aspire.class_averaging.SpcaData">
+<em class="property">class </em><code class="sig-prename descclassname">aspire.aspire.class_averaging.</code><code class="sig-name descname">SpcaData</code><span class="sig-paren">(</span><em class="sig-param">eigval</em>, <em class="sig-param">freqs</em>, <em class="sig-param">radial_freqs</em>, <em class="sig-param">coeff</em>, <em class="sig-param">mean</em>, <em class="sig-param">bandlimit</em>, <em class="sig-param">supp_num</em>, <em class="sig-param">eig_im</em>, <em class="sig-param">fn0</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.class_averaging.SpcaData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p class="rubric">Methods</p>
+<dl class="method">
+<dt id="aspire.aspire.class_averaging.SpcaData.load">
+<code class="sig-name descname">load</code><span class="sig-paren">(</span><em class="sig-param">obj_dir</em>, <em class="sig-param">matlab=False</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.class_averaging.SpcaData.load" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="aspire.aspire.class_averaging.SpcaData.save">
+<code class="sig-name descname">save</code><span class="sig-paren">(</span><em class="sig-param">obj_dir</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.class_averaging.SpcaData.save" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.class_averaging.adjust_rotate">
+<code class="sig-prename descclassname">aspire.aspire.class_averaging.</code><code class="sig-name descname">adjust_rotate</code><span class="sig-paren">(</span><em class="sig-param">phi</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.class_averaging.adjust_rotate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.class_averaging.bessel_ns_radial">
+<code class="sig-prename descclassname">aspire.aspire.class_averaging.</code><code class="sig-name descname">bessel_ns_radial</code><span class="sig-paren">(</span><em class="sig-param">bandlimit</em>, <em class="sig-param">support_size</em>, <em class="sig-param">x</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.class_averaging.bessel_ns_radial" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.class_averaging.bispec_2drot_large">
+<code class="sig-prename descclassname">aspire.aspire.class_averaging.</code><code class="sig-name descname">bispec_2drot_large</code><span class="sig-paren">(</span><em class="sig-param">coeff</em>, <em class="sig-param">freqs</em>, <em class="sig-param">eigval</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.class_averaging.bispec_2drot_large" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.class_averaging.bispec_operator_1">
+<code class="sig-prename descclassname">aspire.aspire.class_averaging.</code><code class="sig-name descname">bispec_operator_1</code><span class="sig-paren">(</span><em class="sig-param">freqs</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.class_averaging.bispec_operator_1" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.class_averaging.cart2rad">
+<code class="sig-prename descclassname">aspire.aspire.class_averaging.</code><code class="sig-name descname">cart2rad</code><span class="sig-paren">(</span><em class="sig-param">n</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.class_averaging.cart2rad" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.class_averaging.comp">
+<code class="sig-prename descclassname">aspire.aspire.class_averaging.</code><code class="sig-name descname">comp</code><span class="sig-paren">(</span><em class="sig-param">a</em>, <em class="sig-param">b</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.class_averaging.comp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.class_averaging.comp_array_of_npy">
+<code class="sig-prename descclassname">aspire.aspire.class_averaging.</code><code class="sig-name descname">comp_array_of_npy</code><span class="sig-paren">(</span><em class="sig-param">a</em>, <em class="sig-param">b</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.class_averaging.comp_array_of_npy" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.class_averaging.comp_sparse">
+<code class="sig-prename descclassname">aspire.aspire.class_averaging.</code><code class="sig-name descname">comp_sparse</code><span class="sig-paren">(</span><em class="sig-param">a</em>, <em class="sig-param">b</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.class_averaging.comp_sparse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.class_averaging.compare_relative_to_classes">
+<code class="sig-prename descclassname">aspire.aspire.class_averaging.</code><code class="sig-name descname">compare_relative_to_classes</code><span class="sig-paren">(</span><em class="sig-param">a1</em>, <em class="sig-param">b1</em>, <em class="sig-param">a2</em>, <em class="sig-param">b2</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.class_averaging.compare_relative_to_classes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.class_averaging.cryo_image_contrast">
+<code class="sig-prename descclassname">aspire.aspire.class_averaging.</code><code class="sig-name descname">cryo_image_contrast</code><span class="sig-paren">(</span><em class="sig-param">projs</em>, <em class="sig-param">r=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.class_averaging.cryo_image_contrast" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.class_averaging.cryo_pft_nfft">
+<code class="sig-prename descclassname">aspire.aspire.class_averaging.</code><code class="sig-name descname">cryo_pft_nfft</code><span class="sig-paren">(</span><em class="sig-param">projections</em>, <em class="sig-param">precomp</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.class_averaging.cryo_pft_nfft" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.class_averaging.cryo_select_subset">
+<code class="sig-prename descclassname">aspire.aspire.class_averaging.</code><code class="sig-name descname">cryo_select_subset</code><span class="sig-paren">(</span><em class="sig-param">classes</em>, <em class="sig-param">size_output</em>, <em class="sig-param">priority=None</em>, <em class="sig-param">to_image=None</em>, <em class="sig-param">n_skip=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.class_averaging.cryo_select_subset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.class_averaging.cryo_smart_select_subset">
+<code class="sig-prename descclassname">aspire.aspire.class_averaging.</code><code class="sig-name descname">cryo_smart_select_subset</code><span class="sig-paren">(</span><em class="sig-param">classes</em>, <em class="sig-param">size_output</em>, <em class="sig-param">priority=None</em>, <em class="sig-param">to_image=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.class_averaging.cryo_smart_select_subset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.class_averaging.fast_rotate_image">
+<code class="sig-prename descclassname">aspire.aspire.class_averaging.</code><code class="sig-name descname">fast_rotate_image</code><span class="sig-paren">(</span><em class="sig-param">image</em>, <em class="sig-param">phi</em>, <em class="sig-param">tmps=None</em>, <em class="sig-param">plans=None</em>, <em class="sig-param">m=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.class_averaging.fast_rotate_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Could make it faster without the flag ‘FFTW_UNALIGNED’ if I could make
+:param image:
+:param phi:
+:param tmps:
+:param plans:
+:param m:
+:return:</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.class_averaging.fast_rotate_precomp">
+<code class="sig-prename descclassname">aspire.aspire.class_averaging.</code><code class="sig-name descname">fast_rotate_precomp</code><span class="sig-paren">(</span><em class="sig-param">szx</em>, <em class="sig-param">szy</em>, <em class="sig-param">phi</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.class_averaging.fast_rotate_precomp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.class_averaging.fbcoeff_nfft">
+<code class="sig-prename descclassname">aspire.aspire.class_averaging.</code><code class="sig-name descname">fbcoeff_nfft</code><span class="sig-paren">(</span><em class="sig-param">split_images</em>, <em class="sig-param">support_size</em>, <em class="sig-param">basis</em>, <em class="sig-param">sample_points</em>, <em class="sig-param">num_threads</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.class_averaging.fbcoeff_nfft" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.class_averaging.fix_signs">
+<code class="sig-prename descclassname">aspire.aspire.class_averaging.</code><code class="sig-name descname">fix_signs</code><span class="sig-paren">(</span><em class="sig-param">u</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.class_averaging.fix_signs" title="Permalink to this definition">¶</a></dt>
+<dd><p>makes the matrix coloumn sign be by the biggest value
+:param u: matrix
+:return: matrix</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.class_averaging.fix_svd">
+<code class="sig-prename descclassname">aspire.aspire.class_averaging.</code><code class="sig-name descname">fix_svd</code><span class="sig-paren">(</span><em class="sig-param">u</em>, <em class="sig-param">v</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.class_averaging.fix_svd" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.class_averaging.get_fast_rotate_vars">
+<code class="sig-prename descclassname">aspire.aspire.class_averaging.</code><code class="sig-name descname">get_fast_rotate_vars</code><span class="sig-paren">(</span><em class="sig-param">resolution</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.class_averaging.get_fast_rotate_vars" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.class_averaging.icfft">
+<code class="sig-prename descclassname">aspire.aspire.class_averaging.</code><code class="sig-name descname">icfft</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">axis=0</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.class_averaging.icfft" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.class_averaging.ift_fb">
+<code class="sig-prename descclassname">aspire.aspire.class_averaging.</code><code class="sig-name descname">ift_fb</code><span class="sig-paren">(</span><em class="sig-param">support_size</em>, <em class="sig-param">bandlimit</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.class_averaging.ift_fb" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.class_averaging.initial_class_comp">
+<code class="sig-prename descclassname">aspire.aspire.class_averaging.</code><code class="sig-name descname">initial_class_comp</code><span class="sig-paren">(</span><em class="sig-param">a1</em>, <em class="sig-param">a2</em>, <em class="sig-param">b1</em>, <em class="sig-param">b2</em>, <em class="sig-param">c1</em>, <em class="sig-param">c2</em>, <em class="sig-param">d1=None</em>, <em class="sig-param">d2=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.class_averaging.initial_class_comp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.class_averaging.lgwt">
+<code class="sig-prename descclassname">aspire.aspire.class_averaging.</code><code class="sig-name descname">lgwt</code><span class="sig-paren">(</span><em class="sig-param">n</em>, <em class="sig-param">a</em>, <em class="sig-param">b</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.class_averaging.lgwt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get leggauss points in interval [a, b]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>n</strong> – number of points</p></li>
+<li><p><strong>a</strong> – interval starting point</p></li>
+<li><p><strong>b</strong> – interval end point</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns SamplePoints(x, w)</dt>
+<dd class="field-even"><p>sample points, weight</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.class_averaging.max_dif">
+<code class="sig-prename descclassname">aspire.aspire.class_averaging.</code><code class="sig-name descname">max_dif</code><span class="sig-paren">(</span><em class="sig-param">a</em>, <em class="sig-param">b</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.class_averaging.max_dif" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.class_averaging.max_dif_matrices_sign_invariant">
+<code class="sig-prename descclassname">aspire.aspire.class_averaging.</code><code class="sig-name descname">max_dif_matrices_sign_invariant</code><span class="sig-paren">(</span><em class="sig-param">a</em>, <em class="sig-param">b</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.class_averaging.max_dif_matrices_sign_invariant" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.class_averaging.nudft2">
+<code class="sig-prename descclassname">aspire.aspire.class_averaging.</code><code class="sig-name descname">nudft2</code><span class="sig-paren">(</span><em class="sig-param">im</em>, <em class="sig-param">freqs</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.class_averaging.nudft2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.class_averaging.nufft2">
+<code class="sig-prename descclassname">aspire.aspire.class_averaging.</code><code class="sig-name descname">nufft2</code><span class="sig-paren">(</span><em class="sig-param">im</em>, <em class="sig-param">freqs</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.class_averaging.nufft2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.class_averaging.pca_y">
+<code class="sig-prename descclassname">aspire.aspire.class_averaging.</code><code class="sig-name descname">pca_y</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">k</em>, <em class="sig-param">num_iters=2</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.class_averaging.pca_y" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.class_averaging.pft_freqs">
+<code class="sig-prename descclassname">aspire.aspire.class_averaging.</code><code class="sig-name descname">pft_freqs</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">n_theta</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.class_averaging.pft_freqs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.class_averaging.rot_align">
+<code class="sig-prename descclassname">aspire.aspire.class_averaging.</code><code class="sig-name descname">rot_align</code><span class="sig-paren">(</span><em class="sig-param">m</em>, <em class="sig-param">coeff</em>, <em class="sig-param">pairs</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.class_averaging.rot_align" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.class_averaging.script_find_graph_weights_v3">
+<code class="sig-prename descclassname">aspire.aspire.class_averaging.</code><code class="sig-name descname">script_find_graph_weights_v3</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">c</em>, <em class="sig-param">n</em>, <em class="sig-param">k</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.class_averaging.script_find_graph_weights_v3" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.class_averaging.sort_list_weights_wrefl">
+<code class="sig-prename descclassname">aspire.aspire.class_averaging.</code><code class="sig-name descname">sort_list_weights_wrefl</code><span class="sig-paren">(</span><em class="sig-param">classes</em>, <em class="sig-param">corr</em>, <em class="sig-param">rot</em>, <em class="sig-param">refl</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.class_averaging.sort_list_weights_wrefl" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.class_averaging.spca_data_compare">
+<code class="sig-prename descclassname">aspire.aspire.class_averaging.</code><code class="sig-name descname">spca_data_compare</code><span class="sig-paren">(</span><em class="sig-param">a</em>, <em class="sig-param">b</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.class_averaging.spca_data_compare" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.class_averaging.spca_whole">
+<code class="sig-prename descclassname">aspire.aspire.class_averaging.</code><code class="sig-name descname">spca_whole</code><span class="sig-paren">(</span><em class="sig-param">coeff</em>, <em class="sig-param">var_hat</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.class_averaging.spca_whole" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.class_averaging.test">
+<code class="sig-prename descclassname">aspire.aspire.class_averaging.</code><code class="sig-name descname">test</code><span class="sig-paren">(</span><em class="sig-param">im</em>, <em class="sig-param">freqs</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.class_averaging.test" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.class_averaging.test2">
+<code class="sig-prename descclassname">aspire.aspire.class_averaging.</code><code class="sig-name descname">test2</code><span class="sig-paren">(</span><em class="sig-param">im</em>, <em class="sig-param">freqs</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.class_averaging.test2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.class_averaging.union_row_idx">
+<code class="sig-prename descclassname">aspire.aspire.class_averaging.</code><code class="sig-name descname">union_row_idx</code><span class="sig-paren">(</span><em class="sig-param">a</em>, <em class="sig-param">b</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.class_averaging.union_row_idx" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.class_averaging.vdm_angle_v2">
+<code class="sig-prename descclassname">aspire.aspire.class_averaging.</code><code class="sig-name descname">vdm_angle_v2</code><span class="sig-paren">(</span><em class="sig-param">v</em>, <em class="sig-param">t</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.class_averaging.vdm_angle_v2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.class_averaging.vdm_lp">
+<code class="sig-prename descclassname">aspire.aspire.class_averaging.</code><code class="sig-name descname">vdm_lp</code><span class="sig-paren">(</span><em class="sig-param">h1</em>, <em class="sig-param">num_eig</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.class_averaging.vdm_lp" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>h1</strong> – </p></li>
+<li><p><strong>num_eig</strong> – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+<p>(This version of VDM still doesn’t work on MATLAB)</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-aspire.aspire.preprocessor">
+<span id="aspire-aspire-preprocessor-module"></span><h2>aspire.aspire.preprocessor module<a class="headerlink" href="#module-aspire.aspire.preprocessor" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="aspire.aspire.preprocessor.PreProcessor">
+<em class="property">class </em><code class="sig-prename descclassname">aspire.aspire.preprocessor.</code><code class="sig-name descname">PreProcessor</code><a class="headerlink" href="#aspire.aspire.preprocessor.PreProcessor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p class="rubric">Methods</p>
+<dl class="method">
+<dt id="aspire.aspire.preprocessor.PreProcessor.crop">
+<em class="property">static </em><code class="sig-name descname">crop</code><span class="sig-paren">(</span><em class="sig-param">mat</em>, <em class="sig-param">n</em>, <em class="sig-param">stack=False</em>, <em class="sig-param">fill_value=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.preprocessor.PreProcessor.crop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reduce the size of a vector, square or cube ‘mat’ by cropping (or
+increase the size by padding with fill_value, by default zero) to a final
+size of n, (n x n), or (n x n x n) respectively. This is the analogue of downsample, but
+it doesn’t change magnification.</p>
+<p>If mat is 2-dimensional and n is a vector, m is cropped to n=[mat_x mat_y].</p>
+<p>The function handles odd and even-sized arrays correctly. The center of
+an odd array is taken to be at (n+1)/2, and an even array is n/2+1.</p>
+<p>If flag is_stack is set to True, then a 3D array ‘mat’ is treated as a stack of 2D
+images, and each image is cropped to (n x n).</p>
+<p>For 2D images, the input image doesn’t have to be square.</p>
+<ul class="simple">
+<li><p>The original MATLAB function supported cropping to non-square matrices.
+As real-world uses will always crop to square (n, n), we don’t support it with Python.</p></li>
+</ul>
+<dl class="simple">
+<dt>Args:</dt><dd><p>mat (numpy.array): Vector, 2D array, stack of 2D arrays or a 3D array
+n (int): Size of desired cropped vector, side of 2D array or side of 3D array
+stack (bool): Set to True in order to handle a 3D mat as a stack of 2D
+fill_value (<code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code>, optional): Padding value. Defaults to 0.</p>
+</dd>
+<dt>Returns:</dt><dd><p>numpy.array: Cropped or padded mat to size of n, (n x n) or (n x n x n)</p>
+</dd>
+</dl>
+<p>TODO: change name to ‘resize’? crop/pad is confusing b/c either you save different
+TODO:   output names or you stick to a misleading name like cropped.mrc for padded stack</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="aspire.aspire.preprocessor.PreProcessor.crop_stack">
+<em class="property">classmethod </em><code class="sig-name descname">crop_stack</code><span class="sig-paren">(</span><em class="sig-param">array</em>, <em class="sig-param">size</em>, <em class="sig-param">fill_value=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.preprocessor.PreProcessor.crop_stack" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="aspire.aspire.preprocessor.PreProcessor.crop_stack_file">
+<em class="property">classmethod </em><code class="sig-name descname">crop_stack_file</code><span class="sig-paren">(</span><em class="sig-param">stack_file</em>, <em class="sig-param">size</em>, <em class="sig-param">output_stack_file=None</em>, <em class="sig-param">fill_value=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.preprocessor.PreProcessor.crop_stack_file" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="aspire.aspire.preprocessor.PreProcessor.cryo_noise_estimation">
+<em class="property">static </em><code class="sig-name descname">cryo_noise_estimation</code><span class="sig-paren">(</span><em class="sig-param">projections</em>, <em class="sig-param">radius_of_mask=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.preprocessor.PreProcessor.cryo_noise_estimation" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="aspire.aspire.preprocessor.PreProcessor.cryo_prewhiten">
+<em class="property">classmethod </em><code class="sig-name descname">cryo_prewhiten</code><span class="sig-paren">(</span><em class="sig-param">proj</em>, <em class="sig-param">noise_response</em>, <em class="sig-param">rel_threshold=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.preprocessor.PreProcessor.cryo_prewhiten" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pre-whiten a stack of projections using the power spectrum of the noise.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>proj</strong> – stack of images/projections</p></li>
+<li><p><strong>noise_response</strong> – 2d image with the power spectrum of the noise. If all
+images are to be whitened with respect to the same power spectrum,
+this is a single image. If each image is to be whitened with respect
+to a different power spectrum, this is a three-dimensional array with
+the same number of 2d slices as the stack of images.</p></li>
+<li><p><strong>rel_threshold</strong> – The relative threshold used to determine which frequencies
+to whiten and which to set to zero. If empty (the default)
+all filter values less than 100*eps(class(proj)) are
+zeroed out, while otherwise, all filter values less than
+threshold times the maximum filter value for each filter
+is set to zero.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Pre-whitened stack of images.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="aspire.aspire.preprocessor.PreProcessor.downsample">
+<em class="property">classmethod </em><code class="sig-name descname">downsample</code><span class="sig-paren">(</span><em class="sig-param">img</em>, <em class="sig-param">side</em>, <em class="sig-param">compute_fx=False</em>, <em class="sig-param">stack=False</em>, <em class="sig-param">mask=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.preprocessor.PreProcessor.downsample" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use Fourier methods to change the sample interval and/or aspect ratio
+of any dimensions of the input image ‘img’. If the optional argument
+stack is set to True, then the <em>first</em> dimension of ‘img’ is interpreted as the index of
+each image in the stack. The size argument side is an integer, the size of the
+output images.  Let the size of a stack
+of 2D images ‘img’ be n1 x n1 x k.  The size of the output will be side x side x k.</p>
+<p>If the optional mask argument is given, this is used as the
+zero-centered Fourier mask for the re-sampling. The size of mask should
+be the same as the output image size. For example for downsampling an
+n0 x n0 image with a 0.9 x nyquist filter, do the following:
+msk = fuzzymask(n,2,.45*n,.05*n)
+out = downsample(img, n, 0, msk)
+The size of the mask must be the size of output. The optional fx output
+argument is the padded or cropped, masked, FT of in, with zero
+frequency at the origin.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="aspire.aspire.preprocessor.PreProcessor.downsample_stack_file">
+<em class="property">classmethod </em><code class="sig-name descname">downsample_stack_file</code><span class="sig-paren">(</span><em class="sig-param">stack_file</em>, <em class="sig-param">side</em>, <em class="sig-param">output_stack_file=None</em>, <em class="sig-param">mask_file=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.preprocessor.PreProcessor.downsample_stack_file" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="aspire.aspire.preprocessor.PreProcessor.global_phaseflip_stack">
+<em class="property">static </em><code class="sig-name descname">global_phaseflip_stack</code><span class="sig-paren">(</span><em class="sig-param">stack</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.preprocessor.PreProcessor.global_phaseflip_stack" title="Permalink to this definition">¶</a></dt>
+<dd><p>Apply global phase flip to an image stack if needed.</p>
+<p>Check if all images in a stack should be globally phase flipped so that
+the molecule corresponds to brighter pixels and the background corresponds
+to darker pixels. This is done by comparing the mean in a small circle
+around the origin (supposed to correspond to the molecule) with the mean
+of the noise, and making sure that the mean of the molecule is larger.</p>
+<dl class="simple">
+<dt>Examples:</dt><dd><p>&gt;&gt; import mrcfile
+&gt;&gt; stack = mrcfile.open(‘stack.mrcs’)
+&gt;&gt; stack = global_phaseflip_stack(stack)</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>stack</strong> – stack of images to phaseflip if needed</p>
+</dd>
+<dt class="field-even">Return stack</dt>
+<dd class="field-even"><p>stack which might be phaseflipped when needed</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="aspire.aspire.preprocessor.PreProcessor.global_phaseflip_stack_file">
+<em class="property">classmethod </em><code class="sig-name descname">global_phaseflip_stack_file</code><span class="sig-paren">(</span><em class="sig-param">stack_file</em>, <em class="sig-param">output_stack_file=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.preprocessor.PreProcessor.global_phaseflip_stack_file" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="aspire.aspire.preprocessor.PreProcessor.normalize_background">
+<em class="property">classmethod </em><code class="sig-name descname">normalize_background</code><span class="sig-paren">(</span><em class="sig-param">stack</em>, <em class="sig-param">radius=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.preprocessor.PreProcessor.normalize_background" title="Permalink to this definition">¶</a></dt>
+<dd><p>Normalize background to mean 0 and std 1.
+Estimate the mean and std of each image in the stack using pixels
+outside radius r (pixels), and normalize the image such that the
+background has mean 0 and std 1. Each image in the stack is corrected
+separately.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>radius</strong> – radius for normalization (default is half the side of image)</p>
+</dd>
+</dl>
+<p>Example:
+normalized_stack = cryo_normalize_background(stack,55);</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="aspire.aspire.preprocessor.PreProcessor.phaseflip_star_file">
+<em class="property">classmethod </em><code class="sig-name descname">phaseflip_star_file</code><span class="sig-paren">(</span><em class="sig-param">star_file</em>, <em class="sig-param">pixel_size=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.preprocessor.PreProcessor.phaseflip_star_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>todo add verbosity</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="aspire.aspire.preprocessor.PreProcessor.prewhiten_stack">
+<em class="property">classmethod </em><code class="sig-name descname">prewhiten_stack</code><span class="sig-paren">(</span><em class="sig-param">stack</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.preprocessor.PreProcessor.prewhiten_stack" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="aspire.aspire.preprocessor.PreProcessor.prewhiten_stack_file">
+<em class="property">classmethod </em><code class="sig-name descname">prewhiten_stack_file</code><span class="sig-paren">(</span><em class="sig-param">stack_file</em>, <em class="sig-param">output=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.preprocessor.PreProcessor.prewhiten_stack_file" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.preprocessor.cryo_CTF_Relion">
+<code class="sig-prename descclassname">aspire.aspire.preprocessor.</code><code class="sig-name descname">cryo_CTF_Relion</code><span class="sig-paren">(</span><em class="sig-param">square_side</em>, <em class="sig-param">star_record</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.preprocessor.cryo_CTF_Relion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the contrast transfer function corresponding an n x n image with
+the sampling interval DetectorPixelSize.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.preprocessor.cryo_parse_Relion_CTF_struct">
+<code class="sig-prename descclassname">aspire.aspire.preprocessor.</code><code class="sig-name descname">cryo_parse_Relion_CTF_struct</code><span class="sig-paren">(</span><em class="sig-param">star_record</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.preprocessor.cryo_parse_Relion_CTF_struct" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-aspire.aspire">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-aspire.aspire" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="aspire.aspire.common.html" class="btn btn-neutral float-right" title="aspire.aspire.common package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="aspire.apple.html" class="btn btn-neutral" title="aspire.apple package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Princeton University
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

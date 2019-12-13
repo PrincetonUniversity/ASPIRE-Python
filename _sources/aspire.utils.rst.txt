@@ -1,0 +1,117 @@
+aspire.utils package
+====================
+
+Subpackages
+-----------
+
+.. toctree::
+
+   aspire.utils.numeric
+
+Submodules
+----------
+
+aspire.utils.blk\_diag\_func module
+-----------------------------------
+
+.. automodule:: aspire.utils.blk_diag_func
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+aspire.utils.cell module
+------------------------
+
+.. automodule:: aspire.utils.cell
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+aspire.utils.config module
+--------------------------
+
+.. automodule:: aspire.utils.config
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+aspire.utils.coor\_trans module
+-------------------------------
+
+.. automodule:: aspire.utils.coor_trans
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+aspire.utils.em module
+----------------------
+
+.. automodule:: aspire.utils.em
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+aspire.utils.fft module
+-----------------------
+
+.. automodule:: aspire.utils.fft
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+aspire.utils.filters module
+---------------------------
+
+.. automodule:: aspire.utils.filters
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+aspire.utils.matlab\_compat module
+----------------------------------
+
+.. automodule:: aspire.utils.matlab_compat
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+aspire.utils.matrix module
+--------------------------
+
+.. automodule:: aspire.utils.matrix
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+aspire.utils.misc module
+------------------------
+
+.. automodule:: aspire.utils.misc
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+aspire.utils.optimize module
+----------------------------
+
+.. automodule:: aspire.utils.optimize
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+aspire.utils.preprocess module
+------------------------------
+
+.. automodule:: aspire.utils.preprocess
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: aspire.utils
+   :members:
+   :undoc-members:
+   :show-inheritance:

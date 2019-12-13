@@ -1,0 +1,355 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>aspire.volume package &mdash; ASPIRE 0.5.24 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="aspire.utils.numeric package" href="aspire.utils.numeric.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> ASPIRE
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.5.24
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Modules</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="aspire.html">aspire package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="aspire.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="aspire.apple.html">aspire.apple package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.aspire.html">aspire.aspire package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.basis.html">aspire.basis package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.class2d.html">aspire.class2d package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.class3d.html">aspire.class3d package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.commands.html">aspire.commands package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.data.html">aspire.data package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.denoise.html">aspire.denoise package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.estimation.html">aspire.estimation package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.image.html">aspire.image package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.io.html">aspire.io package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.nfft.html">aspire.nfft package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.orientation.html">aspire.orientation package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.picker.html">aspire.picker package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.reconstruct.html">aspire.reconstruct package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.source.html">aspire.source package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.utils.html">aspire.utils package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">aspire.volume package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="aspire.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="aspire.html#module-aspire.exceptions">aspire.exceptions module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="aspire.html#module-aspire.version">aspire.version module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="aspire.html#module-aspire">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ASPIRE</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="modules.html">Modules</a> &raquo;</li>
+        
+          <li><a href="aspire.html">aspire package</a> &raquo;</li>
+        
+      <li>aspire.volume package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/aspire.volume.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="aspire-volume-package">
+<h1>aspire.volume package<a class="headerlink" href="#aspire-volume-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-aspire.volume">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-aspire.volume" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="aspire.volume.BasisVolume">
+<em class="property">class </em><code class="sig-prename descclassname">aspire.volume.</code><code class="sig-name descname">BasisVolume</code><span class="sig-paren">(</span><em class="sig-param">basis</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.volume.BasisVolume" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#aspire.volume.Volume" title="aspire.volume.Volume"><code class="xref py py-class docutils literal notranslate"><span class="pre">aspire.volume.Volume</span></code></a></p>
+<p class="rubric">Methods</p>
+<dl class="method">
+<dt id="aspire.volume.BasisVolume.evaluate">
+<code class="sig-name descname">evaluate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aspire.volume.BasisVolume.evaluate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="aspire.volume.BispecVolume">
+<em class="property">class </em><code class="sig-prename descclassname">aspire.volume.</code><code class="sig-name descname">BispecVolume</code><a class="headerlink" href="#aspire.volume.BispecVolume" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#aspire.volume.Volume" title="aspire.volume.Volume"><code class="xref py py-class docutils literal notranslate"><span class="pre">aspire.volume.Volume</span></code></a></p>
+<p class="rubric">Methods</p>
+<dl class="method">
+<dt id="aspire.volume.BispecVolume.expand">
+<code class="sig-name descname">expand</code><span class="sig-paren">(</span><em class="sig-param">basis</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.volume.BispecVolume.expand" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="aspire.volume.CartesianVolume">
+<em class="property">class </em><code class="sig-prename descclassname">aspire.volume.</code><code class="sig-name descname">CartesianVolume</code><a class="headerlink" href="#aspire.volume.CartesianVolume" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#aspire.volume.Volume" title="aspire.volume.Volume"><code class="xref py py-class docutils literal notranslate"><span class="pre">aspire.volume.Volume</span></code></a></p>
+<p class="rubric">Methods</p>
+<dl class="method">
+<dt id="aspire.volume.CartesianVolume.expand">
+<code class="sig-name descname">expand</code><span class="sig-paren">(</span><em class="sig-param">basis</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.volume.CartesianVolume.expand" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="aspire.volume.FBBasisVolume">
+<em class="property">class </em><code class="sig-prename descclassname">aspire.volume.</code><code class="sig-name descname">FBBasisVolume</code><span class="sig-paren">(</span><em class="sig-param">basis</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.volume.FBBasisVolume" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#aspire.volume.BasisVolume" title="aspire.volume.BasisVolume"><code class="xref py py-class docutils literal notranslate"><span class="pre">aspire.volume.BasisVolume</span></code></a></p>
+<p class="rubric">Methods</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="aspire.volume.PolarVolume">
+<em class="property">class </em><code class="sig-prename descclassname">aspire.volume.</code><code class="sig-name descname">PolarVolume</code><a class="headerlink" href="#aspire.volume.PolarVolume" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#aspire.volume.Volume" title="aspire.volume.Volume"><code class="xref py py-class docutils literal notranslate"><span class="pre">aspire.volume.Volume</span></code></a></p>
+<p class="rubric">Methods</p>
+<dl class="method">
+<dt id="aspire.volume.PolarVolume.expand">
+<code class="sig-name descname">expand</code><span class="sig-paren">(</span><em class="sig-param">basis</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.volume.PolarVolume.expand" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="aspire.volume.Volume">
+<em class="property">class </em><code class="sig-prename descclassname">aspire.volume.</code><code class="sig-name descname">Volume</code><a class="headerlink" href="#aspire.volume.Volume" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>stack of volumes</p>
+<p class="rubric">Methods</p>
+<dl class="method">
+<dt id="aspire.volume.Volume.denoise">
+<code class="sig-name descname">denoise</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aspire.volume.Volume.denoise" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="aspire.volume.Volume.rotate">
+<code class="sig-name descname">rotate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aspire.volume.Volume.rotate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="aspire.volume.Volume.shift">
+<code class="sig-name descname">shift</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aspire.volume.Volume.shift" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="aspire.volume.im_backproject">
+<code class="sig-prename descclassname">aspire.volume.</code><code class="sig-name descname">im_backproject</code><span class="sig-paren">(</span><em class="sig-param">im</em>, <em class="sig-param">rot_matrices</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.volume.im_backproject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Backproject images along rotation
+:param im: An L-by-L-by-n array of images to backproject.
+:param rot_matrices: An n-by-3-by-3 array of rotation matrices corresponding to viewing directions.
+:return: An L-by-L-by-L volumes corresponding to the sum of the backprojected images.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="aspire.volume.rotated_grids">
+<code class="sig-prename descclassname">aspire.volume.</code><code class="sig-name descname">rotated_grids</code><span class="sig-paren">(</span><em class="sig-param">L</em>, <em class="sig-param">rot_matrices</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.volume.rotated_grids" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate rotated Fourier grids in 3D from rotation matrices
+:param L: The resolution of the desired grids.
+:param rot_matrices: An array of size k-by-3-by-3 containing K rotation matrices
+:return: A set of rotated Fourier grids in three dimensions as specified by the rotation matrices.</p>
+<blockquote>
+<div><p>Frequencies are in the range [-pi, pi].</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="aspire.volume.vol_project">
+<code class="sig-prename descclassname">aspire.volume.</code><code class="sig-name descname">vol_project</code><span class="sig-paren">(</span><em class="sig-param">vol</em>, <em class="sig-param">rot_matrices</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.volume.vol_project" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="aspire.utils.numeric.html" class="btn btn-neutral" title="aspire.utils.numeric package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Princeton University
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

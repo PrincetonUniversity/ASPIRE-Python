@@ -1,0 +1,30 @@
+aspire.aspire.em\_classavg.image\_denoising.image\_denoising.PSWF2D.BN package
+==============================================================================
+
+Submodules
+----------
+
+aspire.aspire.em\_classavg.image\_denoising.image\_denoising.PSWF2D.BN.BN module
+--------------------------------------------------------------------------------
+
+.. automodule:: aspire.aspire.em_classavg.image_denoising.image_denoising.PSWF2D.BN.BN
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+aspire.aspire.em\_classavg.image\_denoising.image\_denoising.PSWF2D.BN.BN\_init\_utils module
+---------------------------------------------------------------------------------------------
+
+.. automodule:: aspire.aspire.em_classavg.image_denoising.image_denoising.PSWF2D.BN.BN_init_utils
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: aspire.aspire.em_classavg.image_denoising.image_denoising.PSWF2D.BN
+   :members:
+   :undoc-members:
+   :show-inheritance:

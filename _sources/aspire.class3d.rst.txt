@@ -1,0 +1,22 @@
+aspire.class3d package
+======================
+
+Submodules
+----------
+
+aspire.class3d.cov3d module
+---------------------------
+
+.. automodule:: aspire.class3d.cov3d
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: aspire.class3d
+   :members:
+   :undoc-members:
+   :show-inheritance:

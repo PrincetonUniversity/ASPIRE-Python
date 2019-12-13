@@ -1,0 +1,17 @@
+aspire.aspire.em\_classavg.image\_denoising package
+===================================================
+
+Subpackages
+-----------
+
+.. toctree::
+
+   aspire.aspire.em_classavg.image_denoising.image_denoising
+
+Module contents
+---------------
+
+.. automodule:: aspire.aspire.em_classavg.image_denoising
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,1075 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>aspire.basis package &mdash; ASPIRE 0.5.24 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="aspire.class2d package" href="aspire.class2d.html" />
+    <link rel="prev" title="aspire.aspire.utils package" href="aspire.aspire.utils.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> ASPIRE
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.5.24
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Modules</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="aspire.html">aspire package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="aspire.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="aspire.apple.html">aspire.apple package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.aspire.html">aspire.aspire package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">aspire.basis package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.class2d.html">aspire.class2d package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.class3d.html">aspire.class3d package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.commands.html">aspire.commands package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.data.html">aspire.data package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.denoise.html">aspire.denoise package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.estimation.html">aspire.estimation package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.image.html">aspire.image package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.io.html">aspire.io package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.nfft.html">aspire.nfft package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.orientation.html">aspire.orientation package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.picker.html">aspire.picker package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.reconstruct.html">aspire.reconstruct package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.source.html">aspire.source package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.utils.html">aspire.utils package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.volume.html">aspire.volume package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="aspire.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="aspire.html#module-aspire.exceptions">aspire.exceptions module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="aspire.html#module-aspire.version">aspire.version module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="aspire.html#module-aspire">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ASPIRE</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="modules.html">Modules</a> &raquo;</li>
+        
+          <li><a href="aspire.html">aspire package</a> &raquo;</li>
+        
+      <li>aspire.basis package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/aspire.basis.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="aspire-basis-package">
+<h1>aspire.basis package<a class="headerlink" href="#aspire-basis-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-aspire.basis.basis_utils">
+<span id="aspire-basis-basis-utils-module"></span><h2>aspire.basis.basis_utils module<a class="headerlink" href="#module-aspire.basis.basis_utils" title="Permalink to this headline">¶</a></h2>
+<p>Define related utility functions for Fourier–Bessel (2D), Spherical Fourier–Bessel (3D) and
+prolate spheroidal wave function (PSWF) objects.</p>
+<dl class="function">
+<dt id="aspire.basis.basis_utils.besselj_newton">
+<code class="sig-prename descclassname">aspire.basis.basis_utils.</code><code class="sig-name descname">besselj_newton</code><span class="sig-paren">(</span><em class="sig-param">nu</em>, <em class="sig-param">z0</em>, <em class="sig-param">max_iter=10</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.basis_utils.besselj_newton" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.basis.basis_utils.besselj_zeros">
+<code class="sig-prename descclassname">aspire.basis.basis_utils.</code><code class="sig-name descname">besselj_zeros</code><span class="sig-paren">(</span><em class="sig-param">nu</em>, <em class="sig-param">k</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.basis_utils.besselj_zeros" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.basis.basis_utils.check_besselj_zeros">
+<code class="sig-prename descclassname">aspire.basis.basis_utils.</code><code class="sig-name descname">check_besselj_zeros</code><span class="sig-paren">(</span><em class="sig-param">nu</em>, <em class="sig-param">z</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.basis_utils.check_besselj_zeros" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.basis.basis_utils.d_decay_approx_fun">
+<code class="sig-prename descclassname">aspire.basis.basis_utils.</code><code class="sig-name descname">d_decay_approx_fun</code><span class="sig-paren">(</span><em class="sig-param">a</em>, <em class="sig-param">b</em>, <em class="sig-param">c</em>, <em class="sig-param">d</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.basis_utils.d_decay_approx_fun" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.basis.basis_utils.k_operator">
+<code class="sig-prename descclassname">aspire.basis.basis_utils.</code><code class="sig-name descname">k_operator</code><span class="sig-paren">(</span><em class="sig-param">nu</em>, <em class="sig-param">x</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.basis_utils.k_operator" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.basis.basis_utils.leggauss_0_1">
+<code class="sig-prename descclassname">aspire.basis.basis_utils.</code><code class="sig-name descname">leggauss_0_1</code><span class="sig-paren">(</span><em class="sig-param">n</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.basis_utils.leggauss_0_1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wrapper for numpy.polynomial leggauss
+:param n: int &gt; 0, the number of sampled points to integrate
+:return: Legendre-Gauss quadrature of degree n between 0 and 1</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="aspire.basis.basis_utils.lgwt">
+<code class="sig-prename descclassname">aspire.basis.basis_utils.</code><code class="sig-name descname">lgwt</code><span class="sig-paren">(</span><em class="sig-param">ndeg</em>, <em class="sig-param">a</em>, <em class="sig-param">b</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.basis_utils.lgwt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute Legendre-Gauss quadrature</p>
+<p>Generates the Legendre-Gauss nodes and weights on an interval
+[a, b] with truncation order of ndeg for computing definite integrals
+using Legendre-Gauss quadrature. Computes
+Suppose you have a continuous function f(x) which is defined on [a, b]
+which you can evaluate at any x in [a, b]. Simply evaluate it at all of
+the values contained in the x vector to obtain a vector f, then compute
+the definite integral using sum(f.*w);</p>
+<p>The nodes are sorted in ascending order.</p>
+<p>Modified from the MATLAB lgwt version by Greg von Winckel - 02/25/2004</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ndeg</strong> – truncation order, that is, the number of nodes.</p></li>
+<li><p><strong>b</strong> (<em>a</em><em>,</em>) – The endpoints of the interval over which the quadrature is defined.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return x, w</dt>
+<dd class="field-even"><p>The quadrature nodes and weights.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="aspire.basis.basis_utils.norm_assoc_legendre">
+<code class="sig-prename descclassname">aspire.basis.basis_utils.</code><code class="sig-name descname">norm_assoc_legendre</code><span class="sig-paren">(</span><em class="sig-param">j</em>, <em class="sig-param">m</em>, <em class="sig-param">x</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.basis_utils.norm_assoc_legendre" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate the normalized associated Legendre polynomial</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>j</strong> – The order of the associated Legendre polynomial, must satisfy <a href="#id1"><span class="problematic" id="id2">|m|</span></a> &lt; j.</p></li>
+<li><p><strong>m</strong> – The degree of the associated Legendre polynomial, must satisfy <a href="#id3"><span class="problematic" id="id4">|m|</span></a> &lt; j.</p></li>
+<li><p><strong>x</strong> – An array of values between -1 and +1 on which to evaluate.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The normalized associated Legendre polynomial evaluated at corresponding x.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="aspire.basis.basis_utils.num_besselj_zeros">
+<code class="sig-prename descclassname">aspire.basis.basis_utils.</code><code class="sig-name descname">num_besselj_zeros</code><span class="sig-paren">(</span><em class="sig-param">ell</em>, <em class="sig-param">r</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.basis_utils.num_besselj_zeros" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.basis.basis_utils.p_n">
+<code class="sig-prename descclassname">aspire.basis.basis_utils.</code><code class="sig-name descname">p_n</code><span class="sig-paren">(</span><em class="sig-param">n</em>, <em class="sig-param">alpha</em>, <em class="sig-param">beta</em>, <em class="sig-param">x</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.basis_utils.p_n" title="Permalink to this definition">¶</a></dt>
+<dd><p>The first n jacobi polynomial of x as defined in Yoel’s PSWF paper, eq (2), page 6</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>n</strong> – int, &gt; 0
+Number of polynomials to compute</p></li>
+<li><p><strong>alpha</strong> – float, &gt; -1</p></li>
+<li><p><strong>beta</strong> – float, &gt; -1</p></li>
+<li><p><strong>x</strong> – (m,) ndarray</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>v: (m, n + 1) ndarray
+v[:, i] = P^{(alpha, beta)}_n(x) as defined in the paper</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="aspire.basis.basis_utils.real_sph_harmonic">
+<code class="sig-prename descclassname">aspire.basis.basis_utils.</code><code class="sig-name descname">real_sph_harmonic</code><span class="sig-paren">(</span><em class="sig-param">j</em>, <em class="sig-param">m</em>, <em class="sig-param">theta</em>, <em class="sig-param">phi</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.basis_utils.real_sph_harmonic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate a real spherical harmonic</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>j</strong> – The order of the spherical harmonic. These must satisfy <a href="#id5"><span class="problematic" id="id6">|m|</span></a> &lt; j.</p></li>
+<li><p><strong>m</strong> – The degree of the spherical harmonic. These must satisfy <a href="#id7"><span class="problematic" id="id8">|m|</span></a> &lt; j.</p></li>
+<li><p><strong>theta</strong> – The spherical coordinates of the points at which we want to evaluate the real spherical harmonic.
+<cite>theta</cite> is the latitude between 0 and pi</p></li>
+<li><p><strong>phi</strong> – The spherical coordinates of the points at which we want to evaluate the real spherical harmonic.
+<cite>phi</cite> is the longitude, between 0 and 2*pi</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The real spherical harmonics evaluated at the points (theta, phi).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="aspire.basis.basis_utils.sph_bessel">
+<code class="sig-prename descclassname">aspire.basis.basis_utils.</code><code class="sig-name descname">sph_bessel</code><span class="sig-paren">(</span><em class="sig-param">ell</em>, <em class="sig-param">r</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.basis_utils.sph_bessel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute spherical Bessel function values.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ell</strong> – The order of the spherical Bessel function.</p></li>
+<li><p><strong>r</strong> – The coordinates where the function is to be evaluated.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The value of j_ell at r.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="aspire.basis.basis_utils.t_radial_part_mat">
+<code class="sig-prename descclassname">aspire.basis.basis_utils.</code><code class="sig-name descname">t_radial_part_mat</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">n</em>, <em class="sig-param">j</em>, <em class="sig-param">m</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.basis_utils.t_radial_part_mat" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.basis.basis_utils.t_x_derivative_mat">
+<code class="sig-prename descclassname">aspire.basis.basis_utils.</code><code class="sig-name descname">t_x_derivative_mat</code><span class="sig-paren">(</span><em class="sig-param">t1</em>, <em class="sig-param">t2</em>, <em class="sig-param">x</em>, <em class="sig-param">big_n</em>, <em class="sig-param">range_array</em>, <em class="sig-param">approx_length</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.basis_utils.t_x_derivative_mat" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.basis.basis_utils.t_x_mat">
+<code class="sig-prename descclassname">aspire.basis.basis_utils.</code><code class="sig-name descname">t_x_mat</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">n</em>, <em class="sig-param">j</em>, <em class="sig-param">approx_length</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.basis_utils.t_x_mat" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.basis.basis_utils.t_x_mat_dot">
+<code class="sig-prename descclassname">aspire.basis.basis_utils.</code><code class="sig-name descname">t_x_mat_dot</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">n</em>, <em class="sig-param">j</em>, <em class="sig-param">approx_length</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.basis_utils.t_x_mat_dot" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.basis.basis_utils.unique_coords_nd">
+<code class="sig-prename descclassname">aspire.basis.basis_utils.</code><code class="sig-name descname">unique_coords_nd</code><span class="sig-paren">(</span><em class="sig-param">N</em>, <em class="sig-param">ndim</em>, <em class="sig-param">shifted=False</em>, <em class="sig-param">normalized=True</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.basis_utils.unique_coords_nd" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate unique polar coordinates from 2D or 3D rectangular coordinates.
+:param N: length size of a square or cube.
+:param ndim: number of dimension, 2 or 3.
+:param shifted: shifted half pixel or not for odd N.
+:param normalized: normalize the grid or not.
+:return: The unique polar coordinates in 2D or 3D</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-aspire.basis.dirac">
+<span id="aspire-basis-dirac-module"></span><h2>aspire.basis.dirac module<a class="headerlink" href="#module-aspire.basis.dirac" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="aspire.basis.dirac.DiracBasis">
+<em class="property">class </em><code class="sig-prename descclassname">aspire.basis.dirac.</code><code class="sig-name descname">DiracBasis</code><span class="sig-paren">(</span><em class="sig-param">size</em>, <em class="sig-param">ell_max=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.dirac.DiracBasis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#aspire.basis.Basis" title="aspire.basis.Basis"><code class="xref py py-class docutils literal notranslate"><span class="pre">aspire.basis.Basis</span></code></a></p>
+<p class="rubric">Methods</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-aspire.basis.fb_2d">
+<span id="aspire-basis-fb-2d-module"></span><h2>aspire.basis.fb_2d module<a class="headerlink" href="#module-aspire.basis.fb_2d" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="aspire.basis.fb_2d.FBBasis2D">
+<em class="property">class </em><code class="sig-prename descclassname">aspire.basis.fb_2d.</code><code class="sig-name descname">FBBasis2D</code><span class="sig-paren">(</span><em class="sig-param">size</em>, <em class="sig-param">ell_max=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.fb_2d.FBBasis2D" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#aspire.basis.Basis" title="aspire.basis.Basis"><code class="xref py py-class docutils literal notranslate"><span class="pre">aspire.basis.Basis</span></code></a></p>
+<p>Define a derived class using the Fourier-Bessel basis for mapping 2D images.</p>
+<p>The expansion coefficients of 2D images on this basis are obtained by
+the least squares method. The algorithm is described in the publication:
+Z. Zhao, A. Singer, Fourier-Bessel Rotational Invariant Eigenimages,
+The Journal of the Optical Society of America A, 30 (5), pp. 871-877 (2013).</p>
+<p class="rubric">Methods</p>
+<dl class="method">
+<dt id="aspire.basis.fb_2d.FBBasis2D.basis_norm_2d">
+<code class="sig-name descname">basis_norm_2d</code><span class="sig-paren">(</span><em class="sig-param">ell</em>, <em class="sig-param">k</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.fb_2d.FBBasis2D.basis_norm_2d" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="aspire.basis.fb_2d.FBBasis2D.evaluate">
+<code class="sig-name descname">evaluate</code><span class="sig-paren">(</span><em class="sig-param">v</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.fb_2d.FBBasis2D.evaluate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate coefficient vector in basis
+:param v: A coefficient vector (or an array of coefficient vectors) to be evaluated.</p>
+<blockquote>
+<div><p>The first dimension must equal <cite>self.basis_count</cite>.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The evaluation of the coefficient vector(s) <cite>v</cite> for this basis.
+This is an array whose first dimensions equal <cite>self.z</cite> and the remaining dimensions correspond to
+dimensions two and higher of <cite>v</cite>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="aspire.basis.fb_2d.FBBasis2D.evaluate_t">
+<code class="sig-name descname">evaluate_t</code><span class="sig-paren">(</span><em class="sig-param">v</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.fb_2d.FBBasis2D.evaluate_t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate coefficient in dual basis
+:param v: The coefficient array to be evaluated. The first dimensions must equal <cite>self.sz</cite>.
+:return: The evaluation of the coefficient array <cite>v</cite> in the dual basis of <cite>basis</cite>.</p>
+<blockquote>
+<div><p>This is an array of vectors whose first dimension equals <cite>self.basis_count</cite> and whose remaining dimensions
+correspond to higher dimensions of <cite>v</cite>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="aspire.basis.fb_2d.FBBasis2D.expand_t">
+<code class="sig-name descname">expand_t</code><span class="sig-paren">(</span><em class="sig-param">v</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.fb_2d.FBBasis2D.expand_t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Expand array in dual basis</p>
+<p>If <cite>v</cite> is a matrix of size <cite>basis.ct</cite>-by-…, <cite>B</cite> is the change-of-basis matrix of this basis, and <cite>x</cite> is a
+matrix of size <cite>self.sz</cite>-by-…, the function calculates</p>
+<blockquote>
+<div><p>x = (B * B’)^(-1) * B * v</p>
+</div></blockquote>
+<p>where the rows of <cite>B</cite> and columns of <cite>x</cite> are read as vectorized arrays.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>v</strong> – An array whose first dimension is to be expanded in this basis’s dual.
+This dimension must be equal to <cite>self.basis_count</cite>.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The coefficients of <cite>v</cite> expanded in the dual of <cite>basis</cite>. If more than one vector is supplied in <cite>v</cite>,
+the higher dimensions of the return value correspond to second and higher dimensions of <cite>v</cite>.</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>expand</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="aspire.basis.fb_2d.FBBasis2D.indices">
+<code class="sig-name descname">indices</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.fb_2d.FBBasis2D.indices" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="aspire.basis.fb_2d.FBBasis2D.norms">
+<code class="sig-name descname">norms</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.fb_2d.FBBasis2D.norms" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-aspire.basis.fb_3d">
+<span id="aspire-basis-fb-3d-module"></span><h2>aspire.basis.fb_3d module<a class="headerlink" href="#module-aspire.basis.fb_3d" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="aspire.basis.fb_3d.FBBasis3D">
+<em class="property">class </em><code class="sig-prename descclassname">aspire.basis.fb_3d.</code><code class="sig-name descname">FBBasis3D</code><span class="sig-paren">(</span><em class="sig-param">size</em>, <em class="sig-param">ell_max=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.fb_3d.FBBasis3D" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#aspire.basis.Basis" title="aspire.basis.Basis"><code class="xref py py-class docutils literal notranslate"><span class="pre">aspire.basis.Basis</span></code></a></p>
+<p>Define a derived class of spherical Harmonics Bessel basis for mapping 3D volumes.</p>
+<p># TODO: Methods that return dictionaries should return useful objects instead</p>
+<p class="rubric">Methods</p>
+<dl class="method">
+<dt id="aspire.basis.fb_3d.FBBasis3D.basis_norm_3d">
+<code class="sig-name descname">basis_norm_3d</code><span class="sig-paren">(</span><em class="sig-param">ell</em>, <em class="sig-param">k</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.fb_3d.FBBasis3D.basis_norm_3d" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="aspire.basis.fb_3d.FBBasis3D.evaluate">
+<code class="sig-name descname">evaluate</code><span class="sig-paren">(</span><em class="sig-param">v</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.fb_3d.FBBasis3D.evaluate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate coefficient vector in basis
+:param v: A coefficient vector (or an array of coefficient vectors) to be evaluated.</p>
+<blockquote>
+<div><p>The first dimension must equal <cite>self.basis_count</cite>.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The evaluation of the coefficient vector(s) <cite>v</cite> for this basis.
+This is an array whose first dimensions equal <cite>self.z</cite> and the remaining dimensions correspond to
+dimensions two and higher of <cite>v</cite>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="aspire.basis.fb_3d.FBBasis3D.evaluate_t">
+<code class="sig-name descname">evaluate_t</code><span class="sig-paren">(</span><em class="sig-param">v</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.fb_3d.FBBasis3D.evaluate_t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate coefficient in dual basis
+:param v: The coefficient array to be evaluated. The first dimensions must equal <cite>self.sz</cite>.
+:return: The evaluation of the coefficient array <cite>v</cite> in the dual basis of <cite>basis</cite>.</p>
+<blockquote>
+<div><p>This is an array of vectors whose first dimension equals <cite>self.basis_count</cite> and whose remaining dimensions
+correspond to higher dimensions of <cite>v</cite>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="aspire.basis.fb_3d.FBBasis3D.expand_t">
+<code class="sig-name descname">expand_t</code><span class="sig-paren">(</span><em class="sig-param">v</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.fb_3d.FBBasis3D.expand_t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Expand array in dual basis</p>
+<p>If <cite>v</cite> is a matrix of size <cite>basis.ct</cite>-by-…, <cite>B</cite> is the change-of-basis matrix of this basis, and <cite>x</cite> is a
+matrix of size <cite>self.sz</cite>-by-…, the function calculates</p>
+<blockquote>
+<div><p>x = (B * B’)^(-1) * B * v</p>
+</div></blockquote>
+<p>where the rows of <cite>B</cite> and columns of <cite>x</cite> are read as vectorized arrays.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>v</strong> – An array whose first dimension is to be expanded in this basis’s dual.
+This dimension must be equal to <cite>self.basis_count</cite>.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The coefficients of <cite>v</cite> expanded in the dual of <cite>basis</cite>. If more than one vector is supplied in <cite>v</cite>,
+the higher dimensions of the return value correspond to second and higher dimensions of <cite>v</cite>.</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>expand</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="aspire.basis.fb_3d.FBBasis3D.indices">
+<code class="sig-name descname">indices</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.fb_3d.FBBasis3D.indices" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="aspire.basis.fb_3d.FBBasis3D.norms">
+<code class="sig-name descname">norms</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.fb_3d.FBBasis3D.norms" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-aspire.basis.ffb_2d">
+<span id="aspire-basis-ffb-2d-module"></span><h2>aspire.basis.ffb_2d module<a class="headerlink" href="#module-aspire.basis.ffb_2d" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="aspire.basis.ffb_2d.FFBBasis2D">
+<em class="property">class </em><code class="sig-prename descclassname">aspire.basis.ffb_2d.</code><code class="sig-name descname">FFBBasis2D</code><span class="sig-paren">(</span><em class="sig-param">size</em>, <em class="sig-param">ell_max=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.ffb_2d.FFBBasis2D" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#aspire.basis.fb_2d.FBBasis2D" title="aspire.basis.fb_2d.FBBasis2D"><code class="xref py py-class docutils literal notranslate"><span class="pre">aspire.basis.fb_2d.FBBasis2D</span></code></a></p>
+<p>Define a derived class for Fast Fourier Bessel expansion for 2D images.</p>
+<p>The expansion coefficients of 2D images on this basis are obtained by
+a fast method instead of the least squares method.
+The algorithm is described in the publication:
+Z. Zhao, Y. Shkolnisky, A. Singer, Fast Steerable Principal Component Analysis,
+IEEE Transactions on Computational Imaging, 2 (1), pp. 1-12 (2016).​</p>
+<p class="rubric">Methods</p>
+<dl class="method">
+<dt id="aspire.basis.ffb_2d.FFBBasis2D.evaluate">
+<code class="sig-name descname">evaluate</code><span class="sig-paren">(</span><em class="sig-param">v</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.ffb_2d.FFBBasis2D.evaluate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate coefficients in standard 2D coordinate basis from those in Fourier-Bessel basis</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>v</strong> – A coefficient vector (or an array of coefficient vectors) in FB basis to be evaluated.
+The first dimension must equal <cite>self.basis_count</cite>.</p>
+</dd>
+<dt class="field-even">Return x</dt>
+<dd class="field-even"><p>The evaluation of the coefficient vector(s) <cite>x</cite> in standard 2D coordinate basis.
+This is an array whose first two dimensions equal <cite>self.sz</cite> and the remaining dimensions correspond to
+dimensions two and higher of <cite>v</cite>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="aspire.basis.ffb_2d.FFBBasis2D.evaluate_t">
+<code class="sig-name descname">evaluate_t</code><span class="sig-paren">(</span><em class="sig-param">x</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.ffb_2d.FFBBasis2D.evaluate_t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate coefficient in Fourier Bessel basis from those in standard 2D coordinate basis</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>x</strong> – The coefficient array in the standard 2D coordinate basis to be evaluated. The first two
+dimensions must equal <cite>self.sz</cite>.</p>
+</dd>
+<dt class="field-even">Return v</dt>
+<dd class="field-even"><p>The evaluation of the coefficient array <cite>v</cite> in the Fourier Bessel basis.
+This is an array of vectors whose first dimension equals <cite>self.basis_count</cite> and whose remaining dimensions
+correspond to higher dimensions of <cite>x</cite>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="aspire.basis.ffb_2d.FFBBasis2D.expand">
+<code class="sig-name descname">expand</code><span class="sig-paren">(</span><em class="sig-param">x</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.ffb_2d.FFBBasis2D.expand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Obtain expansion coefficients in Fourier Bessel basis from those in standard 2D coordinate basis.</p>
+<p>This is a similar function to evaluate_t but with more accuracy by using the cg optimizing of linear
+equation, Ax=b.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>x</strong> – An array whose first two dimensions are to be expanded in FB basis.
+These dimensions must equal <cite>self.sz</cite>.</p>
+</dd>
+</dl>
+<dl>
+<dt>:return<span class="classifier">The coefficients of <cite>v</cite> expanded in FB basis. The first dimension of <cite>v</cite> is with size of <cite>basis_count</cite></span></dt><dd><p>and the second and higher dimensions of the return value correspond to those higher dimensions of <cite>x</cite>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-aspire.basis.ffb_3d">
+<span id="aspire-basis-ffb-3d-module"></span><h2>aspire.basis.ffb_3d module<a class="headerlink" href="#module-aspire.basis.ffb_3d" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="aspire.basis.ffb_3d.FFBBasis3D">
+<em class="property">class </em><code class="sig-prename descclassname">aspire.basis.ffb_3d.</code><code class="sig-name descname">FFBBasis3D</code><span class="sig-paren">(</span><em class="sig-param">size</em>, <em class="sig-param">ell_max=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.ffb_3d.FFBBasis3D" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#aspire.basis.fb_3d.FBBasis3D" title="aspire.basis.fb_3d.FBBasis3D"><code class="xref py py-class docutils literal notranslate"><span class="pre">aspire.basis.fb_3d.FBBasis3D</span></code></a></p>
+<p>Define a derived class of spherical Harmonics Bessel basis for mapping 3D volumes.</p>
+<p># TODO: Methods that return dictionaries should return useful objects instead</p>
+<p class="rubric">Methods</p>
+<dl class="method">
+<dt id="aspire.basis.ffb_3d.FFBBasis3D.evaluate">
+<code class="sig-name descname">evaluate</code><span class="sig-paren">(</span><em class="sig-param">v</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.ffb_3d.FFBBasis3D.evaluate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate coefficients in standard 3D coordinate basis from those in 3D Fourier-Bessel basis</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>v</strong> – A coefficient vector (or an array of coefficient vectors) in FB basis to be evaluated.
+The first dimension must equal <cite>self.basis_count</cite>.</p>
+</dd>
+<dt class="field-even">Return x</dt>
+<dd class="field-even"><p>The evaluation of the coefficient vector(s) <cite>x</cite> in standard 3D coordinate basis.
+This is an array whose first three dimensions equal <cite>self.sz</cite> and the remaining dimensions correspond to
+dimensions two and higher of <cite>v</cite>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="aspire.basis.ffb_3d.FFBBasis3D.evaluate_t">
+<code class="sig-name descname">evaluate_t</code><span class="sig-paren">(</span><em class="sig-param">x</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.ffb_3d.FFBBasis3D.evaluate_t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate coefficient in Fourier Bessel basis from those in standard 3D coordinate basis</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>x</strong> – The coefficient array in the standard 3D coordinate basis to be evaluated. The first three
+dimensions must equal <cite>self.sz</cite>.</p>
+</dd>
+<dt class="field-even">Return v</dt>
+<dd class="field-even"><p>The evaluation of the coefficient array <cite>v</cite> in the Fourier Bessel basis.
+This is an array of vectors whose first dimension equals <cite>self.basis_count</cite> and whose remaining dimensions
+correspond to higher dimensions of <cite>x</cite>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="aspire.basis.ffb_3d.FFBBasis3D.expand">
+<code class="sig-name descname">expand</code><span class="sig-paren">(</span><em class="sig-param">x</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.ffb_3d.FFBBasis3D.expand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Obtain expansion coefficients in Fourier Bessel basis from those in standard 3D coordinate basis.</p>
+<p>This is a similar function to evaluate_t but with more accuracy by using the cg optimizing of linear
+equation, Ax=b.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>x</strong> – An array whose first three dimensions are to be expanded in FB basis.
+These dimensions must equal <cite>self.sz</cite>.</p>
+</dd>
+</dl>
+<dl>
+<dt>:return<span class="classifier">The coefficients of <cite>v</cite> expanded in FB basis. The first dimension of <cite>v</cite> is with size of <cite>basis_count</cite></span></dt><dd><p>and the second and higher dimensions of the return value correspond to those higher dimensions of <cite>x</cite>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-aspire.basis.fpswf_2d">
+<span id="aspire-basis-fpswf-2d-module"></span><h2>aspire.basis.fpswf_2d module<a class="headerlink" href="#module-aspire.basis.fpswf_2d" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="aspire.basis.fpswf_2d.FPSWFBasis2D">
+<em class="property">class </em><code class="sig-prename descclassname">aspire.basis.fpswf_2d.</code><code class="sig-name descname">FPSWFBasis2D</code><span class="sig-paren">(</span><em class="sig-param">size</em>, <em class="sig-param">gamma_truncation=1.0</em>, <em class="sig-param">beta=1.0</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.fpswf_2d.FPSWFBasis2D" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#aspire.basis.pswf_2d.PSWFBasis2D" title="aspire.basis.pswf_2d.PSWFBasis2D"><code class="xref py py-class docutils literal notranslate"><span class="pre">aspire.basis.pswf_2d.PSWFBasis2D</span></code></a></p>
+<p>Define a derived class using the Prolate Spheroidal Wave Function (PSWF) basis for mapping 2D images.
+The numerical evaluation for 2D PSWFs at arbitrary points in the unit disk is based on the fast method
+described in the papers as below:</p>
+<blockquote>
+<div><p>1) Boris Landa and Yoel Shkolnisky, “Steerable principal components for space-frequency localized images”,
+SIAM J. Imag. Sci. 10, 508-534 (2017).
+2) Boris Landa and Yoel Shkolnisky, “Approximation scheme for essentially bandlimited and space-concentrated
+functions on a disk”, Appl. Comput. Harmon. Anal. 43, 381-403 (2017).
+3) Yoel Shkolnisky, “Prolate spheroidal wave functions on a disc-Integration and approximation of
+two-dimensional bandlimited functions”, Appl. Comput. Harmon. Anal. 22, 235-256 (2007).</p>
+</div></blockquote>
+<p class="rubric">Methods</p>
+<p>Initialize an object for 2D prolate spheroidal wave function (PSWF) basis expansion using fast method.</p>
+<p class="rubric">Methods</p>
+<dl class="method">
+<dt id="aspire.basis.fpswf_2d.FPSWFBasis2D.evaluate">
+<code class="sig-name descname">evaluate</code><span class="sig-paren">(</span><em class="sig-param">coefficients</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.fpswf_2d.FPSWFBasis2D.evaluate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate coefficients in standard 2D coordinate basis from those in PSWF basis</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>coefficients</strong> – A coefficient vector (or an array of coefficient vectors) in PSWF basis to be evaluated.</p>
+</dd>
+</dl>
+<p>:return : The evaluation of the coefficient vector(s) in standard 2D coordinate basis.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="aspire.basis.fpswf_2d.FPSWFBasis2D.evaluate_t">
+<code class="sig-name descname">evaluate_t</code><span class="sig-paren">(</span><em class="sig-param">images</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.fpswf_2d.FPSWFBasis2D.evaluate_t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate coefficient vectors in PSWF basis using the fast method</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>images</strong> – coefficient array in the standard 2D coordinate basis to be evaluated.</p>
+</dd>
+</dl>
+<p>:return : The evaluation of the coefficient array in the PSWF basis.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-aspire.basis.fpswf_3d">
+<span id="aspire-basis-fpswf-3d-module"></span><h2>aspire.basis.fpswf_3d module<a class="headerlink" href="#module-aspire.basis.fpswf_3d" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="aspire.basis.fpswf_3d.FPSWF3D">
+<em class="property">class </em><code class="sig-prename descclassname">aspire.basis.fpswf_3d.</code><code class="sig-name descname">FPSWF3D</code><span class="sig-paren">(</span><em class="sig-param">size</em>, <em class="sig-param">ell_max=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.fpswf_3d.FPSWF3D" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#aspire.basis.pswf_3d.PSWF3D" title="aspire.basis.pswf_3d.PSWF3D"><code class="xref py py-class docutils literal notranslate"><span class="pre">aspire.basis.pswf_3d.PSWF3D</span></code></a></p>
+<p class="rubric">Methods</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-aspire.basis.pswf_2d">
+<span id="aspire-basis-pswf-2d-module"></span><h2>aspire.basis.pswf_2d module<a class="headerlink" href="#module-aspire.basis.pswf_2d" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="aspire.basis.pswf_2d.PSWFBasis2D">
+<em class="property">class </em><code class="sig-prename descclassname">aspire.basis.pswf_2d.</code><code class="sig-name descname">PSWFBasis2D</code><span class="sig-paren">(</span><em class="sig-param">size</em>, <em class="sig-param">gamma_truncation=1.0</em>, <em class="sig-param">beta=1.0</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.pswf_2d.PSWFBasis2D" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#aspire.basis.Basis" title="aspire.basis.Basis"><code class="xref py py-class docutils literal notranslate"><span class="pre">aspire.basis.Basis</span></code></a></p>
+<p>Define a derived class using the Prolate Spheroidal Wave Function (PSWF) basis for mapping 2D images.
+The numerical evaluation for 2D PSWFs at arbitrary points in the unit disk is based on the direct method
+described in the papers as below:</p>
+<blockquote>
+<div><p>1) Boris Landa and Yoel Shkolnisky, “Steerable principal components for space-frequency localized images”,
+SIAM J. Imag. Sci. 10, 508-534 (2017).
+2) Boris Landa and Yoel Shkolnisky, “Approximation scheme for essentially bandlimited and space-concentrated
+functions on a disk”, Appl. Comput. Harmon. Anal. 43, 381-403 (2017).
+3) Yoel Shkolnisky, “Prolate spheroidal wave functions on a disc-Integration and approximation of
+two-dimensional bandlimited functions”, Appl. Comput. Harmon. Anal. 22, 235-256 (2007).</p>
+</div></blockquote>
+<p class="rubric">Methods</p>
+<p>Initialize an object for 2D prolate spheroidal wave function (PSWF) basis expansion using direct method.</p>
+<p class="rubric">Methods</p>
+<dl class="method">
+<dt id="aspire.basis.pswf_2d.PSWFBasis2D.evaluate">
+<code class="sig-name descname">evaluate</code><span class="sig-paren">(</span><em class="sig-param">coefficients</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.pswf_2d.PSWFBasis2D.evaluate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate coefficients in standard 2D coordinate basis from those in PSWF basis</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>coeffcients</strong> – A coefficient vector (or an array of coefficient vectors) in PSWF basis to be evaluated.</p>
+</dd>
+</dl>
+<p>:return : The evaluation of the coefficient vector(s) in standard 2D coordinate basis.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="aspire.basis.pswf_2d.PSWFBasis2D.evaluate_t">
+<code class="sig-name descname">evaluate_t</code><span class="sig-paren">(</span><em class="sig-param">images</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.pswf_2d.PSWFBasis2D.evaluate_t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate coefficient vectors in PSWF basis using the direct method</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>images</strong> – coefficient array in the standard 2D coordinate basis to be evaluated.</p>
+</dd>
+</dl>
+<p>:return : The evaluation of the coefficient array in the PSWF basis.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="aspire.basis.pswf_2d.PSWFBasis2D.pswf_func2d">
+<code class="sig-name descname">pswf_func2d</code><span class="sig-paren">(</span><em class="sig-param">big_n</em>, <em class="sig-param">n</em>, <em class="sig-param">bandlimit</em>, <em class="sig-param">phi_approximate_error</em>, <em class="sig-param">r</em>, <em class="sig-param">w</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.pswf_2d.PSWFBasis2D.pswf_func2d" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p>Calculate the eigenvalues and eigenvectors of PSWF basis functions for all N’s and n’s.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>big_n</strong> – The integer N in PSWF basis.</p></li>
+<li><p><strong>n</strong> – The integer n in PSWF basis.</p></li>
+<li><p><strong>bandlimit</strong> – The band limit estimated by beta * pi * rcut.</p></li>
+<li><p><strong>phi_approximate_error</strong> – The input approximate error for phi.</p></li>
+<li><p><strong>r</strong> – The Legendre–Gauss quadrature nodes.</p></li>
+<li><p><strong>w</strong> – The Legendre–Gauss quadrature weights.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>alpha_n (ndarray): the eigen-values for N.
+d_vec (ndarray): the corresponding eigen-vectors for alpha_n.
+approx_length (int): the number of eigenvalues,len(alpha_n).</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-aspire.basis.pswf_3d">
+<span id="aspire-basis-pswf-3d-module"></span><h2>aspire.basis.pswf_3d module<a class="headerlink" href="#module-aspire.basis.pswf_3d" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="aspire.basis.pswf_3d.PSWF3D">
+<em class="property">class </em><code class="sig-prename descclassname">aspire.basis.pswf_3d.</code><code class="sig-name descname">PSWF3D</code><span class="sig-paren">(</span><em class="sig-param">size</em>, <em class="sig-param">ell_max=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.pswf_3d.PSWF3D" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#aspire.basis.Basis" title="aspire.basis.Basis"><code class="xref py py-class docutils literal notranslate"><span class="pre">aspire.basis.Basis</span></code></a></p>
+<p class="rubric">Methods</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-aspire.basis.pswf_utils">
+<span id="aspire-basis-pswf-utils-module"></span><h2>aspire.basis.pswf_utils module<a class="headerlink" href="#module-aspire.basis.pswf_utils" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="aspire.basis.pswf_utils.BNMatrix">
+<em class="property">class </em><code class="sig-prename descclassname">aspire.basis.pswf_utils.</code><code class="sig-name descname">BNMatrix</code><span class="sig-paren">(</span><em class="sig-param">big_n</em>, <em class="sig-param">band_limit</em>, <em class="sig-param">approx_length</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.pswf_utils.BNMatrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Define a class to compute the B_N matrix ( with elements of b^N_mn) denoting the matrix of the operator L_c
+with respect to the basis T_Nn(x) by elements of b^N_mn. The matrix element b^N_mn is calculated as
+&lt; T_Nm, L_c T_Nn &gt; as shown in the paper below:</p>
+<blockquote>
+<div><p>Yoel Shkolnisky, “Prolate spheroidal wave functions on a disc-Integration and approximation of
+two-dimensional bandlimited functions”, Appl. Comput. Harmon. Anal. 22, 235-256 (2007).</p>
+</div></blockquote>
+<p class="rubric">Methods</p>
+<p>Initial an object to compute the B_N matrix ( with elements of b^N_mn).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>big_n</strong> – A positive integer represented by N.</p></li>
+<li><p><strong>band_limit</strong> – The band limit.</p></li>
+<li><p><strong>approx_length</strong> – The approximated length represented by n.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<dl class="method">
+<dt id="aspire.basis.pswf_utils.BNMatrix.dense_mat">
+<code class="sig-name descname">dense_mat</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.pswf_utils.BNMatrix.dense_mat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Represent the full B_N matrix by a 2D array.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>mat: (M,M), ndarray
+The full BN matrix.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="aspire.basis.pswf_utils.BNMatrix.get_eig_vectors">
+<code class="sig-name descname">get_eig_vectors</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.pswf_utils.BNMatrix.get_eig_vectors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculated the eigenvalues and eigenvectors of B_N matrix.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><dl class="simple">
+<dt>v: (M,M) ndarray</dt><dd><p>The normalized eigenvectors corresponding to the eigenvalues, v[:, i] is corresponding to the w[i].
+In each eigenvector v[:, i], v[argmax(abs(v[:, i])), i] &gt;= 0.</p>
+</dd>
+<dt>w: (M,) ndarray</dt><dd><p>The eigenvalues in descending order.</p>
+</dd>
+</dl>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="aspire.basis.pswf_utils.BNMatrix.shape">
+<code class="sig-name descname">shape</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.pswf_utils.BNMatrix.shape" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ruturn the shape of B_N matrix.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>tuple: (n, n)
+The dense matrix shape</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-aspire.basis">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-aspire.basis" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="aspire.basis.Basis">
+<em class="property">class </em><code class="sig-prename descclassname">aspire.basis.</code><code class="sig-name descname">Basis</code><span class="sig-paren">(</span><em class="sig-param">size</em>, <em class="sig-param">ell_max=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.Basis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Define a base class of mathematical basis for mapping 2D particle images
+and 3D structure volumes.</p>
+<p class="rubric">Methods</p>
+<dl class="method">
+<dt id="aspire.basis.Basis.evaluate">
+<code class="sig-name descname">evaluate</code><span class="sig-paren">(</span><em class="sig-param">v</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.Basis.evaluate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate coefficient vector in basis
+:param v: A coefficient vector (or an array of coefficient vectors) to be evaluated.</p>
+<blockquote>
+<div><p>The first dimension must equal <cite>self.basis_count</cite>.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The evaluation of the coefficient vector(s) <cite>v</cite> for this basis.
+This is an array whose first dimensions equal <cite>self.z</cite> and the remaining dimensions correspond to
+dimensions two and higher of <cite>v</cite>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="aspire.basis.Basis.evaluate_t">
+<code class="sig-name descname">evaluate_t</code><span class="sig-paren">(</span><em class="sig-param">v</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.Basis.evaluate_t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate coefficient in dual basis
+:param v: The coefficient array to be evaluated. The first dimensions must equal <cite>self.sz</cite>.
+:return: The evaluation of the coefficient array <cite>v</cite> in the dual basis of <cite>basis</cite>.</p>
+<blockquote>
+<div><p>This is an array of vectors whose first dimension equals <cite>self.basis_count</cite> and whose remaining dimensions
+correspond to higher dimensions of <cite>v</cite>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="aspire.basis.Basis.expand">
+<code class="sig-name descname">expand</code><span class="sig-paren">(</span><em class="sig-param">v</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.Basis.expand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Expand array in basis</p>
+<p>If <cite>v</cite> is a matrix of size <cite>basis.ct</cite>-by-…, <cite>B</cite> is the change-of-basis matrix of this basis, and <cite>x</cite> is a
+matrix of size <cite>self.sz</cite>-by-…, the function calculates</p>
+<blockquote>
+<div><p>v = (B’ * B)^(-1) * B’ * x</p>
+</div></blockquote>
+<p>where the rows of <cite>B</cite> and columns of <cite>x</cite> are read as vectorized arrays.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>v</strong> – An array whose first few dimensions are to be expanded in this basis.
+These dimensions must equal <cite>self.sz</cite>.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The coefficients of <cite>v</cite> expanded in this basis. If more than one array of size <cite>self.sz</cite> is found in
+<cite>v</cite>, the second and higher dimensions of the return value correspond to those higher dimensions of <cite>v</cite>.</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>evaluate</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="aspire.basis.Basis.expand_t">
+<code class="sig-name descname">expand_t</code><span class="sig-paren">(</span><em class="sig-param">v</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.Basis.expand_t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Expand array in dual basis</p>
+<p>If <cite>v</cite> is a matrix of size <cite>basis.ct</cite>-by-…, <cite>B</cite> is the change-of-basis matrix of this basis, and <cite>x</cite> is a
+matrix of size <cite>self.sz</cite>-by-…, the function calculates</p>
+<blockquote>
+<div><p>x = (B * B’)^(-1) * B * v</p>
+</div></blockquote>
+<p>where the rows of <cite>B</cite> and columns of <cite>x</cite> are read as vectorized arrays.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>v</strong> – An array whose first dimension is to be expanded in this basis’s dual.
+This dimension must be equal to <cite>self.basis_count</cite>.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The coefficients of <cite>v</cite> expanded in the dual of <cite>basis</cite>. If more than one vector is supplied in <cite>v</cite>,
+the higher dimensions of the return value correspond to second and higher dimensions of <cite>v</cite>.</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>expand</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="aspire.basis.Basis.indices">
+<code class="sig-name descname">indices</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.Basis.indices" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="aspire.basis.Basis.mat_evaluate">
+<code class="sig-name descname">mat_evaluate</code><span class="sig-paren">(</span><em class="sig-param">V</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.Basis.mat_evaluate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate coefficient matrix in basis
+:param V: A coefficient matrix of size <cite>self.basis_count</cite>-by-<cite>self.basis_count</cite> to be evaluated.
+:return: A multidimensional matrix of size <cite>self.sz</cite>-by-<cite>self.sz</cite> corresponding to the evaluation of <cite>V</cite> in</p>
+<blockquote>
+<div><p>this basis.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="aspire.basis.Basis.mat_evaluate_t">
+<code class="sig-name descname">mat_evaluate_t</code><span class="sig-paren">(</span><em class="sig-param">X</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.Basis.mat_evaluate_t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate coefficient matrix in dual basis
+:param X: The coefficient array of size <cite>self.sz</cite>-by-<cite>self.sz</cite> to be evaluated.
+:return: The evaluation of <cite>X</cite> in the dual basis. This is <cite>self.count</cite>-by-<cite>self.count</cite>. matrix</p>
+<p>If <cite>V</cite> is a matrix of size <cite>self.basis_count</cite>-by-<cite>self.basis_count</cite>, <cite>B</cite> is the change-of-basis matrix of
+<cite>basis</cite>, and <cite>x</cite> is a multidimensional matrix of size <cite>basis.sz</cite>-by-<cite>basis.sz</cite>, the function calculates</p>
+<p>V = B’ * X * B</p>
+<p>where the rows of <cite>B</cite>, rows of ‘X’, and columns of <cite>X</cite> are read as vectorized arrays.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="aspire.basis.Basis.norms">
+<code class="sig-name descname">norms</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.Basis.norms" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="aspire.class2d.html" class="btn btn-neutral float-right" title="aspire.class2d package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="aspire.aspire.utils.html" class="btn btn-neutral" title="aspire.aspire.utils package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Princeton University
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

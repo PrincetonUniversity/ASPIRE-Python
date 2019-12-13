@@ -1,0 +1,46 @@
+aspire.class2d package
+======================
+
+Submodules
+----------
+
+aspire.class2d.em\_class module
+-------------------------------
+
+.. automodule:: aspire.class2d.em_class
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+aspire.class2d.mra\_class module
+--------------------------------
+
+.. automodule:: aspire.class2d.mra_class
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+aspire.class2d.rfa\_class module
+--------------------------------
+
+.. automodule:: aspire.class2d.rfa_class
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+aspire.class2d.rir\_class module
+--------------------------------
+
+.. automodule:: aspire.class2d.rir_class
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: aspire.class2d
+   :members:
+   :undoc-members:
+   :show-inheritance:

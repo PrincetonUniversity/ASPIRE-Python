@@ -1,0 +1,22 @@
+aspire.picker package
+=====================
+
+Submodules
+----------
+
+aspire.picker.apply\_picker module
+----------------------------------
+
+.. automodule:: aspire.picker.apply_picker
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: aspire.picker
+   :members:
+   :undoc-members:
+   :show-inheritance:

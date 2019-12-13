@@ -1,0 +1,46 @@
+aspire.commands package
+=======================
+
+Submodules
+----------
+
+aspire.commands.apple module
+----------------------------
+
+.. automodule:: aspire.commands.apple
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+aspire.commands.aspire module
+-----------------------------
+
+.. automodule:: aspire.commands.aspire
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+aspire.commands.cov3d module
+----------------------------
+
+.. automodule:: aspire.commands.cov3d
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+aspire.commands.simulation module
+---------------------------------
+
+.. automodule:: aspire.commands.simulation
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: aspire.commands
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,54 @@
+aspire package
+==============
+
+Subpackages
+-----------
+
+.. toctree::
+
+   aspire.apple
+   aspire.aspire
+   aspire.basis
+   aspire.class2d
+   aspire.class3d
+   aspire.commands
+   aspire.data
+   aspire.denoise
+   aspire.estimation
+   aspire.image
+   aspire.io
+   aspire.nfft
+   aspire.orientation
+   aspire.picker
+   aspire.reconstruct
+   aspire.source
+   aspire.utils
+   aspire.volume
+
+Submodules
+----------
+
+aspire.exceptions module
+------------------------
+
+.. automodule:: aspire.exceptions
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+aspire.version module
+---------------------
+
+.. automodule:: aspire.version
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: aspire
+   :members:
+   :undoc-members:
+   :show-inheritance:

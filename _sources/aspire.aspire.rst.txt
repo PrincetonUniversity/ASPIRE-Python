@@ -1,0 +1,47 @@
+aspire.aspire package
+=====================
+
+Subpackages
+-----------
+
+.. toctree::
+
+   aspire.aspire.common
+   aspire.aspire.em_classavg
+   aspire.aspire.utils
+
+Submodules
+----------
+
+aspire.aspire.abinitio module
+-----------------------------
+
+.. automodule:: aspire.aspire.abinitio
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+aspire.aspire.class\_averaging module
+-------------------------------------
+
+.. automodule:: aspire.aspire.class_averaging
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+aspire.aspire.preprocessor module
+---------------------------------
+
+.. automodule:: aspire.aspire.preprocessor
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: aspire.aspire
+   :members:
+   :undoc-members:
+   :show-inheritance:

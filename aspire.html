@@ -1,0 +1,577 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>aspire package &mdash; ASPIRE 0.5.24 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="aspire.apple package" href="aspire.apple.html" />
+    <link rel="prev" title="Modules" href="modules.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> ASPIRE
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.5.24
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Modules</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">aspire package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="aspire.apple.html">aspire.apple package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.aspire.html">aspire.aspire package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.basis.html">aspire.basis package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.class2d.html">aspire.class2d package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.class3d.html">aspire.class3d package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.commands.html">aspire.commands package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.data.html">aspire.data package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.denoise.html">aspire.denoise package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.estimation.html">aspire.estimation package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.image.html">aspire.image package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.io.html">aspire.io package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.nfft.html">aspire.nfft package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.orientation.html">aspire.orientation package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.picker.html">aspire.picker package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.reconstruct.html">aspire.reconstruct package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.source.html">aspire.source package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.utils.html">aspire.utils package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.volume.html">aspire.volume package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-aspire.exceptions">aspire.exceptions module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-aspire.version">aspire.version module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-aspire">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ASPIRE</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="modules.html">Modules</a> &raquo;</li>
+        
+      <li>aspire package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/aspire.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="aspire-package">
+<h1>aspire package<a class="headerlink" href="#aspire-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="aspire.apple.html">aspire.apple package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="aspire.apple.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.apple.html#module-aspire.apple.apple">aspire.apple.apple module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.apple.html#module-aspire.apple.helper">aspire.apple.helper module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.apple.html#module-aspire.apple.picking">aspire.apple.picking module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.apple.html#module-aspire.apple">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="aspire.aspire.html">aspire.aspire package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="aspire.aspire.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="aspire.aspire.common.html">aspire.aspire.common package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="aspire.aspire.common.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.aspire.common.html#module-aspire.aspire.common.config">aspire.aspire.common.config module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.aspire.common.html#module-aspire.aspire.common.logger">aspire.aspire.common.logger module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.aspire.common.html#module-aspire.aspire.common">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="aspire.aspire.em_classavg.html">aspire.aspire.em_classavg package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="aspire.aspire.em_classavg.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.html">aspire.aspire.em_classavg.image_denoising package</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.image_denoising.html">aspire.aspire.em_classavg.image_denoising.image_denoising package</a><ul>
+<li class="toctree-l8"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.image_denoising.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l9"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.image_denoising.ConverterModel.html">aspire.aspire.em_classavg.image_denoising.image_denoising.ConverterModel package</a><ul>
+<li class="toctree-l10"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.image_denoising.ConverterModel.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l11"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.image_denoising.ConverterModel.DirectModel.html">aspire.aspire.em_classavg.image_denoising.image_denoising.ConverterModel.DirectModel package</a><ul>
+<li class="toctree-l12"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.image_denoising.ConverterModel.DirectModel.html#submodules">Submodules</a></li>
+<li class="toctree-l12"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.image_denoising.ConverterModel.DirectModel.html#aspire-aspire-em-classavg-image-denoising-image-denoising-convertermodel-directmodel-directmodel-module">aspire.aspire.em_classavg.image_denoising.image_denoising.ConverterModel.DirectModel.DirectModel module</a></li>
+<li class="toctree-l12"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.image_denoising.ConverterModel.DirectModel.html#aspire-aspire-em-classavg-image-denoising-image-denoising-convertermodel-directmodel-test-module">aspire.aspire.em_classavg.image_denoising.image_denoising.ConverterModel.DirectModel.test module</a></li>
+<li class="toctree-l12"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.image_denoising.ConverterModel.DirectModel.html#module-aspire.aspire.em_classavg.image_denoising.image_denoising.ConverterModel.DirectModel">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l11"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.image_denoising.ConverterModel.FastModel.html">aspire.aspire.em_classavg.image_denoising.image_denoising.ConverterModel.FastModel package</a><ul>
+<li class="toctree-l12"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.image_denoising.ConverterModel.FastModel.html#submodules">Submodules</a></li>
+<li class="toctree-l12"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.image_denoising.ConverterModel.FastModel.html#aspire-aspire-em-classavg-image-denoising-image-denoising-convertermodel-fastmodel-fastmodel-module">aspire.aspire.em_classavg.image_denoising.image_denoising.ConverterModel.FastModel.FastModel module</a></li>
+<li class="toctree-l12"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.image_denoising.ConverterModel.FastModel.html#module-aspire.aspire.em_classavg.image_denoising.image_denoising.ConverterModel.FastModel.FastModel_forward_utils">aspire.aspire.em_classavg.image_denoising.image_denoising.ConverterModel.FastModel.FastModel_forward_utils module</a></li>
+<li class="toctree-l12"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.image_denoising.ConverterModel.FastModel.html#aspire-aspire-em-classavg-image-denoising-image-denoising-convertermodel-fastmodel-fastmodel-init-utils-module">aspire.aspire.em_classavg.image_denoising.image_denoising.ConverterModel.FastModel.FastModel_init_utils module</a></li>
+<li class="toctree-l12"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.image_denoising.ConverterModel.FastModel.html#aspire-aspire-em-classavg-image-denoising-image-denoising-convertermodel-fastmodel-test-module">aspire.aspire.em_classavg.image_denoising.image_denoising.ConverterModel.FastModel.test module</a></li>
+<li class="toctree-l12"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.image_denoising.ConverterModel.FastModel.html#module-aspire.aspire.em_classavg.image_denoising.image_denoising.ConverterModel.FastModel">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l10"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.image_denoising.ConverterModel.html#submodules">Submodules</a></li>
+<li class="toctree-l10"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.image_denoising.ConverterModel.html#aspire-aspire-em-classavg-image-denoising-image-denoising-convertermodel-converter-module">aspire.aspire.em_classavg.image_denoising.image_denoising.ConverterModel.Converter module</a></li>
+<li class="toctree-l10"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.image_denoising.ConverterModel.html#aspire-aspire-em-classavg-image-denoising-image-denoising-convertermodel-test-module">aspire.aspire.em_classavg.image_denoising.image_denoising.ConverterModel.test module</a></li>
+<li class="toctree-l10"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.image_denoising.ConverterModel.html#module-aspire.aspire.em_classavg.image_denoising.image_denoising.ConverterModel">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l9"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.image_denoising.PSWF2D.html">aspire.aspire.em_classavg.image_denoising.image_denoising.PSWF2D package</a><ul>
+<li class="toctree-l10"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.image_denoising.PSWF2D.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l11"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.image_denoising.PSWF2D.BN.html">aspire.aspire.em_classavg.image_denoising.image_denoising.PSWF2D.BN package</a><ul>
+<li class="toctree-l12"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.image_denoising.PSWF2D.BN.html#submodules">Submodules</a></li>
+<li class="toctree-l12"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.image_denoising.PSWF2D.BN.html#aspire-aspire-em-classavg-image-denoising-image-denoising-pswf2d-bn-bn-module">aspire.aspire.em_classavg.image_denoising.image_denoising.PSWF2D.BN.BN module</a></li>
+<li class="toctree-l12"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.image_denoising.PSWF2D.BN.html#module-aspire.aspire.em_classavg.image_denoising.image_denoising.PSWF2D.BN.BN_init_utils">aspire.aspire.em_classavg.image_denoising.image_denoising.PSWF2D.BN.BN_init_utils module</a></li>
+<li class="toctree-l12"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.image_denoising.PSWF2D.BN.html#module-aspire.aspire.em_classavg.image_denoising.image_denoising.PSWF2D.BN">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l10"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.image_denoising.PSWF2D.html#submodules">Submodules</a></li>
+<li class="toctree-l10"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.image_denoising.PSWF2D.html#aspire-aspire-em-classavg-image-denoising-image-denoising-pswf2d-generalfunctions-module">aspire.aspire.em_classavg.image_denoising.image_denoising.PSWF2D.GeneralFunctions module</a></li>
+<li class="toctree-l10"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.image_denoising.PSWF2D.html#aspire-aspire-em-classavg-image-denoising-image-denoising-pswf2d-pswf2dmodel-module">aspire.aspire.em_classavg.image_denoising.image_denoising.PSWF2D.PSWF2DModel module</a></li>
+<li class="toctree-l10"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.image_denoising.PSWF2D.html#aspire-aspire-em-classavg-image-denoising-image-denoising-pswf2d-pswf2d-utils-module">aspire.aspire.em_classavg.image_denoising.image_denoising.PSWF2D.PSWF2D_utils module</a></li>
+<li class="toctree-l10"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.image_denoising.PSWF2D.html#aspire-aspire-em-classavg-image-denoising-image-denoising-pswf2d-test-module">aspire.aspire.em_classavg.image_denoising.image_denoising.PSWF2D.test module</a></li>
+<li class="toctree-l10"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.image_denoising.PSWF2D.html#module-aspire.aspire.em_classavg.image_denoising.image_denoising.PSWF2D">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l8"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.image_denoising.html#submodules">Submodules</a></li>
+<li class="toctree-l8"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.image_denoising.html#aspire-aspire-em-classavg-image-denoising-image-denoising-steerablepca-module">aspire.aspire.em_classavg.image_denoising.image_denoising.SteerablePCA module</a></li>
+<li class="toctree-l8"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.image_denoising.html#module-aspire.aspire.em_classavg.image_denoising.image_denoising">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="aspire.aspire.em_classavg.image_denoising.html#module-aspire.aspire.em_classavg.image_denoising">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.aspire.em_classavg.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.aspire.em_classavg.html#aspire-aspire-em-classavg-circ-shift-kernel-module">aspire.aspire.em_classavg.circ_shift_kernel module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.aspire.em_classavg.html#module-aspire.aspire.em_classavg.config">aspire.aspire.em_classavg.config module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.aspire.em_classavg.html#module-aspire.aspire.em_classavg.data_utils">aspire.aspire.em_classavg.data_utils module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.aspire.em_classavg.html#aspire-aspire-em-classavg-em-module">aspire.aspire.em_classavg.em module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.aspire.em_classavg.html#aspire-aspire-em-classavg-em-old-module">aspire.aspire.em_classavg.em_old module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.aspire.em_classavg.html#aspire-aspire-em-classavg-mask-images-kernel-module">aspire.aspire.em_classavg.mask_images_kernel module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.aspire.em_classavg.html#aspire-aspire-em-classavg-s-em-module">aspire.aspire.em_classavg.s_em module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.aspire.em_classavg.html#aspire-aspire-em-classavg-s-em-class-avg-module">aspire.aspire.em_classavg.s_em_class_avg module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.aspire.em_classavg.html#aspire-aspire-em-classavg-slice-assign-kernel-module">aspire.aspire.em_classavg.slice_assign_kernel module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.aspire.em_classavg.html#aspire-aspire-em-classavg-test-forward-backward-module">aspire.aspire.em_classavg.test_forward_backward module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.aspire.em_classavg.html#aspire-aspire-em-classavg-test-progressbar2-module">aspire.aspire.em_classavg.test_progressbar2 module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.aspire.em_classavg.html#module-aspire.aspire.em_classavg">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="aspire.aspire.utils.html">aspire.aspire.utils package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="aspire.aspire.utils.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.aspire.utils.html#module-aspire.aspire.utils.array_utils">aspire.aspire.utils.array_utils module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.aspire.utils.html#module-aspire.aspire.utils.compare_stacks">aspire.aspire.utils.compare_stacks module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.aspire.utils.html#module-aspire.aspire.utils.data_utils">aspire.aspire.utils.data_utils module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.aspire.utils.html#module-aspire.aspire.utils.helpers">aspire.aspire.utils.helpers module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.aspire.utils.html#module-aspire.aspire.utils.parse_star">aspire.aspire.utils.parse_star module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.aspire.utils.html#module-aspire.aspire.utils.viewstack">aspire.aspire.utils.viewstack module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.aspire.utils.html#aspire-aspire-utils-workflow-validation-module">aspire.aspire.utils.workflow_validation module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.aspire.utils.html#module-aspire.aspire.utils">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.aspire.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.aspire.html#module-aspire.aspire.abinitio">aspire.aspire.abinitio module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.aspire.html#module-aspire.aspire.class_averaging">aspire.aspire.class_averaging module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.aspire.html#module-aspire.aspire.preprocessor">aspire.aspire.preprocessor module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.aspire.html#module-aspire.aspire">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="aspire.basis.html">aspire.basis package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="aspire.basis.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.basis.html#module-aspire.basis.basis_utils">aspire.basis.basis_utils module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.basis.html#module-aspire.basis.dirac">aspire.basis.dirac module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.basis.html#module-aspire.basis.fb_2d">aspire.basis.fb_2d module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.basis.html#module-aspire.basis.fb_3d">aspire.basis.fb_3d module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.basis.html#module-aspire.basis.ffb_2d">aspire.basis.ffb_2d module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.basis.html#module-aspire.basis.ffb_3d">aspire.basis.ffb_3d module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.basis.html#module-aspire.basis.fpswf_2d">aspire.basis.fpswf_2d module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.basis.html#module-aspire.basis.fpswf_3d">aspire.basis.fpswf_3d module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.basis.html#module-aspire.basis.pswf_2d">aspire.basis.pswf_2d module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.basis.html#module-aspire.basis.pswf_3d">aspire.basis.pswf_3d module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.basis.html#module-aspire.basis.pswf_utils">aspire.basis.pswf_utils module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.basis.html#module-aspire.basis">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="aspire.class2d.html">aspire.class2d package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="aspire.class2d.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.class2d.html#module-aspire.class2d.em_class">aspire.class2d.em_class module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.class2d.html#module-aspire.class2d.mra_class">aspire.class2d.mra_class module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.class2d.html#module-aspire.class2d.rfa_class">aspire.class2d.rfa_class module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.class2d.html#module-aspire.class2d.rir_class">aspire.class2d.rir_class module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.class2d.html#module-aspire.class2d">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="aspire.class3d.html">aspire.class3d package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="aspire.class3d.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.class3d.html#module-aspire.class3d.cov3d">aspire.class3d.cov3d module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.class3d.html#module-aspire.class3d">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="aspire.commands.html">aspire.commands package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="aspire.commands.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.commands.html#module-aspire.commands.apple">aspire.commands.apple module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.commands.html#module-aspire.commands.aspire">aspire.commands.aspire module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.commands.html#module-aspire.commands.cov3d">aspire.commands.cov3d module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.commands.html#module-aspire.commands.simulation">aspire.commands.simulation module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.commands.html#module-aspire.commands">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="aspire.data.html">aspire.data package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="aspire.data.html#module-aspire.data">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="aspire.denoise.html">aspire.denoise package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="aspire.denoise.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.denoise.html#module-aspire.denoise.class_avg">aspire.denoise.class_avg module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.denoise.html#module-aspire.denoise">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="aspire.estimation.html">aspire.estimation package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="aspire.estimation.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.estimation.html#module-aspire.estimation.covar">aspire.estimation.covar module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.estimation.html#module-aspire.estimation.covar2d">aspire.estimation.covar2d module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.estimation.html#module-aspire.estimation.kernel">aspire.estimation.kernel module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.estimation.html#module-aspire.estimation.mean">aspire.estimation.mean module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.estimation.html#module-aspire.estimation.noise">aspire.estimation.noise module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.estimation.html#module-aspire.estimation">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="aspire.image.html">aspire.image package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="aspire.image.html#module-aspire.image">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="aspire.io.html">aspire.io package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="aspire.io.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.io.html#module-aspire.io.micrograph">aspire.io.micrograph module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.io.html#module-aspire.io.starfile">aspire.io.starfile module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.io.html#module-aspire.io">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="aspire.nfft.html">aspire.nfft package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="aspire.nfft.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.nfft.html#module-aspire.nfft.finufft">aspire.nfft.finufft module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.nfft.html#module-aspire.nfft.pynfft">aspire.nfft.pynfft module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.nfft.html#module-aspire.nfft.utils">aspire.nfft.utils module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.nfft.html#module-aspire.nfft">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="aspire.orientation.html">aspire.orientation package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="aspire.orientation.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.orientation.html#module-aspire.orientation.commonline_ev">aspire.orientation.commonline_ev module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.orientation.html#module-aspire.orientation.commonline_gcar">aspire.orientation.commonline_gcar module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.orientation.html#module-aspire.orientation.commonline_lud">aspire.orientation.commonline_lud module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.orientation.html#module-aspire.orientation.commonline_sdp">aspire.orientation.commonline_sdp module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.orientation.html#module-aspire.orientation.commonline_sync">aspire.orientation.commonline_sync module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.orientation.html#module-aspire.orientation">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="aspire.picker.html">aspire.picker package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="aspire.picker.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.picker.html#module-aspire.picker.apply_picker">aspire.picker.apply_picker module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.picker.html#module-aspire.picker">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="aspire.reconstruct.html">aspire.reconstruct package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="aspire.reconstruct.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.reconstruct.html#module-aspire.reconstruct.ang_recon">aspire.reconstruct.ang_recon module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.reconstruct.html#module-aspire.reconstruct.em_recon">aspire.reconstruct.em_recon module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.reconstruct.html#module-aspire.reconstruct.kam_recon">aspire.reconstruct.kam_recon module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.reconstruct.html#module-aspire.reconstruct">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="aspire.source.html">aspire.source package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="aspire.source.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.source.html#module-aspire.source.mrcstack">aspire.source.mrcstack module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.source.html#module-aspire.source.relion">aspire.source.relion module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.source.html#module-aspire.source.simulation">aspire.source.simulation module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.source.html#module-aspire.source.xform">aspire.source.xform module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.source.html#module-aspire.source">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="aspire.utils.html">aspire.utils package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="aspire.utils.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="aspire.utils.numeric.html">aspire.utils.numeric package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="aspire.utils.numeric.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.utils.numeric.html#aspire-utils-numeric-cupy-module">aspire.utils.numeric.cupy module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.utils.numeric.html#module-aspire.utils.numeric.numpy">aspire.utils.numeric.numpy module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.utils.numeric.html#module-aspire.utils.numeric">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.utils.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.utils.html#module-aspire.utils.blk_diag_func">aspire.utils.blk_diag_func module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.utils.html#module-aspire.utils.cell">aspire.utils.cell module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.utils.html#module-aspire.utils.config">aspire.utils.config module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.utils.html#module-aspire.utils.coor_trans">aspire.utils.coor_trans module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.utils.html#module-aspire.utils.em">aspire.utils.em module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.utils.html#module-aspire.utils.fft">aspire.utils.fft module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.utils.html#module-aspire.utils.filters">aspire.utils.filters module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.utils.html#module-aspire.utils.matlab_compat">aspire.utils.matlab_compat module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.utils.html#module-aspire.utils.matrix">aspire.utils.matrix module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.utils.html#module-aspire.utils.misc">aspire.utils.misc module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.utils.html#module-aspire.utils.optimize">aspire.utils.optimize module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.utils.html#module-aspire.utils.preprocess">aspire.utils.preprocess module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aspire.utils.html#module-aspire.utils">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="aspire.volume.html">aspire.volume package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="aspire.volume.html#module-aspire.volume">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-aspire.exceptions">
+<span id="aspire-exceptions-module"></span><h2>aspire.exceptions module<a class="headerlink" href="#module-aspire.exceptions" title="Permalink to this headline">¶</a></h2>
+<dl class="exception">
+<dt id="aspire.exceptions.AspireException">
+<em class="property">exception </em><code class="sig-prename descclassname">aspire.exceptions.</code><code class="sig-name descname">AspireException</code><a class="headerlink" href="#aspire.exceptions.AspireException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="aspire.exceptions.DimensionsIncompatible">
+<em class="property">exception </em><code class="sig-prename descclassname">aspire.exceptions.</code><code class="sig-name descname">DimensionsIncompatible</code><a class="headerlink" href="#aspire.exceptions.DimensionsIncompatible" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#aspire.exceptions.AspireException" title="aspire.exceptions.AspireException"><code class="xref py py-class docutils literal notranslate"><span class="pre">aspire.exceptions.AspireException</span></code></a></p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="aspire.exceptions.ErrorTooBig">
+<em class="property">exception </em><code class="sig-prename descclassname">aspire.exceptions.</code><code class="sig-name descname">ErrorTooBig</code><a class="headerlink" href="#aspire.exceptions.ErrorTooBig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#aspire.exceptions.AspireException" title="aspire.exceptions.AspireException"><code class="xref py py-class docutils literal notranslate"><span class="pre">aspire.exceptions.AspireException</span></code></a></p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="aspire.exceptions.UnknownFormat">
+<em class="property">exception </em><code class="sig-prename descclassname">aspire.exceptions.</code><code class="sig-name descname">UnknownFormat</code><a class="headerlink" href="#aspire.exceptions.UnknownFormat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#aspire.exceptions.AspireException" title="aspire.exceptions.AspireException"><code class="xref py py-class docutils literal notranslate"><span class="pre">aspire.exceptions.AspireException</span></code></a></p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="aspire.exceptions.WrongInput">
+<em class="property">exception </em><code class="sig-prename descclassname">aspire.exceptions.</code><code class="sig-name descname">WrongInput</code><a class="headerlink" href="#aspire.exceptions.WrongInput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#aspire.exceptions.AspireException" title="aspire.exceptions.AspireException"><code class="xref py py-class docutils literal notranslate"><span class="pre">aspire.exceptions.AspireException</span></code></a></p>
+</dd></dl>
+
+<dl class="function">
+<dt id="aspire.exceptions.handle_exception">
+<code class="sig-prename descclassname">aspire.exceptions.</code><code class="sig-name descname">handle_exception</code><span class="sig-paren">(</span><em class="sig-param">exc_type</em>, <em class="sig-param">exc_value</em>, <em class="sig-param">exc_traceback</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.exceptions.handle_exception" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handle any top-level unhandled exception.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>exc_type</strong> – Exception type object</p></li>
+<li><p><strong>exc_value</strong> – Exception value object (an instance of type exc_type)</p></li>
+<li><p><strong>exc_traceback</strong> – The Traceback object associated with exc_value (also available as exc_value.__traceback__)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>On return, useful diagnostic information has been logged, and the exception re-raised.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-aspire.version">
+<span id="aspire-version-module"></span><h2>aspire.version module<a class="headerlink" href="#module-aspire.version" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-aspire">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-aspire" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="aspire.apple.html" class="btn btn-neutral float-right" title="aspire.apple package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="modules.html" class="btn btn-neutral" title="Modules" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Princeton University
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

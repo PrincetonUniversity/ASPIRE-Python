@@ -1,0 +1,109 @@
+aspire.aspire.em\_classavg package
+==================================
+
+Subpackages
+-----------
+
+.. toctree::
+
+   aspire.aspire.em_classavg.image_denoising
+
+Submodules
+----------
+
+aspire.aspire.em\_classavg.circ\_shift\_kernel module
+-----------------------------------------------------
+
+.. automodule:: aspire.aspire.em_classavg.circ_shift_kernel
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+aspire.aspire.em\_classavg.config module
+----------------------------------------
+
+.. automodule:: aspire.aspire.em_classavg.config
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+aspire.aspire.em\_classavg.data\_utils module
+---------------------------------------------
+
+.. automodule:: aspire.aspire.em_classavg.data_utils
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+aspire.aspire.em\_classavg.em module
+------------------------------------
+
+.. automodule:: aspire.aspire.em_classavg.em
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+aspire.aspire.em\_classavg.em\_old module
+-----------------------------------------
+
+.. automodule:: aspire.aspire.em_classavg.em_old
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+aspire.aspire.em\_classavg.mask\_images\_kernel module
+------------------------------------------------------
+
+.. automodule:: aspire.aspire.em_classavg.mask_images_kernel
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+aspire.aspire.em\_classavg.s\_em module
+---------------------------------------
+
+.. automodule:: aspire.aspire.em_classavg.s_em
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+aspire.aspire.em\_classavg.s\_em\_class\_avg module
+---------------------------------------------------
+
+.. automodule:: aspire.aspire.em_classavg.s_em_class_avg
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+aspire.aspire.em\_classavg.slice\_assign\_kernel module
+-------------------------------------------------------
+
+.. automodule:: aspire.aspire.em_classavg.slice_assign_kernel
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+aspire.aspire.em\_classavg.test\_forward\_backward module
+---------------------------------------------------------
+
+.. automodule:: aspire.aspire.em_classavg.test_forward_backward
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+aspire.aspire.em\_classavg.test\_progressbar2 module
+----------------------------------------------------
+
+.. automodule:: aspire.aspire.em_classavg.test_progressbar2
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: aspire.aspire.em_classavg
+   :members:
+   :undoc-members:
+   :show-inheritance:

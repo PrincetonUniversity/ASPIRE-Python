@@ -1,0 +1,367 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>aspire.image package &mdash; ASPIRE 0.5.24 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="aspire.io package" href="aspire.io.html" />
+    <link rel="prev" title="aspire.estimation package" href="aspire.estimation.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> ASPIRE
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.5.24
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Modules</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="aspire.html">aspire package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="aspire.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="aspire.apple.html">aspire.apple package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.aspire.html">aspire.aspire package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.basis.html">aspire.basis package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.class2d.html">aspire.class2d package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.class3d.html">aspire.class3d package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.commands.html">aspire.commands package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.data.html">aspire.data package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.denoise.html">aspire.denoise package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.estimation.html">aspire.estimation package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">aspire.image package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.io.html">aspire.io package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.nfft.html">aspire.nfft package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.orientation.html">aspire.orientation package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.picker.html">aspire.picker package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.reconstruct.html">aspire.reconstruct package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.source.html">aspire.source package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.utils.html">aspire.utils package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.volume.html">aspire.volume package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="aspire.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="aspire.html#module-aspire.exceptions">aspire.exceptions module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="aspire.html#module-aspire.version">aspire.version module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="aspire.html#module-aspire">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ASPIRE</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="modules.html">Modules</a> &raquo;</li>
+        
+          <li><a href="aspire.html">aspire package</a> &raquo;</li>
+        
+      <li>aspire.image package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/aspire.image.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="aspire-image-package">
+<h1>aspire.image package<a class="headerlink" href="#aspire-image-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-aspire.image">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-aspire.image" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="aspire.image.BasisImage">
+<em class="property">class </em><code class="sig-prename descclassname">aspire.image.</code><code class="sig-name descname">BasisImage</code><span class="sig-paren">(</span><em class="sig-param">basis</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.image.BasisImage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#aspire.image.Image" title="aspire.image.Image"><code class="xref py py-class docutils literal notranslate"><span class="pre">aspire.image.Image</span></code></a></p>
+<p class="rubric">Methods</p>
+<dl class="method">
+<dt id="aspire.image.BasisImage.evaluate">
+<code class="sig-name descname">evaluate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aspire.image.BasisImage.evaluate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="aspire.image.BispecImage">
+<em class="property">class </em><code class="sig-prename descclassname">aspire.image.</code><code class="sig-name descname">BispecImage</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.image.BispecImage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#aspire.image.Image" title="aspire.image.Image"><code class="xref py py-class docutils literal notranslate"><span class="pre">aspire.image.Image</span></code></a></p>
+<p class="rubric">Methods</p>
+<dl class="method">
+<dt id="aspire.image.BispecImage.expand">
+<code class="sig-name descname">expand</code><span class="sig-paren">(</span><em class="sig-param">basis</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.image.BispecImage.expand" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="aspire.image.CartesianImage">
+<em class="property">class </em><code class="sig-prename descclassname">aspire.image.</code><code class="sig-name descname">CartesianImage</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.image.CartesianImage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#aspire.image.Image" title="aspire.image.Image"><code class="xref py py-class docutils literal notranslate"><span class="pre">aspire.image.Image</span></code></a></p>
+<p class="rubric">Methods</p>
+<dl class="method">
+<dt id="aspire.image.CartesianImage.expand">
+<code class="sig-name descname">expand</code><span class="sig-paren">(</span><em class="sig-param">basis</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.image.CartesianImage.expand" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="aspire.image.FBBasisImage">
+<em class="property">class </em><code class="sig-prename descclassname">aspire.image.</code><code class="sig-name descname">FBBasisImage</code><span class="sig-paren">(</span><em class="sig-param">basis</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.image.FBBasisImage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#aspire.image.BasisImage" title="aspire.image.BasisImage"><code class="xref py py-class docutils literal notranslate"><span class="pre">aspire.image.BasisImage</span></code></a></p>
+<p class="rubric">Methods</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="aspire.image.Image">
+<em class="property">class </em><code class="sig-prename descclassname">aspire.image.</code><code class="sig-name descname">Image</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.image.Image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p class="rubric">Methods</p>
+<dl class="method">
+<dt id="aspire.image.Image.asnumpy">
+<code class="sig-name descname">asnumpy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aspire.image.Image.asnumpy" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="aspire.image.Image.copy">
+<code class="sig-name descname">copy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aspire.image.Image.copy" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="aspire.image.Image.downsample">
+<code class="sig-name descname">downsample</code><span class="sig-paren">(</span><em class="sig-param">ds_res</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.image.Image.downsample" title="Permalink to this definition">¶</a></dt>
+<dd><p>Downsample Image to a specific resolution. This method returns a new Image.
+:param ds_res: int - new resolution, should be &lt;= the current resolution of this Image
+:return: The downsampled Image object.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="aspire.image.Image.filter">
+<code class="sig-name descname">filter</code><span class="sig-paren">(</span><em class="sig-param">filter</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.image.Image.filter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Apply a <cite>Filter</cite> object to the Image. This method returns a new Image.
+:param filter: An object of type <cite>Filter</cite>.
+:return: A new filtered <cite>Image</cite> object.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="aspire.image.Image.rotate">
+<code class="sig-name descname">rotate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aspire.image.Image.rotate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="aspire.image.Image.save">
+<code class="sig-name descname">save</code><span class="sig-paren">(</span><em class="sig-param">mrcs_filepath</em>, <em class="sig-param">overwrite=False</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.image.Image.save" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="aspire.image.Image.shift">
+<code class="sig-name descname">shift</code><span class="sig-paren">(</span><em class="sig-param">shifts</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.image.Image.shift" title="Permalink to this definition">¶</a></dt>
+<dd><p>Translate image by shifts. This method returns a new Image.
+:param shifts: An array of size n-by-2 specifying the shifts in pixels.</p>
+<blockquote>
+<div><p>Alternatively, it can be a column vector of length 2, in which case the same shifts is applied to each image.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The Image translated by the shifts, with periodic boundaries.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="aspire.image.PolarImage">
+<em class="property">class </em><code class="sig-prename descclassname">aspire.image.</code><code class="sig-name descname">PolarImage</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.image.PolarImage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#aspire.image.Image" title="aspire.image.Image"><code class="xref py py-class docutils literal notranslate"><span class="pre">aspire.image.Image</span></code></a></p>
+<p class="rubric">Methods</p>
+<dl class="method">
+<dt id="aspire.image.PolarImage.expand">
+<code class="sig-name descname">expand</code><span class="sig-paren">(</span><em class="sig-param">basis</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.image.PolarImage.expand" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="aspire.io.html" class="btn btn-neutral float-right" title="aspire.io package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="aspire.estimation.html" class="btn btn-neutral" title="aspire.estimation package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Princeton University
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

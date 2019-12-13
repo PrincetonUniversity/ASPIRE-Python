@@ -1,0 +1,53 @@
+aspire.aspire.em\_classavg.image\_denoising.image\_denoising.PSWF2D package
+===========================================================================
+
+Subpackages
+-----------
+
+.. toctree::
+
+   aspire.aspire.em_classavg.image_denoising.image_denoising.PSWF2D.BN
+
+Submodules
+----------
+
+aspire.aspire.em\_classavg.image\_denoising.image\_denoising.PSWF2D.GeneralFunctions module
+-------------------------------------------------------------------------------------------
+
+.. automodule:: aspire.aspire.em_classavg.image_denoising.image_denoising.PSWF2D.GeneralFunctions
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+aspire.aspire.em\_classavg.image\_denoising.image\_denoising.PSWF2D.PSWF2DModel module
+--------------------------------------------------------------------------------------
+
+.. automodule:: aspire.aspire.em_classavg.image_denoising.image_denoising.PSWF2D.PSWF2DModel
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+aspire.aspire.em\_classavg.image\_denoising.image\_denoising.PSWF2D.PSWF2D\_utils module
+----------------------------------------------------------------------------------------
+
+.. automodule:: aspire.aspire.em_classavg.image_denoising.image_denoising.PSWF2D.PSWF2D_utils
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+aspire.aspire.em\_classavg.image\_denoising.image\_denoising.PSWF2D.test module
+-------------------------------------------------------------------------------
+
+.. automodule:: aspire.aspire.em_classavg.image_denoising.image_denoising.PSWF2D.test
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: aspire.aspire.em_classavg.image_denoising.image_denoising.PSWF2D
+   :members:
+   :undoc-members:
+   :show-inheritance:

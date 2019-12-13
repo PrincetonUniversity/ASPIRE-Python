@@ -1,0 +1,544 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>aspire.aspire.utils package &mdash; ASPIRE 0.5.24 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="aspire.basis package" href="aspire.basis.html" />
+    <link rel="prev" title="aspire.aspire.em_classavg.image_denoising.image_denoising.PSWF2D.BN package" href="aspire.aspire.em_classavg.image_denoising.image_denoising.PSWF2D.BN.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> ASPIRE
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.5.24
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Modules</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="aspire.html">aspire package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="aspire.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="aspire.apple.html">aspire.apple package</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="aspire.aspire.html">aspire.aspire package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.basis.html">aspire.basis package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.class2d.html">aspire.class2d package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.class3d.html">aspire.class3d package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.commands.html">aspire.commands package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.data.html">aspire.data package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.denoise.html">aspire.denoise package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.estimation.html">aspire.estimation package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.image.html">aspire.image package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.io.html">aspire.io package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.nfft.html">aspire.nfft package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.orientation.html">aspire.orientation package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.picker.html">aspire.picker package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.reconstruct.html">aspire.reconstruct package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.source.html">aspire.source package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.utils.html">aspire.utils package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.volume.html">aspire.volume package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="aspire.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="aspire.html#module-aspire.exceptions">aspire.exceptions module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="aspire.html#module-aspire.version">aspire.version module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="aspire.html#module-aspire">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ASPIRE</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="modules.html">Modules</a> &raquo;</li>
+        
+          <li><a href="aspire.html">aspire package</a> &raquo;</li>
+        
+          <li><a href="aspire.aspire.html">aspire.aspire package</a> &raquo;</li>
+        
+      <li>aspire.aspire.utils package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/aspire.aspire.utils.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="aspire-aspire-utils-package">
+<h1>aspire.aspire.utils package<a class="headerlink" href="#aspire-aspire-utils-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-aspire.aspire.utils.array_utils">
+<span id="aspire-aspire-utils-array-utils-module"></span><h2>aspire.aspire.utils.array_utils module<a class="headerlink" href="#module-aspire.aspire.utils.array_utils" title="Permalink to this headline">¶</a></h2>
+<p>This module contains functions useful for common tasks such as crop/mask/downsample etc.
+It is different from the functions in PreProcessor as they allow you to crop/downsample to a
+non square size. PreProcessor.crop accepts size as int and here it’s accepted as (X,Y) tuple.
+TODO reduced this file by refactoring it and moving crop/downsample capabilities to PreProcessor.</p>
+<dl class="function">
+<dt id="aspire.aspire.utils.array_utils.bsearch">
+<code class="sig-prename descclassname">aspire.aspire.utils.array_utils.</code><code class="sig-name descname">bsearch</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">lower_bound</em>, <em class="sig-param">upper_bound</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.utils.array_utils.bsearch" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.utils.array_utils.cart2rad">
+<code class="sig-prename descclassname">aspire.aspire.utils.array_utils.</code><code class="sig-name descname">cart2rad</code><span class="sig-paren">(</span><em class="sig-param">n</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.utils.array_utils.cart2rad" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the radii corresponding to the points of a cartesian grid of size NxN points
+XXX This is a name for this function.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.utils.array_utils.cfft2">
+<code class="sig-prename descclassname">aspire.aspire.utils.array_utils.</code><code class="sig-name descname">cfft2</code><span class="sig-paren">(</span><em class="sig-param">x</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.utils.array_utils.cfft2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.utils.array_utils.crop">
+<code class="sig-prename descclassname">aspire.aspire.utils.array_utils.</code><code class="sig-name descname">crop</code><span class="sig-paren">(</span><em class="sig-param">images</em>, <em class="sig-param">out_size</em>, <em class="sig-param">is_stack</em>, <em class="sig-param">fillval=0.0</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.utils.array_utils.crop" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.utils.array_utils.cryo_epsdr">
+<code class="sig-prename descclassname">aspire.aspire.utils.array_utils.</code><code class="sig-name descname">cryo_epsdr</code><span class="sig-paren">(</span><em class="sig-param">vol</em>, <em class="sig-param">samples_idx</em>, <em class="sig-param">max_d</em>, <em class="sig-param">verbose</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.utils.array_utils.cryo_epsdr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.utils.array_utils.cryo_epsds">
+<code class="sig-prename descclassname">aspire.aspire.utils.array_utils.</code><code class="sig-name descname">cryo_epsds</code><span class="sig-paren">(</span><em class="sig-param">imstack</em>, <em class="sig-param">samples_idx</em>, <em class="sig-param">max_d</em>, <em class="sig-param">verbose=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.utils.array_utils.cryo_epsds" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.utils.array_utils.downsample">
+<code class="sig-prename descclassname">aspire.aspire.utils.array_utils.</code><code class="sig-name descname">downsample</code><span class="sig-paren">(</span><em class="sig-param">images</em>, <em class="sig-param">out_size</em>, <em class="sig-param">is_stack=True</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.utils.array_utils.downsample" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.utils.array_utils.estimate_snr">
+<code class="sig-prename descclassname">aspire.aspire.utils.array_utils.</code><code class="sig-name descname">estimate_snr</code><span class="sig-paren">(</span><em class="sig-param">images</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.utils.array_utils.estimate_snr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Estimate signal-noise-ratio for a stack of projections.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>images</strong> – stack of projections (between 1 and N projections)</p>
+</dd>
+</dl>
+<p>TODO test error size, we might have a bug here. it might be too large.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.utils.array_utils.fast_cfft2">
+<code class="sig-prename descclassname">aspire.aspire.utils.array_utils.</code><code class="sig-name descname">fast_cfft2</code><span class="sig-paren">(</span><em class="sig-param">x</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.utils.array_utils.fast_cfft2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.utils.array_utils.fast_icfft2">
+<code class="sig-prename descclassname">aspire.aspire.utils.array_utils.</code><code class="sig-name descname">fast_icfft2</code><span class="sig-paren">(</span><em class="sig-param">x</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.utils.array_utils.fast_icfft2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.utils.array_utils.flatten">
+<code class="sig-prename descclassname">aspire.aspire.utils.array_utils.</code><code class="sig-name descname">flatten</code><span class="sig-paren">(</span><em class="sig-param">array</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.utils.array_utils.flatten" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accept an array and return a flattened vector using Fortran convention.</p>
+<p>This func mimics MATLAB’s behavior:
+array = array(:)</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.utils.array_utils.fuzzymask">
+<code class="sig-prename descclassname">aspire.aspire.utils.array_utils.</code><code class="sig-name descname">fuzzymask</code><span class="sig-paren">(</span><em class="sig-param">n</em>, <em class="sig-param">dims</em>, <em class="sig-param">r0</em>, <em class="sig-param">rise_time</em>, <em class="sig-param">origin=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.utils.array_utils.fuzzymask" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.utils.array_utils.gwindow">
+<code class="sig-prename descclassname">aspire.aspire.utils.array_utils.</code><code class="sig-name descname">gwindow</code><span class="sig-paren">(</span><em class="sig-param">p</em>, <em class="sig-param">max_d</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.utils.array_utils.gwindow" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.utils.array_utils.icfft2">
+<code class="sig-prename descclassname">aspire.aspire.utils.array_utils.</code><code class="sig-name descname">icfft2</code><span class="sig-paren">(</span><em class="sig-param">x</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.utils.array_utils.icfft2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.utils.array_utils.image_grid">
+<code class="sig-prename descclassname">aspire.aspire.utils.array_utils.</code><code class="sig-name descname">image_grid</code><span class="sig-paren">(</span><em class="sig-param">n</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.utils.array_utils.image_grid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.utils.array_utils.mask">
+<code class="sig-prename descclassname">aspire.aspire.utils.array_utils.</code><code class="sig-name descname">mask</code><span class="sig-paren">(</span><em class="sig-param">images</em>, <em class="sig-param">is_stack=False</em>, <em class="sig-param">r=None</em>, <em class="sig-param">rise_time=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.utils.array_utils.mask" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.utils.array_utils.radius_norm">
+<code class="sig-prename descclassname">aspire.aspire.utils.array_utils.</code><code class="sig-name descname">radius_norm</code><span class="sig-paren">(</span><em class="sig-param">n: int</em>, <em class="sig-param">origin=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.utils.array_utils.radius_norm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create an n(1) x n(2) array where the value at (x,y) is the distance from the
+origin, normalized such that a distance equal to the width or height of
+the array = 1.  This is the appropriate function to define frequencies
+for the fft of a rectangular image.</p>
+<p>For a square array of size n (or [n n]) the following is true:
+RadiusNorm(n) = Radius(n)/n.
+The org argument is optional, in which case the FFT center is used.</p>
+<p>Theta is the angle in radians.</p>
+<p>(Transalted from Matlab RadiusNorm.m)</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-aspire.aspire.utils.compare_stacks">
+<span id="aspire-aspire-utils-compare-stacks-module"></span><h2>aspire.aspire.utils.compare_stacks module<a class="headerlink" href="#module-aspire.aspire.utils.compare_stacks" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="aspire.aspire.utils.compare_stacks.compare_stack_files">
+<code class="sig-prename descclassname">aspire.aspire.utils.compare_stacks.</code><code class="sig-name descname">compare_stack_files</code><span class="sig-paren">(</span><em class="sig-param">file1</em>, <em class="sig-param">file2</em>, <em class="sig-param">verbose=None</em>, <em class="sig-param">max_error=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.utils.compare_stacks.compare_stack_files" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wrapper for func compare_stacks.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-aspire.aspire.utils.data_utils">
+<span id="aspire-aspire-utils-data-utils-module"></span><h2>aspire.aspire.utils.data_utils module<a class="headerlink" href="#module-aspire.aspire.utils.data_utils" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="aspire.aspire.utils.data_utils.fctr">
+<code class="sig-prename descclassname">aspire.aspire.utils.data_utils.</code><code class="sig-name descname">fctr</code><span class="sig-paren">(</span><em class="sig-param">n</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.utils.data_utils.fctr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Center of an FFT-shifted image. We use this center
+coordinate for all rotations and centering operations.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.utils.data_utils.load_stack_from_file">
+<code class="sig-prename descclassname">aspire.aspire.utils.data_utils.</code><code class="sig-name descname">load_stack_from_file</code><span class="sig-paren">(</span><em class="sig-param">filepath</em>, <em class="sig-param">c_contiguous=True</em>, <em class="sig-param">return_format=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.utils.data_utils.load_stack_from_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load projection-stack from file. Try different formats.
+Supported formats are MRC/MRCS/MAT/NPY.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.utils.data_utils.mat_to_npy">
+<code class="sig-prename descclassname">aspire.aspire.utils.data_utils.</code><code class="sig-name descname">mat_to_npy</code><span class="sig-paren">(</span><em class="sig-param">file_name</em>, <em class="sig-param">dir_path=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.utils.data_utils.mat_to_npy" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.utils.data_utils.mat_to_npy_vec">
+<code class="sig-prename descclassname">aspire.aspire.utils.data_utils.</code><code class="sig-name descname">mat_to_npy_vec</code><span class="sig-paren">(</span><em class="sig-param">file_name</em>, <em class="sig-param">dir_path=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.utils.data_utils.mat_to_npy_vec" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.utils.data_utils.npy_to_mat">
+<code class="sig-prename descclassname">aspire.aspire.utils.data_utils.</code><code class="sig-name descname">npy_to_mat</code><span class="sig-paren">(</span><em class="sig-param">file_name</em>, <em class="sig-param">var_name</em>, <em class="sig-param">var</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.utils.data_utils.npy_to_mat" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.utils.data_utils.validate_square_projections">
+<code class="sig-prename descclassname">aspire.aspire.utils.data_utils.</code><code class="sig-name descname">validate_square_projections</code><span class="sig-paren">(</span><em class="sig-param">stack</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.utils.data_utils.validate_square_projections" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-aspire.aspire.utils.helpers">
+<span id="aspire-aspire-utils-helpers-module"></span><h2>aspire.aspire.utils.helpers module<a class="headerlink" href="#module-aspire.aspire.utils.helpers" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="aspire.aspire.utils.helpers.TupleCompare">
+<em class="property">class </em><code class="sig-prename descclassname">aspire.aspire.utils.helpers.</code><code class="sig-name descname">TupleCompare</code><a class="headerlink" href="#aspire.aspire.utils.helpers.TupleCompare" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Helper class to compare between all members of tuples.</p>
+<p class="rubric">Methods</p>
+<dl class="method">
+<dt id="aspire.aspire.utils.helpers.TupleCompare.eq">
+<em class="property">classmethod </em><code class="sig-name descname">eq</code><span class="sig-paren">(</span><em class="sig-param">a</em>, <em class="sig-param">b</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.utils.helpers.TupleCompare.eq" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="aspire.aspire.utils.helpers.TupleCompare.gt">
+<em class="property">classmethod </em><code class="sig-name descname">gt</code><span class="sig-paren">(</span><em class="sig-param">a</em>, <em class="sig-param">b</em>, <em class="sig-param">eq=False</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.utils.helpers.TupleCompare.gt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="aspire.aspire.utils.helpers.TupleCompare.lt">
+<em class="property">classmethod </em><code class="sig-name descname">lt</code><span class="sig-paren">(</span><em class="sig-param">a</em>, <em class="sig-param">b</em>, <em class="sig-param">eq=False</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.utils.helpers.TupleCompare.lt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="aspire.aspire.utils.helpers.TupleCompare.validate_same_length">
+<em class="property">classmethod </em><code class="sig-name descname">validate_same_length</code><span class="sig-paren">(</span><em class="sig-param">a</em>, <em class="sig-param">b</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.utils.helpers.TupleCompare.validate_same_length" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.utils.helpers.accepts">
+<code class="sig-prename descclassname">aspire.aspire.utils.helpers.</code><code class="sig-name descname">accepts</code><span class="sig-paren">(</span><em class="sig-param">*types</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.utils.helpers.accepts" title="Permalink to this definition">¶</a></dt>
+<dd><p>Decorator matching func args and their respective
+positional args in the decorated function.</p>
+<p># Example:
+&#64;accepts(int, str)
+def test_int_func(x, y):</p>
+<blockquote>
+<div><p>return x == int(y)</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.utils.helpers.colorize">
+<code class="sig-prename descclassname">aspire.aspire.utils.helpers.</code><code class="sig-name descname">colorize</code><span class="sig-paren">(</span><em class="sig-param">s</em>, <em class="sig-param">color</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.utils.helpers.colorize" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.utils.helpers.get_file_type">
+<code class="sig-prename descclassname">aspire.aspire.utils.helpers.</code><code class="sig-name descname">get_file_type</code><span class="sig-paren">(</span><em class="sig-param">file_path</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.utils.helpers.get_file_type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.utils.helpers.red">
+<code class="sig-prename descclassname">aspire.aspire.utils.helpers.</code><code class="sig-name descname">red</code><span class="sig-paren">(</span><em class="sig-param">s</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.utils.helpers.red" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.utils.helpers.requires_binaries">
+<code class="sig-prename descclassname">aspire.aspire.utils.helpers.</code><code class="sig-name descname">requires_binaries</code><span class="sig-paren">(</span><em class="sig-param">*filenames</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.utils.helpers.requires_binaries" title="Permalink to this definition">¶</a></dt>
+<dd><p>Decorator checking existing of binary files in directory ‘binaries’.
+It prints an error and exits in case they don’t.</p>
+<p>E.g.
+requires_binaries(‘mask1.npy’, ‘mask2.npy’)
+def masking_stack_file(mrc_file):</p>
+<blockquote>
+<div><p># do something with binary files mask1.npy and mask2.npy knowing they’re there</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.utils.helpers.set_output_name">
+<code class="sig-prename descclassname">aspire.aspire.utils.helpers.</code><code class="sig-name descname">set_output_name</code><span class="sig-paren">(</span><em class="sig-param">input_name</em>, <em class="sig-param">suffix</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.utils.helpers.set_output_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.utils.helpers.yellow">
+<code class="sig-prename descclassname">aspire.aspire.utils.helpers.</code><code class="sig-name descname">yellow</code><span class="sig-paren">(</span><em class="sig-param">s</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.utils.helpers.yellow" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-aspire.aspire.utils.parse_star">
+<span id="aspire-aspire-utils-parse-star-module"></span><h2>aspire.aspire.utils.parse_star module<a class="headerlink" href="#module-aspire.aspire.utils.parse_star" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="aspire.aspire.utils.parse_star.auto_cast">
+<code class="sig-prename descclassname">aspire.aspire.utils.parse_star.</code><code class="sig-name descname">auto_cast</code><span class="sig-paren">(</span><em class="sig-param">value</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.utils.parse_star.auto_cast" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.utils.parse_star.pairwise">
+<code class="sig-prename descclassname">aspire.aspire.utils.parse_star.</code><code class="sig-name descname">pairwise</code><span class="sig-paren">(</span><em class="sig-param">iterable</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.utils.parse_star.pairwise" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.utils.parse_star.read_loop">
+<code class="sig-prename descclassname">aspire.aspire.utils.parse_star.</code><code class="sig-name descname">read_loop</code><span class="sig-paren">(</span><em class="sig-param">fpair</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.utils.parse_star.read_loop" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.utils.parse_star.read_star">
+<code class="sig-prename descclassname">aspire.aspire.utils.parse_star.</code><code class="sig-name descname">read_star</code><span class="sig-paren">(</span><em class="sig-param">filename</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.utils.parse_star.read_star" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.utils.parse_star.read_star_data">
+<code class="sig-prename descclassname">aspire.aspire.utils.parse_star.</code><code class="sig-name descname">read_star_data</code><span class="sig-paren">(</span><em class="sig-param">fpair</em>, <em class="sig-param">num_fields</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.utils.parse_star.read_star_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="aspire.aspire.utils.parse_star.read_star_list">
+<code class="sig-prename descclassname">aspire.aspire.utils.parse_star.</code><code class="sig-name descname">read_star_list</code><span class="sig-paren">(</span><em class="sig-param">fpair</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.utils.parse_star.read_star_list" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-aspire.aspire.utils.viewstack">
+<span id="aspire-aspire-utils-viewstack-module"></span><h2>aspire.aspire.utils.viewstack module<a class="headerlink" href="#module-aspire.aspire.utils.viewstack" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="aspire.aspire.utils.viewstack.view_stack">
+<code class="sig-prename descclassname">aspire.aspire.utils.viewstack.</code><code class="sig-name descname">view_stack</code><span class="sig-paren">(</span><em class="sig-param">stack</em>, <em class="sig-param">numslices=16</em>, <em class="sig-param">startslice=1</em>, <em class="sig-param">nrows=4</em>, <em class="sig-param">ncols=4</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.aspire.utils.viewstack.view_stack" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="aspire-aspire-utils-workflow-validation-module">
+<h2>aspire.aspire.utils.workflow_validation module<a class="headerlink" href="#aspire-aspire-utils-workflow-validation-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-aspire.aspire.utils">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-aspire.aspire.utils" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="aspire.basis.html" class="btn btn-neutral float-right" title="aspire.basis package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="aspire.aspire.em_classavg.image_denoising.image_denoising.PSWF2D.BN.html" class="btn btn-neutral" title="aspire.aspire.em_classavg.image_denoising.image_denoising.PSWF2D.BN package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Princeton University
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
