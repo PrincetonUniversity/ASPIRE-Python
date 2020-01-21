@@ -429,7 +429,7 @@ below the Nyquist frequency (default Inf).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>v</strong> – A coefficient vector (or an array of coefficient vectors) to
-be evaluated. The first dimension must equal <cite>self.basis_count</cite>.</p>
+be evaluated. The first dimension must equal <cite>self.count</cite>.</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>The evaluation of the coefficient vector(s) <cite>v</cite> for this basis.
@@ -452,7 +452,7 @@ must equal <cite>self.sz</cite>.</p>
 <dd class="field-even"><p><p>The evaluation of the coefficient array <cite>v</cite> in the dual basis
 of <cite>basis</cite>. This is an array of vectors whose first dimension equals</p>
 <blockquote>
-<div><p><cite>self.basis_count</cite> and whose remaining dimensions correspond to
+<div><p><cite>self.count</cite> and whose remaining dimensions correspond to
 higher dimensions of <cite>v</cite>.</p>
 </div></blockquote>
 </p>
@@ -475,7 +475,7 @@ and columns of <cite>x</cite> are read as vectorized arrays.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>v</strong> – An array whose first dimension is to be expanded in this
-basis’s dual. This dimension must be equal to <cite>self.basis_count</cite>.</p>
+basis’s dual. This dimension must be equal to <cite>self.count</cite>.</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>The coefficients of <cite>v</cite> expanded in the dual of <cite>basis</cite>. If more
@@ -539,7 +539,7 @@ below the Nyquist frequency (default Inf).</p>
 <dd><p>Evaluate coefficients in standard 3D coordinate basis from those in FB basis
 :param v: A coefficient vector (or an array of coefficient vectors) to</p>
 <blockquote>
-<div><p>be evaluated. The first dimension must equal <cite>self.basis_count</cite>.</p>
+<div><p>be evaluated. The first dimension must equal <cite>self.count</cite>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -562,7 +562,7 @@ must equal <cite>self.sz</cite>.</p>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>The evaluation of the coefficient array <cite>v</cite> in the dual
 basis of <cite>basis</cite>. This is an array of vectors whose first dimension
-equals <cite>self.basis_count</cite> and whose remaining dimensions correspond
+equals <cite>self.count</cite> and whose remaining dimensions correspond
 to higher dimensions of <cite>v</cite>.</p>
 </dd>
 </dl>
@@ -583,7 +583,7 @@ and columns of <cite>x</cite> are read as vectorized arrays.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>v</strong> – An array whose first dimension is to be expanded in this
-basis’s dual. This dimension must be equal to <cite>self.basis_count</cite>.</p>
+basis’s dual. This dimension must be equal to <cite>self.count</cite>.</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>The coefficients of <cite>v</cite> expanded in the dual of <cite>basis</cite>. If more
@@ -646,7 +646,7 @@ below the Nyquist frequency (default Inf).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>v</strong> – A coefficient vector (or an array of coefficient vectors)
-in FB basis to be evaluated. The first dimension must equal <cite>self.basis_count</cite>.</p>
+in FB basis to be evaluated. The first dimension must equal <cite>self.count</cite>.</p>
 </dd>
 <dt class="field-even">Return x</dt>
 <dd class="field-even"><p>The evaluation of the coefficient vector(s) <cite>x</cite> in standard 2D
@@ -667,7 +667,7 @@ evaluated. The first two dimensions must equal <cite>self.sz</cite>.</p>
 </dd>
 <dt class="field-even">Return v</dt>
 <dd class="field-even"><p>The evaluation of the coefficient array <cite>v</cite> in the FB basis.
-This is an array of vectors whose first dimension equals <cite>self.basis_count</cite>
+This is an array of vectors whose first dimension equals <cite>self.count</cite>
 and whose remaining dimensions correspond to higher dimensions of <cite>x</cite>.</p>
 </dd>
 </dl>
@@ -686,7 +686,7 @@ These dimensions must equal <cite>self.sz</cite>.</p>
 </dd>
 </dl>
 <dl>
-<dt>:return<span class="classifier">The coefficients of <cite>v</cite> expanded in FB basis. The first dimension</span></dt><dd><p>of <cite>v</cite> is with size of <cite>basis_count</cite> and the second and higher dimensions
+<dt>:return<span class="classifier">The coefficients of <cite>v</cite> expanded in FB basis. The first dimension</span></dt><dd><p>of <cite>v</cite> is with size of <cite>count</cite> and the second and higher dimensions
 of the return value correspond to those higher dimensions of <cite>x</cite>.</p>
 </dd>
 </dl>
@@ -725,7 +725,7 @@ below the Nyquist frequency (default Inf).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>v</strong> – A coefficient vector (or an array of coefficient vectors) in FB basis
-to be evaluated. The first dimension must equal <cite>self.basis_count</cite>.</p>
+to be evaluated. The first dimension must equal <cite>self.count</cite>.</p>
 </dd>
 <dt class="field-even">Return x</dt>
 <dd class="field-even"><p>The evaluation of the coefficient vector(s) <cite>x</cite> in standard 3D
@@ -748,7 +748,7 @@ to be evaluated. The first three dimensions must equal <cite>self.sz</cite>.</p>
 <dt class="field-even">Return v</dt>
 <dd class="field-even"><p>The evaluation of the coefficient array <cite>v</cite> in the FB basis.
 This is an array of vectors whose first dimension equals
-<cite>self.basis_count</cite> and whose remaining dimensions correspond to higher
+<cite>self.count</cite> and whose remaining dimensions correspond to higher
 dimensions of <cite>x</cite>.</p>
 </dd>
 </dl>
@@ -767,7 +767,7 @@ These dimensions must equal <cite>self.sz</cite>.</p>
 </dd>
 </dl>
 <dl>
-<dt>:return<span class="classifier">The coefficients of <cite>v</cite> expanded in FB basis. The first dimension</span></dt><dd><p>of <cite>v</cite> is with size of <cite>basis_count</cite> and the second and higher dimensions
+<dt>:return<span class="classifier">The coefficients of <cite>v</cite> expanded in FB basis. The first dimension</span></dt><dd><p>of <cite>v</cite> is with size of <cite>count</cite> and the second and higher dimensions
 of the return value correspond to those higher dimensions of <cite>x</cite>.</p>
 </dd>
 </dl>
@@ -1084,7 +1084,7 @@ below the Nyquist frequency (default Inf).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>v</strong> – A coefficient vector (or an array of coefficient vectors)
-to be evaluated. The first dimension must equal <cite>self.basis_count</cite>.</p>
+to be evaluated. The first dimension must equal <cite>self.count</cite>.</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>The evaluation of the coefficient vector(s) <cite>v</cite> for this basis.
@@ -1106,7 +1106,7 @@ must equal <cite>self.sz</cite>.</p>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>The evaluation of the coefficient array <cite>v</cite> in the dual
 basis of <cite>basis</cite>.
-This is an array of vectors whose first dimension equals <cite>self.basis_count</cite>
+This is an array of vectors whose first dimension equals <cite>self.count</cite>
 and whose remaining dimensions correspond to higher dimensions of <cite>v</cite>.</p>
 </dd>
 </dl>
@@ -1152,7 +1152,7 @@ and columns of <cite>x</cite> are read as vectorized arrays.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>v</strong> – An array whose first dimension is to be expanded in this
-basis’s dual. This dimension must be equal to <cite>self.basis_count</cite>.</p>
+basis’s dual. This dimension must be equal to <cite>self.count</cite>.</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>The coefficients of <cite>v</cite> expanded in the dual of <cite>basis</cite>. If more
@@ -1178,8 +1178,8 @@ value correspond to second and higher dimensions of <cite>v</cite>.</p>
 <dd><p>Evaluate coefficient matrix in basis</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>V</strong> – A coefficient matrix of size <cite>self.basis_count</cite>-by-
-<cite>self.basis_count</cite> to be evaluated.</p>
+<dd class="field-odd"><p><strong>V</strong> – A coefficient matrix of size <cite>self.count</cite>-by-
+<cite>self.count</cite> to be evaluated.</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>A multidimensional matrix of size <cite>self.sz</cite>-by
@@ -1201,7 +1201,7 @@ to be evaluated.</p>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>The evaluation of <cite>X</cite> in the dual basis. This is
 <cite>self.count</cite>-by-<cite>self.count</cite>. matrix.
-If <cite>V</cite> is a matrix of size <cite>self.basis_count</cite>-by-<cite>self.basis_count</cite>,
+If <cite>V</cite> is a matrix of size <cite>self.count</cite>-by-<cite>self.count</cite>,
 <cite>B</cite> is the change-of-basis matrix of <cite>basis</cite>, and <cite>x</cite> is a
 multidimensional matrix of size <cite>basis.sz</cite>-by-<cite>basis.sz</cite>, the
 function calculates V = B’ * X * B, where the rows of <cite>B</cite>, rows
