@@ -361,13 +361,15 @@
 </li>
       <li><a href="aspire.commands.html#module-aspire.commands.cov3d">aspire.commands.cov3d (module)</a>
 </li>
-      <li><a href="aspire.commands.html#module-aspire.commands.simulation">aspire.commands.simulation (module)</a>
+      <li><a href="aspire.commands.html#module-aspire.commands.denoise">aspire.commands.denoise (module)</a>
 </li>
       <li><a href="aspire.data.html#module-aspire.data">aspire.data (module)</a>
 </li>
-      <li><a href="aspire.denoise.html#module-aspire.denoise">aspire.denoise (module)</a>
+      <li><a href="aspire.denoising.html#module-aspire.denoising">aspire.denoising (module)</a>
 </li>
-      <li><a href="aspire.denoise.html#module-aspire.denoise.class_avg">aspire.denoise.class_avg (module)</a>
+      <li><a href="aspire.denoising.html#module-aspire.denoising.class_avg">aspire.denoising.class_avg (module)</a>
+</li>
+      <li><a href="aspire.denoising.html#module-aspire.denoising.denoiser_cov2d">aspire.denoising.denoiser_cov2d (module)</a>
 </li>
       <li><a href="aspire.estimation.html#module-aspire.estimation">aspire.estimation (module)</a>
 </li>
@@ -619,13 +621,13 @@
 </li>
       <li><a href="aspire.class3d.html#aspire.class3d.Class3D">Class3D (class in aspire.class3d)</a>
 </li>
-      <li><a href="aspire.denoise.html#aspire.denoise.class_avg.ClassAvg.class_averaging">class_averaging() (aspire.denoise.class_avg.ClassAvg method)</a>
+      <li><a href="aspire.denoising.html#aspire.denoising.class_avg.ClassAvg.class_averaging">class_averaging() (aspire.denoising.class_avg.ClassAvg method)</a>
 </li>
       <li><a href="aspire.aspire.html#aspire.aspire.class_averaging.ClassAverages">ClassAverages (class in aspire.aspire.class_averaging)</a>
 </li>
       <li><a href="aspire.aspire.common.html#aspire.aspire.common.config.ClassAveragesConfig">ClassAveragesConfig (class in aspire.aspire.common.config)</a>
 </li>
-      <li><a href="aspire.denoise.html#aspire.denoise.class_avg.ClassAvg">ClassAvg (class in aspire.denoise.class_avg)</a>
+      <li><a href="aspire.denoising.html#aspire.denoising.class_avg.ClassAvg">ClassAvg (class in aspire.denoising.class_avg)</a>
 </li>
       <li><a href="aspire.class2d.html#aspire.class2d.Class2D.classify">classify() (aspire.class2d.Class2D method)</a>
 
@@ -793,9 +795,17 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="aspire.basis.html#aspire.basis.basis_utils.d_decay_approx_fun">d_decay_approx_fun() (in module aspire.basis.basis_utils)</a>
 </li>
-      <li><a href="aspire.denoise.html#aspire.denoise.Denoise">Denoise (class in aspire.denoise)</a>
+      <li><a href="aspire.denoising.html#aspire.denoising.Denoiser.denoise">denoise() (aspire.denoising.Denoiser method)</a>
+
+      <ul>
+        <li><a href="aspire.denoising.html#aspire.denoising.denoiser_cov2d.DenoiserCov2D.denoise">(aspire.denoising.denoiser_cov2d.DenoiserCov2D method)</a>
 </li>
-      <li><a href="aspire.volume.html#aspire.volume.Volume.denoise">denoise() (aspire.volume.Volume method)</a>
+        <li><a href="aspire.volume.html#aspire.volume.Volume.denoise">(aspire.volume.Volume method)</a>
+</li>
+      </ul></li>
+      <li><a href="aspire.denoising.html#aspire.denoising.Denoiser">Denoiser (class in aspire.denoising)</a>
+</li>
+      <li><a href="aspire.denoising.html#aspire.denoising.denoiser_cov2d.DenoiserCov2D">DenoiserCov2D (class in aspire.denoising.denoiser_cov2d)</a>
 </li>
       <li><a href="aspire.basis.html#aspire.basis.pswf_utils.BNMatrix.dense_mat">dense_mat() (aspire.basis.pswf_utils.BNMatrix method)</a>
 </li>
@@ -807,12 +817,12 @@
         <li><a href="aspire.basis.html#aspire.basis.dirac.DiracBasis">(class in aspire.basis.dirac)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="aspire.source.html#aspire.source.xform.Xform.disabled">disabled() (aspire.source.xform.Xform method)</a>
 </li>
       <li><a href="aspire.source.html#aspire.source.xform.Downsample">Downsample (class in aspire.source.xform)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="aspire.aspire.html#aspire.aspire.preprocessor.PreProcessor.downsample">downsample() (aspire.aspire.preprocessor.PreProcessor class method)</a>
 
       <ul>
@@ -1009,6 +1019,8 @@
 </li>
       <li><a href="aspire.aspire.html#aspire.aspire.class_averaging.FastRotatePrecomp">FastRotatePrecomp (class in aspire.aspire.class_averaging)</a>
 </li>
+      <li><a href="aspire.utils.html#aspire.utils.filters.Filter.fb_mat">fb_mat() (aspire.utils.filters.Filter method)</a>
+</li>
       <li><a href="aspire.basis.html#aspire.basis.fb_2d.FBBasis2D">FBBasis2D (class in aspire.basis.fb_2d)</a>
 </li>
       <li><a href="aspire.basis.html#aspire.basis.fb_3d.FBBasis3D">FBBasis3D (class in aspire.basis.fb_3d)</a>
@@ -1041,6 +1053,8 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="aspire.source.html#aspire.source.ImageSource.filter_indices">filter_indices() (aspire.source.ImageSource property)</a>
 </li>
+      <li><a href="aspire.utils.html#aspire.utils.blk_diag_func.filter_to_fb_mat">filter_to_fb_mat() (in module aspire.utils.blk_diag_func)</a>
+</li>
       <li><a href="aspire.source.html#aspire.source.ImageSource.filters">filters() (aspire.source.ImageSource property)</a>
 </li>
       <li><a href="aspire.source.html#aspire.source.xform.FilterXform">FilterXform (class in aspire.source.xform)</a>
@@ -1068,6 +1082,8 @@
       <li><a href="aspire.basis.html#aspire.basis.fpswf_3d.FPSWF3D">FPSWF3D (class in aspire.basis.fpswf_3d)</a>
 </li>
       <li><a href="aspire.basis.html#aspire.basis.fpswf_2d.FPSWFBasis2D">FPSWFBasis2D (class in aspire.basis.fpswf_2d)</a>
+</li>
+      <li><a href="aspire.utils.html#aspire.utils.blk_diag_func.fun2fb_mat">fun2fb_mat() (in module aspire.utils.blk_diag_func)</a>
 </li>
       <li><a href="aspire.utils.html#aspire.utils.filters.FunctionFilter">FunctionFilter (class in aspire.utils.filters)</a>
 </li>
@@ -1477,12 +1493,8 @@
       </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="aspire.denoise.html#aspire.denoise.class_avg.ClassAvg.output_images">output_images() (aspire.denoise.class_avg.ClassAvg method)</a>
-
-      <ul>
-        <li><a href="aspire.denoise.html#aspire.denoise.Denoise.output_images">(aspire.denoise.Denoise method)</a>
+      <li><a href="aspire.denoising.html#aspire.denoising.class_avg.ClassAvg.output_images">output_images() (aspire.denoising.class_avg.ClassAvg method)</a>
 </li>
-      </ul></li>
   </ul></td>
 </tr></table>
 
@@ -1581,8 +1593,6 @@
 <h2 id="R">R</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="aspire.utils.html#aspire.utils.blk_diag_func.radial_filter2fb_mat">radial_filter2fb_mat() (in module aspire.utils.blk_diag_func)</a>
-</li>
       <li><a href="aspire.utils.html#aspire.utils.filters.RadialCTFFilter">RadialCTFFilter (class in aspire.utils.filters)</a>
 </li>
       <li><a href="aspire.aspire.utils.html#aspire.aspire.utils.array_utils.radius_norm">radius_norm() (in module aspire.aspire.utils.array_utils)</a>
@@ -1672,6 +1682,8 @@
       <li><a href="aspire.aspire.html#aspire.aspire.class_averaging.SpcaData.save">save() (aspire.aspire.class_averaging.SpcaData method)</a>
 
       <ul>
+        <li><a href="aspire.denoising.html#aspire.denoising.Denoiser.save">(aspire.denoising.Denoiser method)</a>
+</li>
         <li><a href="aspire.image.html#aspire.image.Image.save">(aspire.image.Image method)</a>
 </li>
         <li><a href="aspire.io.html#aspire.io.starfile.StarFile.save">(aspire.io.starfile.StarFile method)</a>
@@ -1709,10 +1721,10 @@
         <li><a href="aspire.volume.html#aspire.volume.Volume.shift">(aspire.volume.Volume method)</a>
 </li>
       </ul></li>
-      <li><a href="aspire.aspire.common.html#aspire.aspire.common.config.AbinitioConfig.shift_step">shift_step (aspire.aspire.common.config.AbinitioConfig attribute)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="aspire.aspire.common.html#aspire.aspire.common.config.AbinitioConfig.shift_step">shift_step (aspire.aspire.common.config.AbinitioConfig attribute)</a>
+</li>
       <li><a href="aspire.utils.html#aspire.utils.matrix.shrink_covar">shrink_covar() (in module aspire.utils.matrix)</a>
 </li>
       <li><a href="aspire.estimation.html#aspire.estimation.covar2d.RotCov2D.shrink_covar_backward">shrink_covar_backward() (aspire.estimation.covar2d.RotCov2D method)</a>
@@ -1769,10 +1781,16 @@
 </li>
       <li><a href="aspire.aspire.html#aspire.aspire.class_averaging.test">test() (in module aspire.aspire.class_averaging)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="aspire.aspire.html#aspire.aspire.class_averaging.test2">test2() (in module aspire.aspire.class_averaging)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="aspire.denoising.html#aspire.denoising.Denoiser.to_src">to_src() (aspire.denoising.Denoiser method)</a>
+
+      <ul>
+        <li><a href="aspire.denoising.html#aspire.denoising.denoiser_cov2d.DenoiserCov2D.to_src">(aspire.denoising.denoiser_cov2d.DenoiserCov2D method)</a>
+</li>
+      </ul></li>
       <li><a href="aspire.estimation.html#aspire.estimation.kernel.FourierKernel.toeplitz">toeplitz() (aspire.estimation.kernel.FourierKernel method)</a>
 </li>
       <li><a href="aspire.nfft.html#aspire.nfft.finufft.FINufftPlan.transform">transform() (aspire.nfft.finufft.FINufftPlan method)</a>
@@ -1862,11 +1880,7 @@
       <li><a href="aspire.utils.html#aspire.utils.em.wavelength_to_voltage">wavelength_to_voltage() (in module aspire.utils.em)</a>
 </li>
       <li><a href="aspire.source.html#aspire.source.ImageSource.whiten">whiten() (aspire.source.ImageSource method)</a>
-
-      <ul>
-        <li><a href="aspire.source.html#aspire.source.relion.RelionSource.whiten">(aspire.source.relion.RelionSource method)</a>
 </li>
-      </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="aspire.estimation.html#aspire.estimation.noise.WhiteNoiseEstimator">WhiteNoiseEstimator (class in aspire.estimation.noise)</a>

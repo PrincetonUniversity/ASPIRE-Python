@@ -96,7 +96,7 @@
 <li class="toctree-l4"><a class="reference internal" href="aspire.class3d.html">aspire.class3d package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="aspire.commands.html">aspire.commands package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="aspire.data.html">aspire.data package</a></li>
-<li class="toctree-l4"><a class="reference internal" href="aspire.denoise.html">aspire.denoise package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.denoising.html">aspire.denoising package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="aspire.estimation.html">aspire.estimation package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="aspire.image.html">aspire.image package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="aspire.io.html">aspire.io package</a></li>
@@ -247,21 +247,6 @@ The path of the base directory to use as a data store or None. If None is given,
 <em class="property">classmethod </em><code class="sig-name descname">starfile2df</code><span class="sig-paren">(</span><em class="sig-param">filepath</em>, <em class="sig-param">data_folder=None</em>, <em class="sig-param">max_rows=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.source.relion.RelionSource.starfile2df" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
-<dt id="aspire.source.relion.RelionSource.whiten">
-<code class="sig-name descname">whiten</code><span class="sig-paren">(</span><em class="sig-param">noise_filter</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.source.relion.RelionSource.whiten" title="Permalink to this definition">¶</a></dt>
-<dd><p>Modify the <cite>ImageSource</cite> in-place by appending a whitening filter to the generation pipeline.
-:param noise_filter: The noise psd of the images as a <cite>Filter</cite> object. Typically determined by a</p>
-<blockquote>
-<div><p>NoiseEstimator class, and available as its <cite>filter</cite> attribute.</p>
-</div></blockquote>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>On return, the <cite>ImageSource</cite> object has been modified in place.e.</p>
-</dd>
-</dl>
-</dd></dl>
-
 </dd></dl>
 
 </div>
@@ -269,7 +254,7 @@ The path of the base directory to use as a data store or None. If None is given,
 <span id="aspire-source-simulation-module"></span><h2>aspire.source.simulation module<a class="headerlink" href="#module-aspire.source.simulation" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="aspire.source.simulation.Simulation">
-<em class="property">class </em><code class="sig-prename descclassname">aspire.source.simulation.</code><code class="sig-name descname">Simulation</code><span class="sig-paren">(</span><em class="sig-param">L=8</em>, <em class="sig-param">n=1024</em>, <em class="sig-param">states=None</em>, <em class="sig-param">filters=None</em>, <em class="sig-param">offsets=None</em>, <em class="sig-param">amplitudes=None</em>, <em class="sig-param">dtype='single'</em>, <em class="sig-param">C=2</em>, <em class="sig-param">angles=None</em>, <em class="sig-param">seed=0</em>, <em class="sig-param">memory=None</em>, <em class="sig-param">noise_filter=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.source.simulation.Simulation" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">aspire.source.simulation.</code><code class="sig-name descname">Simulation</code><span class="sig-paren">(</span><em class="sig-param">L=8</em>, <em class="sig-param">n=1024</em>, <em class="sig-param">vols=None</em>, <em class="sig-param">states=None</em>, <em class="sig-param">filters=None</em>, <em class="sig-param">offsets=None</em>, <em class="sig-param">amplitudes=None</em>, <em class="sig-param">dtype='single'</em>, <em class="sig-param">C=2</em>, <em class="sig-param">angles=None</em>, <em class="sig-param">seed=0</em>, <em class="sig-param">memory=None</em>, <em class="sig-param">noise_filter=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.source.simulation.Simulation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#aspire.source.ImageSource" title="aspire.source.ImageSource"><code class="xref py py-class docutils literal notranslate"><span class="pre">aspire.source.ImageSource</span></code></a></p>
 <p>A Cryo-EM simulation
 Other than the base class attributes, it has:</p>

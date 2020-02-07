@@ -28,10 +28,10 @@ aspire.commands.cov3d module
    :undoc-members:
    :show-inheritance:
 
-aspire.commands.simulation module
----------------------------------
+aspire.commands.denoise module
+------------------------------
 
-.. automodule:: aspire.commands.simulation
+.. automodule:: aspire.commands.denoise
    :members:
    :undoc-members:
    :show-inheritance:

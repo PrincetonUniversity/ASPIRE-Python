@@ -96,7 +96,7 @@
 <li class="toctree-l4"><a class="reference internal" href="aspire.class3d.html">aspire.class3d package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="aspire.commands.html">aspire.commands package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="aspire.data.html">aspire.data package</a></li>
-<li class="toctree-l4"><a class="reference internal" href="aspire.denoise.html">aspire.denoise package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.denoising.html">aspire.denoising package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="aspire.estimation.html">aspire.estimation package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="aspire.image.html">aspire.image package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="aspire.io.html">aspire.io package</a></li>
@@ -206,80 +206,278 @@
 </div>
 <div class="section" id="module-aspire.utils.blk_diag_func">
 <span id="aspire-utils-blk-diag-func-module"></span><h2>aspire.utils.blk_diag_func module<a class="headerlink" href="#module-aspire.utils.blk_diag_func" title="Permalink to this headline">¶</a></h2>
+<p>Define operation functions of block diagonal matrix needed by Cov2D analysis.</p>
 <dl class="function">
 <dt id="aspire.utils.blk_diag_func.blk_diag_add">
 <code class="sig-prename descclassname">aspire.utils.blk_diag_func.</code><code class="sig-name descname">blk_diag_add</code><span class="sig-paren">(</span><em class="sig-param">blk_diag_a</em>, <em class="sig-param">blk_diag_b</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.blk_diag_func.blk_diag_add" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Define the element addition of block diagonal matrix</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>blk_diag_a</strong> – The block diagonal A matrix</p></li>
+<li><p><strong>blk_diag_b</strong> – The block diagonal B matrix</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A block diagonal matrix with elements equal to corresponding
+sums from A and B elements.</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="function">
 <dt id="aspire.utils.blk_diag_func.blk_diag_apply">
 <code class="sig-prename descclassname">aspire.utils.blk_diag_func.</code><code class="sig-name descname">blk_diag_apply</code><span class="sig-paren">(</span><em class="sig-param">blk_diag</em>, <em class="sig-param">x</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.blk_diag_func.blk_diag_apply" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Define the apply option of a block diagonal matrix with a matrix of coefficient vectors</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>blk_diag</strong> – The block diagonal matrix</p></li>
+<li><p><strong>x</strong> – The coefficient matrix with each column is a coefficient vector</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A matrix with new coefficient vectors</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="function">
 <dt id="aspire.utils.blk_diag_func.blk_diag_compatible">
 <code class="sig-prename descclassname">aspire.utils.blk_diag_func.</code><code class="sig-name descname">blk_diag_compatible</code><span class="sig-paren">(</span><em class="sig-param">blk_diag_a</em>, <em class="sig-param">blk_diag_b</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.blk_diag_func.blk_diag_compatible" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Check whether two block diagonal matrices are compatible or not</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>blk_diag_a</strong> – The block diagonal A matrix</p></li>
+<li><p><strong>blk_diag_b</strong> – The block diagonal B matrix</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><cite>True</cite> value if all of shapes in two list representations of
+block diagonal matrices are the same, otherwise return <cite>False</cite>.</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="function">
 <dt id="aspire.utils.blk_diag_func.blk_diag_eye">
 <code class="sig-prename descclassname">aspire.utils.blk_diag_func.</code><code class="sig-name descname">blk_diag_eye</code><span class="sig-paren">(</span><em class="sig-param">blk_partition</em>, <em class="sig-param">dtype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.blk_diag_func.blk_diag_eye" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Build a block diagonal eye matrix</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>blk_partition</strong> – The matrix block partition of <cite>blk_diag</cite> in the form of a
+K-element list storing all shapes of K diagonal matrix blocks,
+where <cite>blk_partition[i]</cite> corresponds to the shape (number of rows and columns)
+of the <cite>i</cite> diagonal matrix block.</p></li>
+<li><p><strong>dtype</strong> – The data type to set the pricision of diagonal matrix block.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A block diagonal matrix consisting of <cite>K</cite> eye (identity) blocks.</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="function">
 <dt id="aspire.utils.blk_diag_func.blk_diag_isnumeric">
 <code class="sig-prename descclassname">aspire.utils.blk_diag_func.</code><code class="sig-name descname">blk_diag_isnumeric</code><span class="sig-paren">(</span><em class="sig-param">x</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.blk_diag_func.blk_diag_isnumeric" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Check a block diag matrix is numeric or not</p>
+</dd></dl>
 
 <dl class="function">
 <dt id="aspire.utils.blk_diag_func.blk_diag_minus">
 <code class="sig-prename descclassname">aspire.utils.blk_diag_func.</code><code class="sig-name descname">blk_diag_minus</code><span class="sig-paren">(</span><em class="sig-param">blk_diag_a</em>, <em class="sig-param">blk_diag_b</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.blk_diag_func.blk_diag_minus" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Define the element subtraction of block diagonal matrix</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>blk_diag_a</strong> – The block diagonal A matrix</p></li>
+<li><p><strong>blk_diag_b</strong> – The block diagonal B matrix</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A block diagonal matrix with elements equal to corresponding
+subtraction of A from B elements.</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="function">
 <dt id="aspire.utils.blk_diag_func.blk_diag_mult">
 <code class="sig-prename descclassname">aspire.utils.blk_diag_func.</code><code class="sig-name descname">blk_diag_mult</code><span class="sig-paren">(</span><em class="sig-param">blk_diag_a</em>, <em class="sig-param">blk_diag_b</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.blk_diag_func.blk_diag_mult" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Define the matrix multiplication of two block diagonal matrices</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>blk_diag_a</strong> – The block diagonal A matrix</p></li>
+<li><p><strong>blk_diag_b</strong> – The block diagonal B matrix</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A block diagonal matrix with elements resulted from
+the matrix multiplication of A from B block diagonal matrices.</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="function">
 <dt id="aspire.utils.blk_diag_func.blk_diag_norm">
 <code class="sig-prename descclassname">aspire.utils.blk_diag_func.</code><code class="sig-name descname">blk_diag_norm</code><span class="sig-paren">(</span><em class="sig-param">blk_diag</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.blk_diag_func.blk_diag_norm" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Compute the 2-norm of a block diagonal matrix</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>blk_diag</strong> – The block diagonal matrix</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The 2-norm of the block diagonal matrix</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="function">
 <dt id="aspire.utils.blk_diag_func.blk_diag_partition">
 <code class="sig-prename descclassname">aspire.utils.blk_diag_func.</code><code class="sig-name descname">blk_diag_partition</code><span class="sig-paren">(</span><em class="sig-param">blk_diag</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.blk_diag_func.blk_diag_partition" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Create a partition of block diagonal matrix</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>blk_diag</strong> – A block diagonal matrix in the form of a list. Each
+element corresponds to a diagonal block.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The matrix block partition of <cite>blk_diag</cite> in the form of a
+K-element list storing all shapes of K diagonal matrix blocks,
+where <cite>blk_partition[i]</cite> corresponds to the shape (number of rows and columns)
+of the <cite>i</cite> diagonal matrix block.</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="function">
 <dt id="aspire.utils.blk_diag_func.blk_diag_solve">
 <code class="sig-prename descclassname">aspire.utils.blk_diag_func.</code><code class="sig-name descname">blk_diag_solve</code><span class="sig-paren">(</span><em class="sig-param">blk_diag</em>, <em class="sig-param">y</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.blk_diag_func.blk_diag_solve" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Solve a linear system involving a block diagonal matrix</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>blk_diag</strong> – The block diagonal matrix</p></li>
+<li><p><strong>y</strong> – The right-hand side in the linear system.  May be a matrix
+consisting of  coefficient vectors, in which case each column is
+solved for separately.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The result of solving the linear system formed by the matrix.</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="function">
 <dt id="aspire.utils.blk_diag_func.blk_diag_to_mat">
 <code class="sig-prename descclassname">aspire.utils.blk_diag_func.</code><code class="sig-name descname">blk_diag_to_mat</code><span class="sig-paren">(</span><em class="sig-param">blk_diag</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.blk_diag_func.blk_diag_to_mat" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Convert list representation of block diagonal matrix into full matrix</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>blk_diag</strong> – The block diagonal matrix</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The block diagonal matrix including the zero elements of
+non-diagonal blocks.</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="function">
 <dt id="aspire.utils.blk_diag_func.blk_diag_transpose">
 <code class="sig-prename descclassname">aspire.utils.blk_diag_func.</code><code class="sig-name descname">blk_diag_transpose</code><span class="sig-paren">(</span><em class="sig-param">blk_diag</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.blk_diag_func.blk_diag_transpose" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Get the transpose matrix of a block diagonal matrix</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>blk_diag</strong> – The block diagonal matrix</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The corresponding transpose form of a block diagonal matrix</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="function">
 <dt id="aspire.utils.blk_diag_func.blk_diag_zeros">
 <code class="sig-prename descclassname">aspire.utils.blk_diag_func.</code><code class="sig-name descname">blk_diag_zeros</code><span class="sig-paren">(</span><em class="sig-param">blk_partition</em>, <em class="sig-param">dtype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.blk_diag_func.blk_diag_zeros" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Build a block diagonal zero matrix</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>blk_partition</strong> – The matrix block partition of <cite>blk_diag</cite> in the form of a
+K-element list storing all shapes of K diagonal matrix blocks,
+where <cite>blk_partition[i]</cite> corresponds to the shape (number of rows and columns)
+of the <cite>i</cite> diagonal matrix block.</p></li>
+<li><p><strong>dtype</strong> – The data type to set precision of diagonal matrix block.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A block diagonal matrix consisting of <cite>K</cite> zero blocks.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="aspire.utils.blk_diag_func.filter_to_fb_mat">
+<code class="sig-prename descclassname">aspire.utils.blk_diag_func.</code><code class="sig-name descname">filter_to_fb_mat</code><span class="sig-paren">(</span><em class="sig-param">h_fun</em>, <em class="sig-param">fbasis</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.blk_diag_func.filter_to_fb_mat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert a nonradial function in k space into a basis representation</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>h_fun</strong> – The function form in k space</p></li>
+<li><p><strong>fbasis</strong> – The basis object for expanding</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a matrix representation using the <cite>fbasis</cite> expansion</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="aspire.utils.blk_diag_func.fun2fb_mat">
+<code class="sig-prename descclassname">aspire.utils.blk_diag_func.</code><code class="sig-name descname">fun2fb_mat</code><span class="sig-paren">(</span><em class="sig-param">k_vals</em>, <em class="sig-param">wts</em>, <em class="sig-param">h_vals</em>, <em class="sig-param">fbasis</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.blk_diag_func.fun2fb_mat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert 1D array of function values in k space into a basis representation</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>k_vals</strong> – The k values</p></li>
+<li><p><strong>wts</strong> – The weights for each k value</p></li>
+<li><p><strong>h_vals</strong> – The function values in k space</p></li>
+<li><p><strong>fbasis</strong> – The basis object for expanding</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a matrix representation using the <cite>fbasis</cite> expansion</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="function">
 <dt id="aspire.utils.blk_diag_func.mat_to_blk_diag">
 <code class="sig-prename descclassname">aspire.utils.blk_diag_func.</code><code class="sig-name descname">mat_to_blk_diag</code><span class="sig-paren">(</span><em class="sig-param">mat</em>, <em class="sig-param">blk_partition</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.blk_diag_func.mat_to_blk_diag" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="function">
-<dt id="aspire.utils.blk_diag_func.radial_filter2fb_mat">
-<code class="sig-prename descclassname">aspire.utils.blk_diag_func.</code><code class="sig-name descname">radial_filter2fb_mat</code><span class="sig-paren">(</span><em class="sig-param">h_fun</em>, <em class="sig-param">fbasis</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.blk_diag_func.radial_filter2fb_mat" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Convert full block diagonal matrix into list representation
+:param mat; The full block diagonal matrix including the zero elements of</p>
+<blockquote>
+<div><p>non-diagonal blocks.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>blk_partition</strong> – The matrix block partition of <cite>blk_diag</cite> in the form of a
+K-element list storing all shapes of K diagonal matrix blocks,
+where <cite>blk_partition[i]</cite> corresponds to the shape (number of rows and columns)
+of the <cite>i</cite> diagonal matrix block.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The block diagonal matrix in the list representation of diagonal blocks</p>
+</dd>
+</dl>
+</dd></dl>
 
 </div>
 <div class="section" id="module-aspire.utils.cell">
@@ -698,6 +896,12 @@ frequency.</p>
 <dt id="aspire.utils.filters.Filter.evaluate_grid">
 <code class="sig-name descname">evaluate_grid</code><span class="sig-paren">(</span><em class="sig-param">L</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.filters.Filter.evaluate_grid" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
+
+<dl class="method">
+<dt id="aspire.utils.filters.Filter.fb_mat">
+<code class="sig-name descname">fb_mat</code><span class="sig-paren">(</span><em class="sig-param">fbasis</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.filters.Filter.fb_mat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Represent the filter in FB basis matrix</p>
+</dd></dl>
 
 <dl class="method">
 <dt id="aspire.utils.filters.Filter.scale">
@@ -1151,7 +1355,7 @@ Note that when noise_var is zero, this reduces to the projecting y_s onto the sp
 <p>This is corresponding to the implemented version in the ASPIRE Matlab package.
 :param a_fun:  A function handle specifying the linear operation x -&gt; Ax.
 :param b:  The vector consisting of the right hand side of Ax = b.
-:param cg_opt: The parameters for the conjugate gradient method, including:</p>
+:param min_opt: The parameters for the conjugate gradient method, including:</p>
 <blockquote>
 <div><p>max_iter: Maximum number of iterations (default 50).
 verbose: The extent to which information on progress should be</p>
@@ -1204,10 +1408,11 @@ during each iteration. These fields include:
 
 <dl class="function">
 <dt id="aspire.utils.optimize.fill_struct">
-<code class="sig-prename descclassname">aspire.utils.optimize.</code><code class="sig-name descname">fill_struct</code><span class="sig-paren">(</span><em class="sig-param">obj=None</em>, <em class="sig-param">att_vals=None</em>, <em class="sig-param">overwrite=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.optimize.fill_struct" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.utils.optimize.</code><code class="sig-name descname">fill_struct</code><span class="sig-paren">(</span><em class="sig-param">obj=None</em>, <em class="sig-param">att_vals=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.optimize.fill_struct" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fill object with attributes in a dictionary.</p>
 <p>If a struct is not given a new object will be created and filled.
-If the given struct has a field in att_vals, the original field will stay, unless specified otherwise in overwrite.
+If the given struct has a field in att_vals, the original field will stay,
+unless specified otherwise in overwrite.
 att_vals is a dictionary with string keys, and for each key:
 if hasattr(s, key) and key in overwrite:</p>
 <blockquote>

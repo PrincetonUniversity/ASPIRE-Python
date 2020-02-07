@@ -13,7 +13,7 @@ Subpackages
    aspire.class3d
    aspire.commands
    aspire.data
-   aspire.denoise
+   aspire.denoising
    aspire.estimation
    aspire.image
    aspire.io

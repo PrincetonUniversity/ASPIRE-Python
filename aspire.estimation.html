@@ -29,7 +29,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="aspire.image package" href="aspire.image.html" />
-    <link rel="prev" title="aspire.denoise package" href="aspire.denoise.html" /> 
+    <link rel="prev" title="aspire.denoising package" href="aspire.denoising.html" /> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -96,7 +96,7 @@
 <li class="toctree-l4"><a class="reference internal" href="aspire.class3d.html">aspire.class3d package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="aspire.commands.html">aspire.commands package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="aspire.data.html">aspire.data package</a></li>
-<li class="toctree-l4"><a class="reference internal" href="aspire.denoise.html">aspire.denoise package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.denoising.html">aspire.denoising package</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">aspire.estimation package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="aspire.image.html">aspire.image package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="aspire.io.html">aspire.io package</a></li>
@@ -251,7 +251,7 @@ vector is returned instead.</p>
 <span id="aspire-estimation-covar2d-module"></span><h2>aspire.estimation.covar2d module<a class="headerlink" href="#module-aspire.estimation.covar2d" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="aspire.estimation.covar2d.RotCov2D">
-<em class="property">class </em><code class="sig-prename descclassname">aspire.estimation.covar2d.</code><code class="sig-name descname">RotCov2D</code><span class="sig-paren">(</span><em class="sig-param">basis</em>, <em class="sig-param">as_type='single'</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.estimation.covar2d.RotCov2D" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">aspire.estimation.covar2d.</code><code class="sig-name descname">RotCov2D</code><span class="sig-paren">(</span><em class="sig-param">basis</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.estimation.covar2d.RotCov2D" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Define a class for performing Cov2D analysis with CTF information described in</p>
 <p>T. Bhamre, T. Zhang, and A. Singer, “Denoising and covariance estimation of single particle cryo-EM images”,
@@ -268,9 +268,11 @@ J. Struct. Biol. 195, 27-81 (2016). DOI: 10.1016/j.jsb.2016.04.013</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>coeffs</strong> – A coefficient vector (or an array of coefficient vectors) to be calculated.</p></li>
 <li><p><strong>ctf_fb</strong> – The CFT functions in the FB expansion.</p></li>
-<li><p><strong>ctf_idx</strong> – An array of the CFT function indices for all 2D images.</p></li>
+<li><p><strong>ctf_idx</strong> – An array of the CFT function indices for all 2D images.
+If ctf_fb or ctf_idx is None, the identity filter will be applied.</p></li>
 <li><p><strong>mean_coeff</strong> – The mean value vector from all images.</p></li>
-<li><p><strong>noise_var</strong> – The estimated variance of noise.</p></li>
+<li><p><strong>noise_var</strong> – The estimated variance of noise. The value should be zero for <cite>coeffs</cite>
+from clean images of simulation data.</p></li>
 <li><p><strong>covar_est_opt</strong> – The optimization parameter list for obtaining the Cov2D matrix.</p></li>
 </ul>
 </dd>
@@ -288,17 +290,19 @@ are accounted for and inverted to yield a covariance estimate of the unfiltered 
 
 <dl class="method">
 <dt id="aspire.estimation.covar2d.RotCov2D.get_cwf_coeffs">
-<code class="sig-name descname">get_cwf_coeffs</code><span class="sig-paren">(</span><em class="sig-param">coeffs</em>, <em class="sig-param">ctf_fb</em>, <em class="sig-param">ctf_idx</em>, <em class="sig-param">mean_coeff=None</em>, <em class="sig-param">covar_coeff=None</em>, <em class="sig-param">noise_var=1</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.estimation.covar2d.RotCov2D.get_cwf_coeffs" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_cwf_coeffs</code><span class="sig-paren">(</span><em class="sig-param">coeffs</em>, <em class="sig-param">ctf_fb=None</em>, <em class="sig-param">ctf_idx=None</em>, <em class="sig-param">mean_coeff=None</em>, <em class="sig-param">covar_coeff=None</em>, <em class="sig-param">noise_var=1</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.estimation.covar2d.RotCov2D.get_cwf_coeffs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Estimate the expansion coefficients using the Covariance Wiener Filtering (CWF) method.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>coeffs</strong> – A coefficient vector (or an array of coefficient vectors) to be calculated.</p></li>
 <li><p><strong>ctf_fb</strong> – The CFT functions in the FB expansion.</p></li>
-<li><p><strong>ctf_idx</strong> – An array of the CFT function indices for all 2D images.</p></li>
+<li><p><strong>ctf_idx</strong> – An array of the CFT function indices for all 2D images.
+If ctf_fb or ctf_idx is None, the identity filter will be applied.</p></li>
 <li><p><strong>mean_coeff</strong> – The mean value vector from all images.</p></li>
 <li><p><strong>covar_coeff</strong> – The block diagonal covariance matrix of the clean coefficients represented by a cell array.</p></li>
-<li><p><strong>noise_var</strong> – The estimated variance of noise.</p></li>
+<li><p><strong>noise_var</strong> – The estimated variance of noise. The value should be zero for <cite>coeffs</cite>
+from clean images of simulation data.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -318,7 +322,8 @@ and white noise of variance <cite>noise_var</cite> for the noise.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>coeffs</strong> – A coefficient vector (or an array of coefficient vectors) to be averaged.</p></li>
 <li><p><strong>ctf_fb</strong> – The CFT functions in the FB expansion.</p></li>
-<li><p><strong>ctf_idx</strong> – An array of the CFT function indices for all 2D images.</p></li>
+<li><p><strong>ctf_idx</strong> – An array of the CFT function indices for all 2D images.
+If ctf_fb or ctf_idx is None, the identity filter will be applied.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -563,7 +568,7 @@ as coefficients of <cite>basis</cite>.</p>
         <a href="aspire.image.html" class="btn btn-neutral float-right" title="aspire.image package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="aspire.denoise.html" class="btn btn-neutral" title="aspire.denoise package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="aspire.denoising.html" class="btn btn-neutral" title="aspire.denoising package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
