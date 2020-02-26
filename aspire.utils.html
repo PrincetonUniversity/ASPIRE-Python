@@ -440,25 +440,6 @@ of the <cite>i</cite> diagonal matrix block.</p></li>
 </dd></dl>
 
 <dl class="function">
-<dt id="aspire.utils.blk_diag_func.fun2fb_mat">
-<code class="sig-prename descclassname">aspire.utils.blk_diag_func.</code><code class="sig-name descname">fun2fb_mat</code><span class="sig-paren">(</span><em class="sig-param">k_vals</em>, <em class="sig-param">wts</em>, <em class="sig-param">h_vals</em>, <em class="sig-param">fbasis</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.blk_diag_func.fun2fb_mat" title="Permalink to this definition">¶</a></dt>
-<dd><p>Convert 1D array of function values in k space into a basis representation</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>k_vals</strong> – The k values</p></li>
-<li><p><strong>wts</strong> – The weights for each k value</p></li>
-<li><p><strong>h_vals</strong> – The function values in k space</p></li>
-<li><p><strong>fbasis</strong> – The basis object for expanding</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>a matrix representation using the <cite>fbasis</cite> expansion</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="function">
 <dt id="aspire.utils.blk_diag_func.mat_to_blk_diag">
 <code class="sig-prename descclassname">aspire.utils.blk_diag_func.</code><code class="sig-name descname">mat_to_blk_diag</code><span class="sig-paren">(</span><em class="sig-param">mat</em>, <em class="sig-param">blk_partition</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.blk_diag_func.mat_to_blk_diag" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert full block diagonal matrix into list representation
@@ -1353,11 +1334,20 @@ Note that when noise_var is zero, this reduces to the projecting y_s onto the sp
 <code class="sig-prename descclassname">aspire.utils.optimize.</code><code class="sig-name descname">conj_grad</code><span class="sig-paren">(</span><em class="sig-param">a_fun</em>, <em class="sig-param">b</em>, <em class="sig-param">cg_opt=None</em>, <em class="sig-param">init=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.optimize.conj_grad" title="Permalink to this definition">¶</a></dt>
 <dd><p>Conjugate Gradient method to solve the linear system.</p>
 <p>This is corresponding to the implemented version in the ASPIRE Matlab package.
-:param a_fun:  A function handle specifying the linear operation x -&gt; Ax.
-:param b:  The vector consisting of the right hand side of Ax = b.
-:param min_opt: The parameters for the conjugate gradient method, including:</p>
+:param a_fun:  A function handle specifying the linear operation x -&gt; Ax.</p>
 <blockquote>
-<div><p>max_iter: Maximum number of iterations (default 50).
+<div><p>When multiple right-hand sides are supplied, this function takes as
+input an array of shape (n, p), where n is the number of right-hand
+sides and p is the dimension of the space.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>b</strong> – The vector consisting of the right hand side of Ax = b. Again,
+n different right-hand sides are given by supplying an array of shape
+(n, p).</p></li>
+<li><p><strong>cg_opt</strong> – <p>The parameters for the conjugate gradient method, including:
+max_iter: Maximum number of iterations (default 50).
 verbose: The extent to which information on progress should be</p>
 <blockquote>
 <div><p>output to the terminal (default 1).</p>
@@ -1379,12 +1369,11 @@ may require a large amount of memory, this is not recommended
 (default false).</p>
 </dd>
 </dl>
-</div></blockquote>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>init</strong> – A structure specifying the starting point of the algorithm.
+</p></li>
+<li><p><strong>init</strong> – A structure specifying the starting point of the algorithm.
 This can contain values of x or p that will be used for initialization
-(default empty).</p>
+(default empty).</p></li>
+</ul>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p><p>The output result includes:

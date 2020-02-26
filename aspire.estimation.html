@@ -250,6 +250,93 @@ vector is returned instead.</p>
 <div class="section" id="module-aspire.estimation.covar2d">
 <span id="aspire-estimation-covar2d-module"></span><h2>aspire.estimation.covar2d module<a class="headerlink" href="#module-aspire.estimation.covar2d" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
+<dt id="aspire.estimation.covar2d.BatchedRotCov2D">
+<em class="property">class </em><code class="sig-prename descclassname">aspire.estimation.covar2d.</code><code class="sig-name descname">BatchedRotCov2D</code><span class="sig-paren">(</span><em class="sig-param">src</em>, <em class="sig-param">basis=None</em>, <em class="sig-param">batch_size=8192</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.estimation.covar2d.BatchedRotCov2D" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#aspire.estimation.covar2d.RotCov2D" title="aspire.estimation.covar2d.RotCov2D"><code class="xref py py-class docutils literal notranslate"><span class="pre">aspire.estimation.covar2d.RotCov2D</span></code></a></p>
+<p>Perform batchwise rotationally equivariant 2D covariance estimation from an
+<cite>ImageSource</cite> objects. This is done with a single pass through the data,
+processing moderately-sized batches one at a time. The rotational
+equivariance is achieved by decomposing images in a steerable Fourier–Bessel
+basis. For more information, see</p>
+<blockquote>
+<div><p>T. Bhamre, T. Zhang, and A. Singer, “Denoising and covariance estimation
+of single particle cryo-EM images”, J. Struct. Biol. 195, 27-81 (2016).
+DOI: 10.1016/j.jsb.2016.04.013</p>
+<dl class="field-list simple">
+<dt class="field-odd">param src</dt>
+<dd class="field-odd"><p>The <cite>ImageSource</cite> object from which the sample images are to</p>
+</dd>
+</dl>
+<p>be extracted.
+:param basis: The <cite>FBBasis2D</cite> object used to decompose the images. By
+default, this is set to <cite>FFBBasis2D((src.L, src.L))</cite>.
+:param batch_size: The number of images to process at a time (default
+8192).</p>
+</div></blockquote>
+<p class="rubric">Methods</p>
+<p>constructor of an object for 2D covariance analysis</p>
+<p class="rubric">Methods</p>
+<dl class="method">
+<dt id="aspire.estimation.covar2d.BatchedRotCov2D.get_covar">
+<code class="sig-name descname">get_covar</code><span class="sig-paren">(</span><em class="sig-param">noise_var=1</em>, <em class="sig-param">mean_coeff=None</em>, <em class="sig-param">covar_est_opt=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.estimation.covar2d.BatchedRotCov2D.get_covar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate the block diagonal covariance matrix in the basis
+coefficients.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>noise_var</strong> – The variance of the noise in the images (default 1)</p></li>
+<li><p><strong>mean_coeff</strong> – If specified, overrides the mean coefficient vector</p></li>
+</ul>
+</dd>
+</dl>
+<p>used to calculate the covariance (default <cite>self.get_mean()</cite>).
+:param :covar_est_opt: The estimation parameters for obtaining the covariance
+matrix in the form of a dictionary. Keys include:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>‘shrinker’: The type of shrinkage we apply to the right-hand side
+in the normal equations. Can be <cite>‘None’</cite>, in which case no
+shrinkage is performed. For a list of shrinkers, see the
+documentation of <cite>shrink_covar</cite>.</p></li>
+<li><p>‘verbose’: Verbosity (integer) of the conjugate gradient algorithm
+(see documentation for <cite>conj_grad</cite>, default zero).</p></li>
+<li><p>‘max_iter’: Maximum number of conjugate gradient iterations (see
+documentation for <cite>conj_grad</cite>, default 250).</p></li>
+<li><p>‘iter_callback’: Callback performed at the end of an iteration
+(see documentation for <cite>conj_grad</cite>, default <cite>[]</cite>).</p></li>
+<li><p>‘store_iterates’: Determines whether to store intermediate
+iterates (see documentation for <cite>conj_grad</cite>, default <cite>False</cite>).</p></li>
+<li><p>‘rel_tolerance’: Relative stopping tolerance of the conjugate
+gradient algorithm (see documentation for <cite>conj_grad</cite>, default
+<cite>1e-12</cite>).</p></li>
+<li><p>‘precision’: Precision of conjugate gradient algorithm (see
+documentation for <cite>conj_grad</cite>, default <cite>‘float64’</cite>)</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The block diagonal matrix containing the basis coefficients (in</p>
+</dd>
+</dl>
+<p><cite>self.basis</cite>) for the estimated covariance matrix. These may be
+manipulated using the <cite>blk_diag_*</cite> functions.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="aspire.estimation.covar2d.BatchedRotCov2D.get_mean">
+<code class="sig-name descname">get_mean</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aspire.estimation.covar2d.BatchedRotCov2D.get_mean" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate the rotationally invariant mean image in the basis
+coefficients.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The mean coefficient vector in <cite>self.basis</cite>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="aspire.estimation.covar2d.RotCov2D">
 <em class="property">class </em><code class="sig-prename descclassname">aspire.estimation.covar2d.</code><code class="sig-name descname">RotCov2D</code><span class="sig-paren">(</span><em class="sig-param">basis</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.estimation.covar2d.RotCov2D" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
