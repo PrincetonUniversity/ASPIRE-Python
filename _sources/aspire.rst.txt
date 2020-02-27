@@ -12,7 +12,6 @@ Subpackages
    aspire.class2d
    aspire.class3d
    aspire.commands
-   aspire.data
    aspire.denoising
    aspire.estimation
    aspire.image
