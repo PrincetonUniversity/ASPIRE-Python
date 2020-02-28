@@ -219,26 +219,18 @@ prolate spheroidal wave function (PSWF) objects.</p>
 <dd></dd></dl>
 
 <dl class="function">
-<dt id="aspire.basis.basis_utils.leggauss_0_1">
-<code class="sig-prename descclassname">aspire.basis.basis_utils.</code><code class="sig-name descname">leggauss_0_1</code><span class="sig-paren">(</span><em class="sig-param">n</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.basis_utils.leggauss_0_1" title="Permalink to this definition">¶</a></dt>
-<dd><p>Wrapper for numpy.polynomial leggauss
-:param n: int &gt; 0, the number of sampled points to integrate
-:return: Legendre-Gauss quadrature of degree n between 0 and 1</p>
-</dd></dl>
-
-<dl class="function">
 <dt id="aspire.basis.basis_utils.lgwt">
 <code class="sig-prename descclassname">aspire.basis.basis_utils.</code><code class="sig-name descname">lgwt</code><span class="sig-paren">(</span><em class="sig-param">ndeg</em>, <em class="sig-param">a</em>, <em class="sig-param">b</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.basis_utils.lgwt" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute Legendre-Gauss quadrature</p>
 <p>Generates the Legendre-Gauss nodes and weights on an interval
 [a, b] with truncation order of ndeg for computing definite integrals
-using Legendre-Gauss quadrature. Computes
+using Legendre-Gauss quadrature.
 Suppose you have a continuous function f(x) which is defined on [a, b]
 which you can evaluate at any x in [a, b]. Simply evaluate it at all of
 the values contained in the x vector to obtain a vector f, then compute
 the definite integral using sum(f.*w);</p>
-<p>The nodes are sorted in ascending order.</p>
-<p>Modified from the MATLAB lgwt version by Greg von Winckel - 02/25/2004</p>
+<p>This is a 2rapper for numpy.polynomial leggauss which outputs only in the
+range of (-1, 1).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
