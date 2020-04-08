@@ -1,0 +1,10 @@
+aspire.data package
+===================
+
+Module contents
+---------------
+
+.. automodule:: aspire.data
+   :members:
+   :undoc-members:
+   :show-inheritance:

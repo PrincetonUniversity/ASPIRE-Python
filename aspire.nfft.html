@@ -95,6 +95,7 @@
 <li class="toctree-l4"><a class="reference internal" href="aspire.class2d.html">aspire.class2d package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="aspire.class3d.html">aspire.class3d package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="aspire.commands.html">aspire.commands package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.data.html">aspire.data package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="aspire.denoising.html">aspire.denoising package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="aspire.estimation.html">aspire.estimation package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="aspire.image.html">aspire.image package</a></li>
@@ -191,9 +192,9 @@
 </div>
 <div class="section" id="module-aspire.nfft.finufft">
 <span id="aspire-nfft-finufft-module"></span><h2>aspire.nfft.finufft module<a class="headerlink" href="#module-aspire.nfft.finufft" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
+<dl class="py class">
 <dt id="aspire.nfft.finufft.FINufftPlan">
-<em class="property">class </em><code class="sig-prename descclassname">aspire.nfft.finufft.</code><code class="sig-name descname">FINufftPlan</code><span class="sig-paren">(</span><em class="sig-param">sz</em>, <em class="sig-param">fourier_pts</em>, <em class="sig-param">epsilon=1e-15</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.nfft.finufft.FINufftPlan" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">aspire.nfft.finufft.</code><code class="sig-name descname">FINufftPlan</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sz</span></em>, <em class="sig-param"><span class="n">fourier_pts</span></em>, <em class="sig-param"><span class="n">epsilon</span><span class="o">=</span><span class="default_value">1e-15</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.nfft.finufft.FINufftPlan" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#aspire.nfft.Plan" title="aspire.nfft.Plan"><code class="xref py py-class docutils literal notranslate"><span class="pre">aspire.nfft.Plan</span></code></a></p>
 <p>A plan for non-uniform FFT (3D)
 :param sz: A tuple indicating the geometry of the signal
@@ -207,102 +208,69 @@
 </dd>
 </dl>
 <p class="rubric">Methods</p>
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.nfft.finufft.FINufftPlan.adjoint">
-<code class="sig-name descname">adjoint</code><span class="sig-paren">(</span><em class="sig-param">signal</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.nfft.finufft.FINufftPlan.adjoint" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">adjoint</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">signal</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.nfft.finufft.FINufftPlan.adjoint" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.nfft.finufft.FINufftPlan.transform">
-<code class="sig-name descname">transform</code><span class="sig-paren">(</span><em class="sig-param">signal</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.nfft.finufft.FINufftPlan.transform" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">transform</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">signal</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.nfft.finufft.FINufftPlan.transform" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 </div>
-<div class="section" id="module-aspire.nfft.pynfft">
-<span id="aspire-nfft-pynfft-module"></span><h2>aspire.nfft.pynfft module<a class="headerlink" href="#module-aspire.nfft.pynfft" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
-<dt id="aspire.nfft.pynfft.PyNfftPlan">
-<em class="property">class </em><code class="sig-prename descclassname">aspire.nfft.pynfft.</code><code class="sig-name descname">PyNfftPlan</code><span class="sig-paren">(</span><em class="sig-param">sz</em>, <em class="sig-param">fourier_pts</em>, <em class="sig-param">epsilon=1e-15</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.nfft.pynfft.PyNfftPlan" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#aspire.nfft.Plan" title="aspire.nfft.Plan"><code class="xref py py-class docutils literal notranslate"><span class="pre">aspire.nfft.Plan</span></code></a></p>
-<p>A plan for non-uniform FFT (3D)
-:param sz: A tuple indicating the geometry of the signal
-:param fourier_pts: The points in Fourier space where the Fourier transform is to be calculated,</p>
-<blockquote>
-<div><p>arranged as a 3-by-K array. These need to be in the range [-pi, pi] in each dimension.</p>
-</div></blockquote>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>epsilon</strong> – The desired precision of the NUFFT</p>
-</dd>
-</dl>
-<p class="rubric">Methods</p>
-<dl class="method">
-<dt id="aspire.nfft.pynfft.PyNfftPlan.adjoint">
-<code class="sig-name descname">adjoint</code><span class="sig-paren">(</span><em class="sig-param">signal</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.nfft.pynfft.PyNfftPlan.adjoint" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="aspire.nfft.pynfft.PyNfftPlan.epsilon_to_nfft_cutoff">
-<em class="property">static </em><code class="sig-name descname">epsilon_to_nfft_cutoff</code><span class="sig-paren">(</span><em class="sig-param">epsilon</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.nfft.pynfft.PyNfftPlan.epsilon_to_nfft_cutoff" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="aspire.nfft.pynfft.PyNfftPlan.transform">
-<code class="sig-name descname">transform</code><span class="sig-paren">(</span><em class="sig-param">signal</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.nfft.pynfft.PyNfftPlan.transform" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
+<div class="section" id="aspire-nfft-pynfft-module">
+<h2>aspire.nfft.pynfft module<a class="headerlink" href="#aspire-nfft-pynfft-module" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="module-aspire.nfft.utils">
 <span id="aspire-nfft-utils-module"></span><h2>aspire.nfft.utils module<a class="headerlink" href="#module-aspire.nfft.utils" title="Permalink to this headline">¶</a></h2>
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.nfft.utils.nextpow2">
-<code class="sig-prename descclassname">aspire.nfft.utils.</code><code class="sig-name descname">nextpow2</code><span class="sig-paren">(</span><em class="sig-param">x</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.nfft.utils.nextpow2" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.nfft.utils.</code><code class="sig-name descname">nextpow2</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.nfft.utils.nextpow2" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </div>
 <div class="section" id="module-aspire.nfft">
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-aspire.nfft" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
+<dl class="py class">
 <dt id="aspire.nfft.Plan">
 <em class="property">class </em><code class="sig-prename descclassname">aspire.nfft.</code><code class="sig-name descname">Plan</code><a class="headerlink" href="#aspire.nfft.Plan" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.nfft.all_backends">
 <code class="sig-prename descclassname">aspire.nfft.</code><code class="sig-name descname">all_backends</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aspire.nfft.all_backends" title="Permalink to this definition">¶</a></dt>
 <dd><p>Determine all available NFFT backends
 :return: A list of strings representing available NFFT backends</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.nfft.anufft3">
-<code class="sig-prename descclassname">aspire.nfft.</code><code class="sig-name descname">anufft3</code><span class="sig-paren">(</span><em class="sig-param">vol_f</em>, <em class="sig-param">fourier_pts</em>, <em class="sig-param">sz</em>, <em class="sig-param">real=False</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.nfft.anufft3" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.nfft.</code><code class="sig-name descname">anufft3</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">vol_f</span></em>, <em class="sig-param"><span class="n">fourier_pts</span></em>, <em class="sig-param"><span class="n">sz</span></em>, <em class="sig-param"><span class="n">real</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.nfft.anufft3" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.nfft.backend_available">
-<code class="sig-prename descclassname">aspire.nfft.</code><code class="sig-name descname">backend_available</code><span class="sig-paren">(</span><em class="sig-param">backend</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.nfft.backend_available" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.nfft.</code><code class="sig-name descname">backend_available</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">backend</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.nfft.backend_available" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether a particular NFFT backend is available
 :param backend: String representing the NFFT backend, e.g. ‘finufft’ or ‘pynfft’
 :return: Boolean on whether the backend is available</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.nfft.check_backends">
-<code class="sig-prename descclassname">aspire.nfft.</code><code class="sig-name descname">check_backends</code><span class="sig-paren">(</span><em class="sig-param">raise_errors=True</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.nfft.check_backends" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.nfft.</code><code class="sig-name descname">check_backends</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">raise_errors</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.nfft.check_backends" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check all NFFT backends in package configuration
 :param raise_errors: Whether to raise a RuntimeError if no backends detected.
 :return: On return, the global names ‘backends’/’default_plan_class’ have been populated</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.nfft.nufft3">
-<code class="sig-prename descclassname">aspire.nfft.</code><code class="sig-name descname">nufft3</code><span class="sig-paren">(</span><em class="sig-param">vol_f</em>, <em class="sig-param">fourier_pts</em>, <em class="sig-param">sz</em>, <em class="sig-param">real=False</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.nfft.nufft3" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.nfft.</code><code class="sig-name descname">nufft3</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">vol_f</span></em>, <em class="sig-param"><span class="n">fourier_pts</span></em>, <em class="sig-param"><span class="n">sz</span></em>, <em class="sig-param"><span class="n">real</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.nfft.nufft3" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </div>

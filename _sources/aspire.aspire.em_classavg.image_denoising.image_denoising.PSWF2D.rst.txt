@@ -5,6 +5,7 @@ Subpackages
 -----------
 
 .. toctree::
+   :maxdepth: 4
 
    aspire.aspire.em_classavg.image_denoising.image_denoising.PSWF2D.BN
 

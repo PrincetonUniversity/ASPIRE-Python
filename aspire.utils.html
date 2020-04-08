@@ -95,6 +95,7 @@
 <li class="toctree-l4"><a class="reference internal" href="aspire.class2d.html">aspire.class2d package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="aspire.class3d.html">aspire.class3d package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="aspire.commands.html">aspire.commands package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.data.html">aspire.data package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="aspire.denoising.html">aspire.denoising package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="aspire.estimation.html">aspire.estimation package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="aspire.image.html">aspire.image package</a></li>
@@ -206,9 +207,9 @@
 <div class="section" id="module-aspire.utils.blk_diag_func">
 <span id="aspire-utils-blk-diag-func-module"></span><h2>aspire.utils.blk_diag_func module<a class="headerlink" href="#module-aspire.utils.blk_diag_func" title="Permalink to this headline">¶</a></h2>
 <p>Define operation functions of block diagonal matrix needed by Cov2D analysis.</p>
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.utils.blk_diag_func.blk_diag_add">
-<code class="sig-prename descclassname">aspire.utils.blk_diag_func.</code><code class="sig-name descname">blk_diag_add</code><span class="sig-paren">(</span><em class="sig-param">blk_diag_a</em>, <em class="sig-param">blk_diag_b</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.blk_diag_func.blk_diag_add" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.utils.blk_diag_func.</code><code class="sig-name descname">blk_diag_add</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">blk_diag_a</span></em>, <em class="sig-param"><span class="n">blk_diag_b</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.blk_diag_func.blk_diag_add" title="Permalink to this definition">¶</a></dt>
 <dd><p>Define the element addition of block diagonal matrix</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -224,9 +225,9 @@ sums from A and B elements.</p>
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.utils.blk_diag_func.blk_diag_apply">
-<code class="sig-prename descclassname">aspire.utils.blk_diag_func.</code><code class="sig-name descname">blk_diag_apply</code><span class="sig-paren">(</span><em class="sig-param">blk_diag</em>, <em class="sig-param">x</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.blk_diag_func.blk_diag_apply" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.utils.blk_diag_func.</code><code class="sig-name descname">blk_diag_apply</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">blk_diag</span></em>, <em class="sig-param"><span class="n">x</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.blk_diag_func.blk_diag_apply" title="Permalink to this definition">¶</a></dt>
 <dd><p>Define the apply option of a block diagonal matrix with a matrix of coefficient vectors</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -241,9 +242,9 @@ sums from A and B elements.</p>
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.utils.blk_diag_func.blk_diag_compatible">
-<code class="sig-prename descclassname">aspire.utils.blk_diag_func.</code><code class="sig-name descname">blk_diag_compatible</code><span class="sig-paren">(</span><em class="sig-param">blk_diag_a</em>, <em class="sig-param">blk_diag_b</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.blk_diag_func.blk_diag_compatible" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.utils.blk_diag_func.</code><code class="sig-name descname">blk_diag_compatible</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">blk_diag_a</span></em>, <em class="sig-param"><span class="n">blk_diag_b</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.blk_diag_func.blk_diag_compatible" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check whether two block diagonal matrices are compatible or not</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -259,9 +260,9 @@ block diagonal matrices are the same, otherwise return <cite>False</cite>.</p>
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.utils.blk_diag_func.blk_diag_eye">
-<code class="sig-prename descclassname">aspire.utils.blk_diag_func.</code><code class="sig-name descname">blk_diag_eye</code><span class="sig-paren">(</span><em class="sig-param">blk_partition</em>, <em class="sig-param">dtype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.blk_diag_func.blk_diag_eye" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.utils.blk_diag_func.</code><code class="sig-name descname">blk_diag_eye</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">blk_partition</span></em>, <em class="sig-param"><span class="n">dtype</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.blk_diag_func.blk_diag_eye" title="Permalink to this definition">¶</a></dt>
 <dd><p>Build a block diagonal eye matrix</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -279,15 +280,15 @@ of the <cite>i</cite> diagonal matrix block.</p></li>
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.utils.blk_diag_func.blk_diag_isnumeric">
-<code class="sig-prename descclassname">aspire.utils.blk_diag_func.</code><code class="sig-name descname">blk_diag_isnumeric</code><span class="sig-paren">(</span><em class="sig-param">x</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.blk_diag_func.blk_diag_isnumeric" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.utils.blk_diag_func.</code><code class="sig-name descname">blk_diag_isnumeric</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.blk_diag_func.blk_diag_isnumeric" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check a block diag matrix is numeric or not</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.utils.blk_diag_func.blk_diag_minus">
-<code class="sig-prename descclassname">aspire.utils.blk_diag_func.</code><code class="sig-name descname">blk_diag_minus</code><span class="sig-paren">(</span><em class="sig-param">blk_diag_a</em>, <em class="sig-param">blk_diag_b</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.blk_diag_func.blk_diag_minus" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.utils.blk_diag_func.</code><code class="sig-name descname">blk_diag_minus</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">blk_diag_a</span></em>, <em class="sig-param"><span class="n">blk_diag_b</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.blk_diag_func.blk_diag_minus" title="Permalink to this definition">¶</a></dt>
 <dd><p>Define the element subtraction of block diagonal matrix</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -303,9 +304,9 @@ subtraction of A from B elements.</p>
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.utils.blk_diag_func.blk_diag_mult">
-<code class="sig-prename descclassname">aspire.utils.blk_diag_func.</code><code class="sig-name descname">blk_diag_mult</code><span class="sig-paren">(</span><em class="sig-param">blk_diag_a</em>, <em class="sig-param">blk_diag_b</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.blk_diag_func.blk_diag_mult" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.utils.blk_diag_func.</code><code class="sig-name descname">blk_diag_mult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">blk_diag_a</span></em>, <em class="sig-param"><span class="n">blk_diag_b</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.blk_diag_func.blk_diag_mult" title="Permalink to this definition">¶</a></dt>
 <dd><p>Define the matrix multiplication of two block diagonal matrices</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -321,9 +322,9 @@ the matrix multiplication of A from B block diagonal matrices.</p>
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.utils.blk_diag_func.blk_diag_norm">
-<code class="sig-prename descclassname">aspire.utils.blk_diag_func.</code><code class="sig-name descname">blk_diag_norm</code><span class="sig-paren">(</span><em class="sig-param">blk_diag</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.blk_diag_func.blk_diag_norm" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.utils.blk_diag_func.</code><code class="sig-name descname">blk_diag_norm</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">blk_diag</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.blk_diag_func.blk_diag_norm" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute the 2-norm of a block diagonal matrix</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -335,9 +336,9 @@ the matrix multiplication of A from B block diagonal matrices.</p>
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.utils.blk_diag_func.blk_diag_partition">
-<code class="sig-prename descclassname">aspire.utils.blk_diag_func.</code><code class="sig-name descname">blk_diag_partition</code><span class="sig-paren">(</span><em class="sig-param">blk_diag</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.blk_diag_func.blk_diag_partition" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.utils.blk_diag_func.</code><code class="sig-name descname">blk_diag_partition</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">blk_diag</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.blk_diag_func.blk_diag_partition" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a partition of block diagonal matrix</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -353,9 +354,9 @@ of the <cite>i</cite> diagonal matrix block.</p>
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.utils.blk_diag_func.blk_diag_solve">
-<code class="sig-prename descclassname">aspire.utils.blk_diag_func.</code><code class="sig-name descname">blk_diag_solve</code><span class="sig-paren">(</span><em class="sig-param">blk_diag</em>, <em class="sig-param">y</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.blk_diag_func.blk_diag_solve" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.utils.blk_diag_func.</code><code class="sig-name descname">blk_diag_solve</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">blk_diag</span></em>, <em class="sig-param"><span class="n">y</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.blk_diag_func.blk_diag_solve" title="Permalink to this definition">¶</a></dt>
 <dd><p>Solve a linear system involving a block diagonal matrix</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -372,9 +373,9 @@ solved for separately.</p></li>
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.utils.blk_diag_func.blk_diag_to_mat">
-<code class="sig-prename descclassname">aspire.utils.blk_diag_func.</code><code class="sig-name descname">blk_diag_to_mat</code><span class="sig-paren">(</span><em class="sig-param">blk_diag</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.blk_diag_func.blk_diag_to_mat" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.utils.blk_diag_func.</code><code class="sig-name descname">blk_diag_to_mat</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">blk_diag</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.blk_diag_func.blk_diag_to_mat" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert list representation of block diagonal matrix into full matrix</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -387,9 +388,9 @@ non-diagonal blocks.</p>
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.utils.blk_diag_func.blk_diag_transpose">
-<code class="sig-prename descclassname">aspire.utils.blk_diag_func.</code><code class="sig-name descname">blk_diag_transpose</code><span class="sig-paren">(</span><em class="sig-param">blk_diag</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.blk_diag_func.blk_diag_transpose" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.utils.blk_diag_func.</code><code class="sig-name descname">blk_diag_transpose</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">blk_diag</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.blk_diag_func.blk_diag_transpose" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the transpose matrix of a block diagonal matrix</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -401,9 +402,9 @@ non-diagonal blocks.</p>
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.utils.blk_diag_func.blk_diag_zeros">
-<code class="sig-prename descclassname">aspire.utils.blk_diag_func.</code><code class="sig-name descname">blk_diag_zeros</code><span class="sig-paren">(</span><em class="sig-param">blk_partition</em>, <em class="sig-param">dtype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.blk_diag_func.blk_diag_zeros" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.utils.blk_diag_func.</code><code class="sig-name descname">blk_diag_zeros</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">blk_partition</span></em>, <em class="sig-param"><span class="n">dtype</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.blk_diag_func.blk_diag_zeros" title="Permalink to this definition">¶</a></dt>
 <dd><p>Build a block diagonal zero matrix</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -421,9 +422,9 @@ of the <cite>i</cite> diagonal matrix block.</p></li>
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.utils.blk_diag_func.filter_to_fb_mat">
-<code class="sig-prename descclassname">aspire.utils.blk_diag_func.</code><code class="sig-name descname">filter_to_fb_mat</code><span class="sig-paren">(</span><em class="sig-param">h_fun</em>, <em class="sig-param">fbasis</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.blk_diag_func.filter_to_fb_mat" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.utils.blk_diag_func.</code><code class="sig-name descname">filter_to_fb_mat</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">h_fun</span></em>, <em class="sig-param"><span class="n">fbasis</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.blk_diag_func.filter_to_fb_mat" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert a nonradial function in k space into a basis representation</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -438,9 +439,9 @@ of the <cite>i</cite> diagonal matrix block.</p></li>
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.utils.blk_diag_func.mat_to_blk_diag">
-<code class="sig-prename descclassname">aspire.utils.blk_diag_func.</code><code class="sig-name descname">mat_to_blk_diag</code><span class="sig-paren">(</span><em class="sig-param">mat</em>, <em class="sig-param">blk_partition</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.blk_diag_func.mat_to_blk_diag" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.utils.blk_diag_func.</code><code class="sig-name descname">mat_to_blk_diag</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">mat</span></em>, <em class="sig-param"><span class="n">blk_partition</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.blk_diag_func.mat_to_blk_diag" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert full block diagonal matrix into list representation
 :param mat; The full block diagonal matrix including the zero elements of</p>
 <blockquote>
@@ -462,20 +463,20 @@ of the <cite>i</cite> diagonal matrix block.</p>
 </div>
 <div class="section" id="module-aspire.utils.cell">
 <span id="aspire-utils-cell-module"></span><h2>aspire.utils.cell module<a class="headerlink" href="#module-aspire.utils.cell" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
+<dl class="py class">
 <dt id="aspire.utils.cell.Cell2D">
-<em class="property">class </em><code class="sig-prename descclassname">aspire.utils.cell.</code><code class="sig-name descname">Cell2D</code><span class="sig-paren">(</span><em class="sig-param">rows</em>, <em class="sig-param">cols</em>, <em class="sig-param">dtype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.cell.Cell2D" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">aspire.utils.cell.</code><code class="sig-name descname">Cell2D</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">rows</span></em>, <em class="sig-param"><span class="n">cols</span></em>, <em class="sig-param"><span class="n">dtype</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.cell.Cell2D" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Define a base class of Cell to perform similar cell functions in MATLAB.</p>
 <p class="rubric">Methods</p>
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.utils.cell.Cell2D.mat2blk_diag">
-<code class="sig-name descname">mat2blk_diag</code><span class="sig-paren">(</span><em class="sig-param">mat</em>, <em class="sig-param">rows</em>, <em class="sig-param">cols</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.cell.Cell2D.mat2blk_diag" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">mat2blk_diag</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">mat</span></em>, <em class="sig-param"><span class="n">rows</span></em>, <em class="sig-param"><span class="n">cols</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.cell.Cell2D.mat2blk_diag" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.utils.cell.Cell2D.mat2cell">
-<code class="sig-name descname">mat2cell</code><span class="sig-paren">(</span><em class="sig-param">mat</em>, <em class="sig-param">rows</em>, <em class="sig-param">cols</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.cell.Cell2D.mat2cell" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">mat2cell</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">mat</span></em>, <em class="sig-param"><span class="n">rows</span></em>, <em class="sig-param"><span class="n">cols</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.cell.Cell2D.mat2cell" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -483,55 +484,55 @@ of the <cite>i</cite> diagonal matrix block.</p>
 </div>
 <div class="section" id="module-aspire.utils.config">
 <span id="aspire-utils-config-module"></span><h2>aspire.utils.config module<a class="headerlink" href="#module-aspire.utils.config" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
+<dl class="py class">
 <dt id="aspire.utils.config.Config">
-<em class="property">class </em><code class="sig-prename descclassname">aspire.utils.config.</code><code class="sig-name descname">Config</code><span class="sig-paren">(</span><em class="sig-param">ini_string=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.config.Config" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">aspire.utils.config.</code><code class="sig-name descname">Config</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ini_string</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.config.Config" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p class="rubric">Methods</p>
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.utils.config.Config.init_from_fp">
-<code class="sig-name descname">init_from_fp</code><span class="sig-paren">(</span><em class="sig-param">ini_fp</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.config.Config.init_from_fp" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">init_from_fp</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ini_fp</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.config.Config.init_from_fp" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.utils.config.Config.init_from_string">
-<code class="sig-name descname">init_from_string</code><span class="sig-paren">(</span><em class="sig-param">ini_string</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.config.Config.init_from_string" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">init_from_string</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ini_string</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.config.Config.init_from_string" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.utils.config.Config.sections">
 <code class="sig-name descname">sections</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.config.Config.sections" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="aspire.utils.config.ConfigSection">
-<em class="property">class </em><code class="sig-prename descclassname">aspire.utils.config.</code><code class="sig-name descname">ConfigSection</code><span class="sig-paren">(</span><em class="sig-param">section_proxy</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.config.ConfigSection" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">aspire.utils.config.</code><code class="sig-name descname">ConfigSection</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">section_proxy</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.config.ConfigSection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>A thin wrapper over a ConfigParser’s SectionProxy object,
 that tries to infer the types of values, and makes them available as attributes
 Currently int/float/str are supported.</p>
 <p class="rubric">Methods</p>
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.utils.config.ConfigSection.items">
 <code class="sig-name descname">items</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.config.ConfigSection.items" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.utils.config.config_override">
-<code class="sig-prename descclassname">aspire.utils.config.</code><code class="sig-name descname">config_override</code><span class="sig-paren">(</span><em class="sig-param">args</em>, <em class="sig-param">config=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.config.config_override" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.utils.config.</code><code class="sig-name descname">config_override</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">args</span></em>, <em class="sig-param"><span class="n">config</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.config.config_override" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </div>
 <div class="section" id="module-aspire.utils.coor_trans">
 <span id="aspire-utils-coor-trans-module"></span><h2>aspire.utils.coor_trans module<a class="headerlink" href="#module-aspire.utils.coor_trans" title="Permalink to this headline">¶</a></h2>
 <p>General purpose math functions, mostly geometric in nature.</p>
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.utils.coor_trans.cart2pol">
-<code class="sig-prename descclassname">aspire.utils.coor_trans.</code><code class="sig-name descname">cart2pol</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">y</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.coor_trans.cart2pol" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.utils.coor_trans.</code><code class="sig-name descname">cart2pol</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="n">y</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.coor_trans.cart2pol" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert Cartesian to Polar Coordinates. All input arguments must be the same shape.
 :param x: x-coordinate in Cartesian space
 :param y: y-coordinate in Cartesian space
@@ -542,9 +543,9 @@ r: radial distance from origin</p>
 </div></blockquote>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.utils.coor_trans.cart2sph">
-<code class="sig-prename descclassname">aspire.utils.coor_trans.</code><code class="sig-name descname">cart2sph</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">y</em>, <em class="sig-param">z</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.coor_trans.cart2sph" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.utils.coor_trans.</code><code class="sig-name descname">cart2sph</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="n">y</span></em>, <em class="sig-param"><span class="n">z</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.coor_trans.cart2sph" title="Permalink to this definition">¶</a></dt>
 <dd><p>Transform cartesian coordinates to spherical. All input arguments must be the same shape.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -563,9 +564,9 @@ r: radial distance from origin</p>
 <p>This function is equivalent to MATLAB’s cart2sph function.</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.utils.coor_trans.grid_1d">
-<code class="sig-prename descclassname">aspire.utils.coor_trans.</code><code class="sig-name descname">grid_1d</code><span class="sig-paren">(</span><em class="sig-param">n</em>, <em class="sig-param">shifted=False</em>, <em class="sig-param">normalized=True</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.coor_trans.grid_1d" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.utils.coor_trans.</code><code class="sig-name descname">grid_1d</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">n</span></em>, <em class="sig-param"><span class="n">shifted</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">normalized</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.coor_trans.grid_1d" title="Permalink to this definition">¶</a></dt>
 <dd><p>Generate one dimensional grid.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -581,9 +582,9 @@ r: radial distance from origin</p>
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.utils.coor_trans.grid_2d">
-<code class="sig-prename descclassname">aspire.utils.coor_trans.</code><code class="sig-name descname">grid_2d</code><span class="sig-paren">(</span><em class="sig-param">n</em>, <em class="sig-param">shifted=False</em>, <em class="sig-param">normalized=True</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.coor_trans.grid_2d" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.utils.coor_trans.</code><code class="sig-name descname">grid_2d</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">n</span></em>, <em class="sig-param"><span class="n">shifted</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">normalized</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.coor_trans.grid_2d" title="Permalink to this definition">¶</a></dt>
 <dd><p>Generate two dimensional grid.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -599,9 +600,9 @@ r: radial distance from origin</p>
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.utils.coor_trans.grid_3d">
-<code class="sig-prename descclassname">aspire.utils.coor_trans.</code><code class="sig-name descname">grid_3d</code><span class="sig-paren">(</span><em class="sig-param">n</em>, <em class="sig-param">shifted=False</em>, <em class="sig-param">normalized=True</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.coor_trans.grid_3d" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.utils.coor_trans.</code><code class="sig-name descname">grid_3d</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">n</span></em>, <em class="sig-param"><span class="n">shifted</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">normalized</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.coor_trans.grid_3d" title="Permalink to this definition">¶</a></dt>
 <dd><p>Generate three dimensional grid.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -617,9 +618,9 @@ r: radial distance from origin</p>
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.utils.coor_trans.q_to_rot">
-<code class="sig-prename descclassname">aspire.utils.coor_trans.</code><code class="sig-name descname">q_to_rot</code><span class="sig-paren">(</span><em class="sig-param">q</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.coor_trans.q_to_rot" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.utils.coor_trans.</code><code class="sig-name descname">q_to_rot</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">q</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.coor_trans.q_to_rot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert the quaternions into a rotation matrices.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -631,9 +632,9 @@ r: radial distance from origin</p>
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.utils.coor_trans.qrand">
-<code class="sig-prename descclassname">aspire.utils.coor_trans.</code><code class="sig-name descname">qrand</code><span class="sig-paren">(</span><em class="sig-param">nrot</em>, <em class="sig-param">seed=0</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.coor_trans.qrand" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.utils.coor_trans.</code><code class="sig-name descname">qrand</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">nrot</span></em>, <em class="sig-param"><span class="n">seed</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.coor_trans.qrand" title="Permalink to this definition">¶</a></dt>
 <dd><p>Generate a set of quaternions from random normal distribution.</p>
 <p>Each quaternions is a four-elements column vector. Returns a matrix of
 size 4xn.</p>
@@ -646,9 +647,9 @@ so we take a&gt;=0.
 :return: An array consists of 4 dimensions quaternions</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.utils.coor_trans.qrand_rots">
-<code class="sig-prename descclassname">aspire.utils.coor_trans.</code><code class="sig-name descname">qrand_rots</code><span class="sig-paren">(</span><em class="sig-param">nrot</em>, <em class="sig-param">seed=0</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.coor_trans.qrand_rots" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.utils.coor_trans.</code><code class="sig-name descname">qrand_rots</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">nrot</span></em>, <em class="sig-param"><span class="n">seed</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.coor_trans.qrand_rots" title="Permalink to this definition">¶</a></dt>
 <dd><p>Generate random rotations from quaternions</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -660,9 +661,9 @@ so we take a&gt;=0.
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.utils.coor_trans.uniform_random_angles">
-<code class="sig-prename descclassname">aspire.utils.coor_trans.</code><code class="sig-name descname">uniform_random_angles</code><span class="sig-paren">(</span><em class="sig-param">n</em>, <em class="sig-param">seed=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.coor_trans.uniform_random_angles" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.utils.coor_trans.</code><code class="sig-name descname">uniform_random_angles</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">n</span></em>, <em class="sig-param"><span class="n">seed</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.coor_trans.uniform_random_angles" title="Permalink to this definition">¶</a></dt>
 <dd><p>Generate random 3D rotation angles
 :param n: The number of rotation angles to generate
 :param seed: Random integer seed to use. If None, the current random state is used.
@@ -673,17 +674,17 @@ so we take a&gt;=0.
 <div class="section" id="module-aspire.utils.em">
 <span id="aspire-utils-em-module"></span><h2>aspire.utils.em module<a class="headerlink" href="#module-aspire.utils.em" title="Permalink to this headline">¶</a></h2>
 <p>Utility functions for Electron-Microscopy</p>
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.utils.em.voltage_to_wavelength">
-<code class="sig-prename descclassname">aspire.utils.em.</code><code class="sig-name descname">voltage_to_wavelength</code><span class="sig-paren">(</span><em class="sig-param">voltage</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.em.voltage_to_wavelength" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.utils.em.</code><code class="sig-name descname">voltage_to_wavelength</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">voltage</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.em.voltage_to_wavelength" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert from electron voltage to wavelength.
 :param voltage: float, The electron voltage in kV.
 :return: float, The electron wavelength in nm.</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.utils.em.wavelength_to_voltage">
-<code class="sig-prename descclassname">aspire.utils.em.</code><code class="sig-name descname">wavelength_to_voltage</code><span class="sig-paren">(</span><em class="sig-param">wavelength</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.em.wavelength_to_voltage" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.utils.em.</code><code class="sig-name descname">wavelength_to_voltage</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">wavelength</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.em.wavelength_to_voltage" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert from electron voltage to wavelength.
 :param wavelength: float, The electron wavelength in nm.
 :return: float, The electron voltage in kV.</p>
@@ -693,24 +694,24 @@ so we take a&gt;=0.
 <div class="section" id="module-aspire.utils.fft">
 <span id="aspire-utils-fft-module"></span><h2>aspire.utils.fft module<a class="headerlink" href="#module-aspire.utils.fft" title="Permalink to this headline">¶</a></h2>
 <p>FFT/IFFT utilities</p>
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.utils.fft.centered_fft1">
-<code class="sig-prename descclassname">aspire.utils.fft.</code><code class="sig-name descname">centered_fft1</code><span class="sig-paren">(</span><em class="sig-param">x</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.fft.centered_fft1" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.utils.fft.</code><code class="sig-name descname">centered_fft1</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.fft.centered_fft1" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.utils.fft.centered_fft2">
-<code class="sig-prename descclassname">aspire.utils.fft.</code><code class="sig-name descname">centered_fft2</code><span class="sig-paren">(</span><em class="sig-param">x</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.fft.centered_fft2" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.utils.fft.</code><code class="sig-name descname">centered_fft2</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.fft.centered_fft2" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.utils.fft.centered_fft3">
-<code class="sig-prename descclassname">aspire.utils.fft.</code><code class="sig-name descname">centered_fft3</code><span class="sig-paren">(</span><em class="sig-param">x</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.fft.centered_fft3" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.utils.fft.</code><code class="sig-name descname">centered_fft3</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.fft.centered_fft3" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.utils.fft.centered_ifft1">
-<code class="sig-prename descclassname">aspire.utils.fft.</code><code class="sig-name descname">centered_ifft1</code><span class="sig-paren">(</span><em class="sig-param">x</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.fft.centered_ifft1" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.utils.fft.</code><code class="sig-name descname">centered_ifft1</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.fft.centered_ifft1" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate a centered, one-dimensional inverse FFT
 :param x: The one-dimensional signal to be transformed.</p>
 <blockquote>
@@ -723,9 +724,9 @@ so we take a&gt;=0.
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.utils.fft.centered_ifft2">
-<code class="sig-prename descclassname">aspire.utils.fft.</code><code class="sig-name descname">centered_ifft2</code><span class="sig-paren">(</span><em class="sig-param">x</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.fft.centered_ifft2" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.utils.fft.</code><code class="sig-name descname">centered_ifft2</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.fft.centered_ifft2" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate a centered, two-dimensional inverse FFT
 :param x: The two-dimensional signal to be transformed.</p>
 <blockquote>
@@ -738,9 +739,9 @@ so we take a&gt;=0.
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.utils.fft.centered_ifft3">
-<code class="sig-prename descclassname">aspire.utils.fft.</code><code class="sig-name descname">centered_ifft3</code><span class="sig-paren">(</span><em class="sig-param">x</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.fft.centered_ifft3" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.utils.fft.</code><code class="sig-name descname">centered_ifft3</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.fft.centered_ifft3" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate a centered, three-dimensional inverse FFT
 :param x: The three-dimensional signal to be transformed.</p>
 <blockquote>
@@ -753,9 +754,9 @@ so we take a&gt;=0.
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.utils.fft.mdim_fftshift">
-<code class="sig-prename descclassname">aspire.utils.fft.</code><code class="sig-name descname">mdim_fftshift</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">dims=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.fft.mdim_fftshift" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.utils.fft.</code><code class="sig-name descname">mdim_fftshift</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="n">dims</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.fft.mdim_fftshift" title="Permalink to this definition">¶</a></dt>
 <dd><p>Multi-dimensional FFT shift</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -771,9 +772,9 @@ If None, the shift is performed along all dimensions.</p></li>
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.utils.fft.mdim_ifftshift">
-<code class="sig-prename descclassname">aspire.utils.fft.</code><code class="sig-name descname">mdim_ifftshift</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">dims=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.fft.mdim_ifftshift" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.utils.fft.</code><code class="sig-name descname">mdim_ifftshift</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="n">dims</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.fft.mdim_ifftshift" title="Permalink to this definition">¶</a></dt>
 <dd><p>Multi-dimensional FFT unshift
 :param x: The array to be unshifted.
 :param dims: An array of dimension indices along which the unshift should occur.</p>
@@ -790,16 +791,16 @@ If None, the shift is performed along all dimensions.</p></li>
 </div>
 <div class="section" id="module-aspire.utils.filters">
 <span id="aspire-utils-filters-module"></span><h2>aspire.utils.filters module<a class="headerlink" href="#module-aspire.utils.filters" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
+<dl class="py class">
 <dt id="aspire.utils.filters.ArrayFilter">
-<em class="property">class </em><code class="sig-prename descclassname">aspire.utils.filters.</code><code class="sig-name descname">ArrayFilter</code><span class="sig-paren">(</span><em class="sig-param">xfer_fn_array</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.filters.ArrayFilter" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">aspire.utils.filters.</code><code class="sig-name descname">ArrayFilter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">xfer_fn_array</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.filters.ArrayFilter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#aspire.utils.filters.Filter" title="aspire.utils.filters.Filter"><code class="xref py py-class docutils literal notranslate"><span class="pre">aspire.utils.filters.Filter</span></code></a></p>
 <p>A Filter corresponding to the filter with the specified transfer function.
 :param xfer_fn_array: The transfer function of the filter in the form of an array of one or two dimensions.</p>
 <p class="rubric">Methods</p>
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.utils.filters.ArrayFilter.scale">
-<code class="sig-name descname">scale</code><span class="sig-paren">(</span><em class="sig-param">c</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.filters.ArrayFilter.scale" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">scale</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">c</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.filters.ArrayFilter.scale" title="Permalink to this definition">¶</a></dt>
 <dd><p>Scale filter by a constant factor
 :param c: The scaling factor. For c &lt; 1, it dilates the filter(s) in frequency, while for c &gt; 1,</p>
 <blockquote>
@@ -814,9 +815,9 @@ If None, the shift is performed along all dimensions.</p></li>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="aspire.utils.filters.CTFFilter">
-<em class="property">class </em><code class="sig-prename descclassname">aspire.utils.filters.</code><code class="sig-name descname">CTFFilter</code><span class="sig-paren">(</span><em class="sig-param">pixel_size=10</em>, <em class="sig-param">voltage=200</em>, <em class="sig-param">defocus_u=15000</em>, <em class="sig-param">defocus_v=15000</em>, <em class="sig-param">defocus_ang=0</em>, <em class="sig-param">Cs=2.26</em>, <em class="sig-param">alpha=0.07</em>, <em class="sig-param">B=0</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.filters.CTFFilter" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">aspire.utils.filters.</code><code class="sig-name descname">CTFFilter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">pixel_size</span><span class="o">=</span><span class="default_value">10</span></em>, <em class="sig-param"><span class="n">voltage</span><span class="o">=</span><span class="default_value">200</span></em>, <em class="sig-param"><span class="n">defocus_u</span><span class="o">=</span><span class="default_value">15000</span></em>, <em class="sig-param"><span class="n">defocus_v</span><span class="o">=</span><span class="default_value">15000</span></em>, <em class="sig-param"><span class="n">defocus_ang</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">Cs</span><span class="o">=</span><span class="default_value">2.26</span></em>, <em class="sig-param"><span class="n">alpha</span><span class="o">=</span><span class="default_value">0.07</span></em>, <em class="sig-param"><span class="n">B</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.filters.CTFFilter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#aspire.utils.filters.Filter" title="aspire.utils.filters.Filter"><code class="xref py py-class docutils literal notranslate"><span class="pre">aspire.utils.filters.Filter</span></code></a></p>
 <p>A CTF (Contrast Transfer Function) Filter</p>
 <dl class="field-list simple">
@@ -834,9 +835,9 @@ If None, the shift is performed along all dimensions.</p></li>
 </dd>
 </dl>
 <p class="rubric">Methods</p>
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.utils.filters.CTFFilter.scale">
-<code class="sig-name descname">scale</code><span class="sig-paren">(</span><em class="sig-param">c=1</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.filters.CTFFilter.scale" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">scale</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">c</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.filters.CTFFilter.scale" title="Permalink to this definition">¶</a></dt>
 <dd><p>Scale filter by a constant factor
 :param c: The scaling factor. For c &lt; 1, it dilates the filter(s) in frequency, while for c &gt; 1,</p>
 <blockquote>
@@ -851,14 +852,14 @@ If None, the shift is performed along all dimensions.</p></li>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="aspire.utils.filters.Filter">
-<em class="property">class </em><code class="sig-prename descclassname">aspire.utils.filters.</code><code class="sig-name descname">Filter</code><span class="sig-paren">(</span><em class="sig-param">dim=2</em>, <em class="sig-param">radial=False</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.filters.Filter" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">aspire.utils.filters.</code><code class="sig-name descname">Filter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dim</span><span class="o">=</span><span class="default_value">2</span></em>, <em class="sig-param"><span class="n">radial</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.filters.Filter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p class="rubric">Methods</p>
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.utils.filters.Filter.evaluate">
-<code class="sig-name descname">evaluate</code><span class="sig-paren">(</span><em class="sig-param">omega</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.filters.Filter.evaluate" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">evaluate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">omega</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.filters.Filter.evaluate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Evaluate the filter at specified frequencies.
 :param omega: A vector of size n (for 1d filters), or an array of size 2-by-n, representing the spatial</p>
 <blockquote>
@@ -872,20 +873,20 @@ frequency.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.utils.filters.Filter.evaluate_grid">
-<code class="sig-name descname">evaluate_grid</code><span class="sig-paren">(</span><em class="sig-param">L</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.filters.Filter.evaluate_grid" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">evaluate_grid</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">L</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.filters.Filter.evaluate_grid" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.utils.filters.Filter.fb_mat">
-<code class="sig-name descname">fb_mat</code><span class="sig-paren">(</span><em class="sig-param">fbasis</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.filters.Filter.fb_mat" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">fb_mat</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">fbasis</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.filters.Filter.fb_mat" title="Permalink to this definition">¶</a></dt>
 <dd><p>Represent the filter in FB basis matrix</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.utils.filters.Filter.scale">
-<code class="sig-name descname">scale</code><span class="sig-paren">(</span><em class="sig-param">c</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.filters.Filter.scale" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">scale</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">c</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.filters.Filter.scale" title="Permalink to this definition">¶</a></dt>
 <dd><p>Scale filter by a constant factor
 :param c: The scaling factor. For c &lt; 1, it dilates the filter(s) in frequency, while for c &gt; 1,</p>
 <blockquote>
@@ -900,41 +901,41 @@ frequency.</p>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="aspire.utils.filters.FunctionFilter">
-<em class="property">class </em><code class="sig-prename descclassname">aspire.utils.filters.</code><code class="sig-name descname">FunctionFilter</code><span class="sig-paren">(</span><em class="sig-param">f</em>, <em class="sig-param">dim=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.filters.FunctionFilter" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">aspire.utils.filters.</code><code class="sig-name descname">FunctionFilter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">f</span></em>, <em class="sig-param"><span class="n">dim</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.filters.FunctionFilter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#aspire.utils.filters.Filter" title="aspire.utils.filters.Filter"><code class="xref py py-class docutils literal notranslate"><span class="pre">aspire.utils.filters.Filter</span></code></a></p>
 <p>A Filter object that is instantiated directly using a 1D or 2D function, which is then directly used for evaluating
 the filter.</p>
 <p class="rubric">Methods</p>
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="aspire.utils.filters.IdentityFilter">
-<em class="property">class </em><code class="sig-prename descclassname">aspire.utils.filters.</code><code class="sig-name descname">IdentityFilter</code><span class="sig-paren">(</span><em class="sig-param">dim=2</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.filters.IdentityFilter" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">aspire.utils.filters.</code><code class="sig-name descname">IdentityFilter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dim</span><span class="o">=</span><span class="default_value">2</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.filters.IdentityFilter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#aspire.utils.filters.ScalarFilter" title="aspire.utils.filters.ScalarFilter"><code class="xref py py-class docutils literal notranslate"><span class="pre">aspire.utils.filters.ScalarFilter</span></code></a></p>
 <p class="rubric">Methods</p>
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="aspire.utils.filters.MultiplicativeFilter">
-<em class="property">class </em><code class="sig-prename descclassname">aspire.utils.filters.</code><code class="sig-name descname">MultiplicativeFilter</code><span class="sig-paren">(</span><em class="sig-param">*args</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.filters.MultiplicativeFilter" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">aspire.utils.filters.</code><code class="sig-name descname">MultiplicativeFilter</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.filters.MultiplicativeFilter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#aspire.utils.filters.Filter" title="aspire.utils.filters.Filter"><code class="xref py py-class docutils literal notranslate"><span class="pre">aspire.utils.filters.Filter</span></code></a></p>
 <p>A Filter object that returns the product of the evaluation of its individual filters</p>
 <p class="rubric">Methods</p>
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="aspire.utils.filters.PowerFilter">
-<em class="property">class </em><code class="sig-prename descclassname">aspire.utils.filters.</code><code class="sig-name descname">PowerFilter</code><span class="sig-paren">(</span><em class="sig-param">filter</em>, <em class="sig-param">power=1</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.filters.PowerFilter" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">aspire.utils.filters.</code><code class="sig-name descname">PowerFilter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filter</span></em>, <em class="sig-param"><span class="n">power</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.filters.PowerFilter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#aspire.utils.filters.Filter" title="aspire.utils.filters.Filter"><code class="xref py py-class docutils literal notranslate"><span class="pre">aspire.utils.filters.Filter</span></code></a></p>
 <p>A Filter object that is composed of a regular <cite>Filter</cite> object, but evaluates it to a specified power.</p>
 <p class="rubric">Methods</p>
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="aspire.utils.filters.RadialCTFFilter">
-<em class="property">class </em><code class="sig-prename descclassname">aspire.utils.filters.</code><code class="sig-name descname">RadialCTFFilter</code><span class="sig-paren">(</span><em class="sig-param">pixel_size=10</em>, <em class="sig-param">voltage=200</em>, <em class="sig-param">defocus=15000</em>, <em class="sig-param">Cs=2.26</em>, <em class="sig-param">alpha=0.07</em>, <em class="sig-param">B=0</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.filters.RadialCTFFilter" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">aspire.utils.filters.</code><code class="sig-name descname">RadialCTFFilter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">pixel_size</span><span class="o">=</span><span class="default_value">10</span></em>, <em class="sig-param"><span class="n">voltage</span><span class="o">=</span><span class="default_value">200</span></em>, <em class="sig-param"><span class="n">defocus</span><span class="o">=</span><span class="default_value">15000</span></em>, <em class="sig-param"><span class="n">Cs</span><span class="o">=</span><span class="default_value">2.26</span></em>, <em class="sig-param"><span class="n">alpha</span><span class="o">=</span><span class="default_value">0.07</span></em>, <em class="sig-param"><span class="n">B</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.filters.RadialCTFFilter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#aspire.utils.filters.CTFFilter" title="aspire.utils.filters.CTFFilter"><code class="xref py py-class docutils literal notranslate"><span class="pre">aspire.utils.filters.CTFFilter</span></code></a></p>
 <p>A CTF (Contrast Transfer Function) Filter</p>
 <dl class="field-list simple">
@@ -954,14 +955,14 @@ the filter.</p>
 <p class="rubric">Methods</p>
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="aspire.utils.filters.ScalarFilter">
-<em class="property">class </em><code class="sig-prename descclassname">aspire.utils.filters.</code><code class="sig-name descname">ScalarFilter</code><span class="sig-paren">(</span><em class="sig-param">dim=2</em>, <em class="sig-param">value=1</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.filters.ScalarFilter" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">aspire.utils.filters.</code><code class="sig-name descname">ScalarFilter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dim</span><span class="o">=</span><span class="default_value">2</span></em>, <em class="sig-param"><span class="n">value</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.filters.ScalarFilter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#aspire.utils.filters.Filter" title="aspire.utils.filters.Filter"><code class="xref py py-class docutils literal notranslate"><span class="pre">aspire.utils.filters.Filter</span></code></a></p>
 <p class="rubric">Methods</p>
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.utils.filters.ScalarFilter.scale">
-<code class="sig-name descname">scale</code><span class="sig-paren">(</span><em class="sig-param">c</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.filters.ScalarFilter.scale" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">scale</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">c</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.filters.ScalarFilter.scale" title="Permalink to this definition">¶</a></dt>
 <dd><p>Scale filter by a constant factor
 :param c: The scaling factor. For c &lt; 1, it dilates the filter(s) in frequency, while for c &gt; 1,</p>
 <blockquote>
@@ -976,9 +977,9 @@ the filter.</p>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="aspire.utils.filters.ZeroFilter">
-<em class="property">class </em><code class="sig-prename descclassname">aspire.utils.filters.</code><code class="sig-name descname">ZeroFilter</code><span class="sig-paren">(</span><em class="sig-param">dim=2</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.filters.ZeroFilter" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">aspire.utils.filters.</code><code class="sig-name descname">ZeroFilter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dim</span><span class="o">=</span><span class="default_value">2</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.filters.ZeroFilter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#aspire.utils.filters.ScalarFilter" title="aspire.utils.filters.ScalarFilter"><code class="xref py py-class docutils literal notranslate"><span class="pre">aspire.utils.filters.ScalarFilter</span></code></a></p>
 <p class="rubric">Methods</p>
 </dd></dl>
@@ -990,32 +991,32 @@ the filter.</p>
 At some point when the package is full validated against MatLab, the ‘order’ arguments in the functions here
 can be changed to ‘C’, and subsequently, this package deprecated altogether (i.e. the reshape/flatten methods used
 directly by the caller).</p>
-<dl class="class">
+<dl class="py class">
 <dt id="aspire.utils.matlab_compat.Random">
-<em class="property">class </em><code class="sig-prename descclassname">aspire.utils.matlab_compat.</code><code class="sig-name descname">Random</code><span class="sig-paren">(</span><em class="sig-param">seed=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.matlab_compat.Random" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">aspire.utils.matlab_compat.</code><code class="sig-name descname">Random</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">seed</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.matlab_compat.Random" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>A context manager that pushes a random seed to the stack for reproducible results,
 and pops it on exit.</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.utils.matlab_compat.m_flatten">
-<code class="sig-prename descclassname">aspire.utils.matlab_compat.</code><code class="sig-name descname">m_flatten</code><span class="sig-paren">(</span><em class="sig-param">x</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.matlab_compat.m_flatten" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.utils.matlab_compat.</code><code class="sig-name descname">m_flatten</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.matlab_compat.m_flatten" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.utils.matlab_compat.m_reshape">
-<code class="sig-prename descclassname">aspire.utils.matlab_compat.</code><code class="sig-name descname">m_reshape</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">new_shape</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.matlab_compat.m_reshape" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.utils.matlab_compat.</code><code class="sig-name descname">m_reshape</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="n">new_shape</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.matlab_compat.m_reshape" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.utils.matlab_compat.rand">
-<code class="sig-prename descclassname">aspire.utils.matlab_compat.</code><code class="sig-name descname">rand</code><span class="sig-paren">(</span><em class="sig-param">size</em>, <em class="sig-param">seed=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.matlab_compat.rand" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.utils.matlab_compat.</code><code class="sig-name descname">rand</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">size</span></em>, <em class="sig-param"><span class="n">seed</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.matlab_compat.rand" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.utils.matlab_compat.randi">
-<code class="sig-prename descclassname">aspire.utils.matlab_compat.</code><code class="sig-name descname">randi</code><span class="sig-paren">(</span><em class="sig-param">i_max</em>, <em class="sig-param">size</em>, <em class="sig-param">seed=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.matlab_compat.randi" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.utils.matlab_compat.</code><code class="sig-name descname">randi</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">i_max</span></em>, <em class="sig-param"><span class="n">size</span></em>, <em class="sig-param"><span class="n">seed</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.matlab_compat.randi" title="Permalink to this definition">¶</a></dt>
 <dd><p>A MATLAB compatible randi implementation that returns numbers from a discrete uniform distribution.
 While a direct use of np.random.choice would be convenient, this doesn’t seem to return results
 identical to MATLAB.</p>
@@ -1033,9 +1034,9 @@ identical to MATLAB.</p>
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.utils.matlab_compat.randn">
-<code class="sig-prename descclassname">aspire.utils.matlab_compat.</code><code class="sig-name descname">randn</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.matlab_compat.randn" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.utils.matlab_compat.</code><code class="sig-name descname">randn</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.matlab_compat.randn" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calls rand and applies inverse transform sampling to the output.</p>
 </dd></dl>
 
@@ -1043,9 +1044,9 @@ identical to MATLAB.</p>
 <div class="section" id="module-aspire.utils.matrix">
 <span id="aspire-utils-matrix-module"></span><h2>aspire.utils.matrix module<a class="headerlink" href="#module-aspire.utils.matrix" title="Permalink to this headline">¶</a></h2>
 <p>Utilties for arrays/n-dimensional matrices.</p>
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.utils.matrix.acorr">
-<code class="sig-prename descclassname">aspire.utils.matrix.</code><code class="sig-name descname">acorr</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">y</em>, <em class="sig-param">axes=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.matrix.acorr" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.utils.matrix.</code><code class="sig-name descname">acorr</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="n">y</span></em>, <em class="sig-param"><span class="n">axes</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.matrix.acorr" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate array correlation along given axes
 :param x: An array of arbitrary shape
 :param y: An array of same shape as x
@@ -1053,9 +1054,9 @@ identical to MATLAB.</p>
 :return: The correlation of x along specified axes.</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.utils.matrix.ainner">
-<code class="sig-prename descclassname">aspire.utils.matrix.</code><code class="sig-name descname">ainner</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">y</em>, <em class="sig-param">axes=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.matrix.ainner" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.utils.matrix.</code><code class="sig-name descname">ainner</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="n">y</span></em>, <em class="sig-param"><span class="n">axes</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.matrix.ainner" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate array inner product along given axes
 :param x: An array of arbitrary shape
 :param y: An array of same shape as x
@@ -1063,18 +1064,18 @@ identical to MATLAB.</p>
 :return:</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.utils.matrix.anorm">
-<code class="sig-prename descclassname">aspire.utils.matrix.</code><code class="sig-name descname">anorm</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">axes=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.matrix.anorm" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.utils.matrix.</code><code class="sig-name descname">anorm</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="n">axes</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.matrix.anorm" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate array norm along given axes
 :param x: An array of arbitrary size and shape.
 :param axes: The axis along which to compute the norm. If None, the norm is calculated along all axes.
 :return: The Euclidean (l^2) norm of x along specified axes.</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.utils.matrix.eigs">
-<code class="sig-prename descclassname">aspire.utils.matrix.</code><code class="sig-name descname">eigs</code><span class="sig-paren">(</span><em class="sig-param">A</em>, <em class="sig-param">k</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.matrix.eigs" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.utils.matrix.</code><code class="sig-name descname">eigs</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">A</span></em>, <em class="sig-param"><span class="n">k</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.matrix.eigs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Multidimensional partial eigendecomposition
 :param A: An array of size <cite>sig_sz</cite>-by-<cite>sig_sz</cite>, where <cite>sig_sz</cite> is a size containing d dimensions.</p>
 <blockquote>
@@ -1092,25 +1093,25 @@ D: A matrix of size k-by-k containing the corresponding eigenvalues in the diago
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.utils.matrix.im_to_vec">
-<code class="sig-prename descclassname">aspire.utils.matrix.</code><code class="sig-name descname">im_to_vec</code><span class="sig-paren">(</span><em class="sig-param">im</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.matrix.im_to_vec" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.utils.matrix.</code><code class="sig-name descname">im_to_vec</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">im</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.matrix.im_to_vec" title="Permalink to this definition">¶</a></dt>
 <dd><p>Roll up images into vectors
 :param im: An N-by-N-by-… array.
 :return: An N^2-by-… array.</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.utils.matrix.make_symmat">
-<code class="sig-prename descclassname">aspire.utils.matrix.</code><code class="sig-name descname">make_symmat</code><span class="sig-paren">(</span><em class="sig-param">A</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.matrix.make_symmat" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.utils.matrix.</code><code class="sig-name descname">make_symmat</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">A</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.matrix.make_symmat" title="Permalink to this definition">¶</a></dt>
 <dd><p>Symmetrize a matrix
 :param A: A matrix.
 :return: The Hermitian matrix (A+A’)/2.</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.utils.matrix.mat_to_vec">
-<code class="sig-prename descclassname">aspire.utils.matrix.</code><code class="sig-name descname">mat_to_vec</code><span class="sig-paren">(</span><em class="sig-param">mat</em>, <em class="sig-param">is_symmat=False</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.matrix.mat_to_vec" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.utils.matrix.</code><code class="sig-name descname">mat_to_vec</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">mat</span></em>, <em class="sig-param"><span class="n">is_symmat</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.matrix.mat_to_vec" title="Permalink to this definition">¶</a></dt>
 <dd><p>Converts a matrix into vectorized form
 :param mat: An array of size N-by-N-by-… containing the matrices to be vectorized.
 :param is_symmat: Specifies whether the matrices are symmetric/Hermitian, in which case they are stored in packed</p>
@@ -1125,9 +1126,9 @@ of is_symmat.</p>
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.utils.matrix.mdim_mat_fun_conj">
-<code class="sig-prename descclassname">aspire.utils.matrix.</code><code class="sig-name descname">mdim_mat_fun_conj</code><span class="sig-paren">(</span><em class="sig-param">X</em>, <em class="sig-param">d1</em>, <em class="sig-param">d2</em>, <em class="sig-param">f</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.matrix.mdim_mat_fun_conj" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.utils.matrix.</code><code class="sig-name descname">mdim_mat_fun_conj</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">X</span></em>, <em class="sig-param"><span class="n">d1</span></em>, <em class="sig-param"><span class="n">d2</span></em>, <em class="sig-param"><span class="n">f</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.matrix.mdim_mat_fun_conj" title="Permalink to this definition">¶</a></dt>
 <dd><p>Conjugate a multidimensional matrix using a linear mapping
 :param X: An N_1-by-…-by-N_d1-by-N_1…-by-N_d1-by-… array, with the first 2*d1 dimensions corresponding to</p>
 <blockquote>
@@ -1150,14 +1151,14 @@ and columns of the multidimensional matrix X.</p>
 <p>TODO: Very complicated to wrap head around this one!</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.utils.matrix.roll_dim">
-<code class="sig-prename descclassname">aspire.utils.matrix.</code><code class="sig-name descname">roll_dim</code><span class="sig-paren">(</span><em class="sig-param">X</em>, <em class="sig-param">dim</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.matrix.roll_dim" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.utils.matrix.</code><code class="sig-name descname">roll_dim</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">X</span></em>, <em class="sig-param"><span class="n">dim</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.matrix.roll_dim" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.utils.matrix.shrink_covar">
-<code class="sig-prename descclassname">aspire.utils.matrix.</code><code class="sig-name descname">shrink_covar</code><span class="sig-paren">(</span><em class="sig-param">covar_in</em>, <em class="sig-param">noise_var</em>, <em class="sig-param">gamma</em>, <em class="sig-param">shrinker=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.matrix.shrink_covar" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.utils.matrix.</code><code class="sig-name descname">shrink_covar</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">covar_in</span></em>, <em class="sig-param"><span class="n">noise_var</span></em>, <em class="sig-param"><span class="n">gamma</span></em>, <em class="sig-param"><span class="n">shrinker</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.matrix.shrink_covar" title="Permalink to this definition">¶</a></dt>
 <dd><p>Shrink the covariance matrix
 :param covar_in: An input covariance matrix
 :param noise_var: The estimated variance of noise
@@ -1166,9 +1167,9 @@ and columns of the multidimensional matrix X.</p>
 :return: The shrinked covariance matrix</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.utils.matrix.symmat_to_vec">
-<code class="sig-prename descclassname">aspire.utils.matrix.</code><code class="sig-name descname">symmat_to_vec</code><span class="sig-paren">(</span><em class="sig-param">mat</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.matrix.symmat_to_vec" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.utils.matrix.</code><code class="sig-name descname">symmat_to_vec</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">mat</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.matrix.symmat_to_vec" title="Permalink to this definition">¶</a></dt>
 <dd><p>Packs a symmetric matrix into a lower triangular vector
 :param mat: An array of size N-by-N-by-… where the first two dimensions constitute symmetric or</p>
 <blockquote>
@@ -1184,9 +1185,9 @@ column-major ordering of elements (to get behavior consistent with MATLAB), sinc
 data in row-major order.</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.utils.matrix.symmat_to_vec_iso">
-<code class="sig-prename descclassname">aspire.utils.matrix.</code><code class="sig-name descname">symmat_to_vec_iso</code><span class="sig-paren">(</span><em class="sig-param">mat</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.matrix.symmat_to_vec_iso" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.utils.matrix.</code><code class="sig-name descname">symmat_to_vec_iso</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">mat</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.matrix.symmat_to_vec_iso" title="Permalink to this definition">¶</a></dt>
 <dd><p>Isometrically maps a symmetric matrix to a packed vector
 :param mat: An array of size N-by-N-by-… where the first two dimensions constitute symmetric or Hermitian</p>
 <blockquote>
@@ -1200,22 +1201,22 @@ that the Frobenius inner product is mapped to the Euclidean inner product.</p>
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.utils.matrix.unroll_dim">
-<code class="sig-prename descclassname">aspire.utils.matrix.</code><code class="sig-name descname">unroll_dim</code><span class="sig-paren">(</span><em class="sig-param">X</em>, <em class="sig-param">dim</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.matrix.unroll_dim" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.utils.matrix.</code><code class="sig-name descname">unroll_dim</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">X</span></em>, <em class="sig-param"><span class="n">dim</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.matrix.unroll_dim" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.utils.matrix.vec_to_im">
-<code class="sig-prename descclassname">aspire.utils.matrix.</code><code class="sig-name descname">vec_to_im</code><span class="sig-paren">(</span><em class="sig-param">X</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.matrix.vec_to_im" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.utils.matrix.</code><code class="sig-name descname">vec_to_im</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">X</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.matrix.vec_to_im" title="Permalink to this definition">¶</a></dt>
 <dd><p>Unroll vectors to images
 :param X: N^2-by-… array.
 :return: An N-by-N-by-… array.</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.utils.matrix.vec_to_mat">
-<code class="sig-prename descclassname">aspire.utils.matrix.</code><code class="sig-name descname">vec_to_mat</code><span class="sig-paren">(</span><em class="sig-param">vec</em>, <em class="sig-param">is_symmat=False</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.matrix.vec_to_mat" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.utils.matrix.</code><code class="sig-name descname">vec_to_mat</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">vec</span></em>, <em class="sig-param"><span class="n">is_symmat</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.matrix.vec_to_mat" title="Permalink to this definition">¶</a></dt>
 <dd><p>Converts a vectorized matrix into a matrix
 :param vec: The vectorized representations. If the matrix is non-symmetric, this array has the dimensions</p>
 <blockquote>
@@ -1231,9 +1232,9 @@ that the Frobenius inner product is mapped to the Euclidean inner product.</p>
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.utils.matrix.vec_to_symmat">
-<code class="sig-prename descclassname">aspire.utils.matrix.</code><code class="sig-name descname">vec_to_symmat</code><span class="sig-paren">(</span><em class="sig-param">vec</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.matrix.vec_to_symmat" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.utils.matrix.</code><code class="sig-name descname">vec_to_symmat</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">vec</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.matrix.vec_to_symmat" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert packed lower triangular vector to symmetric matrix
 :param vec: A vector of size N*(N+1)/2-by-… describing a symmetric (or Hermitian) matrix.
 :return: An array of size N-by-N-by-… which indexes symmetric/Hermitian matrices that occupy the first two</p>
@@ -1242,9 +1243,9 @@ that the Frobenius inner product is mapped to the Euclidean inner product.</p>
 </div></blockquote>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.utils.matrix.vec_to_symmat_iso">
-<code class="sig-prename descclassname">aspire.utils.matrix.</code><code class="sig-name descname">vec_to_symmat_iso</code><span class="sig-paren">(</span><em class="sig-param">vec</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.matrix.vec_to_symmat_iso" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.utils.matrix.</code><code class="sig-name descname">vec_to_symmat_iso</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">vec</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.matrix.vec_to_symmat_iso" title="Permalink to this definition">¶</a></dt>
 <dd><p>Isometrically map packed vector to symmetric matrix
 :param vec: A vector of size N*(N+1)/2-by-… describing a symmetric (or Hermitian) matrix.
 :return: An array of size N-by-N-by-… which indexes symmetric/Hermitian matrices that occupy the first two</p>
@@ -1254,33 +1255,33 @@ reweighted so that the Euclidean inner product maps to the Frobenius inner produ
 </div></blockquote>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.utils.matrix.vec_to_vol">
-<code class="sig-prename descclassname">aspire.utils.matrix.</code><code class="sig-name descname">vec_to_vol</code><span class="sig-paren">(</span><em class="sig-param">X</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.matrix.vec_to_vol" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.utils.matrix.</code><code class="sig-name descname">vec_to_vol</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">X</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.matrix.vec_to_vol" title="Permalink to this definition">¶</a></dt>
 <dd><p>Unroll vectors to volumes
 :param X: N^3-by-… array.
 :return: An N-by-N-by-N-by-… array.</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.utils.matrix.vecmat_to_volmat">
-<code class="sig-prename descclassname">aspire.utils.matrix.</code><code class="sig-name descname">vecmat_to_volmat</code><span class="sig-paren">(</span><em class="sig-param">X</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.matrix.vecmat_to_volmat" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.utils.matrix.</code><code class="sig-name descname">vecmat_to_volmat</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">X</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.matrix.vecmat_to_volmat" title="Permalink to this definition">¶</a></dt>
 <dd><p>Roll up vector matrices into volume matrices
 :param X: A vector matrix of size L1^3-by-L2^3-by-…
 :return: A volume “matrix” of size L1-by-L1-by-L1-by-L2-by-L2-by-L2-by-…</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.utils.matrix.vol_to_vec">
-<code class="sig-prename descclassname">aspire.utils.matrix.</code><code class="sig-name descname">vol_to_vec</code><span class="sig-paren">(</span><em class="sig-param">X</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.matrix.vol_to_vec" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.utils.matrix.</code><code class="sig-name descname">vol_to_vec</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">X</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.matrix.vol_to_vec" title="Permalink to this definition">¶</a></dt>
 <dd><p>Roll up volumes into vectors
 :param X: N-by-N-by-N-by-… array.
 :return: An N^3-by-… array.</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.utils.matrix.volmat_to_vecmat">
-<code class="sig-prename descclassname">aspire.utils.matrix.</code><code class="sig-name descname">volmat_to_vecmat</code><span class="sig-paren">(</span><em class="sig-param">X</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.matrix.volmat_to_vecmat" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.utils.matrix.</code><code class="sig-name descname">volmat_to_vecmat</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">X</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.matrix.volmat_to_vecmat" title="Permalink to this definition">¶</a></dt>
 <dd><p>Unroll volume matrices to vector matrices
 :param X: A volume “matrix” of size L1-by-L1-by-L1-by-L2-by-L2-by-L2-by-…
 :return: A vector matrix of size L1^3-by-L2^3-by-…</p>
@@ -1290,9 +1291,9 @@ reweighted so that the Euclidean inner product maps to the Frobenius inner produ
 <div class="section" id="module-aspire.utils.misc">
 <span id="aspire-utils-misc-module"></span><h2>aspire.utils.misc module<a class="headerlink" href="#module-aspire.utils.misc" title="Permalink to this headline">¶</a></h2>
 <p>Miscellaneous Utilities that have no better place (yet).</p>
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.utils.misc.qr_vols_forward">
-<code class="sig-prename descclassname">aspire.utils.misc.</code><code class="sig-name descname">qr_vols_forward</code><span class="sig-paren">(</span><em class="sig-param">sim</em>, <em class="sig-param">s</em>, <em class="sig-param">n</em>, <em class="sig-param">vols</em>, <em class="sig-param">k</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.misc.qr_vols_forward" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.utils.misc.</code><code class="sig-name descname">qr_vols_forward</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sim</span></em>, <em class="sig-param"><span class="n">s</span></em>, <em class="sig-param"><span class="n">n</span></em>, <em class="sig-param"><span class="n">vols</span></em>, <em class="sig-param"><span class="n">k</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.misc.qr_vols_forward" title="Permalink to this definition">¶</a></dt>
 <dd><p>TODO: Write docstring
 TODO: Find a better place for this!
 :param sim:
@@ -1303,9 +1304,9 @@ TODO: Find a better place for this!
 :return:</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.utils.misc.src_wiener_coords">
-<code class="sig-prename descclassname">aspire.utils.misc.</code><code class="sig-name descname">src_wiener_coords</code><span class="sig-paren">(</span><em class="sig-param">sim</em>, <em class="sig-param">mean_vol</em>, <em class="sig-param">eig_vols</em>, <em class="sig-param">lambdas=None</em>, <em class="sig-param">noise_var=0</em>, <em class="sig-param">batch_size=512</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.misc.src_wiener_coords" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.utils.misc.</code><code class="sig-name descname">src_wiener_coords</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sim</span></em>, <em class="sig-param"><span class="n">mean_vol</span></em>, <em class="sig-param"><span class="n">eig_vols</span></em>, <em class="sig-param"><span class="n">lambdas</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">noise_var</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">batch_size</span><span class="o">=</span><span class="default_value">512</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.misc.src_wiener_coords" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate coordinates using Wiener filter
 :param sim: A simulation object containing the images whose coordinates we want.
 :param mean_vol: The mean volume of the source in an L-by-L-by-L array.
@@ -1328,9 +1329,9 @@ Note that when noise_var is zero, this reduces to the projecting y_s onto the sp
 </div>
 <div class="section" id="module-aspire.utils.optimize">
 <span id="aspire-utils-optimize-module"></span><h2>aspire.utils.optimize module<a class="headerlink" href="#module-aspire.utils.optimize" title="Permalink to this headline">¶</a></h2>
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.utils.optimize.conj_grad">
-<code class="sig-prename descclassname">aspire.utils.optimize.</code><code class="sig-name descname">conj_grad</code><span class="sig-paren">(</span><em class="sig-param">a_fun</em>, <em class="sig-param">b</em>, <em class="sig-param">cg_opt=None</em>, <em class="sig-param">init=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.optimize.conj_grad" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.utils.optimize.</code><code class="sig-name descname">conj_grad</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">a_fun</span></em>, <em class="sig-param"><span class="n">b</span></em>, <em class="sig-param"><span class="n">cg_opt</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">init</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.optimize.conj_grad" title="Permalink to this definition">¶</a></dt>
 <dd><p>Conjugate Gradient method to solve the linear system.</p>
 <p>This is corresponding to the implemented version in the ASPIRE Matlab package.
 :param a_fun:  A function handle specifying the linear operation x -&gt; Ax.</p>
@@ -1394,9 +1395,9 @@ during each iteration. These fields include:
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.utils.optimize.fill_struct">
-<code class="sig-prename descclassname">aspire.utils.optimize.</code><code class="sig-name descname">fill_struct</code><span class="sig-paren">(</span><em class="sig-param">obj=None</em>, <em class="sig-param">att_vals=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.optimize.fill_struct" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.utils.optimize.</code><code class="sig-name descname">fill_struct</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">obj</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">att_vals</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.optimize.fill_struct" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fill object with attributes in a dictionary.</p>
 <p>If a struct is not given a new object will be created and filled.
 If the given struct has a field in att_vals, the original field will stay,
@@ -1425,9 +1426,9 @@ if hasattr(s, key) and key in overwrite:</p>
 </div>
 <div class="section" id="module-aspire.utils.preprocess">
 <span id="aspire-utils-preprocess-module"></span><h2>aspire.utils.preprocess module<a class="headerlink" href="#module-aspire.utils.preprocess" title="Permalink to this headline">¶</a></h2>
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.utils.preprocess.crop_pad">
-<code class="sig-prename descclassname">aspire.utils.preprocess.</code><code class="sig-name descname">crop_pad</code><span class="sig-paren">(</span><em class="sig-param">mat</em>, <em class="sig-param">n</em>, <em class="sig-param">fill_value=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.preprocess.crop_pad" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.utils.preprocess.</code><code class="sig-name descname">crop_pad</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">mat</span></em>, <em class="sig-param"><span class="n">n</span></em>, <em class="sig-param"><span class="n">fill_value</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.preprocess.crop_pad" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reduce the size of a vector, square or cube ‘mat’ by cropping (or
 increase the size by padding with fill_value, by default zero) to a final
 size of n, (n x n), or (n x n x n) respectively. This is the analogue of downsample, but
@@ -1456,9 +1457,9 @@ As real-world uses will always crop to square (n, n), we don’t support it with
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.utils.preprocess.downsample">
-<code class="sig-prename descclassname">aspire.utils.preprocess.</code><code class="sig-name descname">downsample</code><span class="sig-paren">(</span><em class="sig-param">insamples</em>, <em class="sig-param">szout</em>, <em class="sig-param">mask=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.preprocess.downsample" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.utils.preprocess.</code><code class="sig-name descname">downsample</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">insamples</span></em>, <em class="sig-param"><span class="n">szout</span></em>, <em class="sig-param"><span class="n">mask</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.preprocess.downsample" title="Permalink to this definition">¶</a></dt>
 <dd><p>Blur and downsample 1D to 3D objects such as, curves, images or volumes</p>
 <p>The function handles odd and even-sized arrays correctly. The center of
 an odd array is taken to be at (n+1)/2, and an even array is n/2+1.
@@ -1476,9 +1477,9 @@ an odd array is taken to be at (n+1)/2, and an even array is n/2+1.
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.utils.preprocess.downsample_centered">
-<code class="sig-prename descclassname">aspire.utils.preprocess.</code><code class="sig-name descname">downsample_centered</code><span class="sig-paren">(</span><em class="sig-param">insamples</em>, <em class="sig-param">szout</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.preprocess.downsample_centered" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.utils.preprocess.</code><code class="sig-name descname">downsample_centered</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">insamples</span></em>, <em class="sig-param"><span class="n">szout</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.preprocess.downsample_centered" title="Permalink to this definition">¶</a></dt>
 <dd><p>Blur and downsample 1D to 3D objects such as, curves, images or volumes</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1494,9 +1495,9 @@ is the number of objects.</p></li>
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.utils.preprocess.vol2img">
-<code class="sig-prename descclassname">aspire.utils.preprocess.</code><code class="sig-name descname">vol2img</code><span class="sig-paren">(</span><em class="sig-param">volume</em>, <em class="sig-param">rots</em>, <em class="sig-param">L=None</em>, <em class="sig-param">dtype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.preprocess.vol2img" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.utils.preprocess.</code><code class="sig-name descname">vol2img</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">volume</span></em>, <em class="sig-param"><span class="n">rots</span></em>, <em class="sig-param"><span class="n">L</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dtype</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.preprocess.vol2img" title="Permalink to this definition">¶</a></dt>
 <dd><p>Generate 2D images from the input volume and rotation angles</p>
 <p>The function handles odd and even-sized arrays correctly. The center of
 an odd array is taken to be at (n+1)/2, and an even array is n/2+1.
@@ -1509,9 +1510,9 @@ an odd array is taken to be at (n+1)/2, and an even array is n/2+1.
 </div>
 <div class="section" id="module-aspire.utils">
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-aspire.utils" title="Permalink to this headline">¶</a></h2>
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.utils.ensure">
-<code class="sig-prename descclassname">aspire.utils.</code><code class="sig-name descname">ensure</code><span class="sig-paren">(</span><em class="sig-param">cond</em>, <em class="sig-param">error_message=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.ensure" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.utils.</code><code class="sig-name descname">ensure</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cond</span></em>, <em class="sig-param"><span class="n">error_message</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.ensure" title="Permalink to this definition">¶</a></dt>
 <dd><p>assert statements in Python are sometimes optimized away by the compiler, and are for internal testing purposes.
 For user-facing assertions, we use this simple wrapper to ensure conditions are met at relevant parts of the code.</p>
 <dl class="field-list simple">
@@ -1527,7 +1528,7 @@ For user-facing assertions, we use this simple wrapper to ensure conditions are 
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aspire.utils.get_full_version">
 <code class="sig-prename descclassname">aspire.utils.</code><code class="sig-name descname">get_full_version</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aspire.utils.get_full_version" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get as much version information as we can, including git info (if applicable)

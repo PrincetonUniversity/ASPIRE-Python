@@ -95,6 +95,7 @@
 <li class="toctree-l4"><a class="reference internal" href="aspire.class2d.html">aspire.class2d package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="aspire.class3d.html">aspire.class3d package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="aspire.commands.html">aspire.commands package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.data.html">aspire.data package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="aspire.denoising.html">aspire.denoising package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="aspire.estimation.html">aspire.estimation package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="aspire.image.html">aspire.image package</a></li>
@@ -191,22 +192,22 @@
 </div>
 <div class="section" id="module-aspire.orientation.commonline_ev">
 <span id="aspire-orientation-commonline-ev-module"></span><h2>aspire.orientation.commonline_ev module<a class="headerlink" href="#module-aspire.orientation.commonline_ev" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
+<dl class="py class">
 <dt id="aspire.orientation.commonline_ev.CommLineEV">
-<em class="property">class </em><code class="sig-prename descclassname">aspire.orientation.commonline_ev.</code><code class="sig-name descname">CommLineEV</code><span class="sig-paren">(</span><em class="sig-param">src</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.orientation.commonline_ev.CommLineEV" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">aspire.orientation.commonline_ev.</code><code class="sig-name descname">CommLineEV</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">src</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.orientation.commonline_ev.CommLineEV" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#aspire.orientation.Orient3D" title="aspire.orientation.Orient3D"><code class="xref py py-class docutils literal notranslate"><span class="pre">aspire.orientation.Orient3D</span></code></a></p>
 <p>Class to estimate 3D orientations using Eigenvector method
 <a class="bibtex reference internal" href="quickstart.html#dblp-journals-siamis-singers11" id="id1">[SS11]</a></p>
 <p class="rubric">Methods</p>
 <p>constructor of an object for estimating 3D orientations</p>
 <p class="rubric">Methods</p>
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.orientation.commonline_ev.CommLineEV.estimate">
 <code class="sig-name descname">estimate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aspire.orientation.commonline_ev.CommLineEV.estimate" title="Permalink to this definition">¶</a></dt>
 <dd><p>perform estimation of orientations</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.orientation.commonline_ev.CommLineEV.output">
 <code class="sig-name descname">output</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aspire.orientation.commonline_ev.CommLineEV.output" title="Permalink to this definition">¶</a></dt>
 <dd><p>Output the 3D orientations</p>
@@ -217,9 +218,9 @@
 </div>
 <div class="section" id="module-aspire.orientation.commonline_gcar">
 <span id="aspire-orientation-commonline-gcar-module"></span><h2>aspire.orientation.commonline_gcar module<a class="headerlink" href="#module-aspire.orientation.commonline_gcar" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
+<dl class="py class">
 <dt id="aspire.orientation.commonline_gcar.CommLineGCAR">
-<em class="property">class </em><code class="sig-prename descclassname">aspire.orientation.commonline_gcar.</code><code class="sig-name descname">CommLineGCAR</code><span class="sig-paren">(</span><em class="sig-param">src</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.orientation.commonline_gcar.CommLineGCAR" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">aspire.orientation.commonline_gcar.</code><code class="sig-name descname">CommLineGCAR</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">src</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.orientation.commonline_gcar.CommLineGCAR" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#aspire.orientation.Orient3D" title="aspire.orientation.Orient3D"><code class="xref py py-class docutils literal notranslate"><span class="pre">aspire.orientation.Orient3D</span></code></a></p>
 <p>Define a derived class to estimate 3D orientations using Globally Consistent Angular Reconstitution described
 as below:
@@ -228,13 +229,13 @@ Eigenvestors of Center of Mass Operators, Applied and Computational Harmonic Ana
 <p class="rubric">Methods</p>
 <p>constructor of an object for estimating 3D oreintations</p>
 <p class="rubric">Methods</p>
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.orientation.commonline_gcar.CommLineGCAR.estimate">
 <code class="sig-name descname">estimate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aspire.orientation.commonline_gcar.CommLineGCAR.estimate" title="Permalink to this definition">¶</a></dt>
 <dd><p>perform estimation of orientations</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.orientation.commonline_gcar.CommLineGCAR.output">
 <code class="sig-name descname">output</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aspire.orientation.commonline_gcar.CommLineGCAR.output" title="Permalink to this definition">¶</a></dt>
 <dd><p>Output the 3D orientations</p>
@@ -245,9 +246,9 @@ Eigenvestors of Center of Mass Operators, Applied and Computational Harmonic Ana
 </div>
 <div class="section" id="module-aspire.orientation.commonline_lud">
 <span id="aspire-orientation-commonline-lud-module"></span><h2>aspire.orientation.commonline_lud module<a class="headerlink" href="#module-aspire.orientation.commonline_lud" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
+<dl class="py class">
 <dt id="aspire.orientation.commonline_lud.CommLineLUD">
-<em class="property">class </em><code class="sig-prename descclassname">aspire.orientation.commonline_lud.</code><code class="sig-name descname">CommLineLUD</code><span class="sig-paren">(</span><em class="sig-param">src</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.orientation.commonline_lud.CommLineLUD" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">aspire.orientation.commonline_lud.</code><code class="sig-name descname">CommLineLUD</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">src</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.orientation.commonline_lud.CommLineLUD" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#aspire.orientation.Orient3D" title="aspire.orientation.Orient3D"><code class="xref py py-class docutils literal notranslate"><span class="pre">aspire.orientation.Orient3D</span></code></a></p>
 <p>Define a derived class to estimate 3D orientations using Least Unsquared Deviations described as below:
 L. Wang, A. Singer, and  Z. Wen, Orientation Determination of Cryo-EM Images Using Least Unsquared Deviations,
@@ -255,13 +256,13 @@ SIAM J. Imaging Sciences, 6, 2450-2483 (2013).</p>
 <p class="rubric">Methods</p>
 <p>constructor of an object for estimating 3D orientations</p>
 <p class="rubric">Methods</p>
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.orientation.commonline_lud.CommLineLUD.estimate">
 <code class="sig-name descname">estimate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aspire.orientation.commonline_lud.CommLineLUD.estimate" title="Permalink to this definition">¶</a></dt>
 <dd><p>perform estimation of orientations</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.orientation.commonline_lud.CommLineLUD.output">
 <code class="sig-name descname">output</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aspire.orientation.commonline_lud.CommLineLUD.output" title="Permalink to this definition">¶</a></dt>
 <dd><p>Output the 3D orientations</p>
@@ -272,22 +273,22 @@ SIAM J. Imaging Sciences, 6, 2450-2483 (2013).</p>
 </div>
 <div class="section" id="module-aspire.orientation.commonline_sdp">
 <span id="aspire-orientation-commonline-sdp-module"></span><h2>aspire.orientation.commonline_sdp module<a class="headerlink" href="#module-aspire.orientation.commonline_sdp" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
+<dl class="py class">
 <dt id="aspire.orientation.commonline_sdp.CommLineSDP">
-<em class="property">class </em><code class="sig-prename descclassname">aspire.orientation.commonline_sdp.</code><code class="sig-name descname">CommLineSDP</code><span class="sig-paren">(</span><em class="sig-param">src</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.orientation.commonline_sdp.CommLineSDP" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">aspire.orientation.commonline_sdp.</code><code class="sig-name descname">CommLineSDP</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">src</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.orientation.commonline_sdp.CommLineSDP" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#aspire.orientation.Orient3D" title="aspire.orientation.Orient3D"><code class="xref py py-class docutils literal notranslate"><span class="pre">aspire.orientation.Orient3D</span></code></a></p>
 <p>Class to estimate 3D orientations using Semi-Definite Programming
 <a class="bibtex reference internal" href="quickstart.html#dblp-journals-siamis-singers11" id="id2">[SS11]</a></p>
 <p class="rubric">Methods</p>
 <p>constructor of an object for estimating 3D orientations</p>
 <p class="rubric">Methods</p>
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.orientation.commonline_sdp.CommLineSDP.estimate">
 <code class="sig-name descname">estimate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aspire.orientation.commonline_sdp.CommLineSDP.estimate" title="Permalink to this definition">¶</a></dt>
 <dd><p>perform estimation of orientations</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.orientation.commonline_sdp.CommLineSDP.output">
 <code class="sig-name descname">output</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aspire.orientation.commonline_sdp.CommLineSDP.output" title="Permalink to this definition">¶</a></dt>
 <dd><p>Output the 3D orientations</p>
@@ -298,9 +299,9 @@ SIAM J. Imaging Sciences, 6, 2450-2483 (2013).</p>
 </div>
 <div class="section" id="module-aspire.orientation.commonline_sync">
 <span id="aspire-orientation-commonline-sync-module"></span><h2>aspire.orientation.commonline_sync module<a class="headerlink" href="#module-aspire.orientation.commonline_sync" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
+<dl class="py class">
 <dt id="aspire.orientation.commonline_sync.CommLineSync">
-<em class="property">class </em><code class="sig-prename descclassname">aspire.orientation.commonline_sync.</code><code class="sig-name descname">CommLineSync</code><span class="sig-paren">(</span><em class="sig-param">src</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.orientation.commonline_sync.CommLineSync" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">aspire.orientation.commonline_sync.</code><code class="sig-name descname">CommLineSync</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">src</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.orientation.commonline_sync.CommLineSync" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#aspire.orientation.Orient3D" title="aspire.orientation.Orient3D"><code class="xref py py-class docutils literal notranslate"><span class="pre">aspire.orientation.Orient3D</span></code></a></p>
 <p>Define a class to estimate 3D orientations using Synchronization described as below:
 Y. Shkolnisky, and A. Singer, Viewing Direction Estimation in Cryo-EM Using Synchronization,
@@ -308,13 +309,13 @@ SIAM J. Imaging Sciences, 5, 1088-1110 (2012).</p>
 <p class="rubric">Methods</p>
 <p>constructor of an object for estimating 3D orientations</p>
 <p class="rubric">Methods</p>
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.orientation.commonline_sync.CommLineSync.estimate">
 <code class="sig-name descname">estimate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aspire.orientation.commonline_sync.CommLineSync.estimate" title="Permalink to this definition">¶</a></dt>
 <dd><p>perform estimation of orientations</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.orientation.commonline_sync.CommLineSync.output">
 <code class="sig-name descname">output</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aspire.orientation.commonline_sync.CommLineSync.output" title="Permalink to this definition">¶</a></dt>
 <dd><p>Output the 3D orientations</p>
@@ -325,33 +326,33 @@ SIAM J. Imaging Sciences, 5, 1088-1110 (2012).</p>
 </div>
 <div class="section" id="module-aspire.orientation">
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-aspire.orientation" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
+<dl class="py class">
 <dt id="aspire.orientation.Orient3D">
-<em class="property">class </em><code class="sig-prename descclassname">aspire.orientation.</code><code class="sig-name descname">Orient3D</code><span class="sig-paren">(</span><em class="sig-param">src</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.orientation.Orient3D" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">aspire.orientation.</code><code class="sig-name descname">Orient3D</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">src</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.orientation.Orient3D" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Define a base class for estimating 3D orientations</p>
 <p class="rubric">Methods</p>
 <p>constructor of an object for estimating 3D orientations</p>
 <p class="rubric">Methods</p>
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.orientation.Orient3D.build_clmatrix">
 <code class="sig-name descname">build_clmatrix</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aspire.orientation.Orient3D.build_clmatrix" title="Permalink to this definition">¶</a></dt>
 <dd><p>build the common lines matrix</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.orientation.Orient3D.estimate">
 <code class="sig-name descname">estimate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aspire.orientation.Orient3D.estimate" title="Permalink to this definition">¶</a></dt>
 <dd><p>perform estimation of orientations</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.orientation.Orient3D.get_commonlines">
 <code class="sig-name descname">get_commonlines</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aspire.orientation.Orient3D.get_commonlines" title="Permalink to this definition">¶</a></dt>
 <dd><p>find the common lines by voting method</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.orientation.Orient3D.output">
 <code class="sig-name descname">output</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aspire.orientation.Orient3D.output" title="Permalink to this definition">¶</a></dt>
 <dd><p>Output the 3D orientations</p>

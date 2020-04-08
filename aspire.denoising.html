@@ -29,7 +29,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="aspire.estimation package" href="aspire.estimation.html" />
-    <link rel="prev" title="aspire.commands package" href="aspire.commands.html" /> 
+    <link rel="prev" title="aspire.data package" href="aspire.data.html" /> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -95,6 +95,7 @@
 <li class="toctree-l4"><a class="reference internal" href="aspire.class2d.html">aspire.class2d package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="aspire.class3d.html">aspire.class3d package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="aspire.commands.html">aspire.commands package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.data.html">aspire.data package</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">aspire.denoising package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="aspire.estimation.html">aspire.estimation package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="aspire.image.html">aspire.image package</a></li>
@@ -191,20 +192,20 @@
 </div>
 <div class="section" id="module-aspire.denoising.class_avg">
 <span id="aspire-denoising-class-avg-module"></span><h2>aspire.denoising.class_avg module<a class="headerlink" href="#module-aspire.denoising.class_avg" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
+<dl class="py class">
 <dt id="aspire.denoising.class_avg.ClassAvg">
-<em class="property">class </em><code class="sig-prename descclassname">aspire.denoising.class_avg.</code><code class="sig-name descname">ClassAvg</code><span class="sig-paren">(</span><em class="sig-param">img_src</em>, <em class="sig-param">class_index</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.denoising.class_avg.ClassAvg" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">aspire.denoising.class_avg.</code><code class="sig-name descname">ClassAvg</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">img_src</span></em>, <em class="sig-param"><span class="n">class_index</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.denoising.class_avg.ClassAvg" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#aspire.denoising.Denoiser" title="aspire.denoising.Denoiser"><code class="xref py py-class docutils literal notranslate"><span class="pre">aspire.denoising.Denoiser</span></code></a></p>
 <p>Define a derived class for denoising 2D images using class average methods</p>
 <p class="rubric">Methods</p>
 <p>constructor of an object for denoising 2D images using class averaging method.</p>
 <p class="rubric">Methods</p>
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.denoising.class_avg.ClassAvg.class_averaging">
 <code class="sig-name descname">class_averaging</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aspire.denoising.class_avg.ClassAvg.class_averaging" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.denoising.class_avg.ClassAvg.output_images">
 <code class="sig-name descname">output_images</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aspire.denoising.class_avg.ClassAvg.output_images" title="Permalink to this definition">¶</a></dt>
 <dd><p>Output the clean images</p>
@@ -215,9 +216,9 @@
 </div>
 <div class="section" id="module-aspire.denoising.denoiser_cov2d">
 <span id="aspire-denoising-denoiser-cov2d-module"></span><h2>aspire.denoising.denoiser_cov2d module<a class="headerlink" href="#module-aspire.denoising.denoiser_cov2d" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
+<dl class="py class">
 <dt id="aspire.denoising.denoiser_cov2d.DenoiserCov2D">
-<em class="property">class </em><code class="sig-prename descclassname">aspire.denoising.denoiser_cov2d.</code><code class="sig-name descname">DenoiserCov2D</code><span class="sig-paren">(</span><em class="sig-param">src</em>, <em class="sig-param">basis</em>, <em class="sig-param">var_noise</em>, <em class="sig-param">ctf_info</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.denoising.denoiser_cov2d.DenoiserCov2D" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">aspire.denoising.denoiser_cov2d.</code><code class="sig-name descname">DenoiserCov2D</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">src</span></em>, <em class="sig-param"><span class="n">basis</span></em>, <em class="sig-param"><span class="n">var_noise</span></em>, <em class="sig-param"><span class="n">ctf_info</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.denoising.denoiser_cov2d.DenoiserCov2D" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#aspire.denoising.Denoiser" title="aspire.denoising.Denoiser"><code class="xref py py-class docutils literal notranslate"><span class="pre">aspire.denoising.Denoiser</span></code></a></p>
 <p>Define a derived class for denoising 2D images using Cov2D method</p>
 <p class="rubric">Methods</p>
@@ -233,9 +234,9 @@
 </dd>
 </dl>
 <p class="rubric">Methods</p>
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.denoising.denoiser_cov2d.DenoiserCov2D.denoise">
-<code class="sig-name descname">denoise</code><span class="sig-paren">(</span><em class="sig-param">covar_opt=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.denoising.denoiser_cov2d.DenoiserCov2D.denoise" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">denoise</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">covar_opt</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.denoising.denoiser_cov2d.DenoiserCov2D.denoise" title="Permalink to this definition">¶</a></dt>
 <dd><p>Denoiser 2D images using Cov2D method</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -247,7 +248,7 @@
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.denoising.denoiser_cov2d.DenoiserCov2D.to_src">
 <code class="sig-name descname">to_src</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aspire.denoising.denoiser_cov2d.DenoiserCov2D.to_src" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return an ImageSource object with denoised images</p>
@@ -258,9 +259,9 @@
 </div>
 <div class="section" id="module-aspire.denoising">
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-aspire.denoising" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
+<dl class="py class">
 <dt id="aspire.denoising.Denoiser">
-<em class="property">class </em><code class="sig-prename descclassname">aspire.denoising.</code><code class="sig-name descname">Denoiser</code><span class="sig-paren">(</span><em class="sig-param">src</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.denoising.Denoiser" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">aspire.denoising.</code><code class="sig-name descname">Denoiser</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">src</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.denoising.Denoiser" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Define a base class for denoising 2D images</p>
 <p class="rubric">Methods</p>
@@ -271,15 +272,15 @@
 </dd>
 </dl>
 <p class="rubric">Methods</p>
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.denoising.Denoiser.denoise">
 <code class="sig-name descname">denoise</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aspire.denoising.Denoiser.denoise" title="Permalink to this definition">¶</a></dt>
 <dd><p>Denoise 2D images</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.denoising.Denoiser.save">
-<code class="sig-name descname">save</code><span class="sig-paren">(</span><em class="sig-param">starfile_filepath</em>, <em class="sig-param">batch_size=512</em>, <em class="sig-param">overwrite=False</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.denoising.Denoiser.save" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">save</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">starfile_filepath</span></em>, <em class="sig-param"><span class="n">batch_size</span><span class="o">=</span><span class="default_value">512</span></em>, <em class="sig-param"><span class="n">overwrite</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.denoising.Denoiser.save" title="Permalink to this definition">¶</a></dt>
 <dd><p>Output the denoised images to specified file</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -294,7 +295,7 @@ and the <cite>.mrcs</cite> files saved.</p></li>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.denoising.Denoiser.to_src">
 <code class="sig-name descname">to_src</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aspire.denoising.Denoiser.to_src" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return an ImageSource object with denoised images</p>
@@ -316,7 +317,7 @@ and the <cite>.mrcs</cite> files saved.</p></li>
         <a href="aspire.estimation.html" class="btn btn-neutral float-right" title="aspire.estimation package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="aspire.commands.html" class="btn btn-neutral" title="aspire.commands package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="aspire.data.html" class="btn btn-neutral" title="aspire.data package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

@@ -95,6 +95,7 @@
 <li class="toctree-l4 current"><a class="current reference internal" href="#">aspire.class2d package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="aspire.class3d.html">aspire.class3d package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="aspire.commands.html">aspire.commands package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.data.html">aspire.data package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="aspire.denoising.html">aspire.denoising package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="aspire.estimation.html">aspire.estimation package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="aspire.image.html">aspire.image package</a></li>
@@ -191,20 +192,20 @@
 </div>
 <div class="section" id="module-aspire.class2d.em_class">
 <span id="aspire-class2d-em-class-module"></span><h2>aspire.class2d.em_class module<a class="headerlink" href="#module-aspire.class2d.em_class" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
+<dl class="py class">
 <dt id="aspire.class2d.em_class.EMClass2D">
-<em class="property">class </em><code class="sig-prename descclassname">aspire.class2d.em_class.</code><code class="sig-name descname">EMClass2D</code><span class="sig-paren">(</span><em class="sig-param">src</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.class2d.em_class.EMClass2D" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">aspire.class2d.em_class.</code><code class="sig-name descname">EMClass2D</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">src</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.class2d.em_class.EMClass2D" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#aspire.class2d.Class2D" title="aspire.class2d.Class2D"><code class="xref py py-class docutils literal notranslate"><span class="pre">aspire.class2d.Class2D</span></code></a></p>
 <p>constructor of an object for classifying 2D images using
 Expectation-Maximization (EM) algorithm</p>
 <p class="rubric">Methods</p>
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.class2d.em_class.EMClass2D.classify">
-<code class="sig-name descname">classify</code><span class="sig-paren">(</span><em class="sig-param">src</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.class2d.em_class.EMClass2D.classify" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">classify</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">src</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.class2d.em_class.EMClass2D.classify" title="Permalink to this definition">¶</a></dt>
 <dd><p>perform classifying 2D images</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.class2d.em_class.EMClass2D.output">
 <code class="sig-name descname">output</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aspire.class2d.em_class.EMClass2D.output" title="Permalink to this definition">¶</a></dt>
 <dd><p>Output the clean images</p>
@@ -215,26 +216,26 @@ Expectation-Maximization (EM) algorithm</p>
 </div>
 <div class="section" id="module-aspire.class2d.mra_class">
 <span id="aspire-class2d-mra-class-module"></span><h2>aspire.class2d.mra_class module<a class="headerlink" href="#module-aspire.class2d.mra_class" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
+<dl class="py class">
 <dt id="aspire.class2d.mra_class.MRAClass2D">
-<em class="property">class </em><code class="sig-prename descclassname">aspire.class2d.mra_class.</code><code class="sig-name descname">MRAClass2D</code><span class="sig-paren">(</span><em class="sig-param">src</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.class2d.mra_class.MRAClass2D" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">aspire.class2d.mra_class.</code><code class="sig-name descname">MRAClass2D</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">src</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.class2d.mra_class.MRAClass2D" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#aspire.class2d.Class2D" title="aspire.class2d.Class2D"><code class="xref py py-class docutils literal notranslate"><span class="pre">aspire.class2d.Class2D</span></code></a></p>
 <p>constructor of an object for classifying 2D images using
 Multi-Reference Alignment(MRA) algorithm</p>
 <p class="rubric">Methods</p>
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.class2d.mra_class.MRAClass2D.calculate_invariant">
 <code class="sig-name descname">calculate_invariant</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aspire.class2d.mra_class.MRAClass2D.calculate_invariant" title="Permalink to this definition">¶</a></dt>
 <dd><p>calculate invariant quantities such as ACF and DACF</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.class2d.mra_class.MRAClass2D.classify">
-<code class="sig-name descname">classify</code><span class="sig-paren">(</span><em class="sig-param">src</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.class2d.mra_class.MRAClass2D.classify" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">classify</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">src</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.class2d.mra_class.MRAClass2D.classify" title="Permalink to this definition">¶</a></dt>
 <dd><p>perform classifying 2D images</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.class2d.mra_class.MRAClass2D.output">
 <code class="sig-name descname">output</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aspire.class2d.mra_class.MRAClass2D.output" title="Permalink to this definition">¶</a></dt>
 <dd><p>Output the clean images</p>
@@ -245,20 +246,20 @@ Multi-Reference Alignment(MRA) algorithm</p>
 </div>
 <div class="section" id="module-aspire.class2d.rfa_class">
 <span id="aspire-class2d-rfa-class-module"></span><h2>aspire.class2d.rfa_class module<a class="headerlink" href="#module-aspire.class2d.rfa_class" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
+<dl class="py class">
 <dt id="aspire.class2d.rfa_class.RFAClass2D">
-<em class="property">class </em><code class="sig-prename descclassname">aspire.class2d.rfa_class.</code><code class="sig-name descname">RFAClass2D</code><span class="sig-paren">(</span><em class="sig-param">src</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.class2d.rfa_class.RFAClass2D" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">aspire.class2d.rfa_class.</code><code class="sig-name descname">RFAClass2D</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">src</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.class2d.rfa_class.RFAClass2D" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#aspire.class2d.Class2D" title="aspire.class2d.Class2D"><code class="xref py py-class docutils literal notranslate"><span class="pre">aspire.class2d.Class2D</span></code></a></p>
 <p>constructor of an object for classifying 2D images using
 Reference Free Alignment(RFA) algorithm</p>
 <p class="rubric">Methods</p>
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.class2d.rfa_class.RFAClass2D.classify">
-<code class="sig-name descname">classify</code><span class="sig-paren">(</span><em class="sig-param">src</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.class2d.rfa_class.RFAClass2D.classify" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">classify</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">src</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.class2d.rfa_class.RFAClass2D.classify" title="Permalink to this definition">¶</a></dt>
 <dd><p>perform classifying 2D images</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.class2d.rfa_class.RFAClass2D.output">
 <code class="sig-name descname">output</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aspire.class2d.rfa_class.RFAClass2D.output" title="Permalink to this definition">¶</a></dt>
 <dd><p>Output the clean images</p>
@@ -269,38 +270,38 @@ Reference Free Alignment(RFA) algorithm</p>
 </div>
 <div class="section" id="module-aspire.class2d.rir_class">
 <span id="aspire-class2d-rir-class-module"></span><h2>aspire.class2d.rir_class module<a class="headerlink" href="#module-aspire.class2d.rir_class" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
+<dl class="py class">
 <dt id="aspire.class2d.rir_class.RIRClass2D">
-<em class="property">class </em><code class="sig-prename descclassname">aspire.class2d.rir_class.</code><code class="sig-name descname">RIRClass2D</code><span class="sig-paren">(</span><em class="sig-param">src</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.class2d.rir_class.RIRClass2D" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">aspire.class2d.rir_class.</code><code class="sig-name descname">RIRClass2D</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">src</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.class2d.rir_class.RIRClass2D" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#aspire.class2d.Class2D" title="aspire.class2d.Class2D"><code class="xref py py-class docutils literal notranslate"><span class="pre">aspire.class2d.Class2D</span></code></a></p>
 <p>constructor of an object for classifying 2D images using
 Rotationally Invariant Representation (RIP) algorithm</p>
 <p class="rubric">Methods</p>
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.class2d.rir_class.RIRClass2D.calc_bispec">
 <code class="sig-name descname">calc_bispec</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aspire.class2d.rir_class.RIRClass2D.calc_bispec" title="Permalink to this definition">¶</a></dt>
 <dd><p>calculate rotationally invariant represantion for 2D images</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.class2d.rir_class.RIRClass2D.classify">
 <code class="sig-name descname">classify</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aspire.class2d.rir_class.RIRClass2D.classify" title="Permalink to this definition">¶</a></dt>
 <dd><p>perform classifying 2D images</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.class2d.rir_class.RIRClass2D.get_rand_pca">
 <code class="sig-name descname">get_rand_pca</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aspire.class2d.rir_class.RIRClass2D.get_rand_pca" title="Permalink to this definition">¶</a></dt>
 <dd><p>calculate PCA using randomized algorithm rotationally</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.class2d.rir_class.RIRClass2D.nn_classification">
 <code class="sig-name descname">nn_classification</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aspire.class2d.rir_class.RIRClass2D.nn_classification" title="Permalink to this definition">¶</a></dt>
 <dd><p>perform nearest neighbor classification and alignment</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.class2d.rir_class.RIRClass2D.output">
 <code class="sig-name descname">output</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aspire.class2d.rir_class.RIRClass2D.output" title="Permalink to this definition">¶</a></dt>
 <dd><p>Output the clean images</p>
@@ -311,19 +312,19 @@ Rotationally Invariant Representation (RIP) algorithm</p>
 </div>
 <div class="section" id="module-aspire.class2d">
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-aspire.class2d" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
+<dl class="py class">
 <dt id="aspire.class2d.Class2D">
-<em class="property">class </em><code class="sig-prename descclassname">aspire.class2d.</code><code class="sig-name descname">Class2D</code><span class="sig-paren">(</span><em class="sig-param">src</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.class2d.Class2D" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">aspire.class2d.</code><code class="sig-name descname">Class2D</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">src</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.class2d.Class2D" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>constructor of an object for classifying 2D images</p>
 <p class="rubric">Methods</p>
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.class2d.Class2D.classify">
 <code class="sig-name descname">classify</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aspire.class2d.Class2D.classify" title="Permalink to this definition">¶</a></dt>
 <dd><p>perform classifying 2D images</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.class2d.Class2D.output">
 <code class="sig-name descname">output</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aspire.class2d.Class2D.output" title="Permalink to this definition">¶</a></dt>
 <dd><p>Output the clean images</p>

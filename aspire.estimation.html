@@ -95,6 +95,7 @@
 <li class="toctree-l4"><a class="reference internal" href="aspire.class2d.html">aspire.class2d package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="aspire.class3d.html">aspire.class3d package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="aspire.commands.html">aspire.commands package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.data.html">aspire.data package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="aspire.denoising.html">aspire.denoising package</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">aspire.estimation package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="aspire.image.html">aspire.image package</a></li>
@@ -191,14 +192,14 @@
 </div>
 <div class="section" id="module-aspire.estimation.covar">
 <span id="aspire-estimation-covar-module"></span><h2>aspire.estimation.covar module<a class="headerlink" href="#module-aspire.estimation.covar" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
+<dl class="py class">
 <dt id="aspire.estimation.covar.CovarianceEstimator">
-<em class="property">class </em><code class="sig-prename descclassname">aspire.estimation.covar.</code><code class="sig-name descname">CovarianceEstimator</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.estimation.covar.CovarianceEstimator" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">aspire.estimation.covar.</code><code class="sig-name descname">CovarianceEstimator</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.estimation.covar.CovarianceEstimator" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#aspire.estimation.Estimator" title="aspire.estimation.Estimator"><code class="xref py py-class docutils literal notranslate"><span class="pre">aspire.estimation.Estimator</span></code></a></p>
 <p class="rubric">Methods</p>
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.estimation.covar.CovarianceEstimator.apply_kernel">
-<code class="sig-name descname">apply_kernel</code><span class="sig-paren">(</span><em class="sig-param">coeff</em>, <em class="sig-param">kernel=None</em>, <em class="sig-param">packed=False</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.estimation.covar.CovarianceEstimator.apply_kernel" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">apply_kernel</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">coeff</span></em>, <em class="sig-param"><span class="n">kernel</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">packed</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.estimation.covar.CovarianceEstimator.apply_kernel" title="Permalink to this definition">¶</a></dt>
 <dd><p>Applies the kernel represented by convolution
 :param coeff: The volume matrix (6 dimensions) to be convolved (but see the <cite>packed</cite> argument below).
 :param kernel: a Kernel object. If None, the kernel for this Estimator is used.
@@ -216,24 +217,24 @@ vector is returned instead.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.estimation.covar.CovarianceEstimator.compute_kernel">
 <code class="sig-name descname">compute_kernel</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aspire.estimation.covar.CovarianceEstimator.compute_kernel" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.estimation.covar.CovarianceEstimator.conj_grad">
-<code class="sig-name descname">conj_grad</code><span class="sig-paren">(</span><em class="sig-param">b_coeff</em>, <em class="sig-param">tol=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.estimation.covar.CovarianceEstimator.conj_grad" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">conj_grad</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">b_coeff</span></em>, <em class="sig-param"><span class="n">tol</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.estimation.covar.CovarianceEstimator.conj_grad" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.estimation.covar.CovarianceEstimator.estimate">
-<code class="sig-name descname">estimate</code><span class="sig-paren">(</span><em class="sig-param">mean_vol</em>, <em class="sig-param">noise_variance</em>, <em class="sig-param">tol=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.estimation.covar.CovarianceEstimator.estimate" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">estimate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">mean_vol</span></em>, <em class="sig-param"><span class="n">noise_variance</span></em>, <em class="sig-param"><span class="n">tol</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.estimation.covar.CovarianceEstimator.estimate" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.estimation.covar.CovarianceEstimator.src_backward">
-<code class="sig-name descname">src_backward</code><span class="sig-paren">(</span><em class="sig-param">mean_vol</em>, <em class="sig-param">noise_variance</em>, <em class="sig-param">shrink_method=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.estimation.covar.CovarianceEstimator.src_backward" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">src_backward</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">mean_vol</span></em>, <em class="sig-param"><span class="n">noise_variance</span></em>, <em class="sig-param"><span class="n">shrink_method</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.estimation.covar.CovarianceEstimator.src_backward" title="Permalink to this definition">¶</a></dt>
 <dd><p>Apply adjoint mapping to source</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -248,9 +249,9 @@ vector is returned instead.</p>
 </div>
 <div class="section" id="module-aspire.estimation.covar2d">
 <span id="aspire-estimation-covar2d-module"></span><h2>aspire.estimation.covar2d module<a class="headerlink" href="#module-aspire.estimation.covar2d" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
+<dl class="py class">
 <dt id="aspire.estimation.covar2d.BatchedRotCov2D">
-<em class="property">class </em><code class="sig-prename descclassname">aspire.estimation.covar2d.</code><code class="sig-name descname">BatchedRotCov2D</code><span class="sig-paren">(</span><em class="sig-param">src</em>, <em class="sig-param">basis=None</em>, <em class="sig-param">batch_size=8192</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.estimation.covar2d.BatchedRotCov2D" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">aspire.estimation.covar2d.</code><code class="sig-name descname">BatchedRotCov2D</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">src</span></em>, <em class="sig-param"><span class="n">basis</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">batch_size</span><span class="o">=</span><span class="default_value">8192</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.estimation.covar2d.BatchedRotCov2D" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#aspire.estimation.covar2d.RotCov2D" title="aspire.estimation.covar2d.RotCov2D"><code class="xref py py-class docutils literal notranslate"><span class="pre">aspire.estimation.covar2d.RotCov2D</span></code></a></p>
 <p>Perform batchwise rotationally equivariant 2D covariance estimation from an
 <cite>ImageSource</cite> objects. This is done with a single pass through the data,
@@ -275,9 +276,9 @@ default, this is set to <cite>FFBBasis2D((src.L, src.L))</cite>.
 <p class="rubric">Methods</p>
 <p>constructor of an object for 2D covariance analysis</p>
 <p class="rubric">Methods</p>
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.estimation.covar2d.BatchedRotCov2D.get_covar">
-<code class="sig-name descname">get_covar</code><span class="sig-paren">(</span><em class="sig-param">noise_var=1</em>, <em class="sig-param">mean_coeff=None</em>, <em class="sig-param">covar_est_opt=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.estimation.covar2d.BatchedRotCov2D.get_covar" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_covar</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">noise_var</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">mean_coeff</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">covar_est_opt</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.estimation.covar2d.BatchedRotCov2D.get_covar" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate the block diagonal covariance matrix in the basis
 coefficients.</p>
 <dl class="field-list simple">
@@ -321,7 +322,7 @@ documentation for <cite>conj_grad</cite>, default <cite>‘float64’</cite>)</p
 manipulated using the <cite>blk_diag_*</cite> functions.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.estimation.covar2d.BatchedRotCov2D.get_mean">
 <code class="sig-name descname">get_mean</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aspire.estimation.covar2d.BatchedRotCov2D.get_mean" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate the rotationally invariant mean image in the basis
@@ -335,9 +336,9 @@ coefficients.</p>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="aspire.estimation.covar2d.RotCov2D">
-<em class="property">class </em><code class="sig-prename descclassname">aspire.estimation.covar2d.</code><code class="sig-name descname">RotCov2D</code><span class="sig-paren">(</span><em class="sig-param">basis</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.estimation.covar2d.RotCov2D" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">aspire.estimation.covar2d.</code><code class="sig-name descname">RotCov2D</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">basis</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.estimation.covar2d.RotCov2D" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Define a class for performing Cov2D analysis with CTF information described in</p>
 <p>T. Bhamre, T. Zhang, and A. Singer, “Denoising and covariance estimation of single particle cryo-EM images”,
@@ -345,9 +346,9 @@ J. Struct. Biol. 195, 27-81 (2016). DOI: 10.1016/j.jsb.2016.04.013</p>
 <p class="rubric">Methods</p>
 <p>constructor of an object for 2D covariance analysis</p>
 <p class="rubric">Methods</p>
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.estimation.covar2d.RotCov2D.get_covar">
-<code class="sig-name descname">get_covar</code><span class="sig-paren">(</span><em class="sig-param">coeffs</em>, <em class="sig-param">ctf_fb=None</em>, <em class="sig-param">ctf_idx=None</em>, <em class="sig-param">mean_coeff=None</em>, <em class="sig-param">do_refl=True</em>, <em class="sig-param">noise_var=1</em>, <em class="sig-param">covar_est_opt=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.estimation.covar2d.RotCov2D.get_covar" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_covar</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">coeffs</span></em>, <em class="sig-param"><span class="n">ctf_fb</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ctf_idx</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mean_coeff</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">do_refl</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">noise_var</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">covar_est_opt</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.estimation.covar2d.RotCov2D.get_covar" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate the covariance matrix from the expansion coefficients and CTF information.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -374,9 +375,9 @@ are accounted for and inverted to yield a covariance estimate of the unfiltered 
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.estimation.covar2d.RotCov2D.get_cwf_coeffs">
-<code class="sig-name descname">get_cwf_coeffs</code><span class="sig-paren">(</span><em class="sig-param">coeffs</em>, <em class="sig-param">ctf_fb=None</em>, <em class="sig-param">ctf_idx=None</em>, <em class="sig-param">mean_coeff=None</em>, <em class="sig-param">covar_coeff=None</em>, <em class="sig-param">noise_var=1</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.estimation.covar2d.RotCov2D.get_cwf_coeffs" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_cwf_coeffs</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">coeffs</span></em>, <em class="sig-param"><span class="n">ctf_fb</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ctf_idx</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mean_coeff</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">covar_coeff</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">noise_var</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.estimation.covar2d.RotCov2D.get_cwf_coeffs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Estimate the expansion coefficients using the Covariance Wiener Filtering (CWF) method.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -399,9 +400,9 @@ and white noise of variance <cite>noise_var</cite> for the noise.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.estimation.covar2d.RotCov2D.get_mean">
-<code class="sig-name descname">get_mean</code><span class="sig-paren">(</span><em class="sig-param">coeffs</em>, <em class="sig-param">ctf_fb=None</em>, <em class="sig-param">ctf_idx=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.estimation.covar2d.RotCov2D.get_mean" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_mean</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">coeffs</span></em>, <em class="sig-param"><span class="n">ctf_fb</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ctf_idx</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.estimation.covar2d.RotCov2D.get_mean" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate the mean vector from the expansion coefficients with CTF information.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -418,9 +419,9 @@ If ctf_fb or ctf_idx is None, the identity filter will be applied.</p></li>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.estimation.covar2d.RotCov2D.shrink_covar_backward">
-<code class="sig-name descname">shrink_covar_backward</code><span class="sig-paren">(</span><em class="sig-param">b</em>, <em class="sig-param">b_noise</em>, <em class="sig-param">n</em>, <em class="sig-param">noise_var</em>, <em class="sig-param">shrinker</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.estimation.covar2d.RotCov2D.shrink_covar_backward" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">shrink_covar_backward</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">b</span></em>, <em class="sig-param"><span class="n">b_noise</span></em>, <em class="sig-param"><span class="n">n</span></em>, <em class="sig-param"><span class="n">noise_var</span></em>, <em class="sig-param"><span class="n">shrinker</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.estimation.covar2d.RotCov2D.shrink_covar_backward" title="Permalink to this definition">¶</a></dt>
 <dd><p>Apply the shrinking method to the 2D covariance of coefficients.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -442,45 +443,45 @@ If ctf_fb or ctf_idx is None, the identity filter will be applied.</p></li>
 </div>
 <div class="section" id="module-aspire.estimation.kernel">
 <span id="aspire-estimation-kernel-module"></span><h2>aspire.estimation.kernel module<a class="headerlink" href="#module-aspire.estimation.kernel" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
+<dl class="py class">
 <dt id="aspire.estimation.kernel.FourierKernel">
-<em class="property">class </em><code class="sig-prename descclassname">aspire.estimation.kernel.</code><code class="sig-name descname">FourierKernel</code><span class="sig-paren">(</span><em class="sig-param">kernel</em>, <em class="sig-param">centered</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.estimation.kernel.FourierKernel" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">aspire.estimation.kernel.</code><code class="sig-name descname">FourierKernel</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">kernel</span></em>, <em class="sig-param"><span class="n">centered</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.estimation.kernel.FourierKernel" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#aspire.estimation.kernel.Kernel" title="aspire.estimation.kernel.Kernel"><code class="xref py py-class docutils literal notranslate"><span class="pre">aspire.estimation.kernel.Kernel</span></code></a></p>
 <p class="rubric">Methods</p>
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.estimation.kernel.FourierKernel.circularize">
 <code class="sig-name descname">circularize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aspire.estimation.kernel.FourierKernel.circularize" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.estimation.kernel.FourierKernel.circularize_1d">
-<code class="sig-name descname">circularize_1d</code><span class="sig-paren">(</span><em class="sig-param">kernel</em>, <em class="sig-param">dim</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.estimation.kernel.FourierKernel.circularize_1d" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">circularize_1d</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">kernel</span></em>, <em class="sig-param"><span class="n">dim</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.estimation.kernel.FourierKernel.circularize_1d" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.estimation.kernel.FourierKernel.convolve_volume">
-<code class="sig-name descname">convolve_volume</code><span class="sig-paren">(</span><em class="sig-param">x</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.estimation.kernel.FourierKernel.convolve_volume" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">convolve_volume</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.estimation.kernel.FourierKernel.convolve_volume" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convolve volume with kernel
 :param x: An N-by-N-by-N-by-… array of volumes to be convolved.
 :return: The original volumes convolved by the kernel with the same dimensions as before.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.estimation.kernel.FourierKernel.convolve_volume_matrix">
-<code class="sig-name descname">convolve_volume_matrix</code><span class="sig-paren">(</span><em class="sig-param">x</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.estimation.kernel.FourierKernel.convolve_volume_matrix" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">convolve_volume_matrix</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.estimation.kernel.FourierKernel.convolve_volume_matrix" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convolve volume matrix with kernel
 :param x: An N-by-…-by-N (6 dimensions) volume matrix to be convolved.
 :return: The original volume matrix convolved by the kernel with the same dimensions as before.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.estimation.kernel.FourierKernel.is_centered">
 <code class="sig-name descname">is_centered</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aspire.estimation.kernel.FourierKernel.is_centered" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.estimation.kernel.FourierKernel.toeplitz">
-<code class="sig-name descname">toeplitz</code><span class="sig-paren">(</span><em class="sig-param">L=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.estimation.kernel.FourierKernel.toeplitz" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">toeplitz</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">L</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.estimation.kernel.FourierKernel.toeplitz" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute the 3D Toeplitz matrix corresponding to this Fourier Kernel
 :param L: The size of the volumes to be convolved (default M/2, where the dimensions of this Fourier Kernel</p>
 <blockquote>
@@ -495,7 +496,7 @@ If ctf_fb or ctf_idx is None, the identity filter will be applied.</p></li>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="aspire.estimation.kernel.Kernel">
 <em class="property">class </em><code class="sig-prename descclassname">aspire.estimation.kernel.</code><code class="sig-name descname">Kernel</code><a class="headerlink" href="#aspire.estimation.kernel.Kernel" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
@@ -504,12 +505,12 @@ If ctf_fb or ctf_idx is None, the identity filter will be applied.</p></li>
 </div>
 <div class="section" id="module-aspire.estimation.mean">
 <span id="aspire-estimation-mean-module"></span><h2>aspire.estimation.mean module<a class="headerlink" href="#module-aspire.estimation.mean" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
+<dl class="py class">
 <dt id="aspire.estimation.mean.MeanEstimator">
-<em class="property">class </em><code class="sig-prename descclassname">aspire.estimation.mean.</code><code class="sig-name descname">MeanEstimator</code><span class="sig-paren">(</span><em class="sig-param">src</em>, <em class="sig-param">basis</em>, <em class="sig-param">as_type='single'</em>, <em class="sig-param">batch_size=512</em>, <em class="sig-param">preconditioner='circulant'</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.estimation.mean.MeanEstimator" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">aspire.estimation.mean.</code><code class="sig-name descname">MeanEstimator</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">src</span></em>, <em class="sig-param"><span class="n">basis</span></em>, <em class="sig-param"><span class="n">as_type</span><span class="o">=</span><span class="default_value">'single'</span></em>, <em class="sig-param"><span class="n">batch_size</span><span class="o">=</span><span class="default_value">512</span></em>, <em class="sig-param"><span class="n">preconditioner</span><span class="o">=</span><span class="default_value">'circulant'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.estimation.mean.MeanEstimator" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#aspire.estimation.Estimator" title="aspire.estimation.Estimator"><code class="xref py py-class docutils literal notranslate"><span class="pre">aspire.estimation.Estimator</span></code></a></p>
 <p class="rubric">Methods</p>
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.estimation.mean.MeanEstimator.compute_kernel">
 <code class="sig-name descname">compute_kernel</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aspire.estimation.mean.MeanEstimator.compute_kernel" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -519,9 +520,9 @@ If ctf_fb or ctf_idx is None, the identity filter will be applied.</p></li>
 </div>
 <div class="section" id="module-aspire.estimation.noise">
 <span id="aspire-estimation-noise-module"></span><h2>aspire.estimation.noise module<a class="headerlink" href="#module-aspire.estimation.noise" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
+<dl class="py class">
 <dt id="aspire.estimation.noise.AnisotropicNoiseEstimator">
-<em class="property">class </em><code class="sig-prename descclassname">aspire.estimation.noise.</code><code class="sig-name descname">AnisotropicNoiseEstimator</code><span class="sig-paren">(</span><em class="sig-param">src</em>, <em class="sig-param">bgRadius=1</em>, <em class="sig-param">batchSize=512</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.estimation.noise.AnisotropicNoiseEstimator" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">aspire.estimation.noise.</code><code class="sig-name descname">AnisotropicNoiseEstimator</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">src</span></em>, <em class="sig-param"><span class="n">bgRadius</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">batchSize</span><span class="o">=</span><span class="default_value">512</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.estimation.noise.AnisotropicNoiseEstimator" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#aspire.estimation.noise.NoiseEstimator" title="aspire.estimation.noise.NoiseEstimator"><code class="xref py py-class docutils literal notranslate"><span class="pre">aspire.estimation.noise.NoiseEstimator</span></code></a></p>
 <p>A White Noise Estimator
 :param src: A Source object which can give us images on demand
@@ -529,7 +530,7 @@ If ctf_fb or ctf_idx is None, the identity filter will be applied.</p></li>
 :param batchSize:  The size of the batches in which to compute the variance estimate
 TODO: A base class NoiseEstimator should be instantiated using any object that can furnish images.</p>
 <p class="rubric">Methods</p>
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.estimation.noise.AnisotropicNoiseEstimator.estimate">
 <code class="sig-name descname">estimate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aspire.estimation.noise.AnisotropicNoiseEstimator.estimate" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
@@ -539,7 +540,7 @@ TODO: A base class NoiseEstimator should be instantiated using any object that c
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.estimation.noise.AnisotropicNoiseEstimator.estimate_noise_psd">
 <code class="sig-name descname">estimate_noise_psd</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aspire.estimation.noise.AnisotropicNoiseEstimator.estimate_noise_psd" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
@@ -552,15 +553,15 @@ TODO: A base class NoiseEstimator should be instantiated using any object that c
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="aspire.estimation.noise.NoiseEstimator">
 <em class="property">class </em><code class="sig-prename descclassname">aspire.estimation.noise.</code><code class="sig-name descname">NoiseEstimator</code><a class="headerlink" href="#aspire.estimation.noise.NoiseEstimator" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="aspire.estimation.noise.WhiteNoiseEstimator">
-<em class="property">class </em><code class="sig-prename descclassname">aspire.estimation.noise.</code><code class="sig-name descname">WhiteNoiseEstimator</code><span class="sig-paren">(</span><em class="sig-param">src</em>, <em class="sig-param">bgRadius=1</em>, <em class="sig-param">batchSize=512</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.estimation.noise.WhiteNoiseEstimator" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">aspire.estimation.noise.</code><code class="sig-name descname">WhiteNoiseEstimator</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">src</span></em>, <em class="sig-param"><span class="n">bgRadius</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">batchSize</span><span class="o">=</span><span class="default_value">512</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.estimation.noise.WhiteNoiseEstimator" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#aspire.estimation.noise.NoiseEstimator" title="aspire.estimation.noise.NoiseEstimator"><code class="xref py py-class docutils literal notranslate"><span class="pre">aspire.estimation.noise.NoiseEstimator</span></code></a></p>
 <p>A White Noise Estimator
 Any additional args/kwargs are passed on to the Source’s ‘images’ method
@@ -568,7 +569,7 @@ Any additional args/kwargs are passed on to the Source’s ‘images’ method
 :param bgRadius: The radius of the disk whose complement is used to estimate the noise.
 :param batchSize:  The size of the batches in which to compute the variance estimate</p>
 <p class="rubric">Methods</p>
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.estimation.noise.WhiteNoiseEstimator.estimate">
 <code class="sig-name descname">estimate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aspire.estimation.noise.WhiteNoiseEstimator.estimate" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
@@ -583,14 +584,14 @@ Any additional args/kwargs are passed on to the Source’s ‘images’ method
 </div>
 <div class="section" id="module-aspire.estimation">
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-aspire.estimation" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
+<dl class="py class">
 <dt id="aspire.estimation.Estimator">
-<em class="property">class </em><code class="sig-prename descclassname">aspire.estimation.</code><code class="sig-name descname">Estimator</code><span class="sig-paren">(</span><em class="sig-param">src</em>, <em class="sig-param">basis</em>, <em class="sig-param">as_type='single'</em>, <em class="sig-param">batch_size=512</em>, <em class="sig-param">preconditioner='circulant'</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.estimation.Estimator" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">aspire.estimation.</code><code class="sig-name descname">Estimator</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">src</span></em>, <em class="sig-param"><span class="n">basis</span></em>, <em class="sig-param"><span class="n">as_type</span><span class="o">=</span><span class="default_value">'single'</span></em>, <em class="sig-param"><span class="n">batch_size</span><span class="o">=</span><span class="default_value">512</span></em>, <em class="sig-param"><span class="n">preconditioner</span><span class="o">=</span><span class="default_value">'circulant'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.estimation.Estimator" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p class="rubric">Methods</p>
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.estimation.Estimator.apply_kernel">
-<code class="sig-name descname">apply_kernel</code><span class="sig-paren">(</span><em class="sig-param">vol_coeff</em>, <em class="sig-param">kernel=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.estimation.Estimator.apply_kernel" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">apply_kernel</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">vol_coeff</span></em>, <em class="sig-param"><span class="n">kernel</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.estimation.Estimator.apply_kernel" title="Permalink to this definition">¶</a></dt>
 <dd><p>Applies the kernel represented by convolution
 :param vol_coeff: The volume to be convolved, stored in the basis coefficients.
 :param kernel: a Kernel object. If None, the kernel for this Estimator is used.
@@ -600,22 +601,22 @@ Any additional args/kwargs are passed on to the Source’s ‘images’ method
 </div></blockquote>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.estimation.Estimator.compute_kernel">
 <code class="sig-name descname">compute_kernel</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aspire.estimation.Estimator.compute_kernel" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.estimation.Estimator.conj_grad">
-<code class="sig-name descname">conj_grad</code><span class="sig-paren">(</span><em class="sig-param">b_coeff</em>, <em class="sig-param">tol=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.estimation.Estimator.conj_grad" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">conj_grad</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">b_coeff</span></em>, <em class="sig-param"><span class="n">tol</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.estimation.Estimator.conj_grad" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.estimation.Estimator.estimate">
-<code class="sig-name descname">estimate</code><span class="sig-paren">(</span><em class="sig-param">b_coeff=None</em>, <em class="sig-param">tol=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.estimation.Estimator.estimate" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">estimate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">b_coeff</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tol</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.estimation.Estimator.estimate" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="aspire.estimation.Estimator.n">
 <code class="sig-name descname">n</code><em class="property"> = None</em><a class="headerlink" href="#aspire.estimation.Estimator.n" title="Permalink to this definition">¶</a></dt>
 <dd><p>An object representing a 2*L-by-2*L-by-2*L array containing the non-centered Fourier transform of the mean
@@ -626,7 +627,7 @@ dataset.
 Note that this is a non-centered Fourier transform, so the zero frequency is found at index 1.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="aspire.estimation.Estimator.src_backward">
 <code class="sig-name descname">src_backward</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aspire.estimation.Estimator.src_backward" title="Permalink to this definition">¶</a></dt>
 <dd><p>Apply adjoint mapping to source</p>
