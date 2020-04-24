@@ -651,6 +651,13 @@
 </li>
       </ul></li>
       <li>
+    aspire.denoising.denoised_src
+
+      <ul>
+        <li><a href="aspire.denoising.html#module-aspire.denoising.denoised_src">module</a>
+</li>
+      </ul></li>
+      <li>
     aspire.denoising.denoiser_cov2d
 
       <ul>
@@ -1327,6 +1334,8 @@
         <li><a href="aspire.volume.html#aspire.volume.Volume.denoise">(aspire.volume.Volume method)</a>
 </li>
       </ul></li>
+      <li><a href="aspire.denoising.html#aspire.denoising.denoised_src.DenoisedImageSource">DenoisedImageSource (class in aspire.denoising.denoised_src)</a>
+</li>
       <li><a href="aspire.denoising.html#aspire.denoising.Denoiser">Denoiser (class in aspire.denoising)</a>
 </li>
       <li><a href="aspire.denoising.html#aspire.denoising.denoiser_cov2d.DenoiserCov2D">DenoiserCov2D (class in aspire.denoising.denoiser_cov2d)</a>
@@ -1651,12 +1660,16 @@
         <li><a href="aspire.estimation.html#aspire.estimation.covar2d.RotCov2D.get_covar">(aspire.estimation.covar2d.RotCov2D method)</a>
 </li>
       </ul></li>
-      <li><a href="aspire.estimation.html#aspire.estimation.covar2d.RotCov2D.get_cwf_coeffs">get_cwf_coeffs() (aspire.estimation.covar2d.RotCov2D method)</a>
+      <li><a href="aspire.estimation.html#aspire.estimation.covar2d.BatchedRotCov2D.get_cwf_coeffs">get_cwf_coeffs() (aspire.estimation.covar2d.BatchedRotCov2D method)</a>
+
+      <ul>
+        <li><a href="aspire.estimation.html#aspire.estimation.covar2d.RotCov2D.get_cwf_coeffs">(aspire.estimation.covar2d.RotCov2D method)</a>
 </li>
-      <li><a href="aspire.basis.html#aspire.basis.pswf_utils.BNMatrix.get_eig_vectors">get_eig_vectors() (aspire.basis.pswf_utils.BNMatrix method)</a>
-</li>
+      </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="aspire.basis.html#aspire.basis.pswf_utils.BNMatrix.get_eig_vectors">get_eig_vectors() (aspire.basis.pswf_utils.BNMatrix method)</a>
+</li>
       <li><a href="aspire.aspire.html#aspire.aspire.class_averaging.get_fast_rotate_vars">get_fast_rotate_vars() (in module aspire.aspire.class_averaging)</a>
 </li>
       <li><a href="aspire.aspire.utils.html#aspire.aspire.utils.helpers.get_file_type">get_file_type() (in module aspire.aspire.utils.helpers)</a>
@@ -1737,6 +1750,8 @@
 </li>
       <li><a href="aspire.image.html#aspire.image.Image">Image (class in aspire.image)</a>
 </li>
+      <li><a href="aspire.denoising.html#aspire.denoising.Denoiser.image">image() (aspire.denoising.Denoiser method)</a>
+</li>
       <li><a href="aspire.aspire.em_classavg.html#aspire.aspire.em_classavg.data_utils.image_grid">image_grid() (in module aspire.aspire.em_classavg.data_utils)</a>
 
       <ul>
@@ -1745,8 +1760,12 @@
       </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="aspire.source.html#aspire.source.ImageSource.images">images() (aspire.source.ImageSource method)</a>
+      <li><a href="aspire.denoising.html#aspire.denoising.denoiser_cov2d.DenoiserCov2D.images">images() (aspire.denoising.denoiser_cov2d.DenoiserCov2D method)</a>
+
+      <ul>
+        <li><a href="aspire.source.html#aspire.source.ImageSource.images">(aspire.source.ImageSource method)</a>
 </li>
+      </ul></li>
       <li><a href="aspire.source.html#aspire.source.ImageSource">ImageSource (class in aspire.source)</a>
 </li>
       <li><a href="aspire.source.html#aspire.source.xform.IndexedXform">IndexedXform (class in aspire.source.xform)</a>
@@ -2016,6 +2035,8 @@
         <li><a href="aspire.denoising.html#module-aspire.denoising">aspire.denoising</a>
 </li>
         <li><a href="aspire.denoising.html#module-aspire.denoising.class_avg">aspire.denoising.class_avg</a>
+</li>
+        <li><a href="aspire.denoising.html#module-aspire.denoising.denoised_src">aspire.denoising.denoised_src</a>
 </li>
         <li><a href="aspire.denoising.html#module-aspire.denoising.denoiser_cov2d">aspire.denoising.denoiser_cov2d</a>
 </li>
@@ -2417,11 +2438,11 @@
       <li><a href="aspire.aspire.html#aspire.aspire.class_averaging.SpcaData.save">save() (aspire.aspire.class_averaging.SpcaData method)</a>
 
       <ul>
-        <li><a href="aspire.denoising.html#aspire.denoising.Denoiser.save">(aspire.denoising.Denoiser method)</a>
-</li>
         <li><a href="aspire.image.html#aspire.image.Image.save">(aspire.image.Image method)</a>
 </li>
         <li><a href="aspire.io.html#aspire.io.starfile.StarFile.save">(aspire.io.starfile.StarFile method)</a>
+</li>
+        <li><a href="aspire.source.html#aspire.source.ImageSource.save">(aspire.source.ImageSource method)</a>
 </li>
       </ul></li>
       <li><a href="aspire.io.html#aspire.io.starfile.save_star">save_star() (in module aspire.io.starfile)</a>
@@ -2514,18 +2535,12 @@
 </li>
       <li><a href="aspire.basis.html#aspire.basis.basis_utils.t_x_mat_dot">t_x_mat_dot() (in module aspire.basis.basis_utils)</a>
 </li>
-      <li><a href="aspire.aspire.html#aspire.aspire.class_averaging.test">test() (in module aspire.aspire.class_averaging)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="aspire.aspire.html#aspire.aspire.class_averaging.test">test() (in module aspire.aspire.class_averaging)</a>
+</li>
       <li><a href="aspire.aspire.html#aspire.aspire.class_averaging.test2">test2() (in module aspire.aspire.class_averaging)</a>
 </li>
-      <li><a href="aspire.denoising.html#aspire.denoising.Denoiser.to_src">to_src() (aspire.denoising.Denoiser method)</a>
-
-      <ul>
-        <li><a href="aspire.denoising.html#aspire.denoising.denoiser_cov2d.DenoiserCov2D.to_src">(aspire.denoising.denoiser_cov2d.DenoiserCov2D method)</a>
-</li>
-      </ul></li>
       <li><a href="aspire.estimation.html#aspire.estimation.kernel.FourierKernel.toeplitz">toeplitz() (aspire.estimation.kernel.FourierKernel method)</a>
 </li>
       <li><a href="aspire.nfft.html#aspire.nfft.finufft.FINufftPlan.transform">transform() (aspire.nfft.finufft.FINufftPlan method)</a>

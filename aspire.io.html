@@ -249,7 +249,7 @@ std: sigma value in filter.</p>
 
 <dl class="py function">
 <dt id="aspire.io.starfile.save_star">
-<code class="sig-prename descclassname">aspire.io.starfile.</code><code class="sig-name descname">save_star</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">image_source</span></em>, <em class="sig-param"><span class="n">starfile_filepath</span></em>, <em class="sig-param"><span class="n">batch_size</span><span class="o">=</span><span class="default_value">1024</span></em>, <em class="sig-param"><span class="n">overwrite</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.io.starfile.save_star" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aspire.io.starfile.</code><code class="sig-name descname">save_star</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">image_source</span></em>, <em class="sig-param"><span class="n">starfile_filepath</span></em>, <em class="sig-param"><span class="n">batch_size</span><span class="o">=</span><span class="default_value">1024</span></em>, <em class="sig-param"><span class="n">save_mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">overwrite</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.io.starfile.save_star" title="Permalink to this definition">¶</a></dt>
 <dd><p>Save an ImageSource to a STAR file + individual .mrcs files
 Note that .mrcs files are saved at the same location as the STAR file.</p>
 <dl class="field-list simple">
@@ -259,6 +259,7 @@ Note that .mrcs files are saved at the same location as the STAR file.</p>
 <li><p><strong>starfile_filepath</strong> – Path to STAR file where we want to save image_source</p></li>
 <li><p><strong>batch_size</strong> – Batch size of images to query from the <cite>ImageSource</cite> object. Every <cite>batch_size</cite> rows,
 entries are written to STAR file, and the <cite>.mrcs</cite> files saved.</p></li>
+<li><p><strong>save_mode</strong> – Whether to save all images in a single or multiple files in batch size.</p></li>
 <li><p><strong>overwrite</strong> – Whether to overwrite any .mrcs files found at the target location.</p></li>
 </ul>
 </dd>

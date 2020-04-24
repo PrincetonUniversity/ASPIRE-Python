@@ -12,6 +12,14 @@ aspire.denoising.class\_avg module
    :undoc-members:
    :show-inheritance:
 
+aspire.denoising.denoised\_src module
+-------------------------------------
+
+.. automodule:: aspire.denoising.denoised_src
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 aspire.denoising.denoiser\_cov2d module
 ---------------------------------------
 

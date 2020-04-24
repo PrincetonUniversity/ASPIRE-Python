@@ -767,6 +767,21 @@ no default value is used, and missing field(s) cause a RuntimeError.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt id="aspire.source.ImageSource.save">
+<code class="sig-name descname">save</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">starfile_filepath</span></em>, <em class="sig-param"><span class="n">batch_size</span><span class="o">=</span><span class="default_value">512</span></em>, <em class="sig-param"><span class="n">save_mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">overwrite</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.source.ImageSource.save" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save the output images to mrc files</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>batch_size</strong> – Batch size of images to query.</p></li>
+<li><p><strong>save_mode</strong> – Whether to save all images in a single or multiple files in batch size.</p></li>
+<li><p><strong>overwrite</strong> – Option to overwrite the output mrcs files.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt id="aspire.source.ImageSource.set_metadata">
 <code class="sig-name descname">set_metadata</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">metadata_fields</span></em>, <em class="sig-param"><span class="n">values</span></em>, <em class="sig-param"><span class="n">indices</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.source.ImageSource.set_metadata" title="Permalink to this definition">¶</a></dt>
 <dd><p>Modify metadata field information of this ImageSource for selected indices

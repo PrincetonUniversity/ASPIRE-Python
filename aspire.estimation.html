@@ -323,6 +323,31 @@ manipulated using the <cite>blk_diag_*</cite> functions.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt id="aspire.estimation.covar2d.BatchedRotCov2D.get_cwf_coeffs">
+<code class="sig-name descname">get_cwf_coeffs</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">coeffs</span></em>, <em class="sig-param"><span class="n">ctf_fb</span></em>, <em class="sig-param"><span class="n">ctf_idx</span></em>, <em class="sig-param"><span class="n">mean_coeff</span></em>, <em class="sig-param"><span class="n">covar_coeff</span></em>, <em class="sig-param"><span class="n">noise_var</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.estimation.covar2d.BatchedRotCov2D.get_cwf_coeffs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Estimate the expansion coefficients using the Covariance Wiener Filtering (CWF) method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>coeffs</strong> – A coefficient vector (or an array of coefficient vectors) to be calculated.</p></li>
+<li><p><strong>ctf_fb</strong> – The CFT functions in the FB expansion.</p></li>
+<li><p><strong>ctf_idx</strong> – An array of the CFT function indices for all 2D images.
+If ctf_fb or ctf_idx is None, the identity filter will be applied.</p></li>
+<li><p><strong>mean_coeff</strong> – The mean value vector from all images.</p></li>
+<li><p><strong>covar_coeff</strong> – The block diagonal covariance matrix of the clean coefficients represented by a cell array.</p></li>
+<li><p><strong>noise_var</strong> – The estimated variance of noise. The value should be zero for <cite>coeffs</cite>
+from clean images of simulation data.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The estimated coefficients of the unfiltered images in certain math basis.
+These are obtained using a Wiener filter with the specified covariance for the clean images
+and white noise of variance <cite>noise_var</cite> for the noise.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt id="aspire.estimation.covar2d.BatchedRotCov2D.get_mean">
 <code class="sig-name descname">get_mean</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aspire.estimation.covar2d.BatchedRotCov2D.get_mean" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate the rotationally invariant mean image in the basis

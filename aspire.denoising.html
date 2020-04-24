@@ -214,11 +214,34 @@
 </dd></dl>
 
 </div>
+<div class="section" id="module-aspire.denoising.denoised_src">
+<span id="aspire-denoising-denoised-src-module"></span><h2>aspire.denoising.denoised_src module<a class="headerlink" href="#module-aspire.denoising.denoised_src" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="aspire.denoising.denoised_src.DenoisedImageSource">
+<em class="property">class </em><code class="sig-prename descclassname">aspire.denoising.denoised_src.</code><code class="sig-name descname">DenoisedImageSource</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">src</span></em>, <em class="sig-param"><span class="n">denoiser</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.denoising.denoised_src.DenoisedImageSource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="aspire.source.html#aspire.source.ImageSource" title="aspire.source.ImageSource"><code class="xref py py-class docutils literal notranslate"><span class="pre">aspire.source.ImageSource</span></code></a></p>
+<p>Define a derived ImageSource class to perform operations for denoised 2D images</p>
+<p class="rubric">Attributes</p>
+<p class="rubric">Methods</p>
+<p>Initialize a denoised ImageSource object from original ImageSource of noisy images</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>src</strong> – Original ImageSource object storing noisy images</p></li>
+<li><p><strong>denoiser</strong> – A Denoiser object for specifying a method for denoising</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Attributes</p>
+<p class="rubric">Methods</p>
+</dd></dl>
+
+</div>
 <div class="section" id="module-aspire.denoising.denoiser_cov2d">
 <span id="aspire-denoising-denoiser-cov2d-module"></span><h2>aspire.denoising.denoiser_cov2d module<a class="headerlink" href="#module-aspire.denoising.denoiser_cov2d" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="aspire.denoising.denoiser_cov2d.DenoiserCov2D">
-<em class="property">class </em><code class="sig-prename descclassname">aspire.denoising.denoiser_cov2d.</code><code class="sig-name descname">DenoiserCov2D</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">src</span></em>, <em class="sig-param"><span class="n">basis</span></em>, <em class="sig-param"><span class="n">var_noise</span></em>, <em class="sig-param"><span class="n">ctf_info</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.denoising.denoiser_cov2d.DenoiserCov2D" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">aspire.denoising.denoiser_cov2d.</code><code class="sig-name descname">DenoiserCov2D</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">src</span></em>, <em class="sig-param"><span class="n">basis</span></em>, <em class="sig-param"><span class="n">var_noise</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.denoising.denoiser_cov2d.DenoiserCov2D" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#aspire.denoising.Denoiser" title="aspire.denoising.Denoiser"><code class="xref py py-class docutils literal notranslate"><span class="pre">aspire.denoising.Denoiser</span></code></a></p>
 <p>Define a derived class for denoising 2D images using Cov2D method</p>
 <p class="rubric">Methods</p>
@@ -229,29 +252,44 @@
 <li><p><strong>src</strong> – The source object of 2D images with metadata</p></li>
 <li><p><strong>basis</strong> – The basis method to expand 2D images</p></li>
 <li><p><strong>var_noise</strong> – The estimated variance of noise</p></li>
-<li><p><strong>ctf_info</strong> – Whether the CTF filters are included</p></li>
 </ul>
 </dd>
 </dl>
 <p class="rubric">Methods</p>
 <dl class="py method">
 <dt id="aspire.denoising.denoiser_cov2d.DenoiserCov2D.denoise">
-<code class="sig-name descname">denoise</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">covar_opt</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.denoising.denoiser_cov2d.DenoiserCov2D.denoise" title="Permalink to this definition">¶</a></dt>
-<dd><p>Denoiser 2D images using Cov2D method</p>
+<code class="sig-name descname">denoise</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">covar_opt</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">batch_size</span><span class="o">=</span><span class="default_value">512</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.denoising.denoiser_cov2d.DenoiserCov2D.denoise" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p>Build covariance matrix of 2D images and return a new ImageSource object</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>basis</strong> – The basis method to expand 2D images</p></li>
 <li><p><strong>covar_opt</strong> – The option list for building Cov2D matrix</p></li>
+<li><p><strong>batch_size</strong> – The batch size for processing images</p></li>
 </ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A <cite>DenoisedImageSource</cite> object with the specified denoising object</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
-<dt id="aspire.denoising.denoiser_cov2d.DenoiserCov2D.to_src">
-<code class="sig-name descname">to_src</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aspire.denoising.denoiser_cov2d.DenoiserCov2D.to_src" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return an ImageSource object with denoised images</p>
+<dt id="aspire.denoising.denoiser_cov2d.DenoiserCov2D.images">
+<code class="sig-name descname">images</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">istart</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">batch_size</span><span class="o">=</span><span class="default_value">512</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.denoising.denoiser_cov2d.DenoiserCov2D.images" title="Permalink to this definition">¶</a></dt>
+<dd><p>Obtain a batch size of 2D images after denosing by Cov2D method</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>istart</strong> – the index of starting image</p></li>
+<li><p><strong>batch_size</strong> – The batch size for processing images</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>an <cite>Image</cite> object with denoised images</p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
@@ -275,30 +313,13 @@
 <dl class="py method">
 <dt id="aspire.denoising.Denoiser.denoise">
 <code class="sig-name descname">denoise</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aspire.denoising.Denoiser.denoise" title="Permalink to this definition">¶</a></dt>
-<dd><p>Denoise 2D images</p>
+<dd><p>Precompute for Denoiser and DenoisedImageSource for 2D images</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="aspire.denoising.Denoiser.save">
-<code class="sig-name descname">save</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">starfile_filepath</span></em>, <em class="sig-param"><span class="n">batch_size</span><span class="o">=</span><span class="default_value">512</span></em>, <em class="sig-param"><span class="n">overwrite</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.denoising.Denoiser.save" title="Permalink to this definition">¶</a></dt>
-<dd><p>Output the denoised images to specified file</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>starfile_filepath</strong> – Path to STAR file for saving image_source</p></li>
-<li><p><strong>batch_size</strong> – Batch size of images to query from the <cite>ImageSource</cite> object.
-Every <cite>batch_size</cite> rows, entries are written to STAR file,
-and the <cite>.mrcs</cite> files saved.</p></li>
-<li><p><strong>overwrite</strong> – Whether to overwrite any .mrcs files found at the target location.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="aspire.denoising.Denoiser.to_src">
-<code class="sig-name descname">to_src</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aspire.denoising.Denoiser.to_src" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return an ImageSource object with denoised images</p>
+<dt id="aspire.denoising.Denoiser.image">
+<code class="sig-name descname">image</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">istart</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">batch_size</span><span class="o">=</span><span class="default_value">512</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.denoising.Denoiser.image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Obtain a batch size of 2D images after denosing by a specified method</p>
 </dd></dl>
 
 </dd></dl>
