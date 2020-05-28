@@ -117,6 +117,7 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="authors.html">Authors</a></li>
 </ul>
 
             
@@ -363,22 +364,75 @@ v[:, i] = P^{(alpha, beta)}_n(x) as defined in the paper</p>
 <span id="aspire-basis-dirac-module"></span><h2>aspire.basis.dirac module<a class="headerlink" href="#module-aspire.basis.dirac" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="aspire.basis.dirac.DiracBasis">
-<em class="property">class </em><code class="sig-prename descclassname">aspire.basis.dirac.</code><code class="sig-name descname">DiracBasis</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">size</span></em>, <em class="sig-param"><span class="n">ell_max</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.dirac.DiracBasis" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">aspire.basis.dirac.</code><code class="sig-name descname">DiracBasis</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sz</span></em>, <em class="sig-param"><span class="n">mask</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.dirac.DiracBasis" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#aspire.basis.Basis" title="aspire.basis.Basis"><code class="xref py py-class docutils literal notranslate"><span class="pre">aspire.basis.Basis</span></code></a></p>
-<p>Initialize an object for the base of basis class</p>
+<p>Define a derived class for Dirac basis</p>
+<p class="rubric">Methods</p>
+<p>Initialize an object for Dirac basis
+:param sz: The shape of the vectors for which to define the basis.
+:param mask: A boolean _mask of size sz indicating which coordinates</p>
+<blockquote>
+<div><p>to include in the basis (default np.full(sz, True)).</p>
+</div></blockquote>
+<p class="rubric">Methods</p>
+<dl class="py method">
+<dt id="aspire.basis.dirac.DiracBasis.evaluate">
+<code class="sig-name descname">evaluate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">v</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.dirac.DiracBasis.evaluate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate coefficients in standard coordinate basis from those in Dirac basis</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>size</strong> – The size of the vectors for which to define the basis.
-Currently only square images and cubic volumes are supported.</p>
+<dd class="field-odd"><p><strong>v</strong> – A coefficient vector (or an array of coefficient vectors) to
+be evaluated. The first dimension must equal <cite>self.count</cite>.</p>
 </dd>
-<dt class="field-even">Ell_max</dt>
-<dd class="field-even"><p>The maximum order ell of the basis elements. If no input
-(= None), it will be set to np.Inf and the basis includes all
-ell such that the resulting basis vectors are concentrated
-below the Nyquist frequency (default Inf).</p>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The evaluation of the coefficient vector(s) <cite>v</cite> for this basis.
+This is an array whose first dimensions equal <cite>self.sz</cite> and the remaining
+dimensions correspond to dimensions two and higher of <cite>v</cite>.</p>
 </dd>
 </dl>
-<p class="rubric">Methods</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="aspire.basis.dirac.DiracBasis.evaluate_t">
+<code class="sig-name descname">evaluate_t</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.dirac.DiracBasis.evaluate_t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate coefficient in Dirac basis from those in standard coordinate basis</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>x</strong> – The coefficient array to be evaluated. The first dimensions
+must equal <cite>self.sz</cite>.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><p>The evaluation of the coefficient array <cite>v</cite> in the dual basis
+of <cite>basis</cite>. This is an array of vectors whose first dimension equals</p>
+<blockquote>
+<div><p><cite>self.count</cite> and whose remaining dimensions correspond to
+higher dimensions of <cite>v</cite>.</p>
+</div></blockquote>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="aspire.basis.dirac.DiracBasis.expand">
+<code class="sig-name descname">expand</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.dirac.DiracBasis.expand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Obtain coefficients in the basis from those in standard coordinate basis</p>
+<p>This is a similar function to evaluate_t but with more accuracy by using
+the cg optimizing of linear equation, Ax=b.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>x</strong> – An array whose first two or three dimensions are to be expanded
+the desired basis. These dimensions must equal <cite>self.sz</cite>.</p>
+</dd>
+</dl>
+<dl>
+<dt>:return<span class="classifier">The coefficients of <cite>v</cite> expanded in the desired basis.</span></dt><dd><p>The first dimension of <cite>v</cite> is with size of <cite>count</cite> and the
+second and higher dimensions of the return value correspond to
+those higher dimensions of <cite>x</cite>.</p>
+</dd>
+</dl>
+</dd></dl>
+
 </dd></dl>
 
 </div>
@@ -665,25 +719,6 @@ and whose remaining dimensions correspond to higher dimensions of <cite>x</cite>
 </dl>
 </dd></dl>
 
-<dl class="py method">
-<dt id="aspire.basis.ffb_2d.FFBBasis2D.expand">
-<code class="sig-name descname">expand</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.ffb_2d.FFBBasis2D.expand" title="Permalink to this definition">¶</a></dt>
-<dd><p>Obtain coefficients in FB basis from those in standard 2D coordinate basis</p>
-<p>This is a similar function to evaluate_t but with more accuracy by using
-the cg optimizing of linear equation, Ax=b.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>x</strong> – An array whose first two dimensions are to be expanded in FB basis.
-These dimensions must equal <cite>self.sz</cite>.</p>
-</dd>
-</dl>
-<dl>
-<dt>:return<span class="classifier">The coefficients of <cite>v</cite> expanded in FB basis. The first dimension</span></dt><dd><p>of <cite>v</cite> is with size of <cite>count</cite> and the second and higher dimensions
-of the return value correspond to those higher dimensions of <cite>x</cite>.</p>
-</dd>
-</dl>
-</dd></dl>
-
 </dd></dl>
 
 </div>
@@ -742,25 +777,6 @@ to be evaluated. The first three dimensions must equal <cite>self.sz</cite>.</p>
 This is an array of vectors whose first dimension equals
 <cite>self.count</cite> and whose remaining dimensions correspond to higher
 dimensions of <cite>x</cite>.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="aspire.basis.ffb_3d.FFBBasis3D.expand">
-<code class="sig-name descname">expand</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.ffb_3d.FFBBasis3D.expand" title="Permalink to this definition">¶</a></dt>
-<dd><p>Obtain expansion coefficients in FB basis from those in standard 3D coordinate basis</p>
-<p>This is a similar function to evaluate_t but with more accuracy by using
-the cg optimizing of linear equation, Ax=b.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>x</strong> – An array whose first three dimensions are to be expanded in FB basis.
-These dimensions must equal <cite>self.sz</cite>.</p>
-</dd>
-</dl>
-<dl>
-<dt>:return<span class="classifier">The coefficients of <cite>v</cite> expanded in FB basis. The first dimension</span></dt><dd><p>of <cite>v</cite> is with size of <cite>count</cite> and the second and higher dimensions
-of the return value correspond to those higher dimensions of <cite>x</cite>.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -841,7 +857,7 @@ to be evaluated.</p>
 <span id="aspire-basis-fpswf-3d-module"></span><h2>aspire.basis.fpswf_3d module<a class="headerlink" href="#module-aspire.basis.fpswf_3d" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="aspire.basis.fpswf_3d.FPSWF3D">
-<em class="property">class </em><code class="sig-prename descclassname">aspire.basis.fpswf_3d.</code><code class="sig-name descname">FPSWF3D</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">size</span></em>, <em class="sig-param"><span class="n">ell_max</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.fpswf_3d.FPSWF3D" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">aspire.basis.fpswf_3d.</code><code class="sig-name descname">FPSWF3D</code><span class="sig-paren">(</span><em class="sig-param">size</em>, <em class="sig-param">ell_max=None</em>, <em class="sig-param">dtype=&lt;class 'numpy.float64'&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.fpswf_3d.FPSWF3D" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#aspire.basis.pswf_3d.PSWF3D" title="aspire.basis.pswf_3d.PSWF3D"><code class="xref py py-class docutils literal notranslate"><span class="pre">aspire.basis.pswf_3d.PSWF3D</span></code></a></p>
 <p>Initialize an object for the base of basis class</p>
 <dl class="field-list simple">
@@ -857,6 +873,64 @@ below the Nyquist frequency (default Inf).</p>
 </dd>
 </dl>
 <p class="rubric">Methods</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-aspire.basis.polar_2d">
+<span id="aspire-basis-polar-2d-module"></span><h2>aspire.basis.polar_2d module<a class="headerlink" href="#module-aspire.basis.polar_2d" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="aspire.basis.polar_2d.PolarBasis2D">
+<em class="property">class </em><code class="sig-prename descclassname">aspire.basis.polar_2d.</code><code class="sig-name descname">PolarBasis2D</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">size</span></em>, <em class="sig-param"><span class="n">nrad</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ntheta</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.polar_2d.PolarBasis2D" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#aspire.basis.Basis" title="aspire.basis.Basis"><code class="xref py py-class docutils literal notranslate"><span class="pre">aspire.basis.Basis</span></code></a></p>
+<p>Define a derived class for polar Fourier representation for 2D images</p>
+<p class="rubric">Methods</p>
+<p>Initialize an object for the 2D polar Fourier grid class</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>size</strong> – The shape of the vectors for which to define the grid.
+Currently only square images are supported.</p></li>
+<li><p><strong>nrad</strong> – The number of points in the radial dimension.</p></li>
+<li><p><strong>ntheta</strong> – The number of points in the angular dimension.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<dl class="py method">
+<dt id="aspire.basis.polar_2d.PolarBasis2D.evaluate">
+<code class="sig-name descname">evaluate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">v</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.polar_2d.PolarBasis2D.evaluate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate coefficients in standard 2D coordinate basis from those in polar Fourier basis</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>v</strong> – A coefficient vector (or an array of coefficient vectors)
+in polar Fourier basis to be evaluated. The first dimension must equal to
+<cite>self.count</cite>.</p>
+</dd>
+<dt class="field-even">Return x</dt>
+<dd class="field-even"><p>The evaluation of the coefficient vector(s) <cite>x</cite> in standard 2D
+coordinate basis. This is an array whose first two dimensions equal <cite>self.sz</cite>
+and the remaining dimensions correspond to dimensions two and higher of <cite>v</cite>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="aspire.basis.polar_2d.PolarBasis2D.evaluate_t">
+<code class="sig-name descname">evaluate_t</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.polar_2d.PolarBasis2D.evaluate_t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate coefficient in polar Fourier grid from those in standard 2D coordinate basis</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>x</strong> – The coefficient array in the standard 2D coordinate basis to be
+evaluated. The first two dimensions must equal <cite>self.sz</cite>.</p>
+</dd>
+<dt class="field-even">Return v</dt>
+<dd class="field-even"><p>The evaluation of the coefficient array <cite>v</cite> in the polar Fourier grid.
+This is an array of vectors whose first dimension is <cite>self.count</cite> and
+whose remaining dimensions correspond to higher dimensions of <cite>x</cite>.</p>
+</dd>
+</dl>
+</dd></dl>
+
 </dd></dl>
 
 </div>
@@ -958,7 +1032,7 @@ approx_length (int): the number of eigenvalues,len(alpha_n).</p>
 <span id="aspire-basis-pswf-3d-module"></span><h2>aspire.basis.pswf_3d module<a class="headerlink" href="#module-aspire.basis.pswf_3d" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="aspire.basis.pswf_3d.PSWF3D">
-<em class="property">class </em><code class="sig-prename descclassname">aspire.basis.pswf_3d.</code><code class="sig-name descname">PSWF3D</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">size</span></em>, <em class="sig-param"><span class="n">ell_max</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.pswf_3d.PSWF3D" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">aspire.basis.pswf_3d.</code><code class="sig-name descname">PSWF3D</code><span class="sig-paren">(</span><em class="sig-param">size</em>, <em class="sig-param">ell_max=None</em>, <em class="sig-param">dtype=&lt;class 'numpy.float64'&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.pswf_3d.PSWF3D" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#aspire.basis.Basis" title="aspire.basis.Basis"><code class="xref py py-class docutils literal notranslate"><span class="pre">aspire.basis.Basis</span></code></a></p>
 <p>Initialize an object for the base of basis class</p>
 <dl class="field-list simple">
@@ -1051,7 +1125,7 @@ The dense matrix shape</p>
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-aspire.basis" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="aspire.basis.Basis">
-<em class="property">class </em><code class="sig-prename descclassname">aspire.basis.</code><code class="sig-name descname">Basis</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">size</span></em>, <em class="sig-param"><span class="n">ell_max</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.Basis" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">aspire.basis.</code><code class="sig-name descname">Basis</code><span class="sig-paren">(</span><em class="sig-param">size</em>, <em class="sig-param">ell_max=None</em>, <em class="sig-param">dtype=&lt;class 'numpy.float64'&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.Basis" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Define a base class for expanding 2D particle images and 3D structure volumes</p>
 <p class="rubric">Methods</p>
@@ -1106,25 +1180,20 @@ and whose remaining dimensions correspond to higher dimensions of <cite>v</cite>
 
 <dl class="py method">
 <dt id="aspire.basis.Basis.expand">
-<code class="sig-name descname">expand</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">v</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.Basis.expand" title="Permalink to this definition">¶</a></dt>
-<dd><p>Expand array in basis</p>
-<dl class="simple">
-<dt>This is a similar function to <cite>evaluate_t</cite> but with more accuracy by</dt><dd><p>using the cg optimizing of linear equation, Ax=b.</p>
-</dd>
-</dl>
-<p>If <cite>v</cite> is a matrix of size <cite>basis.ct</cite>-by-…, <cite>B</cite> is the change-of-basis
-matrix of this basis, and <cite>x</cite> is a matrix of size <cite>self.sz</cite>-by-…,
-the function calculates  v = (B’ * B)^(-1) * B’ * x, where the rows
-of <cite>B</cite> and columns of <cite>x</cite> are read as vectorized arrays.</p>
+<code class="sig-name descname">expand</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.basis.Basis.expand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Obtain coefficients in the basis from those in standard coordinate basis</p>
+<p>This is a similar function to evaluate_t but with more accuracy by using
+the cg optimizing of linear equation, Ax=b.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>v</strong> – An array whose first few dimensions are to be expanded in this basis.
-These dimensions must equal <cite>self.sz</cite>.</p>
+<dd class="field-odd"><p><strong>x</strong> – An array whose first two or three dimensions are to be expanded
+the desired basis. These dimensions must equal <cite>self.sz</cite>.</p>
 </dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The coefficients of <cite>v</cite> expanded in this basis. If more than
-one array of size <cite>self.sz</cite> is found in <cite>v</cite>, the second and higher
-dimensions of the return value correspond to those higher dimensions of <cite>v</cite>.</p>
+</dl>
+<dl>
+<dt>:return<span class="classifier">The coefficients of <cite>v</cite> expanded in the desired basis.</span></dt><dd><p>The first dimension of <cite>v</cite> is with size of <cite>count</cite> and the
+second and higher dimensions of the return value correspond to
+those higher dimensions of <cite>x</cite>.</p>
 </dd>
 </dl>
 </dd></dl>

@@ -68,6 +68,14 @@ aspire.basis.fpswf\_3d module
    :undoc-members:
    :show-inheritance:
 
+aspire.basis.polar\_2d module
+-----------------------------
+
+.. automodule:: aspire.basis.polar_2d
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 aspire.basis.pswf\_2d module
 ----------------------------
 

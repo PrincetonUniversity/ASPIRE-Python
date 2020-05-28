@@ -117,6 +117,7 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="authors.html">Authors</a></li>
 </ul>
 
             
@@ -318,8 +319,8 @@ documentation for <cite>conj_grad</cite>, default <cite>‘float64’</cite>)</p
 <dd class="field-odd"><p>The block diagonal matrix containing the basis coefficients (in</p>
 </dd>
 </dl>
-<p><cite>self.basis</cite>) for the estimated covariance matrix. These may be
-manipulated using the <cite>blk_diag_*</cite> functions.</p>
+<p><cite>self.basis</cite>) for the estimated covariance matrix. These are
+implemented using <cite>BlkDiagMatrix</cite>.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -391,7 +392,7 @@ from clean images of simulation data.</p></li>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>The basis coefficients of the covariance matrix in
 the form of cell array representing a block diagonal matrix. These
-block diagonal matrices may be manipulated using the <cite>blk_diag_*</cite> functions.
+block diagonal matrices are implemented as BlkDiagMatrix instances.
 The covariance is calculated from the images represented by the coeffs array,
 along with all possible rotations and reflections. As a result, the computed covariance
 matrix is invariant to both reflection and rotation. The effect of the filters in ctf_fb
