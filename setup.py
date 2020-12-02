@@ -30,6 +30,7 @@ setup(
         "jupyter",
         "matplotlib",
         "mrcfile",
+        "numba",  # Note should probably pin this version.
         "numpy==1.16",
         "numpydoc==0.7.0",
         "pandas==0.25.3",
