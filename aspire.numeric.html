@@ -1,0 +1,462 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>aspire.numeric package &mdash; ASPIRE 0.6.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="aspire.operators package" href="aspire.operators.html" />
+    <link rel="prev" title="aspire.nufft package" href="aspire.nufft.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> ASPIRE
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.6.2
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Modules</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="aspire.html">aspire package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="aspire.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="aspire.abinitio.html">aspire.abinitio package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.apple.html">aspire.apple package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.basis.html">aspire.basis package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.commands.html">aspire.commands package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.config.html">aspire.config package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.covariance.html">aspire.covariance package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.denoising.html">aspire.denoising package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.image.html">aspire.image package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.noise.html">aspire.noise package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.nufft.html">aspire.nufft package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">aspire.numeric package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.operators.html">aspire.operators package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.optimization.html">aspire.optimization package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.reconstruction.html">aspire.reconstruction package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.source.html">aspire.source package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.storage.html">aspire.storage package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.utils.html">aspire.utils package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aspire.volume.html">aspire.volume package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="aspire.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="aspire.html#module-aspire.exceptions">aspire.exceptions module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="aspire.html#module-aspire">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="authors.html">Authors</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ASPIRE</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="modules.html">Modules</a> &raquo;</li>
+        
+          <li><a href="aspire.html">aspire package</a> &raquo;</li>
+        
+      <li>aspire.numeric package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/aspire.numeric.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="aspire-numeric-package">
+<h1>aspire.numeric package<a class="headerlink" href="#aspire-numeric-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-aspire.numeric.base_fft">
+<span id="aspire-numeric-base-fft-module"></span><h2>aspire.numeric.base_fft module<a class="headerlink" href="#module-aspire.numeric.base_fft" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="aspire.numeric.base_fft.FFT">
+<em class="property">class </em><code class="descclassname">aspire.numeric.base_fft.</code><code class="descname">FFT</code><a class="headerlink" href="#aspire.numeric.base_fft.FFT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Define a customized interface for FFT functions</p>
+<p>To make consistent among Pyfftw, Scipyfft and cupy fft,
+not all arguments are included.</p>
+<p class="rubric">Methods</p>
+<dl class="method">
+<dt id="aspire.numeric.base_fft.FFT.centered_fft">
+<code class="descname">centered_fft</code><span class="sig-paren">(</span><em>x</em>, <em>axis=-1</em>, <em>workers=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.numeric.base_fft.FFT.centered_fft" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="aspire.numeric.base_fft.FFT.centered_fft2">
+<code class="descname">centered_fft2</code><span class="sig-paren">(</span><em>x</em>, <em>axes=(-2</em>, <em>-1)</em>, <em>workers=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.numeric.base_fft.FFT.centered_fft2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="aspire.numeric.base_fft.FFT.centered_fftn">
+<code class="descname">centered_fftn</code><span class="sig-paren">(</span><em>x</em>, <em>axes=None</em>, <em>workers=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.numeric.base_fft.FFT.centered_fftn" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="aspire.numeric.base_fft.FFT.centered_ifft">
+<code class="descname">centered_ifft</code><span class="sig-paren">(</span><em>x</em>, <em>axis=-1</em>, <em>workers=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.numeric.base_fft.FFT.centered_ifft" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="aspire.numeric.base_fft.FFT.centered_ifft2">
+<code class="descname">centered_ifft2</code><span class="sig-paren">(</span><em>x</em>, <em>axes=(-2</em>, <em>-1)</em>, <em>workers=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.numeric.base_fft.FFT.centered_ifft2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="aspire.numeric.base_fft.FFT.centered_ifftn">
+<code class="descname">centered_ifftn</code><span class="sig-paren">(</span><em>x</em>, <em>axes=None</em>, <em>workers=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.numeric.base_fft.FFT.centered_ifftn" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="aspire.numeric.base_fft.FFT.fft">
+<code class="descname">fft</code><span class="sig-paren">(</span><em>x</em>, <em>axis=-1</em>, <em>workers=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.numeric.base_fft.FFT.fft" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="aspire.numeric.base_fft.FFT.fft2">
+<code class="descname">fft2</code><span class="sig-paren">(</span><em>x</em>, <em>axes=(-2</em>, <em>-1)</em>, <em>workers=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.numeric.base_fft.FFT.fft2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="aspire.numeric.base_fft.FFT.fftn">
+<code class="descname">fftn</code><span class="sig-paren">(</span><em>x</em>, <em>axes=None</em>, <em>workers=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.numeric.base_fft.FFT.fftn" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="aspire.numeric.base_fft.FFT.fftshift">
+<code class="descname">fftshift</code><span class="sig-paren">(</span><em>x</em>, <em>axes=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.numeric.base_fft.FFT.fftshift" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="aspire.numeric.base_fft.FFT.ifft">
+<code class="descname">ifft</code><span class="sig-paren">(</span><em>x</em>, <em>axis=-1</em>, <em>workers=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.numeric.base_fft.FFT.ifft" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="aspire.numeric.base_fft.FFT.ifft2">
+<code class="descname">ifft2</code><span class="sig-paren">(</span><em>x</em>, <em>axes=(-2</em>, <em>-1)</em>, <em>workers=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.numeric.base_fft.FFT.ifft2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="aspire.numeric.base_fft.FFT.ifftn">
+<code class="descname">ifftn</code><span class="sig-paren">(</span><em>x</em>, <em>axes=None</em>, <em>workers=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.numeric.base_fft.FFT.ifftn" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="aspire.numeric.base_fft.FFT.ifftshift">
+<code class="descname">ifftshift</code><span class="sig-paren">(</span><em>x</em>, <em>axes=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.numeric.base_fft.FFT.ifftshift" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="aspire-numeric-cupy-module">
+<h2>aspire.numeric.cupy module<a class="headerlink" href="#aspire-numeric-cupy-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="aspire-numeric-cupy-fft-module">
+<h2>aspire.numeric.cupy_fft module<a class="headerlink" href="#aspire-numeric-cupy-fft-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-aspire.numeric.numpy">
+<span id="aspire-numeric-numpy-module"></span><h2>aspire.numeric.numpy module<a class="headerlink" href="#module-aspire.numeric.numpy" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="aspire.numeric.numpy.Numpy">
+<em class="property">class </em><code class="descclassname">aspire.numeric.numpy.</code><code class="descname">Numpy</code><a class="headerlink" href="#aspire.numeric.numpy.Numpy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p class="rubric">Methods</p>
+<dl class="staticmethod">
+<dt id="aspire.numeric.numpy.Numpy.asnumpy">
+<em class="property">static </em><code class="descname">asnumpy</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.numeric.numpy.Numpy.asnumpy" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-aspire.numeric.pyfftw_fft">
+<span id="aspire-numeric-pyfftw-fft-module"></span><h2>aspire.numeric.pyfftw_fft module<a class="headerlink" href="#module-aspire.numeric.pyfftw_fft" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="aspire.numeric.pyfftw_fft.PyfftwFFT">
+<em class="property">class </em><code class="descclassname">aspire.numeric.pyfftw_fft.</code><code class="descname">PyfftwFFT</code><a class="headerlink" href="#aspire.numeric.pyfftw_fft.PyfftwFFT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#aspire.numeric.base_fft.FFT" title="aspire.numeric.base_fft.FFT"><code class="xref py py-class docutils literal notranslate"><span class="pre">aspire.numeric.base_fft.FFT</span></code></a></p>
+<p>Define a unified wrapper class for PyFFT functions</p>
+<p>To be consistent with Scipy FFT, not all arguments are included.</p>
+<p class="rubric">Methods</p>
+<dl class="method">
+<dt id="aspire.numeric.pyfftw_fft.PyfftwFFT.fft">
+<code class="descname">fft</code><span class="sig-paren">(</span><em>a</em>, <em>axis=-1</em>, <em>workers=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.numeric.pyfftw_fft.PyfftwFFT.fft" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="aspire.numeric.pyfftw_fft.PyfftwFFT.fft2">
+<code class="descname">fft2</code><span class="sig-paren">(</span><em>a</em>, <em>axes=(-2</em>, <em>-1)</em>, <em>workers=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.numeric.pyfftw_fft.PyfftwFFT.fft2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="aspire.numeric.pyfftw_fft.PyfftwFFT.fftn">
+<code class="descname">fftn</code><span class="sig-paren">(</span><em>a</em>, <em>axes=None</em>, <em>workers=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.numeric.pyfftw_fft.PyfftwFFT.fftn" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="aspire.numeric.pyfftw_fft.PyfftwFFT.fftshift">
+<code class="descname">fftshift</code><span class="sig-paren">(</span><em>a</em>, <em>axes=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.numeric.pyfftw_fft.PyfftwFFT.fftshift" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="aspire.numeric.pyfftw_fft.PyfftwFFT.ifft">
+<code class="descname">ifft</code><span class="sig-paren">(</span><em>a</em>, <em>axis=-1</em>, <em>workers=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.numeric.pyfftw_fft.PyfftwFFT.ifft" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="aspire.numeric.pyfftw_fft.PyfftwFFT.ifft2">
+<code class="descname">ifft2</code><span class="sig-paren">(</span><em>a</em>, <em>axes=(-2</em>, <em>-1)</em>, <em>workers=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.numeric.pyfftw_fft.PyfftwFFT.ifft2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="aspire.numeric.pyfftw_fft.PyfftwFFT.ifftn">
+<code class="descname">ifftn</code><span class="sig-paren">(</span><em>a</em>, <em>axes=None</em>, <em>workers=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.numeric.pyfftw_fft.PyfftwFFT.ifftn" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="aspire.numeric.pyfftw_fft.PyfftwFFT.ifftshift">
+<code class="descname">ifftshift</code><span class="sig-paren">(</span><em>a</em>, <em>axes=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.numeric.pyfftw_fft.PyfftwFFT.ifftshift" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-aspire.numeric.scipy_fft">
+<span id="aspire-numeric-scipy-fft-module"></span><h2>aspire.numeric.scipy_fft module<a class="headerlink" href="#module-aspire.numeric.scipy_fft" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="aspire.numeric.scipy_fft.ScipyFFT">
+<em class="property">class </em><code class="descclassname">aspire.numeric.scipy_fft.</code><code class="descname">ScipyFFT</code><a class="headerlink" href="#aspire.numeric.scipy_fft.ScipyFFT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#aspire.numeric.base_fft.FFT" title="aspire.numeric.base_fft.FFT"><code class="xref py py-class docutils literal notranslate"><span class="pre">aspire.numeric.base_fft.FFT</span></code></a></p>
+<p>Define a unified wrapper class for Scipy FFT functions</p>
+<p>To be consistent with Pyfftw, not all arguments are included.</p>
+<p class="rubric">Methods</p>
+<dl class="method">
+<dt id="aspire.numeric.scipy_fft.ScipyFFT.fft">
+<code class="descname">fft</code><span class="sig-paren">(</span><em>x</em>, <em>axis=-1</em>, <em>workers=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.numeric.scipy_fft.ScipyFFT.fft" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="aspire.numeric.scipy_fft.ScipyFFT.fft2">
+<code class="descname">fft2</code><span class="sig-paren">(</span><em>x</em>, <em>axes=(-2</em>, <em>-1)</em>, <em>workers=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.numeric.scipy_fft.ScipyFFT.fft2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="aspire.numeric.scipy_fft.ScipyFFT.fftn">
+<code class="descname">fftn</code><span class="sig-paren">(</span><em>x</em>, <em>axes=None</em>, <em>workers=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.numeric.scipy_fft.ScipyFFT.fftn" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="aspire.numeric.scipy_fft.ScipyFFT.fftshift">
+<code class="descname">fftshift</code><span class="sig-paren">(</span><em>x</em>, <em>axes=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.numeric.scipy_fft.ScipyFFT.fftshift" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="aspire.numeric.scipy_fft.ScipyFFT.ifft">
+<code class="descname">ifft</code><span class="sig-paren">(</span><em>x</em>, <em>axis=-1</em>, <em>workers=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.numeric.scipy_fft.ScipyFFT.ifft" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="aspire.numeric.scipy_fft.ScipyFFT.ifft2">
+<code class="descname">ifft2</code><span class="sig-paren">(</span><em>x</em>, <em>axes=(-2</em>, <em>-1)</em>, <em>workers=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.numeric.scipy_fft.ScipyFFT.ifft2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="aspire.numeric.scipy_fft.ScipyFFT.ifftn">
+<code class="descname">ifftn</code><span class="sig-paren">(</span><em>x</em>, <em>axes=None</em>, <em>workers=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.numeric.scipy_fft.ScipyFFT.ifftn" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="aspire.numeric.scipy_fft.ScipyFFT.ifftshift">
+<code class="descname">ifftshift</code><span class="sig-paren">(</span><em>x</em>, <em>axes=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.numeric.scipy_fft.ScipyFFT.ifftshift" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-aspire.numeric">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-aspire.numeric" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="aspire.numeric.fft_object">
+<code class="descclassname">aspire.numeric.</code><code class="descname">fft_object</code><span class="sig-paren">(</span><em>which</em><span class="sig-paren">)</span><a class="headerlink" href="#aspire.numeric.fft_object" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="aspire.operators.html" class="btn btn-neutral float-right" title="aspire.operators package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="aspire.nufft.html" class="btn btn-neutral float-left" title="aspire.nufft package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Princeton University
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
