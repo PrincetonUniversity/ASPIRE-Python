@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Installation &mdash; ASPIRE 0.5.28 documentation</title>
+  <title>Installation &mdash; ASPIRE 0.6.2 documentation</title>
   
 
   
@@ -17,34 +17,36 @@
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Getting Started" href="quickstart.html" />
-    <link rel="prev" title="Aspire" href="index.html" /> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+    <link rel="prev" title="Aspire v0.6.2" href="index.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -58,7 +60,7 @@
             
             
               <div class="version">
-                0.5.28
+                0.6.2
               </div>
             
           
@@ -87,8 +89,8 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#install-conda">Install Conda</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#install-and-activate-the-environment">Install and Activate the environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#alternative-developer-installations">Alternative Developer Installations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#test-the-package">Test the package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#install-the-package">Install the package</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#generating-documentation">Generating Documentation</a></li>
 </ul>
 </li>
@@ -161,26 +163,79 @@
             
   <div class="section" id="installation">
 <h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
-<p>ASPIRE runs on Python 3.6, and comes with an <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code> to reconstruct a working Conda environment to run the package.
+<p>ASPIRE is based on Python 3.6, and comes with an <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code> for reconstructing a working Conda environment to run the package.
 The package is tested on Linux/Windows/Mac OS X. Pre-built binaries are available for all platform-specific components. No manual
 compilation should be needed.</p>
 <div class="section" id="install-conda">
 <h2>Install Conda<a class="headerlink" href="#install-conda" title="Permalink to this headline">¶</a></h2>
-<p>You will need to install Conda for <strong>Python3</strong>, either
+<p>To follow the suggested installation, you will need to install Conda for <strong>Python3</strong>, either
 <a class="reference external" href="https://www.anaconda.com/download/#linux">Anaconda</a> or
 <a class="reference external" href="https://conda.io/miniconda.html">Miniconda</a>, click on the right
 distribution to view Conda’s installation instructions.</p>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>If you’re not sure which distribution is right for you, go with <a class="reference external" href="https://conda.io/miniconda.html">Miniconda</a></p>
+<p class="first admonition-title">Note</p>
+<p class="last">If you’re not sure which distribution is right for you, go with <a class="reference external" href="https://conda.io/miniconda.html">Miniconda</a></p>
 </div>
 </div>
 <div class="section" id="install-and-activate-the-environment">
 <h2>Install and Activate the environment<a class="headerlink" href="#install-and-activate-the-environment" title="Permalink to this headline">¶</a></h2>
-<p>Once <cite>conda</cite> is installed and available on the path, create and activate the environment using:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">git</span><span class="o">/</span><span class="n">clone</span><span class="o">/</span><span class="n">folder</span>
-<span class="n">conda</span> <span class="n">env</span> <span class="n">create</span> <span class="o">-</span><span class="n">f</span> <span class="n">environment</span><span class="o">.</span><span class="n">yml</span>
-<span class="n">conda</span> <span class="n">activate</span> <span class="n">aspire</span>
+<p>For most end users, simply installing the package is sufficient to use ASPIRE.
+The commands in this section should install ASPIRE directly from the <code class="docutils literal notranslate"><span class="pre">Python</span> <span class="pre">Package</span> <span class="pre">Index</span></code> into your activated environment.
+This does not require checking out source code.
+If you are interested in checking out and working with the source code, running tests, or a different flavor of install,
+then skip to the next section now instead.</p>
+<p>Once <code class="docutils literal notranslate"><span class="pre">conda</span></code> is installed and available on the path, we can create a fresh <code class="docutils literal notranslate"><span class="pre">conda</span></code> environment.
+Here we have chosen to name it <code class="docutils literal notranslate"><span class="pre">aspire_env</span></code>, but you may choose any name you like so long as that name is used consistently in the following step.
+After creating the environment, we activate it.
+Finally, we install the <code class="docutils literal notranslate"><span class="pre">aspire</span></code> package inside the activated environment. This should install all supporting Python software required.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">create</span> <span class="o">--</span><span class="n">name</span> <span class="n">aspire_env</span> <span class="n">python</span><span class="o">=</span><span class="mf">3.6</span> <span class="n">pip</span>
+<span class="n">conda</span> <span class="n">activate</span> <span class="n">aspire_env</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="n">aspire</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Installing the package installs ASPIRE to the <code class="docutils literal notranslate"><span class="pre">site-packages</span></code> folder of your active environment.
+This is only desirable if you are not going to be doing any development on ASPIRE,
+but simply want to run scripts that depend on the ASPIRE package.</p>
+</div>
+</div>
+<div class="section" id="alternative-developer-installations">
+<h2>Alternative Developer Installations<a class="headerlink" href="#alternative-developer-installations" title="Permalink to this headline">¶</a></h2>
+<p>Developers are expected to be able to manage their own code and environments.
+However, for consistency and newcomers, we recommend the following procedure using <cite>conda</cite>.
+Note that here the name <code class="docutils literal notranslate"><span class="pre">aspire_dev</span></code> was chosen, but you may chose any name for the <code class="docutils literal notranslate"><span class="pre">conda</span></code> environment.
+Some people use different environment names for different features,
+but this is personal preference and will largely depend on what type of changes you are making.
+For example, if you are making changes to dependent package versions for testing,
+you would probably want to keep that in a seperate environment.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Acquire the code.</span>
+<span class="n">git</span> <span class="n">clone</span> <span class="o">-</span><span class="n">b</span> <span class="n">develop</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">ComputationalCryoEM</span><span class="o">/</span><span class="n">ASPIRE</span><span class="o">-</span><span class="n">Python</span>
+<span class="n">cd</span> <span class="n">ASPIRE</span><span class="o">-</span><span class="n">Python</span>
+
+<span class="c1"># Create&#39;s the conda environment and installs base dependencies.</span>
+<span class="n">conda</span> <span class="n">env</span> <span class="n">create</span> <span class="o">-</span><span class="n">f</span> <span class="n">environment</span><span class="o">.</span><span class="n">yml</span> <span class="o">--</span><span class="n">name</span> <span class="n">aspire_dev</span>
+
+<span class="c1"># Activate the environment</span>
+<span class="n">conda</span> <span class="n">activate</span> <span class="n">aspire_dev</span>
+
+<span class="c1"># Command to install the aspire package in a locally editable way:</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">e</span> <span class="o">.</span>
+</pre></div>
+</div>
+<p>We recommend using <code class="docutils literal notranslate"><span class="pre">conda</span></code> or a <code class="docutils literal notranslate"><span class="pre">virtualenv</span></code> environment managing solutions because ASPIRE may have conflicts or change installed versions of Python packages on your system.</p>
+<p>Again, we recommend the above for consistency.
+However, ASPIRE is a <code class="docutils literal notranslate"><span class="pre">pip</span></code> package,
+so you can attempt to install it using standard <code class="docutils literal notranslate"><span class="pre">pip</span></code> or <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> commands.  There are methods such as <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">--no-deps</span></code> that can leave your other packages undisturbed, but this is left to the developer.
+ASPIRE should generally be compatible with newer version of Python, and newer dependent packages. We are currently testing 3.6, 3.7, 3.8 base Python as configured by ASPIRE, and with upgrading packages to the latest for each of those bases.
+If you encounter an issue with a custom pip install, we will try to help, but you may be on your own for support of this method of installation.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Standard pip site-packages installation command</span>
+<span class="n">cd</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">aspire</span><span class="o">-</span><span class="n">repo</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="o">.</span>
+
+<span class="c1"># Standard pip developer installation</span>
+<span class="n">cd</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">aspire</span><span class="o">-</span><span class="n">repo</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">e</span> <span class="o">.</span>
 </pre></div>
 </div>
 </div>
@@ -188,24 +243,10 @@ distribution to view Conda’s installation instructions.</p>
 <h2>Test the package<a class="headerlink" href="#test-the-package" title="Permalink to this headline">¶</a></h2>
 <p>Make sure all unit tests run correctly by doing:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">git</span><span class="o">/</span><span class="n">clone</span><span class="o">/</span><span class="n">folder</span>
-<span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">test</span>
+<span class="n">pytest</span>
 </pre></div>
 </div>
-<p>Tests currently take around 5 minutes to run. If some tests fail, you may realize that <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">setup.py</span> <span class="pre">test</span></code> produces too much information. Re-running tests using <code class="docutils literal notranslate"><span class="pre">py.test</span> <span class="pre">tests</span></code> in <code class="docutils literal notranslate"><span class="pre">/path/to/git/clone/folder</span></code> may provide a cleaner output to analyze.</p>
-</div>
-<div class="section" id="install-the-package">
-<h2>Install the package<a class="headerlink" href="#install-the-package" title="Permalink to this headline">¶</a></h2>
-<p>If the tests pass, install the ASPIRE package for the currently active Conda environment:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">git</span><span class="o">/</span><span class="n">clone</span><span class="o">/</span><span class="n">folder</span>
-<span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">install</span>
-</pre></div>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Installing the package installs ASPIRE to the <code class="docutils literal notranslate"><span class="pre">site-packages</span></code> folder of your active environment.
-This is only desirable if you are not going to be doing any development on ASPIRE,
-but simply want to run scripts that depend on the ASPIRE package.</p>
-</div>
+<p>Tests currently take around 5 minutes to run, but this depends on your specific machine’s resources.</p>
 </div>
 <div class="section" id="generating-documentation">
 <h2>Generating Documentation<a class="headerlink" href="#generating-documentation" title="Permalink to this headline">¶</a></h2>
@@ -231,7 +272,7 @@ but simply want to run scripts that depend on the ASPIRE package.</p>
         <a href="quickstart.html" class="btn btn-neutral float-right" title="Getting Started" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral" title="Aspire" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral float-left" title="Aspire v0.6.2" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -257,26 +298,16 @@ but simply want to run scripts that depend on the ASPIRE package.</p>
   
 
 
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
-    
-
-  
-
-  <script type="text/javascript" src="_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

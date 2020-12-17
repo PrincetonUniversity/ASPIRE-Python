@@ -1,118 +1,94 @@
 aspire.utils package
 ====================
 
-Subpackages
------------
-
-.. toctree::
-   :maxdepth: 4
-
-   aspire.utils.numeric
-
 Submodules
 ----------
-
-aspire.utils.blk\_diag\_matrix module
--------------------------------------
-
-.. automodule:: aspire.utils.blk_diag_matrix
-   :members:
-   :undoc-members:
-   :show-inheritance:
 
 aspire.utils.cell module
 ------------------------
 
 .. automodule:: aspire.utils.cell
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-aspire.utils.config module
---------------------------
-
-.. automodule:: aspire.utils.config
-   :members:
-   :undoc-members:
-   :show-inheritance:
+    :members:
+    :undoc-members:
+    :show-inheritance:
 
 aspire.utils.coor\_trans module
 -------------------------------
 
 .. automodule:: aspire.utils.coor_trans
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-aspire.utils.em module
-----------------------
-
-.. automodule:: aspire.utils.em
-   :members:
-   :undoc-members:
-   :show-inheritance:
+    :members:
+    :undoc-members:
+    :show-inheritance:
 
 aspire.utils.fft module
 -----------------------
 
 .. automodule:: aspire.utils.fft
-   :members:
-   :undoc-members:
-   :show-inheritance:
+    :members:
+    :undoc-members:
+    :show-inheritance:
 
-aspire.utils.filters module
----------------------------
+aspire.utils.filter\_to\_fb\_mat module
+---------------------------------------
 
-.. automodule:: aspire.utils.filters
-   :members:
-   :undoc-members:
-   :show-inheritance:
+.. automodule:: aspire.utils.filter_to_fb_mat
+    :members:
+    :undoc-members:
+    :show-inheritance:
 
 aspire.utils.matlab\_compat module
 ----------------------------------
 
 .. automodule:: aspire.utils.matlab_compat
-   :members:
-   :undoc-members:
-   :show-inheritance:
+    :members:
+    :undoc-members:
+    :show-inheritance:
 
 aspire.utils.matrix module
 --------------------------
 
 .. automodule:: aspire.utils.matrix
-   :members:
-   :undoc-members:
-   :show-inheritance:
+    :members:
+    :undoc-members:
+    :show-inheritance:
 
 aspire.utils.misc module
 ------------------------
 
 .. automodule:: aspire.utils.misc
-   :members:
-   :undoc-members:
-   :show-inheritance:
+    :members:
+    :undoc-members:
+    :show-inheritance:
 
-aspire.utils.optimize module
+aspire.utils.random module
+--------------------------
+
+.. automodule:: aspire.utils.random
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+aspire.utils.rotation module
 ----------------------------
 
-.. automodule:: aspire.utils.optimize
-   :members:
-   :undoc-members:
-   :show-inheritance:
+.. automodule:: aspire.utils.rotation
+    :members:
+    :undoc-members:
+    :show-inheritance:
 
-aspire.utils.preprocess module
-------------------------------
+aspire.utils.types module
+-------------------------
 
-.. automodule:: aspire.utils.preprocess
-   :members:
-   :undoc-members:
-   :show-inheritance:
+.. automodule:: aspire.utils.types
+    :members:
+    :undoc-members:
+    :show-inheritance:
 
 
 Module contents
 ---------------
 
 .. automodule:: aspire.utils
-   :members:
-   :undoc-members:
-   :show-inheritance:
+    :members:
+    :undoc-members:
+    :show-inheritance:

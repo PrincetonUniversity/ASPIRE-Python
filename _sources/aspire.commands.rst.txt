@@ -8,39 +8,39 @@ aspire.commands.apple module
 ----------------------------
 
 .. automodule:: aspire.commands.apple
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-aspire.commands.aspire module
------------------------------
-
-.. automodule:: aspire.commands.aspire
-   :members:
-   :undoc-members:
-   :show-inheritance:
+    :members:
+    :undoc-members:
+    :show-inheritance:
 
 aspire.commands.cov3d module
 ----------------------------
 
 .. automodule:: aspire.commands.cov3d
-   :members:
-   :undoc-members:
-   :show-inheritance:
+    :members:
+    :undoc-members:
+    :show-inheritance:
 
 aspire.commands.denoise module
 ------------------------------
 
 .. automodule:: aspire.commands.denoise
-   :members:
-   :undoc-members:
-   :show-inheritance:
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+aspire.commands.preprocess module
+---------------------------------
+
+.. automodule:: aspire.commands.preprocess
+    :members:
+    :undoc-members:
+    :show-inheritance:
 
 
 Module contents
 ---------------
 
 .. automodule:: aspire.commands
-   :members:
-   :undoc-members:
-   :show-inheritance:
+    :members:
+    :undoc-members:
+    :show-inheritance:

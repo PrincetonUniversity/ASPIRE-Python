@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Getting Started &mdash; ASPIRE 0.5.28 documentation</title>
+  <title>Getting Started &mdash; ASPIRE 0.6.2 documentation</title>
   
 
   
@@ -17,34 +17,36 @@
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Modules" href="modules.html" />
     <link rel="prev" title="Installation" href="installation.html" /> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -58,7 +60,7 @@
             
             
               <div class="version">
-                0.5.28
+                0.6.2
               </div>
             
           
@@ -174,7 +176,7 @@ Substitute <code class="docutils literal notranslate"><span class="pre">&lt;comm
 <div class="section" id="particle-picking">
 <h2>1. Particle-Picking<a class="headerlink" href="#particle-picking" title="Permalink to this headline">¶</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">apple</span></code> command takes in a folder of one or more <code class="docutils literal notranslate"><span class="pre">*.mrc</span></code> files, picks particles using the Apple-Picker algorithm described at
-<a class="bibtex reference internal" href="#dblp-journals-corr-abs-1802-00469" id="id1">[HAndenS18]</a>, and generates <code class="docutils literal notranslate"><span class="pre">*.star</span></code> files, one for each <code class="docutils literal notranslate"><span class="pre">*.mrc</span></code> file processed, at an output folder location.</p>
+<a class="reference internal" href="#dblp-journals-corr-abs-1802-00469" id="id1">[DBLP:journals/corr/abs-1802-00469]</a>, and generates <code class="docutils literal notranslate"><span class="pre">*.star</span></code> files, one for each <code class="docutils literal notranslate"><span class="pre">*.mrc</span></code> file processed, at an output folder location.</p>
 <p>For example, to run the command on sample data included in ASPIRE (a single <code class="docutils literal notranslate"><span class="pre">sample.mrc</span></code> file provided from the 5.3 GB
 <a class="reference external" href="https://www.ebi.ac.uk/pdbe/emdb/empiar/entry/10017/">Beta-galactosidase Falcon-II micrographs EMPIAR dataset</a>) and save results to a
 <code class="docutils literal notranslate"><span class="pre">particles</span></code> folder:</p>
@@ -205,8 +207,8 @@ a good way to exercise most parts of the ASPIRE pipeline.</p>
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Pay special attention to the flags specified in the example above. The <code class="docutils literal notranslate"><span class="pre">--max_resolution</span> <span class="pre">8</span></code>
+<p class="first admonition-title">Note</p>
+<p class="last">Pay special attention to the flags specified in the example above. The <code class="docutils literal notranslate"><span class="pre">--max_resolution</span> <span class="pre">8</span></code>
 flag down-samples images to 8x8 pixels (needed otherwise you may run out of memory, and/or the script may take way
 too long to execute). <code class="docutils literal notranslate"><span class="pre">--cg_tol</span> <span class="pre">0.2</span></code> sets very liberal (and unrealistic) limits on optimization convergence
 tolerance, which is needed for such a small dataset. For real datasets, you typically <em>do not</em> want to override this
@@ -221,25 +223,28 @@ parameter.</p>
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This command will crop images found in <cite>demo.mrc</cite> to images of size 42x42, in debug mode and with maximum verbosity.</p>
+<p class="first admonition-title">Note</p>
+<p class="last">This command will crop images found in <cite>demo.mrc</cite> to images of size 42x42, in debug mode and with maximum verbosity.</p>
 </div>
 <div class="section" id="arguments-options-and-flags">
 <h3>Arguments, options and flags<a class="headerlink" href="#arguments-options-and-flags" title="Permalink to this headline">¶</a></h3>
 <ul>
-<li><dl class="simple">
-<dt><strong>Arguments</strong> are mandatory inputs.</dt><dd><p>For example, when running ‘compare’ command, you must provide 2 MRC files to compare.</p>
+<li><dl class="first docutils">
+<dt><strong>Arguments</strong> are mandatory inputs.</dt>
+<dd><p class="first last">For example, when running ‘compare’ command, you must provide 2 MRC files to compare.</p>
 </dd>
 </dl>
 </li>
-<li><dl class="simple">
-<dt><strong>Options</strong> are, like their name suggests, optional inputs.</dt><dd><p>For example, <code class="docutils literal notranslate"><span class="pre">aspire</span></code> accepts option ‘<em>-v 2</em>’ for setting verbosity level to 2.
+<li><dl class="first docutils">
+<dt><strong>Options</strong> are, like their name suggests, optional inputs.</dt>
+<dd><p class="first last">For example, <code class="docutils literal notranslate"><span class="pre">aspire</span></code> accepts option ‘<em>-v 2</em>’ for setting verbosity level to 2.
 All options have a default value set for them.</p>
 </dd>
 </dl>
 </li>
-<li><dl>
-<dt><strong>Flags</strong> are optional values which tells Aspire to activate/deactivate certain behaviour.</dt><dd><div class="line-block">
+<li><dl class="first docutils">
+<dt><strong>Flags</strong> are optional values which tells Aspire to activate/deactivate certain behaviour.</dt>
+<dd><div class="first last line-block">
 <div class="line">A good example would be ‘<em>--debug</em>’.</div>
 <div class="line">All flags also have a default value pre-set for them, ‘<em>--no-debug</em>’ in case of the <em>debug</em> flag.</div>
 </div>
@@ -256,14 +261,18 @@ provide another layer of arguments, options and flags. For example, in case of <
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> python -m aspire -v <span class="m">2</span> --debug compare  a.mrc  b.mrc --max-error<span class="o">=</span><span class="m">0</span>.123
 </pre></div>
 </div>
-<p id="bibtex-bibliography-quickstart-0"><dl class="citation">
-<dt class="bibtex label" id="dblp-journals-corr-abs-1802-00469"><span class="brackets"><a class="fn-backref" href="#id1">HAndenS18</a></span></dt>
-<dd><p>Ayelet Heimowitz, Joakim Andén, and Amit Singer. APPLE picker: automatic particle picking, a low-effort cryo-em framework. <em>CoRR</em>, 2018. URL: <a class="reference external" href="http://arxiv.org/abs/1802.00469">http://arxiv.org/abs/1802.00469</a>, <a class="reference external" href="https://arxiv.org/abs/1802.00469">arXiv:1802.00469</a>.</p>
-</dd>
-<dt class="bibtex label" id="dblp-journals-siamis-singers11"><span class="brackets">SS11</span></dt>
-<dd><p>Amit Singer and Yoel Shkolnisky. Three-dimensional structure determination from common lines in cryo-em by eigenvectors and semidefinite programming. <em>SIAM J. Imaging Sciences</em>, 4(2):543–572, 2011. URL: <a class="reference external" href="https://doi.org/10.1137/090767777">https://doi.org/10.1137/090767777</a>, <a class="reference external" href="https://doi.org/10.1137/090767777">doi:10.1137/090767777</a>.</p>
-</dd>
-</dl>
+<p id="bibtex-bibliography-quickstart-0"><table class="bibtex docutils citation" frame="void" id="dblp-journals-corr-abs-1802-00469" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[HAndenS18]</a></td><td>Ayelet Heimowitz, Joakim Andén, and Amit Singer. APPLE picker: automatic particle picking, a low-effort cryo-em framework. <em>CoRR</em>, 2018. URL: <a class="reference external" href="http://arxiv.org/abs/1802.00469">http://arxiv.org/abs/1802.00469</a>, <a class="reference external" href="https://arxiv.org/abs/1802.00469">arXiv:1802.00469</a>.</td></tr>
+</tbody>
+</table>
+<table class="bibtex docutils citation" frame="void" id="dblp-journals-siamis-singers11" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[SS11]</td><td>Amit Singer and Yoel Shkolnisky. Three-dimensional structure determination from common lines in cryo-em by eigenvectors and semidefinite programming. <em>SIAM J. Imaging Sciences</em>, 4(2):543–572, 2011. URL: <a class="reference external" href="https://doi.org/10.1137/090767777">https://doi.org/10.1137/090767777</a>, <a class="reference external" href="https://doi.org/10.1137/090767777">doi:10.1137/090767777</a>.</td></tr>
+</tbody>
+</table>
 </p>
 </div>
 </div>
@@ -280,7 +289,7 @@ provide another layer of arguments, options and flags. For example, in case of <
         <a href="modules.html" class="btn btn-neutral float-right" title="Modules" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="installation.html" class="btn btn-neutral" title="Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="installation.html" class="btn btn-neutral float-left" title="Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -306,26 +315,16 @@ provide another layer of arguments, options and flags. For example, in case of <
   
 
 
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
-    
-
-  
-
-  <script type="text/javascript" src="_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

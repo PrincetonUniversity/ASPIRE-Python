@@ -5,26 +5,25 @@ Subpackages
 -----------
 
 .. toctree::
-   :maxdepth: 4
 
-   aspire.apple
-   aspire.aspire
-   aspire.basis
-   aspire.class2d
-   aspire.class3d
-   aspire.commands
-   aspire.data
-   aspire.denoising
-   aspire.estimation
-   aspire.image
-   aspire.io
-   aspire.nfft
-   aspire.orientation
-   aspire.picker
-   aspire.reconstruct
-   aspire.source
-   aspire.utils
-   aspire.volume
+    aspire.abinitio
+    aspire.apple
+    aspire.basis
+    aspire.commands
+    aspire.config
+    aspire.covariance
+    aspire.denoising
+    aspire.image
+    aspire.noise
+    aspire.nufft
+    aspire.numeric
+    aspire.operators
+    aspire.optimization
+    aspire.reconstruction
+    aspire.source
+    aspire.storage
+    aspire.utils
+    aspire.volume
 
 Submodules
 ----------
@@ -33,23 +32,15 @@ aspire.exceptions module
 ------------------------
 
 .. automodule:: aspire.exceptions
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-aspire.version module
----------------------
-
-.. automodule:: aspire.version
-   :members:
-   :undoc-members:
-   :show-inheritance:
+    :members:
+    :undoc-members:
+    :show-inheritance:
 
 
 Module contents
 ---------------
 
 .. automodule:: aspire
-   :members:
-   :undoc-members:
-   :show-inheritance:
+    :members:
+    :undoc-members:
+    :show-inheritance:
